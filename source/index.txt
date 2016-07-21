@@ -18,15 +18,13 @@ MongoDB. It's written in pure Ruby and is optimized for simplicity.
 It can be used on its own, but it also serves as the basis of several
 object mapping libraries, such as Mongoid_.
 
-Resources:
-
-- `Ruby Driver Source Code <https://github.com/mongodb/mongo-ruby-driver>`_
+Resources: `Ruby Driver Source Code <https://github.com/mongodb/mongo-ruby-driver>`_
 
 Compatibility
 -------------
 
 MongoDB Compatibility
-`````````````````````
+~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/ruby-driver-compatibility-matrix-mongodb.rst
 
@@ -59,7 +57,7 @@ MongoDB Compatibility
 .. include:: /includes/older-server-versions-unsupported.rst
 
 Language Compatibility
-``````````````````````
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/ruby-driver-compatibility-matrix-language.rst
 
@@ -94,16 +92,6 @@ Language Compatibility
 
 .. include:: /includes/unicode-checkmark.rst
 
-BSON
-----
-
-The Ruby BSON implementation is packaged in a separate gem with C and
-Java extensions for speed depending on the runtime enviroment.
-
-Resources:
-
-- `BSON Source Code <https://github.com/mongodb/bson-ruby>`_
-
 Object Mappers
 --------------
 
@@ -113,12 +101,19 @@ solution for many applications.
 But if you need validations, associations, and other high-level data
 modeling functions then an Object Document Mapper may be needed.
 
-In the context of a Rails application these provide functionality
+In the context of a Rails application, these provide functionality
 equivalent to, but distinct from, ActiveRecord. Because MongoDB is a
 document-based database, these mappers are called Object Document
 Mappers (ODM) as opposed to Object Relational Mappers (ORM).
 
-The ODM officially supported by MongoDB is Mongoid_, originally written by Durran Jordan.
+Official MongoDB Ruby ODM
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ODM officially supported by MongoDB is Mongoid_, originally written
+by Durran Jordan.
+
+Other Mappers
+~~~~~~~~~~~~~
 
 Several other mappers are available:
 
@@ -139,9 +134,13 @@ MongoDB configuration.
 .. _Mongoid: http://mongoid.org/en/mongoid/index.html 
 
 
-.. REMOVED PRESENTATIONS:
-   [Introduction to MongoDB and Ruby|http://www.mongodb.com/presentations/webinar/introduction-mongodb-and-ruby] (September 2012)
-   [MongoDB & Ruby Presentations|https://www.mongodb.com/presentations?application=&programming_lang=ruby&event=]
+BSON
+~~~~
+
+The Ruby BSON implementation is packaged in a separate gem with C and
+Java extensions for speed depending on the runtime enviroment.
+
+Resources: `BSON Source Code <https://github.com/mongodb/bson-ruby>`_
 
 .. class:: hidden
 
@@ -149,7 +148,7 @@ MongoDB configuration.
       :titlesonly:
 
       getting-started
-      /tutorial/ruby-bson-tutorial
+      /bson
       /tutorial/ruby-mongoid-tutorial
       /reference
 
