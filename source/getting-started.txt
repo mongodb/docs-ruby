@@ -2,9 +2,9 @@
 
 .. _ruby-driver-tutorial-2-0:
 
-============================
-Ruby Driver Tutorial (2.0.0)
-============================
+===============
+Getting Started
+===============
 
 .. default-domain:: mongodb
 

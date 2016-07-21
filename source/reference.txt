@@ -1,0 +1,15 @@
+====================
+Additional Reference
+====================
+
+.. default-domain:: mongodb
+
+This section contains additional references.
+
+.. class:: hidden
+
+   .. toctree::
+      :titlesonly:
+
+      /reference/compatibility
+      /reference/external-resources

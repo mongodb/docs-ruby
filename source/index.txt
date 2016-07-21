@@ -8,30 +8,10 @@ Ruby MongoDB Driver
 
 .. default-domain:: mongodb
 
-.. contents:: On this page
-   :local:
-   :backlinks: none
-   :depth: 1
-   :class: twocols
-
 .. admonition:: Ruby Driver 2.0 Released
 
    For more information, see
    `Announcing Ruby Driver 2.0, a Rewrite <http://www.mongodb.com/blog/post/announcing-ruby-driver-20-rewrite?jmp=docs>`_.
-
-This is an overview of the available tools and suggested practices for
-using Ruby with MongoDB. To skip to more detailed
-discussion see:
-
-- :ref:`ruby-driver-tutorial`
-- :ref:`ruby-driver-tutorial-2-0`
-- :ref:`ruby-bson-tutorial`
-- :ref:`ruby-mongoid-tutorial`
-
-For a list of external resources, see :ref:`ruby-external-resources`.
-
-Ruby Driver
------------
 
 The MongoDB Ruby driver is the officially supported Ruby driver for
 MongoDB. It's written in pure Ruby and is optimized for simplicity.
@@ -48,7 +28,7 @@ Compatibility
 MongoDB Compatibility
 `````````````````````
 
-.. include:: /includes/extracts/ruby-driver-compatibility-matrix-mongodb.rst
+.. include:: /includes/ruby-driver-compatibility-matrix-mongodb.rst
 
 .. list-table::
    :header-rows: 1
@@ -62,12 +42,6 @@ MongoDB Compatibility
      - MongoDB 3.0
      - MongoDB 3.2
 
-   * - 2.2
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-
    * - 2.0
      - |checkmark|
      - |checkmark|
@@ -80,14 +54,14 @@ MongoDB Compatibility
      - |checkmark|
      -
 
-.. include:: /includes/extracts/ruby-driver-compatibility-full-mongodb.rst
+.. include:: /includes/ruby-driver-compatibility-full-mongodb.rst
 
 .. include:: /includes/older-server-versions-unsupported.rst
 
 Language Compatibility
 ``````````````````````
 
-.. include:: /includes/extracts/ruby-driver-compatibility-matrix-language.rst
+.. include:: /includes/ruby-driver-compatibility-matrix-language.rst
 
 
 .. list-table::
@@ -116,7 +90,7 @@ Language Compatibility
      - |checkmark|
      - |checkmark|
 
-.. include:: /includes/extracts/ruby-driver-compatibility-full-language.rst
+.. include:: /includes/ruby-driver-compatibility-full-language.rst
 
 .. include:: /includes/unicode-checkmark.rst
 
@@ -164,28 +138,19 @@ MongoDB configuration.
 
 .. _Mongoid: http://mongoid.org/en/mongoid/index.html 
 
-Notable Projects
-----------------
-
-Tools for working with MongoDB in Ruby are being developed daily.
-See :ref:`ruby-external-resources`.
-
-If you are working on a project that you would like to have included,
-let us know.
 
 .. REMOVED PRESENTATIONS:
    [Introduction to MongoDB and Ruby|http://www.mongodb.com/presentations/webinar/introduction-mongodb-and-ruby] (September 2012)
    [MongoDB & Ruby Presentations|https://www.mongodb.com/presentations?application=&programming_lang=ruby&event=]
 
-Documentation
--------------
+.. class:: hidden
 
-.. toctree::
-   :titlesonly:
+   .. toctree::
+      :titlesonly:
 
-   /drivers/ruby-resources
-   /tutorial/ruby-driver-tutorial
-   /tutorial/ruby-driver-tutorial-2-0
-   /tutorial/ruby-bson-tutorial
-   /tutorial/ruby-mongoid-tutorial
+      getting-started
+      /tutorial/ruby-bson-tutorial
+      /tutorial/ruby-mongoid-tutorial
+      /reference
+
 
