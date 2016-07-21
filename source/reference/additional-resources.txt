@@ -1,8 +1,8 @@
 .. _ruby-external-resources:
 
-=======================
-Ruby External Resources
-=======================
+====================
+Additional Resources
+====================
 
 .. default-domain:: mongodb
 

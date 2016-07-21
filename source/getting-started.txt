@@ -16,6 +16,9 @@ Getting Started
 
 This tutorial discusses using the core MongoDB Ruby driver, version 2.0
 
+.. seealso::  `Ruby Driver Source Code on GitHub <https://github.com/mongodb/mongo-ruby-driver>`_
+
+
 Installation
 ------------
 
