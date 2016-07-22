@@ -56,7 +56,7 @@ For tutorial on Mongoid, see :doc:`/tutorial/ruby-mongoid-tutorial`.
    .. toctree::
       :titlesonly:
 
-      getting-started
+      /quick-start
       /bson
       /tutorial/ruby-mongoid-tutorial
       /reference/driver-compatibility
