@@ -1,3 +1,9 @@
+=====================
+Bulk Write Operations
+=====================
+
+.. default-domain:: mongodb
+
 This tutorial explains how to take advantage of MongoDB's bulk write
 operation feature with the Ruby driver. Executing write operations in
 batches reduces the number of network round trips and increases write
@@ -300,11 +306,11 @@ Write Concern
 By default bulk operations are executed with the ``write_concern``
 inherited from the collection. A custom write concern can be passed to
 the ``execute`` method. More detail on write concern can be found in the
-MongoDB `Manual <http://docs.mongodb.org/manual/core/write-concern/>`__
+MongoDB `Manual <https://docs.mongodb.com/manual/core/write-concern/>`_
 or in the
-`wiki <https://github.com/mongodb/mongo-ruby-driver/wiki/Write-Concern>`__.
+`wiki <https://github.com/mongodb/mongo-ruby-driver/wiki/Write-Concern>`_.
 Write concern errors, e.g.
-`wtimeout <http://docs.mongodb.org/manual/reference/write-concern/>`__,
+`wtimeout <https://docs.mongodb.com/manual/reference/write-concern/>`_,
 will be reported after all operations are attempted, regardless of
 execution order.
 

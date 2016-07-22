@@ -1,17 +1,23 @@
+=====================
+Aggregation Framework
+=====================
+
+.. default-domain:: mongodb
+
 This document provides a number of practical examples that display the
 capabilities of the aggregation framework.
 
 The `*Aggregations using the Zip Codes Data
-Set* <http://docs.mongodb.org/manual/tutorial/aggregation-examples/#aggregations-using-the-zip-code-data-set>`__
+Set* <https://docs.mongodb.com/manual/tutorial/aggregation-examples/#aggregations-using-the-zip-code-data-set>`_
 examples uses a publicly available data set of all zipcodes and
 populations in the United States. These data are available at:
-`zips.json <http://media.mongodb.org/zips.json>`__.
+`zips.json <http://media.mongodb.org/zips.json>`_.
 
 Requirements
 ============
 
-`MongoDB <http://www.mongodb.org/downloads>`__, version 2.2.0 or later.
-`Ruby MongoDB Driver <https://github.com/mongodb/mongo-ruby-driver>`__,
+`MongoDB <http://www.mongodb.org/downloads>`_, version 2.2.0 or later.
+`Ruby MongoDB Driver <https://github.com/mongodb/mongo-ruby-driver>`_,
 version 1.7.0 or later. Ruby, version 1.8.7 or later.
 
 Let’s check if everything is installed.
@@ -90,11 +96,11 @@ The above aggregation pipeline is build from two pipeline operators:
 The ``$group`` pipeline operator requires ``_id`` field where we specify
 grouping; remaining fields specify how to generate composite value and
 must use one of `the group aggregation
-functions <http://docs.mongodb.org/manual/reference/aggregation/#group-operators>`__:
+functions <https://docs.mongodb.com/manual/reference/aggregation/#group-operators>`_:
 ``$addToSet``, ``$first``, ``$last``, ``$max``, ``$min``, ``$avg``,
 ``$push``, ``$sum``. The ``$match`` pipeline operator syntax is the same
 as the `read
-operation <http://docs.mongodb.org/manual/core/read-operations/>`__
+operation <https://docs.mongodb.com/manual/core/read-operations/>`_
 query syntax.
 
 The ``$group`` process reads all documents and for each state it creates
@@ -216,7 +222,7 @@ Unwinding data in the Name Days Data Set
 ========================================
 
 To run the examples below you need this data set:
-`name\_days.json <https://raw.github.com/wiki/mongodb/mongo-ruby-driver/data/name_days.json>`__.
+`name\_days.json <https://raw.github.com/wiki/mongodb/mongo-ruby-driver/data/name_days.json>`_.
 
 Use *mongoimport* to import this data set into MongoDB:
 

@@ -1,16 +1,19 @@
+================
 Ruby MongoDB FAQ
 ================
+
+.. default-domain:: mongodb
 
 This is a list of frequently asked questions about using Ruby with
 MongoDB. If you have a question you'd like to have answered here, please
 post your question to the `mongodb-user
-list <http://groups.google.com/group/mongodb-user>`__.
+list <http://groups.google.com/group/mongodb-user>`_.
 
 Can I run (insert command name here) from the Ruby driver?
 ----------------------------------------------------------
 
 Yes. You can run any of the `available database
-commands <http://docs.mongodb.org/manual/reference/command/>`__ from the
+commands <https://docs.mongodb.com/manual/reference/command/>`_ from the
 driver using the DB#command method. The only trick is to use an
 OrderedHash when specifying the command. For example, here's how you'd
 run an asynchronous fsync from the driver:
@@ -18,7 +21,7 @@ run an asynchronous fsync from the driver:
 .. code:: ruby
 
     include Mongo
-        
+
     # This command is run on the admin database.
     @db = MongoClient.new('localhost', 27017).db('admin')
 
@@ -103,7 +106,7 @@ situation:
     # Note that the key "something_to_update" is a string.
 
     record.update(:something_to_update => "a_more_recent_value")
-    # This is allowed because the Ruby hash has a key "something_to_update" as a string and adding the symbol :something_to_update is allowed. 
+    # This is allowed because the Ruby hash has a key "something_to_update" as a string and adding the symbol :something_to_update is allowed.
     # The Ruby hash is now: { "_id" => "an_id", "something_to_update" => "my_original_value", :something_to_update => "a_more_recent_value" }
 
     collection.update({ :_id => "an_id" }, record})

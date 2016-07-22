@@ -1,3 +1,9 @@
+============
+Web Examples
+============
+
+.. default-domain:: mongodb
+
 Thin
 ====
 

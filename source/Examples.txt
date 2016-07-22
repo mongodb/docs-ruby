@@ -1,5 +1,8 @@
+=============
 Admin Example
 =============
+
+.. default-domain:: mongodb
 
 .. code:: ruby
 
@@ -46,7 +49,7 @@ Admin Example
     coll.drop
 
 Capped Collection Example
-=========================
+-------------------------
 
 .. code:: ruby
 
@@ -73,7 +76,7 @@ Capped Collection Example
     coll.drop
 
 Working with Cursors
-====================
+--------------------
 
 .. code:: ruby
 
@@ -125,7 +128,7 @@ Working with Cursors
     coll.drop
 
 GridFS
-======
+------
 
 .. code:: ruby
 
@@ -174,7 +177,7 @@ GridFS
     p file.data
 
 Gathering Information
-=====================
+---------------------
 
 .. code:: ruby
 
@@ -209,7 +212,7 @@ Gathering Information
     coll.drop
 
 Queries
-=======
+-------
 
 .. code:: ruby
 
@@ -287,7 +290,7 @@ Queries
     pp coll.find({'c' => /[f|b]/}, :hint => '$natural').explain
 
 Replica Sets
-============
+------------
 
 .. code:: ruby
 
@@ -319,7 +322,7 @@ Replica Sets
     end
 
 Simple
-======
+------
 
 .. code:: ruby
 
@@ -348,7 +351,7 @@ Simple
     coll.drop
 
 Strict Mode
-===========
+-----------
 
 .. code:: ruby
 
@@ -387,7 +390,7 @@ Strict Mode
     db.drop_collection('test')
 
 Types
-=====
+-----
 
 .. code:: ruby
 

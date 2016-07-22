@@ -1,5 +1,8 @@
+========================
 Tailable cursors in Ruby
 ========================
+
+.. default-domain:: mongodb
 
 Tailable cursors are cursors that remain open even after they've
 returned a final result. This way, if more documents are added to a

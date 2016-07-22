@@ -1,5 +1,8 @@
+=====================
 Write Concern in Ruby
 =====================
+
+.. default-domain:: mongodb
 
 Setting the write concern
 -------------------------
@@ -15,7 +18,7 @@ possible other options:
     @mongo_client.save({:doc => 'foo'}, {:w => 2})  # replica set acknowledged
 
     # replica set acknowledged, with 200 ms timeout
-    @mongo_client.save({:doc => 'foo'}, {:w => 2, :wtimeout => 200}) 
+    @mongo_client.save({:doc => 'foo'}, {:w => 2, :wtimeout => 200})
 
     # replicaset acknowledged, with 200 ms timeout and journal write acknowledged
     @mongo_client.save({:doc => 'foo'}, {:w => 2, :wtimeout => 200, :j => true})

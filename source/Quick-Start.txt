@@ -1,10 +1,13 @@
-MongoDB Ruby Driver Tutorial
-============================
+===========
+Quick Start
+===========
+
+.. default-domain:: mongodb
 
 This tutorial gives many common examples of using MongoDB with the Ruby
 driver. If you're looking for information on data modeling, see `MongoDB
 Data Modeling and
-Rails <http://www.mongodb.org/display/DOCS/MongoDB+Data+Modeling+and+Rails>`__.
+Rails <http://www.mongodb.org/display/DOCS/MongoDB+Data+Modeling+and+Rails>`_.
 
 Installation
 ------------
@@ -122,7 +125,7 @@ for the specified database. Each DB instance uses a separate socket
 connection to the server.
 
 If you're trying to connect to a replica set, see `Replica Sets in
-Ruby <http://www.mongodb.org/display/DOCS/Replica+Sets+in+Ruby>`__.
+Ruby <http://www.mongodb.org/display/DOCS/Replica+Sets+in+Ruby>`_.
 
 Authentication
 ~~~~~~~~~~~~~~
@@ -597,4 +600,4 @@ See Also
 --------
 
 -  `MongoDB
-   Manual <http://www.mongodb.org/display/DOCS/Developer+Zone>`__
+   Manual <http://www.mongodb.org/display/DOCS/Developer+Zone>`_

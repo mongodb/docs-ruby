@@ -1,13 +1,19 @@
+===========
+Style Guide
+===========
+
+.. default-domain:: mongodb
+
 Ruby
-====
+----
 
 Please see the community maintained `Ruby Style
-Guide <https://github.com/bbatsov/ruby-style-guide>`__. To check for
+Guide <https://github.com/bbatsov/ruby-style-guide>`_. To check for
 style guide violations, you can run ``rake quality`` or ``rspec`` for a
 report (only for the 2.x driver).
 
 RSpec
-=====
+-----
 
 Do not use instance variables in specs, use ``let`` instead. Instance
 variables cause tests to have an order dependency in some cases where

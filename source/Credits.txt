@@ -1,5 +1,9 @@
+=======
 Credits
 =======
+
+.. default-domain:: mongodb
+
 
 Adrian Madrid, aemadrid@gmail.com
 

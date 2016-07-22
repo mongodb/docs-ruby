@@ -1,5 +1,8 @@
+=======================
 Read Preference in Ruby
 =======================
+
+.. default-domain:: mongodb
 
 About Read Preference
 ---------------------

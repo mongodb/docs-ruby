@@ -1,0 +1,17 @@
+project: 'docs-ruby'
+master_doc: 'index'
+logo: ".static/logo.png"
+paths:
+  static: ['source/.static']
+theme:
+  name: 'meta-driver'
+  project: 'docs-ruby'
+  google_analytics: 'UA-7301842-8'
+  repo: 'mongodb/docs-ruby'
+  jira: 'DOCS'
+  sitename: 'Ruby Driver'
+  nav_excluded: []
+sidebars:
+  '**':
+    - 'pagenav.html'
+...

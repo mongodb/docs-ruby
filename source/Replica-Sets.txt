@@ -1,9 +1,12 @@
+====================
 Replica Sets in Ruby
 ====================
 
+.. default-domain:: mongodb
+
 Here follow a few considerations for those using the MongoDB Ruby driver
 with `replica
-sets <http://www.mongodb.org/display/DOCS/Replica+Sets>`__.
+sets <http://www.mongodb.org/display/DOCS/Replica+Sets>`_.
 
 Setup
 -----
@@ -179,7 +182,5 @@ to work.
 Further Reading
 ---------------
 
--  `Replica
-   Sets <http://www.mongodb.org/display/DOCS/Replica+Set+Configuration>`__
 -  `Replica Set
-   Configuration <http://www.mongodb.org/display/DOCS/Replica+Set+Configuration>`__
+   Configuration <http://www.mongodb.org/display/DOCS/Replica+Set+Configuration>`_

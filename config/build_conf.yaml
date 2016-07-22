@@ -1,0 +1,37 @@
+git:
+  repo: 'mongodb/docs-ruby'
+  remote:
+    upstream: 'mongodb/docs-ruby'
+    tools: 'mongodb/docs-tools'
+project:
+  name: 'ruby-driver'
+  tag: 'ruby-driver'
+  url: 'https://docs.mongodb.com'
+  title: 'Ruby Driver Manual'
+  branched: true
+version:
+  release: '1.1'
+  branch: '1.1'
+system:
+  runstate:
+    serial_sphinx: publish
+  files:
+    - 'intersphinx.yaml'
+    - 'integration.yaml'
+    - 'sphinx_local.yaml'
+    - 'push.yaml'
+assets:
+  - branch: master
+    path: build/docs-tools
+    repository: https://github.com/mongodb/docs-tools.git
+paths:
+  output: 'build'
+  source: 'source'
+  includes: 'source/includes'
+  images: 'source/images'
+  tools: 'bin'
+  buildsystem: 'build/docs-tools'
+  builddata: 'config'
+  locale: 'locale'
+
+...
