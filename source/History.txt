@@ -1,0 +1,2 @@
+This content has moved, please visit:
+https://github.com/mongodb/mongo-ruby-driver/releases
