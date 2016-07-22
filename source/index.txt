@@ -16,7 +16,7 @@ object mapping libraries.
 Get Started
 -----------
 
-To get started with the Ruby driver, see :doc:`/getting-started`
+To get started with the Ruby driver, see :doc:`/quick-start`
 
 BSON
 ----
