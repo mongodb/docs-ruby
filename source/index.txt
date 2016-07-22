@@ -17,44 +17,44 @@ object mapping libraries.
 Basic Features
 --------------
 
-- :doc:`/Quick-Start`
-- :doc:`/Aggregation-Framework-Examples`
-- :doc:`/Examples`
-- :doc:`/Authentication-Examples`
-- :doc:`/Web-Examples`
-- :doc:`/FAQ`
+- :doc:`/quick-start`
+- :doc:`/aggregation-framework`
+- :doc:`/examples`
+- :doc:`/authentication`
+- :doc:`/web-examples`
+- :doc:`/faq`
 
 Multiple Nodes
 --------------
 
--  :doc:`/Replica-Sets`
--  :doc:`/Read-Preference`
--  :doc:`/Write-Concern`
+-  :doc:`/replica-sets`
+-  :doc:`/read-preference`
+-  :doc:`/write-concern`
 
 Advanced Features
 -----------------
 
--  :doc:`/Bulk-Write-Operations`
--  :doc:`/Tailable-Cursors`
--  :doc:`/GridFS`
+-  :doc:`/bulk-write-operations`
+-  :doc:`/tailable-cursors`
+-  :doc:`/gridfs`
 
 .. class:: hidden
 
    .. toctree::
       :titlesonly:
 
-      /Quick-Start
-      /Aggregation-Framework-Examples
-      /Examples
-      /Replica-Sets
-      /Read-Preference
-      /Write-Concern
-      /Bulk-Write-Operations
-      /Authentication-Examples
-      /GridFS
-      /Tailable-Cursors
-      /Web-Examples
-      /FAQ
-      /Style-Guide
-      /Credits
+      /quick-start
+      /aggregation-framework
+      /examples
+      /replica-sets
+      /read-preference
+      /write-concern
+      /bulk-write-operations
+      /authentication
+      /gridfs
+      /tailable-cursors
+      /web-examples
+      /faq
+      /style-guide
+      /credits
 
