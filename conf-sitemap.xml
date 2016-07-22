@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site
   base_url="https://docs.mongodb.com/ruby-driver/1.1/"
-  store_into="build/master/sitemap.xml.gz"
+  store_into="build/v1.1/sitemap.xml.gz"
   verbose="1"
   >
 
