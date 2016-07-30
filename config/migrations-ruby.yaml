@@ -1,0 +1,45 @@
+source:  build/ruby-driver-1.x/docs/aggregation-framework.txt
+target:  aggregation-framework.txt
+---
+source:  build/ruby-driver-1.x/docs/authentication.txt
+target:  authentication.txt
+---
+source:  build/ruby-driver-1.x/docs/bulk-write-operations.txt
+target:  bulk-write-operations.txt
+---
+source:  build/ruby-driver-1.x/docs/credits.txt
+target:  credits.txt
+---
+source:  build/ruby-driver-1.x/docs/examples.txt
+target:  examples.txt
+---
+source:  build/ruby-driver-1.x/docs/faq.txt
+target:  faq.txt
+---
+source:  build/ruby-driver-1.x/docs/gridfs.txt
+target:  gridfs.txt
+---
+source:  build/ruby-driver-1.x/docs/index.txt
+target:  index.txt
+---
+source:  build/ruby-driver-1.x/docs/quick-start.txt
+target:  quick-start.txt
+---
+source:  build/ruby-driver-1.x/docs/read-preference.txt
+target:  read-preference.txt
+---
+source:  build/ruby-driver-1.x/docs/replica-sets.txt
+target:  replica-sets.txt
+---
+source:  build/ruby-driver-1.x/docs/style-guide.txt
+target:  style-guide.txt
+---
+source:  build/ruby-driver-1.x/docs/tailable-cursors.txt
+target:  tailable-cursors.txt
+---
+source:  build/ruby-driver-1.x/docs/web-examples.txt
+target:  web-examples.txt
+---
+source:  build/ruby-driver-1.x/docs/write-concern.txt
+target:  write-concern.txt
+...

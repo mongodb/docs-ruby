@@ -20,10 +20,15 @@ system:
     - 'integration.yaml'
     - 'sphinx_local.yaml'
     - 'push.yaml'
+    - migrations: 
+       - 'migrations-ruby.yaml'
 assets:
   - branch: master
     path: build/docs-tools
     repository: https://github.com/mongodb/docs-tools.git
+  - branch: 1.x-stable
+    path: build/ruby-driver-1.x
+    repository: https://github.com/mongodb/mongo-ruby-driver.git
 paths:
   output: 'build'
   source: 'source'
