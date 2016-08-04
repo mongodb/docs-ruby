@@ -39,9 +39,9 @@ assets:
     path: build/mongoid-5.1
 paths:
   output: 'build'
-  source: 'source'
-  includes: 'source/includes'
-  images: 'source/images'
+  source: 'source-v2.0'
+  includes: 'source-v2.0/includes'
+  images: 'source-v2.0/images'
   tools: 'bin'
   buildsystem: 'build/docs-tools'
   builddata: 'config'
