@@ -10,8 +10,8 @@ project:
   title: 'Ruby Driver Manual'
   branched: true
 version:
-  release: '1.1'
-  branch: '1.1'
+  release: 'v1.x'
+  branch: 'v1.x'
 system:
   runstate:
     serial_sphinx: publish
@@ -31,9 +31,9 @@ assets:
     repository: https://github.com/mongodb/mongo-ruby-driver.git
 paths:
   output: 'build'
-  source: 'source'
-  includes: 'source/includes'
-  images: 'source/images'
+  source: 'source-v1.x'
+  includes: 'source-v1.x/includes'
+  images: 'source-v1.x/images'
   tools: 'bin'
   buildsystem: 'build/docs-tools'
   builddata: 'config'
