@@ -10,8 +10,8 @@ project:
   title: 'Ruby Driver Manual'
   branched: true
 version:
-  release: 'v1.x'
-  branch: 'v1.x'
+  release: '1.x'
+  branch: '1.x'
 system:
   runstate:
     serial_sphinx: publish
