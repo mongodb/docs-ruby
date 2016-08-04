@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site
-  base_url="https://docs.mongodb.com/ruby-driver/1.1/"
-  store_into="build/v1.1/sitemap.xml.gz"
+  base_url="https://docs.mongodb.com/ruby-driver/1.x/"
+  store_into="build/v1.x/sitemap.xml.gz"
   verbose="1"
   >
 
 <directory
-	path="build/public/v1.1/"
-	url="https://docs.mongodb.com/ruby-driver/1.1/"
+	path="build/public/v1.x/"
+	url="https://docs.mongodb.com/ruby-driver/1.x/"
 	default_file="index.html"
 	/>
 <filter  action="drop"  type="wildcard"  pattern="*~" />
