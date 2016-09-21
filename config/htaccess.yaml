@@ -329,5 +329,82 @@ to: '/quick-start'
 type: 'redirect'
 code: 301
 outputs:
-  - 'before-v2.0'
+  - 'before-v2.0': {'/ruby-driver': 'https://docs.mongodb.com/ruby-driver'}
+---
+from: /tutorials/mongoid-callbacks
+to: /mongoid
+outputs:
+  - 'after-v1.x': {'/ruby-driver': 'https://docs.mongodb.com/ruby-driver'}
+type: 'redirect'
+code: 301
+---
+from: /tutorials/mongoid-installation
+to: /mongoid
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v1.x': {'/ruby-driver': 'https://docs.mongodb.com/ruby-driver'}
+---
+from: /tutorials/mongoid-queries
+to: /mongoid
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v1.x': {'/ruby-driver': 'https://docs.mongodb.com/ruby-driver'}
+---
+from: /tutorials/mongoid-upgrade
+to: /mongoid
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v1.x': {'/ruby-driver': 'https://docs.mongodb.com/ruby-driver'}
+---
+from: /tutorials/mongoid-documents
+to: /mongoid
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v1.x': {'/ruby-driver': 'https://docs.mongodb.com/ruby-driver'}
+---
+from: /tutorials/mongoid-nested-attributes
+to: /mongoid
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v1.x': {'/ruby-driver': 'https://docs.mongodb.com/ruby-driver'}
+---
+from: /tutorials/mongoid-rails
+to: /mongoid
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v1.x': {'/ruby-driver': 'https://docs.mongodb.com/ruby-driver'}
+---
+from: /tutorials/mongoid-validation
+to: /mongoid
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v1.x': {'/ruby-driver': 'https://docs.mongodb.com/ruby-driver'}
+---
+from: /tutorials/mongoid-indexes
+to: /mongoid
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v1.x': {'/ruby-driver': 'https://docs.mongodb.com/ruby-driver'}
+---
+from: /tutorials/mongoid-persistence
+to: /mongoid
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v1.x': {'/ruby-driver': 'https://docs.mongodb.com/ruby-driver'}
+---
+from: /tutorials/mongoid-relations
+to: /mongoid
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v1.x': {'/ruby-driver': 'https://docs.mongodb.com/ruby-driver'}
 ...
