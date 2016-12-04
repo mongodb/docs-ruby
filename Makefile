@@ -10,6 +10,8 @@ PRODUCTION_BUCKET=docs-mongodb-org-prod
 
 PREFIX=ruby-driver
 
+TARGET_SOURCE=source-${GIT_BRANCH}
+
 .PHONY: help stage fake-deploy deploy
 
 help:
@@ -21,6 +23,15 @@ help:
 	@echo ''
 	@echo 'Variables'
 	@echo '  ARGS         - Arguments to pass to mut-publish'
+
+html: migrate
+	giza make html
+
+publish-build-only:  
+	giza make publish
+
+publish: migrate 
+	giza make publish
 
 stage:
 	mut-publish build/${GIT_BRANCH}/html ${STAGING_BUCKET} --prefix=${PREFIX} --stage ${ARGS}
@@ -39,3 +50,34 @@ deploy: build/public/${GIT_BRANCH}
 	mut-publish build/public/${GIT_BRANCH} ${PRODUCTION_BUCKET} --prefix=${PREFIX}/${GIT_BRANCH} --deploy --verbose --all-subdirectories  --redirects build/public/.htaccess ${ARGS}
 
 	@echo "Hosted at ${PRODUCTION_URL}/${PREFIX}/${GIT_BRANCH}"
+
+migrate: get-assets
+	@echo "Making target source directory -- doing this explicitly instead of via cp"
+	if [ -d ${TARGET_SOURCE} ]; then rm -rf ${TARGET_SOURCE}/ ; fi;
+	mkdir ${TARGET_SOURCE}
+	mkdir -p ${TARGET_SOURCE}/tutorials/5.1.0
+	mkdir -p ${TARGET_SOURCE}/tutorials/6.0.0
+	
+	@echo "Copying over ruby-driver docs files"
+	cp -R build/ruby-driver-${GIT_BRANCH}/docs/ ${TARGET_SOURCE}
+	
+	@echo "Copying over bson  docs files"
+	cp -R build/bson-ruby/docs/ ${TARGET_SOURCE}
+	
+	@echo "Regex'ing mongoid-5.1 toctree"
+	perl -pe  's/\/tutorials\/version\//\/tutorials\/5.1.0\//g' build/mongoid-5.1/docs/mongoid-tutorials.txt | tee ${TARGET_SOURCE}/mongoid-tutorials-5.1.txt 
+	
+	@echo "Copying over mongoid-5.1 docs files"
+	cp -R build/mongoid-5.1/docs/tutorials/ ${TARGET_SOURCE}/tutorials/5.1.0/
+	
+	@echo "Regex'ing mongoid-master toctree - Currently master = mongoid 6.0.0"
+	perl -pe  's/\/tutorials\/version\//\/tutorials\/6.0.0\//g' build/mongoid-master/docs/mongoid-tutorials.txt | tee ${TARGET_SOURCE}/mongoid-tutorials-6.0.txt 
+	
+	
+	@echo "Copying over mongoid-master tutorials files"
+	cp build/mongoid-master/docs/mongoid.txt ${TARGET_SOURCE}/mongoid.txt
+
+	cp -R build/mongoid-master/docs/tutorials/ ${TARGET_SOURCE}/tutorials/6.0.0
+	
+get-assets:
+	giza generate assets
