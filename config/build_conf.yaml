@@ -20,12 +20,6 @@ system:
     - 'integration.yaml'
     - 'sphinx_local.yaml'
     - 'push.yaml'
-    - htaccess: ['htaccess.yaml']
-    - migrations: 
-       - 'migrations-bson.yaml'
-       - 'migrations-mongoid-master.yaml'
-       - 'migrations-mongoid-5.1.yaml'
-
 assets:
   - branch: master
     path: build/docs-tools
