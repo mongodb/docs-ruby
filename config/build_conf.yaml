@@ -31,7 +31,7 @@ assets:
     repository: https://github.com/mongodb/docs-tools.git
   - branch: 2.0-stable
     repository: https://github.com/mongodb/mongo-ruby-driver.git
-    path: build/ruby-driver-2.0
+    path: build/ruby-driver-v2.0
   - branch: master
     repository: https://github.com/mongodb/bson-ruby.git
     path: build/bson-ruby
