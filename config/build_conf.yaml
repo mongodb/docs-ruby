@@ -11,7 +11,7 @@ project:
   branched: true
 version:
   release: '2.2'
-  branch: '2.2'
+  branch: 'v2.2'
 system:
   runstate:
     serial_sphinx: publish
@@ -31,7 +31,7 @@ assets:
     path: build/docs-tools
     repository: https://github.com/mongodb/docs-tools.git
   - branch: 2.2-stable
-    path: build/ruby-driver-2.2
+    path: build/ruby-driver-v2.2
     repository: https://github.com/mongodb/mongo-ruby-driver.git
   - branch: master
     path: build/bson-ruby
