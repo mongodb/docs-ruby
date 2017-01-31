@@ -9,6 +9,7 @@ STAGING_BUCKET=docs-mongodb-org-staging
 PRODUCTION_BUCKET=docs-mongodb-org-prod
 
 PREFIX=ruby-driver
+TARGET_DIR=source-${GIT_BRANCH}
 
 .PHONY: help stage html publish-build-only migrate publish get-assets fake-deploy deploy
 
