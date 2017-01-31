@@ -25,7 +25,7 @@ system:
        - 'migrations-bson.yaml'
        - 'migrations-mongoid-master.yaml'
        - 'migrations-mongoid-5.1.yaml'
-       - 'migrations-ruby.yaml'
+
 assets:
   - branch: master
     path: build/docs-tools
