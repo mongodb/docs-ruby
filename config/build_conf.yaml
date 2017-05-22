@@ -30,12 +30,6 @@ assets:
   - branch: master
     repository: https://github.com/mongodb/bson-ruby.git
     path: build/bson-ruby
-  - branch: master
-    path: build/mongoid-master
-    repository: https://github.com/mongodb/mongoid.git
-  - branch: 5.1.0-stable
-    repository: https://github.com/mongodb/mongoid.git
-    path: build/mongoid-5.1
 paths:
   output: 'build'
   source: 'source-v2.0'
