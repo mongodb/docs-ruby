@@ -16,7 +16,7 @@ TARGET_DIR=source-${GIT_BRANCH}
 # the current "stable" branch. This is weird and dumb, yes.
 STABLE_BRANCH=`grep 'manual' build/docs-tools/data/${PROJECT}-published-branches.yaml | cut -d ':' -f 2 | grep -Eo '[0-9a-z.]+'`
 
-.PHONY: help html stage fake-deploy deploy deploy-search-index check-redirects publish-build-only publish migrate get-assets
+.PHONY: help html stage fake-deploy deploy deploy-search-index check-redirects publish-build-only publish migrate get-assets clean
 
 help: ## Show this help message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
@@ -79,3 +79,6 @@ get-assets:
 #This workaround is because the redirects for symlink version does not prefix with ruby-driver.
 check-redirects:
 	perl -pi -e  's/301 \/v/301 \/ruby-driver\/v/g' build/public/.htaccess
+
+clean:
+	rm -rf build
