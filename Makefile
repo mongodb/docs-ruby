@@ -81,4 +81,4 @@ check-redirects:
 	perl -pi -e  's/301 \/v/301 \/ruby-driver\/v/g' build/public/.htaccess
 
 clean:
-	rm -rf build
+	rm -rf build giza.log source-master
