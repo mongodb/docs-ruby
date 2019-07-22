@@ -24,8 +24,8 @@ assets:
   - branch: master
     path: build/docs-tools
     repository: https://github.com/mongodb/docs-tools.git
-  - branch: master
-    path: build/ruby-driver-master
+  - branch: 2.9-stable
+    path: build/ruby-driver-v2.9
     repository: https://github.com/mongodb/mongo-ruby-driver.git
   - branch: master
     path: build/bson-ruby
