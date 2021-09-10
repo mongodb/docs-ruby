@@ -10,7 +10,7 @@ project:
   title: 'MongoDB Ruby Driver Manual'
   branched: true
 version:
-  release: 'upcoming'
+  release: '2.16'
   branch: 'v2.16'
 system:
   runstate:
