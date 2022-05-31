@@ -5,11 +5,12 @@ USER=$(shell whoami)
 STAGING_URL="https://docs-mongodborg-staging.corp.mongodb.com"
 PRODUCTION_URL="https://docs.mongodb.com"
 
-STAGING_BUCKET=docs-mongodb-org-stg
-PRODUCTION_BUCKET=docs-mongodb-org-prd
-
 PROJECT=ruby-driver
 TARGET_DIR=source-${GIT_BRANCH}
+
+STAGING_BUCKET=docs-mongodb-org-stg
+DOTCOM_PRODUCTION_BUCKET=docs-mongodb-org-dotcomprd
+DOTCOM_PREFIX=docs/${PROJECT}
 
 SOURCE_FILE_DIR=build/ruby-driver-${GIT_BRANCH}
 
@@ -57,7 +58,7 @@ fake-deploy: build/public/${GIT_BRANCH} ## Create a fake deployment in the stagi
 	@echo "Hosted at ${STAGING_URL}/${PROJECT}/${GIT_BRANCH}/index.html"
 
 deploy: build/public/${GIT_BRANCH} ## Deploy to the production bucket
-	mut-publish build/public/ ${PRODUCTION_BUCKET} --prefix=${PROJECT} --deploy --redirects build/public/.htaccess ${ARGS}
+	mut-publish build/public/ ${DOTCOM_PRODUCTION_BUCKET} --prefix=${DOTCOM_PREFIX} --deploy --redirects build/public/.htaccess ${ARGS}
 
 	@echo "Hosted at ${PRODUCTION_URL}/${PROJECT}/${GIT_BRANCH}"
 
