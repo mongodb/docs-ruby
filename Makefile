@@ -14,7 +14,7 @@ DOTCOM_STAGING_URL="https://mongodbcom-cdn.website.staging.corp.mongodb.com"
 DOTCOM_STAGING_BUCKET=docs-mongodb-org-dotcomstg
 DOTCOM_PRODUCTION_URL="https://mongodb.com"
 DOTCOM_PRODUCTION_BUCKET=docs-mongodb-org-dotcomprd
-DOTCOM_PREFIX=docs-qa/ruby-driver
+DOTCOM_PREFIX=docs/ruby-driver
 DOTCOM_STGPREFIX=docs-qa/ruby-driver
 
 PROJECT=ruby-driver
@@ -58,10 +58,6 @@ fake-deploy: build/public/${GIT_BRANCH} ## Create a fake deployment in the stagi
 	@echo "Hosted at ${DOTCOM_STAGING_URL}/${DOTCOM_STGPREFIX}/${GIT_BRANCH}/index.html"
 
 deploy: build/public/${GIT_BRANCH} ## Deploy to the production bucket
-	mut-publish build/public/ ${PRODUCTION_BUCKET} --prefix=${PROJECT} --deploy --redirects build/public/.htaccess ${ARGS}
-
-	@echo "Hosted at ${PRODUCTION_URL}/${PROJECT}/${GIT_BRANCH}"
-
 	mut-publish build/public/ ${DOTCOM_PRODUCTION_BUCKET} --prefix=${DOTCOM_PREFIX} --deploy --redirects build/public/.htaccess ${ARGS}
 
 	@echo "Hosted at ${DOTCOM_PRODUCTION_URL}/${DOTCOM_PREFIX}/${GIT_BRANCH}"
