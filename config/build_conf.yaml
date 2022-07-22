@@ -10,8 +10,8 @@ project:
   title: 'MongoDB Ruby Driver Manual'
   branched: true
 version:
-  release: '2.17'
-  branch: 'v2.17'
+  release: '2.18'
+  branch: 'v2.18'
 system:
   runstate:
     serial_sphinx: publish
@@ -24,17 +24,17 @@ assets:
   - branch: master
     path: build/docs-tools
     repository: https://github.com/mongodb/docs-tools.git
-  - branch: 2.17-stable
-    path: build/ruby-driver-v2.17
+  - branch: 2.18-stable
+    path: build/ruby-driver-v2.18
     repository: https://github.com/mongodb/mongo-ruby-driver.git
   - branch: master
     path: build/bson-ruby
     repository: https://github.com/mongodb/bson-ruby.git
 paths:
   output: 'build'
-  source: 'source-v2.17'
-  includes: 'source-v2.17/includes'
-  images: 'source-v2.17/images'
+  source: 'source-v2.18'
+  includes: 'source-v2.18/includes'
+  images: 'source-v2.18/images'
   tools: 'bin'
   buildsystem: 'build/docs-tools'
   builddata: 'config'
