@@ -99,7 +99,7 @@ api-docs:
 		--exclude ${SOURCE_FILE_DIR}/spec \
 		--readme ${SOURCE_FILE_DIR}/README.md -o build/public/${GIT_BRANCH}/api/
 
-migrate: 
+migrate: get-assets
 	@echo "Making target source directory -- doing this explicitly instead of via cp"
 	if [ -d ${TARGET_DIR} ]; then rm -rf ${TARGET_DIR} ; fi;
 	mkdir ${TARGET_DIR}
