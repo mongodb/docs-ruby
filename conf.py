@@ -110,6 +110,8 @@ html_theme_options = {
     'stable': conf.version.stable,
     'sitename': sconf.theme.sitename,
     'nav_excluded': sconf.theme.nav_excluded,
+    'eol': True,
+    'eol_msg': 'This version of the documentation is archived and no longer supported. View the current documentation[https://www.mongodb.com/docs/ruby-driver/current/] to learn how to upgrade your version of the Ruby Driver.',
 }
 
 html_sidebars = sconf.sidebars
