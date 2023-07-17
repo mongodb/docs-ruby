@@ -1,14 +1,25 @@
 # Makefile for Ruby driver docs
 
 GIT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
-USER=`whoami`
+
+USER=$(shell whoami)
 STAGING_URL="https://docs-mongodborg-staging.corp.mongodb.com"
 PRODUCTION_URL="https://docs.mongodb.com"
-	
-STAGING_BUCKET=docs-mongodb-org-stg
+
+STAGING_BUCKET=docs-mongodb-org-prd-staging
 PRODUCTION_BUCKET=docs-mongodb-org-prd
 
 PROJECT=ruby-driver
+PREFIX=ruby-driver
+
+DOTCOM_STAGING_URL="https://mongodbcom-cdn.website.staging.corp.mongodb.com"
+DOTCOM_STAGING_BUCKET=docs-mongodb-org-dotcomstg
+DOTCOM_PRODUCTION_URL="https://mongodb.com"
+DOTCOM_PRODUCTION_BUCKET=docs-mongodb-org-dotcomprd
+DOTCOM_PREFIX=docs/ruby-driver
+DOTCOM_STGPREFIX=docs/ruby-driver
+
+
 
 # Parse our published-branches configuration file to get the name of
 # the current "stable" branch. This is weird and dumb, yes.
