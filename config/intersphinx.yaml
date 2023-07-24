@@ -4,6 +4,6 @@ url: https://docs.python.org/2/
 path: python2.inv
 ---
 name: mongodb
-url: https://docs.mongodb.com/manual/
-path: mongodb.inv
+url: https://www.mongodb.com/docs/manual/
+path: objects.inv
 ...
