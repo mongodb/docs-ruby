@@ -174,3 +174,7 @@ raw: /${prefix} -> ${base}/current/
 [v2.16-*]: ${prefix}/${version}/tutorials/user-management -> ${base}/${version}/reference/user-management/
 [v2.16-*]: ${prefix}/${version}/tutorials/query-cache -> ${base}/${version}/reference/query-cache/
 [v2.16-*]: ${prefix}/${version}/quick-start -> ${base}/${version}/tutorials/quick-start/
+
+# redirects for master
+
+[master]: ${prefix}/${version}/tutorials/bson-v4/index.html -> ${base}/v2.15/tutorials/bson-v4/
