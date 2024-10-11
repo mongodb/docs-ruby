@@ -1,4 +1,16 @@
+eol = true
 name = "ruby-driver"
 title = "Ruby MongoDB Driver"
 
 intersphinx = ["https://www.mongodb.com/docs/manual/objects.inv"]
+
+[constants]
+driver-short = "Ruby driver"
+current-url-base = "https://www.mongodb.com/docs/ruby-driver/current/"
+
+[[banners]]
+targets = ["*"]
+variant = "info"
+value = """\
+    This version of the documentation is archived and no longer supported. View the `current documentation <{+current-url-base+}>`__ to learn how to `upgrade your version of the [{+driver-short+}] <{+current-url-base+}/installation>`__.\
+    """
