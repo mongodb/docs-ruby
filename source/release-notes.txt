@@ -4,23 +4,6 @@
 Release Notes
 *************
 
-==========
-What's New
-==========
-
-.. contents:: On this page
-   :local:
-   :backlinks: none
-   :depth: 1
-   :class: singlecol
-
-.. facet::
-   :name: genre
-   :values: reference
- 
-.. meta::
-   :keywords: version, update, upgrade, backwards compatibility
-
 .. default-domain:: mongodb
 
 This page documents significant changes in driver releases.
@@ -33,11 +16,6 @@ comprehensive list of changes in each version of the driver and the
 <https://jira.mongodb.org/projects/RUBY?selectedItem=com.atlassian.jira.jira-projects-plugin%3Arelease-page&status=released>`_
 for the complete list of changes, including those internal to the driver and
 its test suite.
-
-Learn what's new in:
-
-* :ref:`Version 2.21 <release-notes-2.21>`
-* :ref:`Version 2.20 <release-notes-2.20>`
 
 .. _release-notes-2.21:
 
