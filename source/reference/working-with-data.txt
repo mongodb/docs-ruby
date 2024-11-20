@@ -16,7 +16,7 @@ implements for inserting, updating and retrieving data from MongoDB.
   Bulk Writes </reference/bulk-operations>
   Projection </reference/projection>
   Aggregation </reference/aggregation>
-  Map-Reduce </reference/map-reduce>
+  MapReduce </reference/map-reduce>
   Text Search </reference/text-search>
   Geospatial Search </reference/geospatial-search>
   Query Cache </reference/query-cache>

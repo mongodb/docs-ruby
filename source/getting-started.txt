@@ -13,5 +13,5 @@ Getting Started
   Driver Compatibility <reference/driver-compatibility>
   Support <support>
 
-This section describes how to install the driver, installation prerequisites
+This section describes how to install the driver, installation prerequisites,
 and compatibility considerations.

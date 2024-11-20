@@ -21,7 +21,7 @@ Ruby MongoDB Driver
     API <https://mongodb.com/docs/ruby-driver/current/api/>
     Release Notes <release-notes>
     Additional Resources <reference/additional-resources>
-    Contribute to the Driver <contribute>
+    Contribute <contribute>
 
 Welcome to the documentation site for the official MongoDB Ruby driver.
 You can add the driver to your application to work with MongoDB in
