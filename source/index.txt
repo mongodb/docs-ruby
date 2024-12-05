@@ -15,21 +15,21 @@
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
 
-  .. TODO:
-  Get Started </get-started>
-  Connect </connect>
-  Databases & Collections </databases-collections>
-  Read Data </read>
-  Write Data </write>
-  Operations on Replica Sets </read-write-pref>
-  Indexes </indexes>
-  Monitor Your Application </monitoring>
-  Data Aggregation </aggregation>
-  Security </security>
-  Issues & Help </issues-and-help>
-  What's New </whats-new>
-  Upgrade </upgrade>
-  Compatibility </compatibility>
+.. TODO:
+ Get Started </get-started>
+ Connect </connect>
+ Databases & Collections </databases-collections>
+ Read Data </read>
+ Write Data </write>
+ Operations on Replica Sets </read-write-pref>
+ Indexes </indexes>
+ Monitor Your Application </monitoring>
+ Data Aggregation </aggregation>
+ Security </security>
+ Issues & Help </issues-and-help>
+ What's New </whats-new>
+ Upgrade </upgrade>
+ Compatibility </compatibility>
 
 Introduction
 ------------
