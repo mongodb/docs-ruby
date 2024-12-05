@@ -1,0 +1,25 @@
+.. _ruby-connect:
+
+==================
+Connect to MongoDB
+==================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+.. facet::
+   :name: genre
+   :values: reference
+ 
+.. meta::
+   :description: Learn how to use the {+driver-short+} to connect to MongoDB.
+   :keywords: client, ssl
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   /connect/mongoclient

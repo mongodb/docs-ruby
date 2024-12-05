@@ -1,6 +1,6 @@
 name = "ruby-driver"
 title = "Ruby MongoDB Driver"
-toc_landing_pages = []
+toc_landing_pages = ["/connect"]
 
 intersphinx = ["https://www.mongodb.com/docs/manual/objects.inv"]
 sharedinclude_root = "https://raw.githubusercontent.com/10gen/docs-shared/main/"
