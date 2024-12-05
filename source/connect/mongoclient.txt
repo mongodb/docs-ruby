@@ -22,9 +22,9 @@ Overview
 
 To connect to a MongoDB deployment, you need two things:
 
-- A **connection URI**, also known as a *connection string*, which tells the {+driver-short+}
+- **Connection URI**, also known as a *connection string*, which tells the {+driver-short+}
   which MongoDB deployment to connect to.
-- A **Mongo::Client** object, which creates the connection to the MongoDB deployment
+- **Mongo::Client** object, which creates the connection to the MongoDB deployment
   and lets you perform operations on it.
 
 You can also use either of these components to customize the way the {+driver-short+} behaves
@@ -56,7 +56,8 @@ A standard connection string includes the following components:
 
      - Optional. Authentication credentials. If you include these, the client
        authenticates the user against the database specified in ``authSource``.
-       For more information about the ``authSource`` connection option, see
+
+.. TODO For more information about the ``authSource`` connection option, see
        :ref:`ruby-auth`. 
 
    * - ``hostname[:port]``
@@ -74,7 +75,9 @@ A standard connection string includes the following components:
    * - ``?<options>``
 
      - Optional. A query string that specifies connection-specific
-       options as ``<name>=<value>`` pairs. See
+       options as ``<name>=<value>`` pairs.
+       
+.. TODO: See
        :ref:`ruby-connection-options` for a full description of
        these options.
 
@@ -88,7 +91,7 @@ Create a Mongo::Client
 To create a connection to MongoDB, construct an instance of the ``Mongo::Client`` class,
 passing the connection URI to the constructor.
 The following example constructs a ``Mongo::Client`` object to connect to a MongoDB 
-deployment on port ``27017`` of ``localhost``.
+deployment on port ``27017`` of ``localhost``:
 
 .. code-block:: ruby
 
@@ -133,6 +136,4 @@ API Documentation
 -----------------
 
 To learn more about creating a ``Mongo::Client`` object with the {+driver-short+},
-see the following API documentation:
-
-- `Mongo::Client <{+api-root+}/Mongo/Client.html>`__ 
+see the API documentation for `Mongo::Client. <{+api-root+}/Mongo/Client.html>`__

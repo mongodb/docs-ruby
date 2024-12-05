@@ -15,7 +15,7 @@ Connect to MongoDB
    :values: reference
  
 .. meta::
-   :description: Learn how to use the {+driver-short+} to connect to MongoDB.
+   :description: Learn how to use the Ruby driver to connect to MongoDB.
    :keywords: client, ssl
 
 .. toctree::
