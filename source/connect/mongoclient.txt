@@ -9,7 +9,7 @@ Create a MongoDB Client
    :values: reference
 
 .. meta::
-   :keywords: connection string, URI, server, Atlas, settings
+   :keywords: connection string, URI, server, deployment
 
 .. contents:: On this page
    :local:
