@@ -1,12 +1,8 @@
-.. http://www.mongodb.org/display/DOCS/Ruby+Language+Center
-
 .. _ruby-language-center:
 
 *******************
 Ruby MongoDB Driver
 *******************
-
-.. default-domain:: mongodb
 
 .. class:: hidden
 
@@ -14,6 +10,7 @@ Ruby MongoDB Driver
     :titlesonly:
 
     Get Started <getting-started>
+    Connect to MongoDB <connect>
     Tutorials <tutorials>
     Connection & Configuration <reference/connection-and-configuration>
     Working with Data <reference/working-with-data>
@@ -60,8 +57,3 @@ The ODM officially supported by MongoDB is Mongoid, originally written
 by Durran Jordan.
 
 For tutorials on Mongoid, see the `Mongoid Manual <https://mongodb.com/docs/mongoid/master>`_.
-
-.. COMMENT  For the actual build, see mongodb/docs-ruby repo which pulls the documentation source from:
-..    mongo-ruby-driver,
-..    bson-ruby, and
-..    mongoid repos.
