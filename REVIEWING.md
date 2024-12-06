@@ -1,4 +1,4 @@
-# Pull Request Reviewing Guidelines for C#/.NET Driver Documentation
+# Pull Request Reviewing Guidelines for Ruby Driver Documentation
 
 Contributions to the set of documents in this repository can receive reviews from one or both of the following types of reviews:
 
