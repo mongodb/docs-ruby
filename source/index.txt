@@ -11,13 +11,13 @@
 .. toctree::
    :titlesonly:
    :maxdepth: 1
-  
+
+   Get Started </get-started>
+   Connect </connect>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
 
 .. TODO:
- Get Started </get-started>
- Connect </connect>
  Databases & Collections </databases-collections>
  Read Data </read>
  Write Data </write>
