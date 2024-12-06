@@ -116,4 +116,4 @@ The Developer Hub provides tutorials and social engagement for
 developers.
 
 To ask questions and engage in discussions with fellow developers who
-use the {+driver-short+}, see the `forums page <https://www.mongodb.com/community/forums/tag/ruby>`__.
+use the {+driver-short+}, see the `forums page. <https://www.mongodb.com/community/forums/tag/ruby>`__
