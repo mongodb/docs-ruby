@@ -47,7 +47,7 @@ Download and Install
 
       Open the ``quickstart.rb`` file and add the following code:
 
-      .. code-block:: bash
+      .. code-block:: ruby
          
          require 'bundler/inline'
 
