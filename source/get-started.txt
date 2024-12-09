@@ -43,7 +43,6 @@ and query data in your cluster.
    deployments. You can create your own free (no credit card required) MongoDB Atlas 
    deployment by following the steps in this guide.
 
-Follow this guide to connect a sample Ruby application to a MongoDB Atlas
-deployment. If you prefer to connect to MongoDB using a different driver or
-programming language, see our :driver:`list of official drivers <>`.
+If you prefer to use a different driver or programming language to connect to
+MongoDB, see our :driver:`list of official drivers <>`.
 

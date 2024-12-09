@@ -16,12 +16,13 @@ Download and Install
 
    .. step:: Install dependencies
 
-      Before you being developing, ensure you have the following dependencies
+      Before you begin developing, ensure you have the following dependencies
       installed in your development environment:
       
       - `Ruby <https://www.ruby-lang.org/en/downloads/>`__ version 2.7
         or later
-      - `bson <https://rubygems.org/gems/bson>`__ versions 4.14.1 to 6.0
+      - `bson <https://rubygems.org/gems/bson>`__ version 4.14.1 or later, up to
+        version 6.0
 
       .. note::
 
