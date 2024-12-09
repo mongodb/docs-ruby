@@ -1,0 +1,24 @@
+.. _ruby-get-started:
+
+================================
+Get Started with the Ruby Driver
+================================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+.. facet::
+   :name: genre
+   :values: tutorial
+
+.. meta::
+   :description: Learn how to create an app to connect to MongoDB deployment by using the Ruby driver.
+   :keywords: quick start, tutorial, basics
+
+.. toctree::
+
+   Create a Deployment </get-started/create-a-deployment>
+   Create a Connection String </get-started/create-a-connection-string>
