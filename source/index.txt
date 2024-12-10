@@ -11,13 +11,13 @@
 .. toctree::
    :titlesonly:
    :maxdepth: 1
-   
+
    Get Started </get-started>
+   Connect </connect>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
 
 .. TODO:
- Connect </connect>
  Databases & Collections </databases-collections>
  Read Data </read>
  Write Data </write>
@@ -37,12 +37,11 @@ Introduction
 Welcome to the documentation site for the {+driver-long+}, the official
 MongoDB driver for {+language+} applications.
 
-.. TODO:
-.. Get Started
-.. -----------
+Get Started
+-----------
 
-.. Learn how to install the driver, establish a connection to MongoDB, and begin
-.. working with data in the :ref:`ruby-get-started` tutorial.
+Learn how to install the driver, establish a connection to MongoDB, and begin
+working with data in the :ref:`ruby-get-started` tutorial.
 
 .. Connect to MongoDB
 .. ------------------
