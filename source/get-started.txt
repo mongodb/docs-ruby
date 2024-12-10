@@ -21,10 +21,10 @@ Get Started with the Ruby Driver
 .. toctree::
 
    Download & Install </get-started/download-and-install/>
-
-.. TODO:
    Create a Deployment </get-started/create-a-deployment>
    Create a Connection String </get-started/create-a-connection-string>
+
+.. TODO:
    Connect to MongoDB </get-started/connect-to-mongodb>
    Next Steps </get-started/next-steps>
 
