@@ -1,4 +1,4 @@
-.. _cpp-quick-start-connect-to-mongodb:
+.. _ruby-get-started-connect-to-mongodb:
 
 ==================
 Connect to MongoDB
@@ -14,7 +14,7 @@ Connect to MongoDB
 .. procedure::
    :style: connected
 
-   .. step:: Create your {+driver-short+} application
+   .. step:: Edit your {+language+} application file
 
       Navigate to your ``quickstart.rb`` file in the ``ruby-quickstart``
       directory. Copy and paste the following code under the Bundler
@@ -36,7 +36,7 @@ Connect to MongoDB
 
    .. step:: Run your {+language+} application
 
-      In your shell, run the following command to run this application:
+      In your project directory, run the following shell command to run the application:
       
       .. code-block:: none
 
