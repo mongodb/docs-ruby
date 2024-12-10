@@ -21,6 +21,7 @@ Get Started with the Ruby Driver
 .. toctree::
 
    Download & Install </get-started/download-and-install/>
+   Connect to MongoDB </get-started/connect-to-mongodb>
 
 .. TODO:
    Create a Deployment </get-started/create-a-deployment>
