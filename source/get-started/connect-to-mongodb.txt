@@ -31,7 +31,7 @@ Connect to MongoDB
    .. step:: Assign the connection string
 
       Replace the ``<connection string>`` placeholder with the 
-      connection string that you copied from the :ref:`ruby-quick-start-connection-string`
+      connection string that you copied from the :ref:`ruby-get-started-connection-string`
       step of this tutorial.
 
    .. step:: Run your {+language+} application
