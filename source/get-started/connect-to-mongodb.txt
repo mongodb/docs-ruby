@@ -17,10 +17,10 @@ Connect to MongoDB
    .. step:: Edit your {+language+} application file
 
       Navigate to your ``quickstart.rb`` file in the ``ruby-quickstart``
-      directory. Copy and paste the following code under the Bundler
+      directory. Copy and paste the following code below the Bundler
       code from the :ref:`ruby-quick-start-download-and-install` step 
-      of this tutorial to query the ``movies`` collection in the ``sample_mflix``
-      database:
+      of this tutorial. This code connects to MongoDB and queries the
+      ``movies`` collection in the ``sample_mflix`` database.
 
       .. literalinclude:: /includes/get-started/quickstart.rb
          :language: ruby
@@ -36,7 +36,8 @@ Connect to MongoDB
 
    .. step:: Run your {+language+} application
 
-      In your project directory, run the following shell command to run the application:
+      From your ``ruby-quickstart`` directory, run the following shell
+      command to run the application:
       
       .. code-block:: none
 
