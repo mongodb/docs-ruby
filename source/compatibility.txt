@@ -1,4 +1,4 @@
-.. _ruby_compatibility:
+.. _ruby-compatibility:
 
 =============
 Compatibility
