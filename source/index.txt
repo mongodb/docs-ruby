@@ -14,12 +14,12 @@
 
    Get Started </get-started>
    Connect </connect>
+   Read Data </read>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
 
 .. TODO:
  Databases & Collections </databases-collections>
- Read Data </read>
  Write Data </write>
  Operations on Replica Sets </read-write-pref>
  Indexes </indexes>
