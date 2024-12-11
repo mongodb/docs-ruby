@@ -29,10 +29,11 @@ MongoDB server releases are generally backwards compatible. This means a
 particular driver version will generally work with newer server versions but may
 not utilize the new functionalities in those server versions.
 
-The first column lists the driver versions. **D** in a column means support
-for that Ruby version is deprecated.
+The first column lists the driver versions.
 
 .. sharedinclude:: dbx/lifecycle-schedule-callout.rst
+
+.. include:: /includes/compatibility-table-legend-ruby.rst
 
 .. include:: /includes/mongodb-compatibility-table-ruby.rst
 
@@ -44,8 +45,9 @@ Language Compatibility
 The following compatibility table specifies the versions of Ruby supported
 by the various versions of the {+driver-long+}.
 
-The first column lists the driver versions. **D** in a column means support
-for that Ruby version is deprecated.
+The first column lists the driver versions.
+
+.. include:: /includes/compatibility-table-legend-ruby.rst
 
 .. include:: /includes/language-compatibility-table-ruby.rst
 
@@ -123,8 +125,8 @@ When running on JRuby and connecting to Atlas Free Tier,
 `driver version 2.6.4 <https://github.com/mongodb/mongo-ruby-driver/releases/tag/v2.6.4>`_
 or higher and Java 8 or higher are required.
 
-``mongo_kerberos`` Compatibility
---------------------------------
+mongo_kerberos Compatibility
+----------------------------
 
 The following compatibility table specifies the version(s) of the
 :ref:`mongo_kerberos library <kerberos>` to use with a specific version of
@@ -143,9 +145,9 @@ the {+driver-short+}.
 
 
 JRuby and Kerberos Authentication
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you use ``mongo_kerberos`` gem for Kerberos authentication with JRuby, the
+If you use the ``mongo_kerberos`` gem for Kerberos authentication with JRuby, the
 JVM system property ``sun.security.jgss.native`` is set to ``true`` to
 facilitate the use of the system cache of Ticket Granting Tickets (TGTs) (for
 example, TGTs obtained with ``kinit``). This setting also affects any other use
