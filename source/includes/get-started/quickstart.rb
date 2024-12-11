@@ -23,9 +23,7 @@ begin
   # Prints the movie document
   puts movie
 
-  client.close
-
-rescue => e
-  raise "Unable to find the document due to the following error: #{e}"
+ensure
+  client&.close
 end
-#end-query
+# end-query
