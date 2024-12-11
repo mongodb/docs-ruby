@@ -96,17 +96,15 @@ The following code calls the ``each`` method to iterate over the query results:
    .. output::
       :visible: false
 
-      {"_id":{"$oid":"..."},"name":"Mitsubishi Motors","permalink":"mitsubishi-motors",
-      "crunchbase_url":"http:\/\/www.crunchbase.com\/company\/mitsubishi-motors",
-      ... }
-
-      {"_id":{"$oid":"..."},"name":"Western Digital","permalink":"western-digital",
-      "crunchbase_url":"http:\/\/www.crunchbase.com\/company\/western-digital",
-      ... }
-
-      {"_id":{"$oid":"..."},"name":"Celarayn","permalink":"celarayn","crunchbase_url":
-      "http:\/\/www.crunchbase.com\/company\/celarayn",
-      ... }
+      {"_id"=>BSON::ObjectId('...'), "name"=>"Mitsubishi Motors", "permalink"=>"mitsubishi-motors",
+      "crunchbase_url"=>"http://www.crunchbase.com/company/mitsubishi-motors",
+      "homepage_url"=>"http://www.mitsubishi-motors.com", ...}
+      {"_id"=>BSON::ObjectId('...'), "name"=>"Western Digital", "permalink"=>"western-digital",
+      "crunchbase_url"=>"http://www.crunchbase.com/company/western-digital",
+      "homepage_url"=>"http://www.wdc.com/en", ...}
+      {"_id"=>BSON::ObjectId('...'), "name"=>"Celarayn", "permalink"=>"celarayn",
+      "crunchbase_url"=>"http://www.crunchbase.com/company/celarayn",
+      "homepage_url"=>"http://www.celarayn.es", ...}
 
 .. note:: Find All Documents
 
@@ -197,13 +195,26 @@ results. The following table describes some of these options:
 
 The following example uses the ``find`` method to find all documents in which
 the ``number_of_employees`` field has the value ``1000``. The example uses the
-``limit`` option to return a maximum of ``5`` results:
+``limit`` option to return a maximum of ``2`` results:
 
-.. literalinclude:: /includes/read/retrieve.rb
-    :language: ruby
-    :emphasize-lines: 3
-    :start-after: start-modify
-    :end-before: end-modify
+.. io-code-block::
+   :copyable:
+
+   .. input:: /includes/read/retrieve.rb
+      :start-after: start-modify
+      :end-before: end-modify
+      :language: ruby
+      :dedent:
+
+   .. output::
+      :visible: false
+
+      {"_id"=>BSON::ObjectId('...'), "name"=>"Akamai Technologies", "permalink"=>"akamai-technologies",
+      "crunchbase_url"=>"http://www.crunchbase.com/company/akamai-technologies",
+      "homepage_url"=>"http://www.akamai.com", ...}
+      {"_id"=>BSON::ObjectId('...'), "name"=>"Yodle", "permalink"=>"yodle",
+      "crunchbase_url"=>"http://www.crunchbase.com/company/yodle",
+      "homepage_url"=>"http://www.yodle.com", ...}
 
 For a full list of options, see the API documentation for the
 `find <{+api-root}/Mongo/Collection.html#find-instance_method>`__ 

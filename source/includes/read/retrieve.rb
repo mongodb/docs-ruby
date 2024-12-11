@@ -33,9 +33,9 @@ begin
   # end-cursor
 
 
-  # Finds and prints up to 5 documents with a "number_of_employees" value of 1000
+  # Finds and prints up to 2 documents with a "number_of_employees" value of 1000
   # start-modify
-  limit_results = collection.find({ 'number_of_employees' => 1000 }).limit(5)
+  limit_results = collection.find({ 'number_of_employees' => 1000 }).limit(2)
 
   limit_results.each do |doc|
     puts doc
