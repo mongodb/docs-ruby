@@ -55,4 +55,4 @@ when applicable, and connection options.
 After completing these steps, you have a connection string that
 contains your database username and password.
 
-.. include:: /includes/get-started/quickstart-troubleshoot.rst
+.. include:: /includes/get-started/troubleshoot.rst

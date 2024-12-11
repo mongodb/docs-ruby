@@ -26,4 +26,4 @@ After you complete these steps, you have a new free tier MongoDB
 deployment on Atlas, database user credentials, and sample data loaded
 in your database.
 
-.. include:: /includes/get-started/quickstart-troubleshoot.rst
+.. include:: /includes/get-started/troubleshoot.rst
