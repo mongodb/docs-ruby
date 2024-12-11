@@ -75,7 +75,6 @@ value:
    .. input:: /includes/write/update.rb
       :start-after: start-update-one
       :end-before: end-update-one
-      :emphasize-lines: 3
       :language: ruby
       :dedent:
 
@@ -98,7 +97,6 @@ in which the ``name`` field value is ``"Starbucks"``. The update document uses t
    .. input:: /includes/write/update.rb
       :start-after: start-update-many
       :end-before: end-update-many
-      :emphasize-lines: 3
       :language: ruby
       :dedent:
 
@@ -184,7 +182,6 @@ doesn't match any existing documents.
       :start-after: start-update-options
       :end-before: end-update-options
       :language: ruby
-      :emphasize-lines: 2
       :dedent:
 
    .. output::

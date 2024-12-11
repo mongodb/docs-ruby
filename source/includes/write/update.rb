@@ -36,6 +36,7 @@ begin
   puts "#{many_result.modified_count} document(s) updated."
   # end-update-many
 
+  # Performs an update operation with the upsert option enabled
   # start-update-options
   filter = { 'name' => 'Sunrise Pizzeria' }
 
