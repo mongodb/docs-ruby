@@ -21,8 +21,8 @@ Overview
 --------
 
 In this guide, you can learn how to use the {+driver-short+} to update
-documents in a MongoDB collection by using the ``update_one()`` and
-``update_many()`` methods.
+documents in a MongoDB collection by using the ``update_one`` and
+``update_many`` methods.
 
 Sample Data
 ~~~~~~~~~~~
@@ -46,8 +46,8 @@ Update Operations
 
 You can update documents in MongoDB by using the following methods:
 
-- ``update_one()``, which updates *the first document* that matches the search criteria
-- ``update_many()``, which updates *all documents* that match the search criteria
+- ``update_one``, which updates *the first document* that matches the search criteria
+- ``update_many``, which updates *all documents* that match the search criteria
 
 Each update method requires the following parameters:
 
@@ -64,7 +64,7 @@ Each update method requires the following parameters:
 Update One Document Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following example uses the ``update_one()`` method to update the
+The following example uses the ``update_one`` method to update the
 ``name`` field value of a document from ``"Happy Garden"`` to ``"Mountain
 House"``. The update document uses the ``$set`` operation to update the ``name`` field
 value:
@@ -87,7 +87,7 @@ value:
 Update Many Documents Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following example uses the ``update_many()`` method to update all documents
+The following example uses the ``update_many`` method to update all documents
 in which the ``name`` field value is ``"Starbucks"``. The update document uses the
 ``rename()`` method to change the name of the ``address`` field to ``location``:
 
@@ -109,7 +109,7 @@ in which the ``name`` field value is ``"Starbucks"``. The update document uses t
 Customize the Update Operation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``update_one()`` and ``update_many()`` methods accept options to configure the update
+The ``update_one`` and ``update_many`` methods accept options to configure the update
 operation. You can pass these options individually as parameters, or you can create a
 ``Hash`` object that contains the options and pass it as a parameter.
 If you don't specify any options, the driver performs update
@@ -165,7 +165,7 @@ configure the update operation:
 Modify Update Example
 `````````````````````
 
-This example creates and passes options to the ``update_one()`` method.
+This example creates and passes options to the ``update_one`` method.
 The example uses the ``$equal`` operation to match documents
 in which the ``name`` field value is ``"Sunrise Pizzeria"``. It then uses the ``$set`` 
 operation to set the ``borough`` field value in the first matching document to
@@ -193,7 +193,7 @@ doesn't match any existing documents.
 Return Value
 ~~~~~~~~~~~~
 
-The ``update_one()`` and ``update_many()`` methods each return a ``Result`` 
+The ``update_one`` and ``update_many`` methods each return a ``Result`` 
 object. You can use the access the following instance methods from a ``Result`` instance:
 
 .. list-table::
@@ -243,6 +243,6 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
-- `update_one() <{+api-root+}/Mongo/Collection.html#update_one-instance_method>`_
-- `update_many() <{+api-root+}/Mongo/Collection.html#update_many-instance_method>`_
+- `update_one <{+api-root+}/Mongo/Collection.html#update_one-instance_method>`_
+- `update_many <{+api-root+}/Mongo/Collection.html#update_many-instance_method>`_
 - `Result <{+api-root+}/Mongo/Operation/Update/Result.html>`_
