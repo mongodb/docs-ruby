@@ -217,7 +217,7 @@ the ``number_of_employees`` field has the value ``1000``. The example uses the
       "homepage_url"=>"http://www.yodle.com", ...}
 
 For a full list of options, see the API documentation for the
-`find <{+api-root}/Mongo/Collection.html#find-instance_method>`__ 
+`find <{+api-root+}/Mongo/Collection.html#find-instance_method>`__ 
 method.
 
 .. _ruby-retrieve-additional-information:
@@ -235,6 +235,6 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
-- `find <{+api-root}/Mongo/Collection.html#find-instance_method>`__ 
-- `Mongo::Collection::View <{+api-root}/Mongo/Collection/View.html>`__ 
-- `Mongo::Cursor <{+api-root}/Mongo/Cursor.html>`__ 
+- `find <{+api-root+}/Mongo/Collection.html#find-instance_method>`__ 
+- `Mongo::Collection::View <{+api-root+}/Mongo/Collection/View.html>`__ 
+- `Mongo::Cursor <{+api-root+}/Mongo/Cursor.html>`__ 
