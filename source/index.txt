@@ -101,12 +101,12 @@ working with data in the :ref:`ruby-get-started` tutorial.
 .. Learn what changes you must make to your application to upgrade driver
 .. versions in the :ref:`ruby-upgrade` section.
 
-.. Compatibility
-.. -------------
+Compatibility
+-------------
 
-.. To learn about the versions of the {+mdb-server+} and the {+language+} language
-.. that are compatible with  each version of the {+driver-short+}, see the
-.. :ref:`Compatibility <ruby-compatibility>` section.
+To learn about the versions of the {+mdb-server+} and the {+language+} language
+that are compatible with  each version of the {+driver-short+}, see the
+:ref:`Compatibility <ruby-compatibility>` section.
 
 Developer Hub
 -------------
