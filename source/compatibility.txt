@@ -58,7 +58,7 @@ Rails/ActiveSupport Compatibility
 
 The {+driver-short+} does not depend on ActiveSupport. However, if your
 application uses ActiveSupport or Ruby on Rails, you must load the driver's
-ActiveSupport compatibility code to behavior such as time serialization to be
+ActiveSupport compatibility code for behavior such as time serialization to be
 correct:
 
 .. code-block:: ruby
@@ -74,7 +74,7 @@ the driver's ActiveSupport code, since Mongoid automatically does so.
 TLS/SSL Compatibility
 ----------------------
 
-The driver uses the protocols supported by the underlying Ruby
+The {+driver-short+} uses the protocols supported by the underlying Ruby
 ``openssl`` extension. The ``openssl`` extension generally exposes
 the functionality available in the operating system's OpenSSL library.
 

@@ -31,21 +31,7 @@
      -
      -
 
-   * - 2.20
-     -
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     -
-     -
-     -
-     -
-
-   * - 2.19
+   * - 2.19 to 2.20
      -
      - |checkmark|
      - |checkmark|
@@ -101,21 +87,7 @@
      - D
      - D
 
-   * - 2.15
-     -
-     -
-     -
-     -
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-
-   * - 2.14
+   * - 2.14 to 2.15
      -
      -
      -
@@ -185,49 +157,7 @@
      - |checkmark|
      - |checkmark|
 
-   * - 2.9
-     -
-     -
-     -
-     -
-     -
-     -
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-
-   * - 2.8
-     -
-     -
-     -
-     -
-     -
-     -
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-
-   * - 2.7
-     -
-     -
-     -
-     -
-     -
-     -
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-
-   * - 2.6
+   * - 2.6 to 2.9
      -
      -
      -
@@ -256,10 +186,8 @@
      - |checkmark|
 
 .. [#ocsp] OCSP verification is implemented as of driver version 2.14.
-
 .. [#srv-polling] Polling of SRV records in sharded topologies is
    implemented as of driver version 2.11.
-
 .. [#client-side-encryption] Client-side encryption is implemented as of
    driver version 2.12.
 
