@@ -16,6 +16,7 @@
    Connect </connect>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
+   Compatibility </compatibility>
 
 .. TODO:
  Databases & Collections </databases-collections>
@@ -29,7 +30,6 @@
  Issues & Help </issues-and-help>
  What's New </whats-new>
  Upgrade </upgrade>
- Compatibility </compatibility>
 
 Introduction
 ------------
