@@ -2,7 +2,8 @@ name = "ruby-driver"
 title = "Ruby MongoDB Driver"
 toc_landing_pages = [
     "/get-started",
-    "/connect"
+    "/connect",
+    "/write"
 ]
 
 intersphinx = ["https://www.mongodb.com/docs/manual/objects.inv"]
