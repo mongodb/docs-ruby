@@ -26,7 +26,7 @@ MongoDB. Except when indicated, the specified driver versions expose or
 take advantage of the features added in the corresponding server versions.
 
 MongoDB server releases are generally backwards compatible. This means a
-particular driver version will generally work with newer server versions but may
+particular driver version will generally work with newer server versions but might
 not utilize the new functionalities in those server versions.
 
 The first column lists the driver versions.
@@ -79,31 +79,33 @@ The {+driver-short+} uses the protocols supported by the underlying Ruby
 the functionality available in the operating system's OpenSSL library.
 
 Industry best practices, and some regulations, require the use of TLS 1.1
-or newer. Some operating systems or versions may not provide an OpenSSL version
+or newer. Some operating systems or versions might not provide an OpenSSL version
 that supports these TLS versions.
 
 If you use macOS older than 10.13 (High Sierra), you need to install Ruby from
 `rvm`_, `homebrew`_, `macports`_, or another similar source. See
 `Installing Ruby`_ for more options.
 
-If you use Linux or other non-macOS Unix, you can check your OpenSSL version
+If you use Linux or other non-macOS Unix system, you can check your OpenSSL version
 as follows:
 
 .. code-block:: sh
 
-  openssl version
+   openssl version
 
 If the version number is less than 1.0.1, support for TLS 1.1 or newer is
 not available. Contact your operating system vendor for a solution or upgrade
 to a newer distribution.
 
-You can check your Ruby interpreter by running the following command:
+You can check your TLS version by running the following command in your Ruby
+interpreter:
 
 .. code-block:: sh
 
-  ruby -e "require 'net/http'; require 'json'; puts JSON.parse(Net::HTTP.get(URI('https://www.howsmyssl.com/a/check')))['tls_version']"
+   ruby -e "require 'net/http'; require 'json'; puts JSON.parse(Net::HTTP.get(URI('https://www.howsmyssl.com/a/check')))['tls_version']"
 
-You should see ``TLS 1.X`` where ``X`` is greater than or equal to ``1``.
+After running the command, you must see ``TLS 1.X`` where ``X`` is greater than
+or equal to ``1``.
 
 To learn more about TLS versions and their security implications, see `Transport Layer Security Cheat Sheet
 <https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html>`_.
@@ -116,14 +118,12 @@ To learn more about TLS versions and their security implications, see `Transport
 Atlas Compatibility
 -------------------
 
-We recommend `Driver version 2.6.1
-<https://github.com/mongodb/mongo-ruby-driver/releases/tag/v2.6.1>`_ or higher
-when using MongoDB Atlas. This version has significant performance improvements
-for TLS connections, and all Atlas connections use TLS.
+We recommend {+driver-short+} version 2.6.1 or higher when using MongoDB Atlas.
+This version has significant performance improvements for TLS connections, and
+all Atlas connections use TLS.
 
-When running on JRuby and connecting to Atlas Free Tier,
-`driver version 2.6.4 <https://github.com/mongodb/mongo-ruby-driver/releases/tag/v2.6.4>`_
-or higher and Java 8 or higher are required.
+When running on JRuby and connecting to Atlas Free Tier, {+driver-short+}
+version 2.6.4 or higher and Java 8 or higher are required.
 
 mongo_kerberos Compatibility
 ----------------------------
@@ -147,12 +147,13 @@ the {+driver-short+}.
 JRuby and Kerberos Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you use the ``mongo_kerberos`` gem for Kerberos authentication with JRuby, the
-JVM system property ``sun.security.jgss.native`` is set to ``true`` to
+If you use the ``mongo_kerberos`` gem for Kerberos authentication with JRuby,
+the JVM system property ``sun.security.jgss.native`` is set to ``true``. This
 facilitate the use of the system cache of Ticket Granting Tickets (TGTs) (for
-example, TGTs obtained with ``kinit``). This setting also affects any other use
-of the JGSS library, making any TGTs in the system cache available for obtaining
-Kerberos credentials.
+example, TGTs obtained with ``kinit``). 
+
+This setting also affects any other use of the JGSS library, making any TGTs in
+the system cache available for obtaining Kerberos credentials.
 
 .. include:: /includes/unicode-checkmark.rst
 .. include:: /includes/unicode-nbsp.rst

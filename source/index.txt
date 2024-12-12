@@ -105,7 +105,7 @@ Compatibility
 -------------
 
 To learn about the versions of the {+mdb-server+} and the {+language+} language
-that are compatible with  each version of the {+driver-short+}, see the
+that are compatible with each version of the {+driver-short+}, see the
 :ref:`Compatibility <ruby-compatibility>` section.
 
 Developer Hub
