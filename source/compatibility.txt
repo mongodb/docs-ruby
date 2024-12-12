@@ -86,7 +86,7 @@ If you use macOS older than 10.13 (High Sierra), you need to install Ruby from
 `rvm`_, `homebrew`_, `macports`_, or another similar source. See
 `Installing Ruby`_ for more options.
 
-If you use Linux or other non-macOS Unix system, you can check your OpenSSL version
+If you use Linux or other non-macOS Unix systems, you can check your OpenSSL version
 as follows:
 
 .. code-block:: sh
@@ -136,8 +136,8 @@ JRuby and Kerberos Authentication
 
 If you use the ``mongo_kerberos`` gem for Kerberos authentication with JRuby,
 the JVM system property ``sun.security.jgss.native`` is set to ``true``. This
-facilitates the use of the system cache of Ticket Granting Tickets (TGTs), for
-example, TGTs obtained with ``kinit``.
+facilitates the use of the system cache of Ticket Granting Tickets (TGTs), such
+as TGTs obtained with ``kinit``.
 
 This setting also affects any other use of the JGSS library, making any TGTs in
 the system cache available for obtaining Kerberos credentials.
