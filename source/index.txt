@@ -16,6 +16,7 @@
    Connect </connect>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
+   What's New </whats-new>
 
 .. TODO:
  Databases & Collections </databases-collections>
@@ -27,7 +28,6 @@
  Data Aggregation </aggregation>
  Security </security>
  Issues & Help </issues-and-help>
- What's New </whats-new>
  Upgrade </upgrade>
  Compatibility </compatibility>
 
@@ -89,11 +89,11 @@ working with data in the :ref:`ruby-get-started` tutorial.
 .. Learn how to authenticate your application and encrypt your data in the
 .. :ref:`ruby-security` section.
 
-.. What's New
-.. ----------
+What's New
+----------
 
-.. For a list of new features and changes in each version, see the :ref:`What's New <ruby-whats-new>`
-.. section.
+For a list of new features and changes in each version, see the :ref:`What's New <ruby-whats-new>`
+section.
 
 .. Upgrade Driver Versions
 .. -----------------------
