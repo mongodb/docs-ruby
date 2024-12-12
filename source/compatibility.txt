@@ -128,7 +128,7 @@ version 2.6.4 or later and Java 8 or later are required.
 mongo_kerberos Compatibility
 ----------------------------
 
-The {+driver-short+} versions 2.7 and later are compatible with the
+{+driver-short+} versions 2.7 and later are compatible with the
 ``mongo_kerberos`` gem version 2.1 of the :ref:`mongo_kerberos library <kerberos>`.
 
 JRuby and Kerberos Authentication
