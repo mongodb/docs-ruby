@@ -143,7 +143,6 @@ This setting also affects any other use of the JGSS library, making any TGTs in
 the system cache available for obtaining Kerberos credentials.
 
 .. include:: /includes/unicode-checkmark.rst
-.. include:: /includes/unicode-nbsp.rst
 
 JRuby and TLS Connections
 -------------------------
