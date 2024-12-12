@@ -15,7 +15,7 @@ Read Data from MongoDB
    :values: reference
  
 .. meta::
-   :description: Learn how to use the Ruby driver to read data to MongoDB.
+   :description: Learn how to use the Ruby driver to read data from MongoDB.
    :keywords: usage examples, save, crud, read, code example
 
 .. toctree::
