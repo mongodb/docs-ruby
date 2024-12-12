@@ -97,8 +97,7 @@ If the version number is less than 1.0.1, support for TLS 1.1 or newer is
 not available. Contact your operating system vendor for a solution or upgrade
 to a newer distribution.
 
-You can check your TLS version by running the following command in your Ruby
-interpreter:
+You can check your TLS version by running the following command:
 
 .. code-block:: sh
 
@@ -114,35 +113,6 @@ To learn more about TLS versions and their security implications, see `Transport
 .. _homebrew: https://brew.sh/
 .. _macports: https://www.macports.org/
 .. _Installing Ruby: https://www.ruby-lang.org/en/documentation/installation
-
-Atlas Compatibility
--------------------
-
-We recommend {+driver-short+} version 2.6.1 or later when using MongoDB Atlas.
-This version has significant performance improvements for TLS connections, and
-all Atlas connections use TLS.
-
-When running on JRuby and connecting to Atlas Free Tier, {+driver-short+}
-version 2.6.4 or later and Java 8 or later are required.
-
-mongo_kerberos Compatibility
-----------------------------
-
-{+driver-short+} versions 2.7 and later are compatible with the
-``mongo_kerberos`` gem version 2.1 of the :ref:`mongo_kerberos library <kerberos>`.
-
-JRuby and Kerberos Authentication
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you use the ``mongo_kerberos`` gem for Kerberos authentication with JRuby,
-the JVM system property ``sun.security.jgss.native`` is set to ``true``. This
-facilitates the use of the system cache of Ticket Granting Tickets (TGTs), such
-as TGTs obtained with ``kinit``.
-
-This setting also affects any other use of the JGSS library, making any TGTs in
-the system cache available for obtaining Kerberos credentials.
-
-.. include:: /includes/unicode-checkmark.rst
 
 JRuby and TLS Connections
 -------------------------

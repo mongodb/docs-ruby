@@ -11,11 +11,6 @@
      - MongoDB 4.4
      - MongoDB 4.2
      - MongoDB 4.0
-     - MongoDB 3.6
-     - MongoDB 3.4
-     - MongoDB 3.2
-     - MongoDB 3.0
-     - MongoDB 2.6
 
    * - 2.21
      - |checkmark|
@@ -25,11 +20,6 @@
      - |checkmark|
      - |checkmark|
      - |checkmark|
-     - |checkmark|
-     -
-     -
-     -
-     -
 
    * - 2.19 to 2.20
      -
@@ -39,11 +29,6 @@
      - |checkmark|
      - |checkmark|
      - |checkmark|
-     - |checkmark|
-     -
-     -
-     -
-     -
 
    * - 2.18
      -
@@ -53,11 +38,6 @@
      - |checkmark|
      - |checkmark|
      - |checkmark|
-     - |checkmark|
-     -
-     -
-     -
-     -
 
    * - 2.17
      -
@@ -67,11 +47,6 @@
      - |checkmark|
      - |checkmark|
      - |checkmark|
-     - |checkmark|
-     -
-     -
-     -
-     -
 
    * - 2.16
      -
@@ -81,22 +56,12 @@
      - |checkmark|
      - |checkmark|
      - |checkmark|
-     - |checkmark|
-     - D
-     - D
-     - D
-     - D
 
    * - 2.14 to 2.15
      -
      -
      -
      -
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
      - |checkmark|
      - |checkmark|
      - |checkmark|
@@ -109,11 +74,6 @@
      - |checkmark| [#ocsp]_
      - |checkmark|
      - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
 
    * - 2.12
      -
@@ -121,11 +81,6 @@
      -
      -
      -
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
      - |checkmark|
      - |checkmark|
 
@@ -137,11 +92,6 @@
      -
      - |checkmark| [#client-side-encryption]_
      - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
 
    * - 2.10
      -
@@ -151,11 +101,6 @@
      -
      - |checkmark| [#srv-polling]_ [#client-side-encryption]_
      - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
 
    * - 2.6 to 2.9
      -
@@ -164,25 +109,6 @@
      -
      -
      -
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-
-   * - 2.5
-     -
-     -
-     -
-     -
-     -
-     -
-     -
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
-     - |checkmark|
      - |checkmark|
 
 .. [#ocsp] OCSP verification is implemented as of driver version 2.14.
