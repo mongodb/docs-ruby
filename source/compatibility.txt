@@ -118,39 +118,26 @@ To learn more about TLS versions and their security implications, see `Transport
 Atlas Compatibility
 -------------------
 
-We recommend {+driver-short+} version 2.6.1 or higher when using MongoDB Atlas.
+We recommend {+driver-short+} version 2.6.1 or later when using MongoDB Atlas.
 This version has significant performance improvements for TLS connections, and
 all Atlas connections use TLS.
 
 When running on JRuby and connecting to Atlas Free Tier, {+driver-short+}
-version 2.6.4 or higher and Java 8 or higher are required.
+version 2.6.4 or later and Java 8 or later are required.
 
 mongo_kerberos Compatibility
 ----------------------------
 
-The following compatibility table specifies the version(s) of the
-:ref:`mongo_kerberos library <kerberos>` to use with a specific version of
-the {+driver-short+}.
-
-.. list-table::
-   :header-rows: 1
-   :stub-columns: 1
-   :class: compatibility-large no-padding
-
-   * - Ruby Driver
-     - mongo_kerberos |nbsp| 2.1
-
-   * - 2.7 - 2.19
-     - |checkmark|
-
+The {+driver-short+} versions 2.7 and later are compatible with the
+``mongo_kerberos`` gem version 2.1 of the :ref:`mongo_kerberos library <kerberos>`.
 
 JRuby and Kerberos Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you use the ``mongo_kerberos`` gem for Kerberos authentication with JRuby,
 the JVM system property ``sun.security.jgss.native`` is set to ``true``. This
-facilitate the use of the system cache of Ticket Granting Tickets (TGTs) (for
-example, TGTs obtained with ``kinit``). 
+facilitates the use of the system cache of Ticket Granting Tickets (TGTs), for
+example, TGTs obtained with ``kinit``.
 
 This setting also affects any other use of the JGSS library, making any TGTs in
 the system cache available for obtaining Kerberos credentials.
