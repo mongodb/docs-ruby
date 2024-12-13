@@ -6,9 +6,7 @@ end
 
 uri = "<connection string URI>"
 
-begin
-  client = Mongo::Client.new(uri)
-
+Mongo::Client.new(uri) do |client|
   # start-db-coll
   database = client.use('sample_restaurants')
   collection = database[:restaurants]
@@ -16,9 +14,9 @@ begin
 
   # Updates a single document
   # start-update-one
-  filter = { 'name' => 'Happy Garden' }
+  filter = { name: 'Happy Garden' }
 
-  update = { '$set' => { 'name' => 'Mountain House' } }
+  update = { '$set' => { name: 'Mountain House' } }
 
   single_result = collection.update_one(filter, update)
 
@@ -27,9 +25,9 @@ begin
 
   # Updates multiple documents
   # start-update-many
-  filter = { 'name' => 'Starbucks' }
+  filter = { name: 'Starbucks' }
 
-  update = { '$rename' => { 'address' => 'location' } }
+  update = { '$rename' => { address: 'location' } }
 
   many_result = collection.update_many(filter, update)
 
@@ -40,13 +38,10 @@ begin
   # start-update-options
   filter = { 'name' => 'Sunrise Pizzeria' }
 
-  update = { '$set' => { 'borough' => 'Queens', 'cuisine' => 'Italian' } }
+  update = { '$set' => { borough: 'Queens', cuisine: 'Italian' } }
 
   upsert_result = collection.update_one(filter, update, upsert: true)
 
   puts "#{upsert_result.modified_count} document(s) updated."
   # end-update-options
-
-ensure
-  client&.close
 end

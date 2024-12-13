@@ -140,7 +140,7 @@ configure the update operation:
        | Default: ``false``
 
    * - ``collation``
-     - | The kind of language collation to use when sorting
+     - | Language collation to use when sorting
          results. For more information, see :manual:`Collation </reference/collation/#std-label-collation>`
          in the {+mdb-server+} manual.
 
@@ -154,7 +154,7 @@ configure the update operation:
          in the {+mdb-server+} manual.
 
    * - ``let``
-     - | A map of parameter names and values to set top-level
+     - | Map of parameter names and values to set top-level
          variables for the operation. Values must be constant or closed
          expressions that don't reference document fields. For more information,
          see the :manual:`let statement
@@ -171,7 +171,7 @@ operator to set the ``borough`` field value in the first matching document to
 
 Because the ``upsert`` option is set to ``true``, if the query filter
 doesn't match any existing documents, the driver inserts a new document that
-has the fields and values in the filter and update documents.
+contains the fields and values in the filter and update documents.
 
 .. io-code-block::
    :copyable: true
