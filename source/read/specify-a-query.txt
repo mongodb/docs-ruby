@@ -51,7 +51,7 @@ Literal value queries return documents that have an exact match to your query fi
 
 The following example specifies a query filter as a parameter to the ``find``
 method. The code returns all documents in which the value of the ``color`` field
-is ``"yellow"``:
+is ``'yellow'``:
 
 .. io-code-block::
    :copyable: 
@@ -83,9 +83,12 @@ Comparison Operators
 Comparison operators evaluate a document field value against a specified value
 in your query filter. The following list describes common comparison operators:
 
-- ``$gt``: Greater than
-- ``$lte``: Less than or Equal
-- ``$ne``: Not equal
+- ``$gt``: Returns documents in which the value of the given field is *greater than*
+  the specified value
+- ``$lte``: Returns documents in which the value of the given field is *less than or
+  equal to* the specified value
+- ``$ne``: Returns documents in which the value of the given field *does not equal* the
+  specified value
 
 .. tip::
 
@@ -118,10 +121,10 @@ Logical Operators
 Logical operators match documents by using logic applied to the results of two or
 more sets of expressions. The following list describes each logical operator: 
 
-- ``$and``: Returns all documents that match the conditions of *all* clauses
-- ``$or``: Returns all documents that match the conditions of *one* clause
-- ``$nor``: Returns all documents that *do not* match the conditions of any clause
-- ``$not``: Returns all documents that *do not* match the expression
+- ``$and``: Returns documents that match the conditions of *all* clauses
+- ``$or``: Returns documents that match the conditions of *one* clause
+- ``$nor``: Returns documents that *do not* match the conditions of any clause
+- ``$not``: Returns documents that *do not* match the expression
 
 .. tip::
 
@@ -131,7 +134,7 @@ more sets of expressions. The following list describes each logical operator:
 The following example specifies a logical operator in a query filter as a
 parameter to the ``find`` method. The code returns all documents that have a
 ``qty`` field value greater than ``5`` **or** a ``color`` field value of
-``"yellow"``:
+``'yellow'``:
 
 .. io-code-block::
    :copyable:
@@ -157,8 +160,8 @@ array field. The following list describes each array operator:
 
 - ``$all``: Returns documents with arrays that contain all elements in the query
 - ``$elemMatch``: Returns documents if an element in their array field matches
-   all conditions in the query
-- ``$size``: Returns all documents with arrays of a specified size
+  all conditions in the query
+- ``$size``: Returns documents with arrays of a specified size
 
 .. tip::
 
@@ -258,8 +261,8 @@ all documents in which the ``name`` field value has at least two consecutive
 Additional Information
 ----------------------
 
-To learn more about querying documents, see the :manual:`Query Documents
-</tutorial/query-documents/>` guide in the {+mdb-server+} manual.
+To learn more about querying documents, see :manual:`Query Documents
+</tutorial/query-documents/>` in the {+mdb-server+} manual.
 
 To learn more about retrieving documents with the {+driver-short+}, see the
 :ref:`ruby-retrieve` guide.
