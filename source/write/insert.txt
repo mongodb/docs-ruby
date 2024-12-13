@@ -121,7 +121,7 @@ configure the ``insert_one`` operation:
      - Description
 
    * - ``bypass_document_validation``
-     - | If set to ``true``, allows the driver to ignore
+     - | Instructs the driver whether or not to ignore
          :manual:`document-level validation </core/schema-validation>`. 
        | Defaults to ``false``.
 
@@ -129,6 +129,14 @@ configure the ``insert_one`` operation:
      - | Sets a comment to attach to the operation. For more information, see the :manual:`insert command
          fields </reference/command/insert/#command-fields>` guide in the
          {+mdb-server+} manual for more information.
+
+   * - ``session``
+     - | Sets the session to use for the operation. To learn more about sessions, see
+         :manual:`Client Sessions and Causal Consistency Guarantees </core/read-isolation-consistency-recency/#std-label-sessions>`
+         in the {+mdb-server+} manual.
+   
+   * - ``write_concern``
+     - | Sets the :manual:`write concern </core/write-concern>` for the operation. 
 
 You can set the preceding settings on the ``insert_many`` method
 by passing a ``Hash`` as a parameter to the method call. You can also use the
