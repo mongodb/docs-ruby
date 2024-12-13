@@ -44,7 +44,19 @@ Sample Data
 
 The examples in this guide use the ``movies`` collection in the
 ``sample_mflix`` database from the :atlas:`Atlas sample datasets
-</sample-data>`. To learn how to create a free MongoDB Atlas cluster and
+</sample-data>`. To access this collection from your {+language+} 
+application, create a ``Mongo::Client`` object that connects to
+an Atlas cluster and assign the following values to your ``database`` 
+and ``collection``
+variables: 
+
+.. literalinclude:: /includes/indexes/single-field.rb
+   :start-after: start-sample-data
+   :end-before: end-sample-data
+   :language: ruby
+   :copyable:
+
+To learn how to create a free MongoDB Atlas cluster and
 load the sample datasets, see the :atlas:`Get Started with Atlas
 </getting-started>` guide.
 
@@ -118,6 +130,6 @@ API Documentation
 To learn more about any of the methods discussed in this guide, see the
 following API documentation:
 
-- `Collection#indexes<{+api-root+}/Mongo/Collection.html#indexes-instance_method>`__
+- `Collection#indexes <{+api-root+}/Mongo/Collection.html#indexes-instance_method>`__
 - `Index::View#create_one <{+api-root+}/Mongo/Index/View.html>`__
 - `Collection#find <{+api-root+}/Mongo/Collection.html#find-instance_method>`__ 

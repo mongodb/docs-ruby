@@ -8,8 +8,11 @@ options = { server_api: { version: "1" }}
 
 # Create a new client and connect to the server
 client = Mongo::Client.new(uri, options)
+
+# start-sample-data
 database = client.use('sample_mflix')
 collection = database[:movies]
+# end-sample-data
 
 # start-index-single
 # Create an index on the "title" field
@@ -26,7 +29,7 @@ if doc
     puts doc.to_json
   else
     puts "No document found"
-  end
+end
 # end-index-single-query
 
 # start-check-single-index
