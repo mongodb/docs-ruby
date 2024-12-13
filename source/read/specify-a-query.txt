@@ -264,7 +264,7 @@ Additional Information
 To learn more about querying documents, see :manual:`Query Documents
 </tutorial/query-documents/>` in the {+mdb-server+} manual.
 
-To learn more about retrieving documents with the {+driver-short+}, see the
+To learn more about retrieving documents by using the {+driver-short+}, see the
 :ref:`ruby-retrieve` guide.
 
 API Documentation
