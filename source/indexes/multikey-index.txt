@@ -1,0 +1,27 @@
+.. _ruby-multikey-index:
+
+================
+Multikey Indexes
+================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: index, query, optimization, efficiency
+
+Overview
+--------
+
+**Multikey indexes** are indexes that improve the performance of queries
+on array-valued fields. You can create a multikey index on a collection
+by using the ``create_one`` method and the same syntax that you use to create 
+a :ref:`single field index <ruby-single-field-index>`.
+
