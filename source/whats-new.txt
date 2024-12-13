@@ -50,11 +50,11 @@ The {+driver-short+} 2.20 release includes the following new features:
   support for JRuby 9.4.
 - Supports the newly-released Ruby-BSON version 5.0.
 - Allows connection strings without a slash between the hosts and the options.
-  For example, "mongodb://example.com?w=1" and "mongodb://example.com/?w=1" are
+  For example, ``mongodb://example.com?w=1`` and ``mongodb://example.com/?w=1`` are
   both valid connection strings now.
 - Sends container runtime and orchestration metadata for the client environment
   to the server for analytics purposes.
 - Writes a warning message to the log when detecting the host as a CosmosDB
   (Azure) or DocumentDB (Amazon) instance.
-- Attempts retries of read or write operations on a different mongos instance in
-  a sharded topology, if possible.
+- Attempts retries of read or write operations on a different ``mongos``
+  instance in a sharded topology, if possible.
