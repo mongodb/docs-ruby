@@ -1,0 +1,25 @@
+.. _ruby-read:
+
+======================
+Read Data from MongoDB
+======================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+.. facet::
+   :name: genre
+   :values: reference
+ 
+.. meta::
+   :description: Learn how to use the Ruby driver to read data from MongoDB.
+   :keywords: usage examples, save, crud, read, code example
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   Retrieve Data </read/retrieve>
