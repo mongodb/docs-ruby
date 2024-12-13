@@ -14,13 +14,14 @@
 
    Get Started </get-started>
    Connect </connect>
+   Read Data </read>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
    What's New </whats-new>
+   Compatibility </compatibility>
 
 .. TODO:
  Databases & Collections </databases-collections>
- Read Data </read>
  Write Data </write>
  Operations on Replica Sets </read-write-pref>
  Indexes </indexes>
@@ -29,7 +30,6 @@
  Security </security>
  Issues & Help </issues-and-help>
  Upgrade </upgrade>
- Compatibility </compatibility>
 
 Introduction
 ------------
@@ -101,12 +101,12 @@ section.
 .. Learn what changes you must make to your application to upgrade driver
 .. versions in the :ref:`ruby-upgrade` section.
 
-.. Compatibility
-.. -------------
+Compatibility
+-------------
 
-.. To learn about the versions of the {+mdb-server+} and the {+language+} language
-.. that are compatible with  each version of the {+driver-short+}, see the
-.. :ref:`Compatibility <ruby-compatibility>` section.
+To learn about the versions of the {+mdb-server+} and the {+language+} language
+that are compatible with each version of the {+driver-short+}, see the
+:ref:`Compatibility <ruby-compatibility>` section.
 
 Developer Hub
 -------------

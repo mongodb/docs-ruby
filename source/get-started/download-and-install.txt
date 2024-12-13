@@ -47,14 +47,11 @@ Download and Install
 
       Open the ``quickstart.rb`` file and add the following code:
 
-      .. code-block:: ruby
-         
-         require 'bundler/inline'
-
-         gemfile do
-            source 'https://rubygems.org'
-            gem 'mongo'
-         end
+      .. literalinclude:: /includes/get-started/quickstart.rb
+         :language: ruby
+         :dedent:
+         :start-after: start-bundler
+         :end-before: end-bundler
 
       This code adds the {+driver-short+} as a dependency by
       using the `Bundler <https://bundler.io/>`__ dependency management tool.
