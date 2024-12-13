@@ -92,7 +92,7 @@ Insert Multiple Documents
 -------------------------
 
 To add multiple documents to a MongoDB collection, call the ``insert_many``
-function and pass a list of documents you want to insert.
+method and pass a list of documents you want to insert.
 
 The following example inserts two documents into the ``restaurants`` collection:
 
@@ -117,18 +117,17 @@ configure the ``insert_one`` operation:
    :widths: 30 70
    :header-rows: 1
 
-   * - Method
+   * - Option
      - Description
 
    * - ``bypass_document_validation``
-     - | Instructs the driver whether or not to ignore
-         :manual:`document-level validation </core/schema-validation>`. 
+     - | Instructs the driver whether to ignore document-level validation. For more information,
+         see :manual:`Schema Validation </core/schema-validation>` in the {+mdb-server+} manual.
        | Defaults to ``false``.
 
    * - ``comment``
      - | Sets a comment to attach to the operation. For more information, see the :manual:`insert command
-         fields </reference/command/insert/#command-fields>` guide in the
-         {+mdb-server+} manual for more information.
+         fields </reference/command/insert/#command-fields>` guide in the {+mdb-server+} manual.
 
    * - ``session``
      - | Sets the session to use for the operation. To learn more about sessions, see
@@ -136,7 +135,8 @@ configure the ``insert_one`` operation:
          in the {+mdb-server+} manual.
    
    * - ``write_concern``
-     - | Sets the :manual:`write concern </core/write-concern>` for the operation. 
+     - | Sets the write concern for the operation. For more information, see the
+         :manual:`Write Concern </core/write-concern>` guide in the {+mdb-server+} manual.
 
 You can set the preceding settings on the ``insert_many`` method
 by passing a ``Hash`` as a parameter to the method call. You can also use the
