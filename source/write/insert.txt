@@ -83,10 +83,10 @@ The following example inserts a document into the ``restaurants`` collection:
 
 .. literalinclude:: /includes/write/insert.rb
    :language: ruby
-    :start-after: start-insert-one
-    :end-before: end-insert-one
-    :dedent:
-    :copyable:
+   :start-after: start-insert-one
+   :end-before: end-insert-one
+   :dedent:
+   :copyable:
 
 Insert Multiple Documents
 -------------------------
@@ -98,10 +98,10 @@ The following example inserts two documents into the ``restaurants`` collection:
 
 .. literalinclude:: /includes/write/insert.rb
    :language: ruby
-    :start-after: start-insert-many
-    :end-before: end-insert-many
-    :dedent:
-    :copyable:
+   :start-after: start-insert-many
+   :end-before: end-insert-many
+   :dedent:
+   :copyable:
 
 Modify Insert Behavior
 ----------------------
@@ -144,10 +144,10 @@ option is enabled, this insert operation bypasses document-level validation:
 
 .. literalinclude:: /includes/write/insert.rb
    :language: ruby
-    :start-after: start-insert-options
-    :end-before: end-insert-options
-    :dedent:
-    :copyable:
+   :start-after: start-insert-options
+   :end-before: end-insert-options
+   :dedent:
+   :copyable:
 
 Additional Information
 ----------------------
