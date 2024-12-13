@@ -26,9 +26,9 @@ filter = { title: 'Sweethearts' }
 doc = collection.find(filter).first
 
 if doc
-    puts doc.to_json
-  else
-    puts "No document found"
+  puts doc.to_json
+else
+  puts "No document found"
 end
 # end-index-single-query
 
