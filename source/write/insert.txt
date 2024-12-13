@@ -148,7 +148,7 @@ Example
 
 The following code uses the ``insert_many`` method to insert
 three new documents into a collection. Because the ``bypass_document_validation``
-option is enabled, this insert operation bypasses document-level validation:
+option is enabled, this insert operation bypasses document-level validation.
 
 .. literalinclude:: /includes/write/insert.rb
    :language: ruby
