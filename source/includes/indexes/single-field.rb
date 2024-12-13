@@ -1,7 +1,7 @@
 require 'mongo'
 
 # Replace the placeholders with your credentials
-uri = "mongodb+srv://lindsey:me123@atlascluster.spm1ztf.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster"
+uri = "<connection string>"
 
 # Set the server_api field of the options object to Stable API version 1
 options = { server_api: { version: "1" }}
