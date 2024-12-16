@@ -26,7 +26,7 @@ Mongo::Client.new(uri) do |client|
 
   # start-delete-options
   filter = { name: /Red/ }
-  options = { comment: 'Delete all restaurants with a name that contains "Red"' }
+  options = { hint: 'name_index' }
   result = collection.delete_many(filter, options)
   puts "Deleted #{result.deleted_count} document(s)"
   # end-delete-options
