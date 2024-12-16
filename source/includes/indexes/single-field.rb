@@ -16,7 +16,7 @@ collection = database[:movies]
 
 # start-index-single
 # Creates an index on the "title" field
-index = collection.indexes.create_one({ title: 1 })
+collection.indexes.create_one({ title: 1 })
 # end-index-single
 
 # start-index-single-query
@@ -33,8 +33,5 @@ end
 
 # start-check-single-index
 # Lists all indexes on the collection
-all_indexes = collection.indexes
-all_indexes.each do |index_spec|
-  puts index_spec.to_json
-end
+puts collection.indexes.collect(&:to_json)
 # end-check-single-index
