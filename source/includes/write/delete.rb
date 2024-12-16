@@ -20,6 +20,7 @@ Mongo::Client.new(uri) do |client|
 
   # start-delete-many
   filter = { name: 'Starbucks', borough: 'Brooklyn' }
+  result = collection.delete_many(filter)
   puts "Deleted #{result.deleted_count} document(s)"
   # end-delete-many
 

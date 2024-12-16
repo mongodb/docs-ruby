@@ -103,7 +103,7 @@ Customize the Delete Operation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can pass a ``Hash`` object as a parameter to the ``delete_one`` and ``delete_many`` methods
-``DeleteOptions`` parameter to set options to configure the delete operation. If you don't specify any
+to set options to configure the delete operation. If you don't specify any
 options, the driver performs the delete operation with default settings.
 
 The following table describes the options that you can use to
@@ -169,31 +169,13 @@ collection in which the value of the ``name`` field includes the string
    instead of the ``delete_many`` method, the driver deletes only the
    first document that matches the query filter.
 
-Return Value
-~~~~~~~~~~~~
-
-The ``delete_one`` and ``delete_many`` methods each return a
-``DeleteResult`` instance. You can access the following information from
-a ``DeleteResult`` instance:
-
-- ``deletedCount``, which indicates the number of documents deleted
-- ``wasAcknowledged()``, which returns ``true`` if the server
-  acknowledges the result
-
-If the query filter does not match any documents, the driver doesn't delete any
-documents, and the value of ``deletedCount`` is ``0``.
-
-.. note::
-
-   If the ``wasAcknowledged()`` method returns ``false``, trying to
-   access the ``deletedCount`` property results in an
-   ``InvalidOperation`` exception. The driver cannot 
-   determine these values if the server does not acknowledge the write
-   operation.
-
 API Documentation
 ~~~~~~~~~~~~~~~~~
 
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
+
+- `delete_one <{+api-root+}/Mongo/Collection.html#delete_one-instance_method>`_
+- `delete_many <{+api-root+}/Mongo/Collection.html#delete_many-instance_method>`_
+- `Mongo::Operation::Delete::Result <{+api-root+}/Mongo/Operation/Delete/Result.html>`_
 
