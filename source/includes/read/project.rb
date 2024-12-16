@@ -10,8 +10,8 @@ uri = '<connection string>'
 Mongo::Client.new(uri) do |client|
     # Access database and collection
     # start-db-coll
-    database = client.database
-    collection = client[:restaurants]
+    database = client.use('sample_restaurants')
+    collection = database[:restaurants]
     # end-db-coll
   
     # Retrieves documents matching the "name" field query
