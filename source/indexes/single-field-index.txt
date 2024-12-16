@@ -130,6 +130,6 @@ API Documentation
 To learn more about any of the methods discussed in this guide, see the
 following API documentation:
 
-- `Collection#indexes <{+api-root+}/Mongo/Collection.html#indexes-instance_method>`__
-- `Index::View#create_one <{+api-root+}/Mongo/Index/View.html>`__
-- `Collection#find <{+api-root+}/Mongo/Collection.html#find-instance_method>`__ 
+- `indexes <{+api-root+}/Mongo/Collection.html#indexes-instance_method>`__
+- `create_one <{+api-root+}/Mongo/Index/View.html>`__
+- `find <{+api-root+}/Mongo/Collection.html#find-instance_method>`__ 
