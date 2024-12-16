@@ -20,7 +20,7 @@ collection.indexes.create_one({ title: 1 })
 # end-index-single
 
 # start-index-single-query
-# Finds a document with the title "Sweethearts"
+# Finds a document with the title "Sweethearts", using the newly created index
 filter = { title: 'Sweethearts' }
 doc = collection.find(filter).first
 
