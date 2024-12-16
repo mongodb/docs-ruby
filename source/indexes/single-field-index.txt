@@ -76,9 +76,9 @@ field index. The following example creates an index in ascending order on the
 Verify Index Creation
 ---------------------
 
-You can verify that the index was created by iterating through the ``indexes`` object
-to list the indexes in the collection. You should see an index for ``title`` in 
-the list, as shown in the following output:
+You can verify that the index was created by listing the indexes in the 
+collection. You should see an index for ``title`` in the list, as shown 
+in the following output:
 
 .. io-code-block::
    :copyable: true
