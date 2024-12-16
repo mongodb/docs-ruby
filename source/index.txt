@@ -16,6 +16,7 @@
    Connect </connect>
    Write Data </write>
    Read Data </read>
+   Indexes </indexes>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
    Compatibility </compatibility>
@@ -24,7 +25,6 @@
  Databases & Collections </databases-collections>
  Write Data </write>
  Operations on Replica Sets </read-write-pref>
- Indexes </indexes>
  Monitor Your Application </monitoring>
  Data Aggregation </aggregation>
  Security </security>
