@@ -145,8 +145,7 @@ Modify Delete Example
 The following code specifies the ``hint`` option to
 instruct the delete operation to use the ``"name_index"`` index. Then, the example uses the
 ``delete_many`` method to delete all documents in the ``restaurants``
-collection in which the value of the ``name`` field includes the string
-``"Red"``.
+collection with a ``name`` field value that includes the string ``"Red"``.
 
 .. io-code-block::
    :copyable: true
@@ -170,7 +169,7 @@ collection in which the value of the ``name`` field includes the string
    first document that matches the query filter.
 
 API Documentation
-~~~~~~~~~~~~~~~~~
+-----------------
 
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
