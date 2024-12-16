@@ -40,8 +40,7 @@ The examples in this guide use the ``movies`` collection in the
 </sample-data>`. To access this collection from your {+language+} 
 application, create a ``Mongo::Client`` object that connects to
 an Atlas cluster and assign the following values to your ``database`` 
-and ``collection``
-variables: 
+and ``collection`` variables: 
 
 .. literalinclude:: /includes/indexes/single-field.rb
    :start-after: start-sample-data

@@ -15,7 +15,7 @@ collection = database[:movies]
 # end-sample-data
 
 # start-index-multikey
-# Creates an index on the "title" field
+# Creates an index on the "cast" field
 collection.indexes.create_one({ cast: 1 })
 # end-index-multikey
 
