@@ -14,6 +14,7 @@
 
    Get Started </get-started>
    Connect </connect>
+   Write Data </write>
    Read Data </read>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
