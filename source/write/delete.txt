@@ -52,7 +52,7 @@ You can perform delete operations in MongoDB by using the following methods:
 - ``delete_one``, which deletes *the first document* that matches the search criteria
 - ``delete_many``, which deletes *all documents* that match the search criteria
 
-Each delete method requires a **query filter** document, which specifies the
+Each delete method requires a **query filter** parameter, which specifies the
 search criteria that determine which documents to select for removal.
 To learn more about query filters, see the :ref:`ruby-specify-query` guide.
 
