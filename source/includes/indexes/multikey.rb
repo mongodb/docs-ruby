@@ -21,7 +21,7 @@ collection.indexes.create_one({ cast: 1 })
 
 # start-index-multikey-query
 # Finds a document with the specified cast members by using the newly created index
-filter = { 'cast': { '$all' => ['Aamir Khan', 'Kajol'] } }
+filter = { cast: { '$all' => ['Aamir Khan', 'Kajol'] } }
 doc = collection.find(filter).first
 
 if doc
