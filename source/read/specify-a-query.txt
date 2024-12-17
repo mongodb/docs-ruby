@@ -34,7 +34,7 @@ Sample Data
 
 The examples in this guide run operations on the ``fruits`` collection,
 which contains documents representing fruits. The following
-code example shows how to create a database and collection, then
+code example shows how to create a database and collection, and then
 insert the sample documents into your collection:
 
 .. literalinclude:: /includes/read/specify-queries.rb
