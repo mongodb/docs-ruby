@@ -38,6 +38,10 @@ The {+driver-short+} 2.21 release includes the following new features:
   parameter. For more information about Queryable Encryption, see :manual:`Queryable Encryption </core/queryable-encryption>`
   in the {+mdb-server+} manual.
 
+To learn more about this release, see the
+:github:`v2.21 Release Notes <mongodb/mongo-ruby-driver/releases/tag/v2.21.0>` on
+GitHub.
+
 .. _version-2.20:
 
 What's New in 2.20
@@ -58,3 +62,7 @@ The {+driver-short+} 2.20 release includes the following new features:
   (Azure) or DocumentDB (Amazon) instance.
 - Attempts retries of read or write operations on a different ``mongos``
   instance in a sharded topology, if possible.
+
+To learn more about this release, see the
+:github:`v2.20 Release Notes <mongodb/mongo-ruby-driver/releases/tag/v2.20.0>` on
+GitHub.
