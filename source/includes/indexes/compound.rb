@@ -20,8 +20,8 @@ collection.indexes.create_one({ runtime: -1, year: 1 })
 # end-index-compound
 
 # start-index-compound-query
-# Finds a document with the specified runtime and release year 
-# by using the newly created index
+# Finds a document with the specified runtime and release year by using the
+# newly created index
 filter = { '$and' => [
     { 'runtime': { '$gt' => 90 } },
     { 'year': { '$gt' => 2005 } }
