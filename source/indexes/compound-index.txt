@@ -1,4 +1,4 @@
-.. ruby-compound-index:
+.. _ruby-compound-index:
 
 ================
 Compound Indexes
