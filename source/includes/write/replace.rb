@@ -24,6 +24,6 @@ Mongo::Client.new(uri) do |client|
   # start-replace-options
   options = { upsert: true }
   result = collection.replace_one(filter, new_document, options)
-  puts "Upserted #{result.upserted_count} document(s)"
+  puts "Replaced #{result.upserted_count} document(s)"
   # end-replace-options
 end

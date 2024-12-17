@@ -99,7 +99,7 @@ is ``"Primola Restaurant"``:
 Customize the Replace Operation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can pass a ``Hash`` as a parameter to the ``replace_one`` method to set options to
+You can pass a ``Hash`` object as a parameter to the ``replace_one`` method to set options to
 configure the replace operation. If you don't specify any options, the driver performs the replace
 operation with default settings.
 
@@ -171,7 +171,7 @@ existing documents:
 Return Value
 ~~~~~~~~~~~~
 
-The ``replace_one`` method returns an ``Mongo::Operation::Update::Result`` 
+The ``replace_one`` method returns a ``Mongo::Operation::Update::Result`` 
 object. You can use the following methods to access information from
 a ``Result`` instance:
 
