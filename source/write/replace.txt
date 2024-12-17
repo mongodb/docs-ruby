@@ -60,15 +60,15 @@ Required Parameters
 
 You must pass the following parameters to the ``replace_one`` method:
 
-- **Query filter**: Matches which documents to update. To learn
+- **Query filter**: Specifies which documents to update. To learn
   more about query filters, see the :ref:`ruby-specify-query`
   guide.
 
 - **Replacement document**: Specifies the fields and values that
   you want to replace the existing fields and values with.
 
-Replace One Document
---------------------
+Replace Example
+~~~~~~~~~~~~~~~
 
 The following example uses the ``replace_one`` method to replace the
 fields and values of a document in which the value of the ``name`` field
@@ -148,7 +148,7 @@ configure the replace operation:
          variables for the operation. Values must be constant or closed
          expressions that don't reference document fields.
 
-The following code performs the same replace operation as above, but sets the ``upsert``
+The following code performs the same replace operation as the preceding example, but sets the ``upsert``
 option to ``true``. This instructs the driver to insert a new document that has the fields
 and values specified in the replacement document if the query filter doesn't match any
 existing documents:
