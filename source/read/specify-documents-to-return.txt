@@ -123,7 +123,7 @@ of ``'Italian'``, sorted in ascending order of ``name`` field values:
       {"_id"=>BSON::ObjectId('...'), ... , "name"=>"101 Restaurant And Bar",
       "restaurant_id"=>"40560108"}
       ...
-      {"_id"=>BSON::ObjectId('...'), ", "name"=>"Zucchero E Pomodori",
+      {"_id"=>BSON::ObjectId('...'), ... , "name"=>"Zucchero E Pomodori",
       "restaurant_id"=>"41189590"}
 
 .. _ruby-return-documents-skip:
@@ -150,9 +150,9 @@ of ``'Manhattan'`` and skips the first ``10`` documents:
    .. output::
       :visible: false
 
-      {"_id"=>BSON::ObjectId('...'), , "name"=>"Cafe Metro", "restaurant_id"=>"40363298"}
-      {"_id"=>BSON::ObjectId('...'), , "name"=>"Lexler Deli", "restaurant_id"=>"40363426"}
-      {"_id"=>BSON::ObjectId('...'), , "name"=>"Domino'S Pizza", "restaurant_id"=>"40363644"}
+      {"_id"=>BSON::ObjectId('...'), ... , "name"=>"Cafe Metro", "restaurant_id"=>"40363298"}
+      {"_id"=>BSON::ObjectId('...'), ... , "name"=>"Lexler Deli", "restaurant_id"=>"40363426"}
+      {"_id"=>BSON::ObjectId('...'), ... , "name"=>"Domino'S Pizza", "restaurant_id"=>"40363644"}
       ...
 
 .. _ruby-return-documents-combine:
@@ -187,7 +187,7 @@ skipping the first ``10`` documents:
       {"_id"=>BSON::ObjectId('...'), ... , "name"=>"Acqua Santa", "restaurant_id"=>"40735858"}
       {"_id"=>BSON::ObjectId('...'), ... , "name"=>"Acquista Trattoria",
       "restaurant_id"=>"40813992"}
-      {"_id"=>BSON::ObjectId('...'), , "name"=>"Acquolina Catering", "restaurant_id"=>"41381423"}
+      {"_id"=>BSON::ObjectId('...'), ... , "name"=>"Acquolina Catering", "restaurant_id"=>"41381423"}
 
 .. note::
 
