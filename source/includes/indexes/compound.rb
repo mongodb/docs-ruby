@@ -23,8 +23,8 @@ collection.indexes.create_one({ runtime: -1, year: 1 })
 # Finds a document with the specified runtime and release year by using the
 # newly created index
 filter = { '$and' => [
-    { 'runtime': { '$gt' => 90 } },
-    { 'year': { '$gt' => 2005 } }
+    { runtime: { '$gt' => 90 } },
+    { year: { '$gt' => 2005 } }
   ] }
 doc = collection.find(filter).first
 
