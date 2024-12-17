@@ -87,8 +87,7 @@ is ``"Primola Restaurant"``:
       :language: console
       :visible: false
 
-      Replaced document count: 1
-      Completed
+      Replaced 1 document(s)
 
 .. important::
 
@@ -144,17 +143,14 @@ configure the replace operation:
          </reference/method/db.collection.replaceOne/#std-label-replace-one-hint>`
          in the {+mdb-server+} manual.
 
-   * - ``let()``
+   * - ``let``
      - | Provides a map of parameter names and values to set top-level
          variables for the operation. Values must be constant or closed
          expressions that don't reference document fields.
 
-   * - ``comment()``
-     - | Sets a comment to attach to the operation.
-
-The following code sets the ``upsert`` option to ``true``, which instructs the
-driver to insert a new document that has the fields and values specified
-in the replacement document if the query filter doesn't match any
+The following code performs the same replace operation as above, but sets the ``upsert``
+option to ``true``. This instructs the driver to insert a new document that has the fields
+and values specified in the replacement document if the query filter doesn't match any
 existing documents:
 
 .. io-code-block::
@@ -170,15 +166,14 @@ existing documents:
       :language: console
       :visible: false
 
-      Replaced document count: 1
-      Completed
+      Replaced 1 document(s)
 
 Return Value
 ~~~~~~~~~~~~
 
-The ``replace_one`` method returns an ``UpdateResult`` 
+The ``replace_one`` method returns an ``Mongo::Operation::Update::Result`` 
 object. You can use the following methods to access information from
-an ``UpdateResult`` instance:
+a ``Result`` instance:
 
 .. list-table::
    :widths: 30 70
@@ -187,18 +182,18 @@ an ``UpdateResult`` instance:
    * - Method
      - Description
 
-   * - ``getMatchedCount()``
+   * - ``matched_count``
      - | Returns the number of documents that matched the query filter.
 
-   * - ``getModifiedCount()``
+   * - ``modified_count``
      - | Returns the number of documents modified by the update operation. If an updated
          document is identical to the original, it is not included in this
          count.
          
-   * - ``wasAcknowledged()``
-     - | Returns ``true`` if the server acknowledged the result.
+   * - ``upserted_count``
+     - | Returns the number of documents upserted.
 
-   * - ``getUpsertedId()``
+   * - ``upserted_id``
      - | Returns the ``_id`` value of the document that the driver upserted
          into the database, if any.
 
@@ -214,3 +209,5 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
+- `replace_one <{+api-root+}/Mongo/Collection.html#replace_one-instance_method>`_
+- `Mongo::Operation::Update::Result <{+api-root+}/Mongo/Operation/Update/Result.html>`_
