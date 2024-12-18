@@ -45,15 +45,14 @@ To learn how to create a free MongoDB Atlas cluster and load the sample datasets
 Projection Types
 ----------------
 
-You can use a projection to specify which fields to include in a return
-document, or to specify which fields to exclude. You cannot combine inclusion and
-exclusion statements in a single projection, unless you are excluding the
-``_id`` field.
+You can use a projection to specify which fields to include or exclude in
+a return Document. You cannot combine inclusion and exclusion statements in
+a single projection, unless you are excluding the ``_id`` field.
 
 Specify Fields to Include
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To specify the fields to include in the result, specify the ``projection``
+To include specific fields in a read operation result, specify the ``projection``
 option in a parameter to the ``find`` method. To set this option, use the following syntax:
 
 .. code-block:: ruby
@@ -114,7 +113,7 @@ excludes the ``_id`` field from the projection:
 Specify Fields to Exclude
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To specify the fields to exclude from the result, specify the ``projection``
+To exclude specific fields from a read operation result, specify the ``projection``
 option in a parameter to the ``find`` method. To set this option, use the
 following syntax:
 
@@ -124,7 +123,7 @@ following syntax:
 
 The following example uses the ``find`` method to find all restaurants in which the ``name``
 field value is ``'Emerald Pub'``. Then, the code uses the ``projection`` option
-to instruct the find operation to omit the ``name`` and ``address`` fields
+to instruct the find operation to omit the ``grades`` and ``address`` fields
 in the result:
 
 .. io-code-block::
