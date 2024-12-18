@@ -39,7 +39,7 @@ Mongo::Client.new(uri) do |client|
 
   # Estimates the number of documents in the collection and sets a time limit on the operation
   # start-modify-estimate
-  result = collection.estimated_document_count(max_time: 1)
+  result = collection.estimated_document_count(max_time_ms: 1000)
   puts "Estimated number of documents: #{result}"
   # end-modify-estimate
 end

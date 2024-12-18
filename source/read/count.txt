@@ -248,7 +248,7 @@ estimate of the number of documents in the collection and sets a timeout of
 API Documentation
 -----------------
 
-To learn more about any of the methods or types discussed in this
+To learn more about any of the methods discussed in this
 guide, see the following API documentation:
 
 - `count_documents <{+api-root+}/Mongo/Collection.html#count_documents-instance_method>`__ 
