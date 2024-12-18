@@ -23,3 +23,4 @@ Read Data from MongoDB
    :maxdepth: 1
 
    Retrieve Data </read/retrieve>
+   Count Documents </read/count>
