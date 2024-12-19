@@ -147,7 +147,7 @@ describes the options you can set to customize the count operation:
 
    * - ``read``
      - | The read preference to use for the operation. To learn more, see
-         :manual:`Read Preference </core/read-preference/>` in the Server manual.
+         :manual:`Read Preference </core/read-preference/>` in the {+mdb-server+} manual.
        | **Type**: ``Hash``
 
 The following example uses the ``count_documents`` method to count the number of
