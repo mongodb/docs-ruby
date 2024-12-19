@@ -20,7 +20,7 @@ Single Field Indexes
 Overview
 --------
 
-Single field indexes are indexes with a reference to a single field of a
+**Single field indexes** are indexes with a reference to a single field of a
 document in a collection. These indexes improve single field query and
 sort performance. They also support :manual:`TTL Indexes </core/index-ttl>`
 that automatically remove documents from a collection after a certain
