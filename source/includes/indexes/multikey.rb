@@ -14,13 +14,13 @@ database = client.use('sample_mflix')
 collection = database[:movies]
 # end-sample-data
 
-# start-index-multikey
 # Creates an index on the "cast" field
+# start-index-multikey
 collection.indexes.create_one({ cast: 1 })
 # end-index-multikey
 
-# start-index-multikey-query
 # Finds a document with the specified cast members by using the newly created index
+# start-index-multikey-query
 filter = { cast: { '$all' => ['Aamir Khan', 'Kajol'] } }
 doc = collection.find(filter).first
 
@@ -31,7 +31,7 @@ else
 end
 # end-index-multikey-query
 
-# start-check-multikey-index
 # Lists all indexes on the collection
+# start-check-multikey-index
 puts collection.indexes.collect(&:to_json)
 # end-check-multikey-index
