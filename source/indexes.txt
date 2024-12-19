@@ -15,7 +15,7 @@ Optimize Queries by Using Indexes
    :values: reference
 
 .. meta::
-   :description: Learn how to use indexes by using the MongoDB Scala Driver.
+   :description: Learn how to use indexes by using the MongoDB Ruby Driver.
    :keywords: query, optimization, efficiency, usage example, code example
 
 .. toctree::
@@ -35,7 +35,7 @@ different types of indexes by using the {+driver-long+}.
 
 To use an example from this page, copy the code example into the sample 
 application or your own application. Be sure to replace all placeholders in the 
-code examples, such as ``<connection string URI>``, with the relevant values for 
+code examples, such as ``<connection string>``, with the relevant values for 
 your MongoDB deployment.
 
 Sample Application
@@ -91,7 +91,7 @@ The following example creates a multikey index on the specified array-valued fie
    :start-after: start-index-multikey
    :end-before: end-index-multikey
 
-To learn more about multikey indexes, see the :ref:`scala-multikey-index` guide.
+To learn more about multikey indexes, see the :ref:`ruby-multikey-index` guide.
 
 Geospatial Index
 ----------------
@@ -123,13 +123,16 @@ To learn more about search indexes, see the :ref:`ruby-atlas-search-index` guide
 Create Search Index
 ~~~~~~~~~~~~~~~~~~~
 
-The following example creates an Atlas Search index on a specified field:
+The following example creates an Atlas Search index on the specified field:
 
 .. literalinclude:: /includes/indexes/index-code-examples.rb
    :language: ruby
    :start-after: start-create-search-index
    :end-before: end-create-search-index
    :dedent:
+
+To learn more about creating search indexes, see the :ref:`ruby-atlas-search-index-create`
+guide.
 
 List Search Indexes
 ~~~~~~~~~~~~~~~~~~~
@@ -143,6 +146,9 @@ collection:
    :end-before: end-list-search-indexes
    :dedent:
 
+To learn more about listing search indexes, see the :ref:`kotlin-sync-atlas-search-index-list`
+guide.
+
 Update Search Indexes
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -155,6 +161,9 @@ new index definition:
    :end-before: end-update-search-indexes
    :dedent:
 
+To learn more about updating search indexes, see the :ref:`ruby-atlas-search-index-update`
+guide.
+
 Delete Search Indexes
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -165,6 +174,9 @@ The following example deletes an Atlas Search index with the specified name:
    :start-after: start-drop-search-index
    :end-before: end-drop-search-index
    :dedent:
+
+To learn more about deleting search indexes, see the :ref:`ruby-atlas-search-index-drop`
+guide.
 
 Text Index
 ----------
@@ -182,6 +194,14 @@ The following example creates a text index on the specified string field:
 
 Create Many Indexes
 -------------------
+
+The following example creates multiple indexes on the given array of index specifications:
+
+.. literalinclude:: /includes/indexes/index-code-examples.rb
+   :start-after: start-index-create-many
+   :end-before: end-index-create-many
+   :language: ruby
+   :dedent:
 
 Drop Index
 ----------
@@ -215,9 +235,10 @@ collection:
 Index Options
 -------------
 
-The following is a full list of the available options that can be added
+The following is a full list of the available options you can add
 when creating indexes. These options mirror the options supported by the
-:manual:`createIndex command</reference/method/db.collection.createIndex/>`.
+``createIndex`` command. For more information, see the :manual:`createIndex command 
+</reference/method/db.collection.createIndex/>` in the {+mdb-server+} manual.
 
 .. list-table::
    :header-rows: 1
@@ -264,9 +285,11 @@ when creating indexes. These options mirror the options supported by the
      - Specify how many data-bearing members of a replica set, including the primary, must 
        complete the index builds successfully before the primary marks the indexes as ready. 
        Potential values are:
+
        - integer from 0 to the number of members of the replica set
-       - “majority” indicating that a majority of data bearing nodes must vote
-       - “votingMembers” which means that all voting data bearing nodes must vote
+       - ``“majority”`` indicating that a majority of data bearing nodes must vote
+       - ``“votingMembers”`` which means that all voting data bearing nodes must vote
+
        For more information, see :manual:`commitQuorom 
        </reference/method/db.collection.createIndex/#std-label-createIndex-method-commitQuorum>` 
        in the {+mdb-server+} manual.

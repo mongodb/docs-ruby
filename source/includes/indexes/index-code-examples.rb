@@ -36,15 +36,11 @@ collection.indexes.create_one({ <GeoJSON field name>: '2dsphere' })
 
 # Create Search Index
 # start-create-search-index
-index_definition = {
+index_definition = { 
   definition: {
     mappings: {
       dynamic: false,  
-      fields: {
-        <field name>: {
-          type: '<field type>'
-        }
-      }
+      fields: { <field name>: {type: '<field type>'} }
     }
   }
 }
