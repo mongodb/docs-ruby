@@ -23,10 +23,10 @@ Overview
 In this guide, you can learn how to use the {+driver-short+} to retrieve the
 distinct values of a specified field across a collection.
 
-Within a collection, different documents might contain different values for a
+Within a collection, documents might contain different values for a
 single field. For example, one document in a ``restaurants`` collection has a
 ``borough`` value of ``'Manhattan'``, and another has a ``borough`` value of
-``'Queens'``. By using the {+driver-short+}, you can retrieve all the unique values
+``'Queens'``. You can use the {+driver-short+} to retrieve all the unique values
 that a field contains across multiple documents in a collection.
 
 Sample Data
@@ -39,10 +39,10 @@ an Atlas cluster and assign the following values to your ``database`` and ``coll
 variables:
 
 .. literalinclude:: /includes/read/distinct.rb
-    :language: ruby
-    :dedent:
-    :start-after: start-db-coll
-    :end-before: end-db-coll
+   :language: ruby
+   :dedent:
+   :start-after: start-db-coll
+   :end-before: end-db-coll
 
 To learn how to create a free MongoDB Atlas cluster and load the sample datasets, see the
 :atlas:`Get Started with Atlas </getting-started>` guide.

@@ -25,4 +25,4 @@ Read Data from MongoDB
    Retrieve Data </read/retrieve>
    Specify Documents to Return </read/specify-documents-to-return>
    Specify Fields to Return </read/project>
-   Distinct Field Values </read/project>
+   Distinct Field Values </read/distinct>
