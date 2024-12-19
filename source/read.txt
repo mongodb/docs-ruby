@@ -26,3 +26,4 @@ Read Data from MongoDB
    Specify a Query </read/specify-a-query>
    Specify Documents to Return </read/specify-documents-to-return>
    Specify Fields to Return </read/project>
+   Count Documents </read/count>
