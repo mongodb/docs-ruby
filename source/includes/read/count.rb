@@ -9,8 +9,8 @@ uri = '<connection string>'
 
 Mongo::Client.new(uri) do |client|
   # start-db-coll
-  db = client.database
-  collection = db['companies']
+  database = client.use('sample_training')
+  collection = database['companies']
   # end-db-coll
 
   # Counts all documents in the collection
