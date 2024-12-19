@@ -21,11 +21,12 @@ Optimize Queries by Using Indexes
 .. toctree::
    :titlesonly:
    :maxdepth: 1
-   
+
    Single Field </indexes/single-field-index>
+   Multikey </indexes/multikey-index>
 ..   Compound </indexes/compound-index>
-..   Multikey </indexes/multikey-index>
 ..   Atlas Search </indexes/atlas-search-index>
+
 
 Overview
 --------
