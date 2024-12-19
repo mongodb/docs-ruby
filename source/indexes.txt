@@ -146,7 +146,7 @@ collection:
    :end-before: end-list-search-indexes
    :dedent:
 
-To learn more about listing search indexes, see the :ref:`kotlin-sync-atlas-search-index-list`
+To learn more about listing search indexes, see the :ref:`ruby-atlas-search-index-list`
 guide.
 
 Update Search Indexes
