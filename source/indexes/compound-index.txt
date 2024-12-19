@@ -64,13 +64,14 @@ in ascending order on the ``year`` field:
    :language: ruby
    :copyable:
 
+To verify the index's creation, you can list the 
+
 Verify Index Creation
 ---------------------
 
 You can verify that the index was created by listing the indexes in the 
 collection. You should see an index for ``runtime`` and ``year`` in the list, 
 as shown in the following output:
-
 
 .. io-code-block::
    :copyable: true
