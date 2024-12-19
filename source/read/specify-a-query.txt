@@ -258,6 +258,12 @@ all documents in which the ``name`` field value has at least two consecutive
       {"_id"=>1, "name"=>"apples", "qty"=>5, "rating"=>3, "color"=>"red", "type"=>["fuji", "honeycrisp"]}
       {"_id"=>4, "name"=>"pineapples", "qty"=>3, "rating"=>5, "color"=>"yellow"}
 
+.. note::
+
+    The {+driver-short+} implicitly uses the ``$regex`` operator
+    when a query filter includes a regular expression value, as shown
+    in the preceding example.
+
 Additional Information
 ----------------------
 
