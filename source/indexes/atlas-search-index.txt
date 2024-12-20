@@ -1,0 +1,30 @@
+.. _ruby-atlas-search-index:
+
+====================
+Atlas Search Indexes
+====================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: index, query, optimization, efficiency
+
+Overview
+--------
+
+:atlas:`Atlas Search </atlas-search>` enables you to perform full-text searches on
+collections hosted on MongoDB Atlas. Atlas Search indexes specify the behavior of
+the search and which fields to index.
+
+You can call the following database commands to manage you Atlas Search indexes:
+
+- createSearchIndexes
+- 

@@ -23,9 +23,9 @@ Optimize Queries by Using Indexes
    :maxdepth: 1
    
    Single Field </indexes/single-field-index>
+   Atlas Search </indexes/atlas-search-index>
 ..   Compound </indexes/compound-index>
 ..   Multikey </indexes/multikey-index>
-..   Atlas Search </indexes/atlas-search-index>
 
 Overview
 --------
