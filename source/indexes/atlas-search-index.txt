@@ -21,17 +21,17 @@ Overview
 --------
 
 :atlas:`Atlas Search </atlas-search>` enables you to perform full-text searches on
-collections hosted on MongoDB Atlas. Atlas Search indexes specify the behavior of
-the search and which fields to index.
+collections hosted on MongoDB Atlas. With Atlas Search indexes, you can specify the 
+behavior of the search and which fields to index.
 
 You can call the following database commands to manage you Atlas Search indexes:
 
-- createSearchIndexes
-- dropSearchIndex
-- updateSearchIndex
+- ``createSearchIndexes``
+- ``dropSearchIndex``
+- ``updateSearchIndex``
 
 The following sections provide code examples that demonstrate how to use
-each of the preceding methods.
+each of the preceding commands.
 
 .. _ruby-atlas-search-index-create:
 
@@ -47,9 +47,8 @@ The following code example shows how to create multiple Atlas Search indexes:
    :language: ruby
    :start-after: start-create-search-index
    :end-before: end-create-search-index
-   :dedent:
 
-To learn more about the syntax for the ``createSearchIndex`` database command,
+To learn more about the syntax for the ``createSearchIndexes`` database command,
 see the :manual:`createSearchIndexes </reference/command/createSearchIndexes/>`
 reference in the {+mdb-server+} manual.
 
@@ -59,10 +58,10 @@ guide in the Atlas manual.
 
 .. note:: Atlas Vector Search Indexes
 
-    You can also use this method to create Atlas Vector Search Indexes.
-    Atlas Vector Search enables you to perform semantic searches on vector
-    embeddings stored in MongoDB Atlas. To learn more about this feature,
-    see the :atlas:`Atlas Vector Search Overview
+    You can also use the ``createSearchIndexes`` database command to create 
+    Atlas Vector Search Indexes. Atlas Vector Search enables you to perform 
+    semantic searches on vector embeddings stored in MongoDB Atlas. To learn 
+    more about this feature, see the :atlas:`Atlas Vector Search Overview
     </atlas-vector-search/vector-search-overview/>`.
 
 Update a Search Index
@@ -70,14 +69,13 @@ Update a Search Index
 
 You can use the ``updateSearchIndex`` database command to update an Atlas Search index.
 
-To update the index, you must provide a new index ``definition``. The 
-following code shows how to update the search index:
+To update an index, you must provide a new index ``definition``. The 
+following code shows how to update a search index:
 
 .. literalinclude:: /includes/indexes/atlas-search-index.rb
    :language: ruby
    :start-after: start-update-search-indexes
    :end-before: end-update-search-indexes
-   :dedent:
 
 To learn more about the syntax for the ``updateSearchIndex`` database command,
 see the :manual:`updateSearchIndex </reference/command/updateSearchIndex/>`
@@ -88,14 +86,13 @@ Delete a Search Index
 
 You can use the ``dropSearchIndex`` database command to delete an Atlas Search index.
 
-To delete the index, you must provide the ``name`` of the index. The following 
+To delete an index, you must provide the ``name`` of the index. The following 
 code shows how to delete a search index from a collection:
 
 .. literalinclude:: /includes/indexes/atlas-search-index.rb
    :language: ruby
    :start-after: start-drop-search-index
    :end-before: end-drop-search-index
-   :dedent:
 
 To learn more about the syntax for the ``dropSearchIndex`` database command,
 see the :manual:`dropSearchIndex </reference/command/dropSearchIndex/>`
