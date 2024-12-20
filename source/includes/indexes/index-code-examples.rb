@@ -37,6 +37,7 @@ collection.indexes.create_one({ <GeoJSON field name>: '2dsphere' })
 # Create Search Index
 # start-create-search-index
 index_definition = { 
+  name: '<index name>',
   definition: {
     mappings: {
       dynamic: false,  
@@ -57,15 +58,22 @@ collection.database.command(listSearchIndexes: '<collection name>')
 
 # Update Search Indexes
 #start-update-search-indexes
+updated_definition = {
+  mappings: {
+    dynamic: false,  
+    fields: { <updated field name>: { type: '<field type>' } }
+    }
+}
 collection.database.command(
     updateSearchIndex: '<collection name>',
-    name: '<index name>'
+    name: '<index name>',
+    definition: updated_definition
 )
 #end-update-search-indexes
 
 # Delete Search Index
 # start-drop-search-index
-result = collection.database.command(
+collection.database.command(
     dropSearchIndex: '<collection name>',
     name: '<index name>'
 )
