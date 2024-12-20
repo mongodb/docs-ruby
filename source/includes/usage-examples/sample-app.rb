@@ -4,13 +4,11 @@ gemfile do
   gem 'mongo'
 end
 
-uri = "<connection string URI>"
+uri = "<connection string>"
 
 Mongo::Client.new(uri) do |client|
-  # start-db-coll
   database = client.use('<database name>')
   collection = database[:<collection name>]
-  # end-db-coll
 
   # Start example code here
 

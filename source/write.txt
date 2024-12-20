@@ -43,7 +43,7 @@ can use to write data to MongoDB by using the {+driver-short+}.
 
 To use an example from this page, copy the code example into the :ref:`sample
 application <ruby-write-sample>` or your own application. Be sure to replace all
-placeholders in the code examples, such as ``<connection string URI>``, with the
+placeholders in the code examples, such as ``<connection string>``, with the
 relevant values for your MongoDB deployment.
 
 .. _ruby-write-sample:
@@ -54,7 +54,7 @@ relevant values for your MongoDB deployment.
     :language: ruby
     :copyable:
     :linenos:
-    :emphasize-lines: 15-17
+    :emphasize-lines: 13-15
 
 Insert One 
 ----------
