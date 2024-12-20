@@ -83,7 +83,7 @@ The following code shows how to insert multiple documents into a collection:
    :copyable:
    :dedent:
 
-To learn more about the ``insert_one`` method, see the
+To learn more about the ``insert_many`` method, see the
 :ref:`Insert Documents <ruby-write-insert>` guide.
 
 Update One

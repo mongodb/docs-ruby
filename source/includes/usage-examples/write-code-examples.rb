@@ -59,7 +59,6 @@ Mongo::Client.new(uri) do |client|
     { <bulk operation 2> },
     { <bulk operation 3> },
   ]
-
   collection.bulk_write(operations)
   # end-bulk-write
 end
