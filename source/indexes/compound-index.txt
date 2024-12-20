@@ -62,9 +62,7 @@ in ascending order on the ``year`` field:
    :start-after: start-index-compound
    :end-before: end-index-compound
    :language: ruby
-   :copyable:
-
-To verify the index's creation, you can list the 
+   :copyable: 
 
 Verify Index Creation
 ---------------------
