@@ -51,5 +51,3 @@ collection.database.command(
     name: '<index name>'
 )
 # end-drop-search-index
-
-client.close
