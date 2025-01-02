@@ -281,7 +281,7 @@ Return Value
 ------------
 
 The ``bulk_write`` method returns a ``BulkWrite::Result``. You can access information from
-the ``Result`` instance by  subscribing to the observable and using the following methods:
+the ``Result`` instance by using the following instance methods:
 
 .. list-table::
    :widths: 30 70
