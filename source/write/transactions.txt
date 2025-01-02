@@ -35,15 +35,15 @@ meets an expectation of atomicity, consistency, isolation, and durability.
 MongoDB guarantees that the data involved in your transaction operations remains
 consistent, even if the operations encounter unexpected errors.
 
-When using the {+driver-short+}, you can start a ``Mongo::Session`` by calling
-the ``start_session`` method on your client. Then, you can perform transactions
+When using the {+driver-short+}, you can start a session by calling the
+``start_session`` method on your client. Then, you can perform transactions
 within the session.
 
 .. warning::
 
-   Use a ``Mongo::Session`` only in operations running on the ``Mongo::Client``
-   that created it. Using a ``Mongo::Session`` with a different ``Mongo::Client``
-   results in operation errors.
+   Use a session only in operations running on the ``Mongo::Client`` that
+   created it. Using a session with a different ``Mongo::Client`` results in
+   operation errors.
 
 Methods 
 -------
@@ -107,9 +107,6 @@ actions:
    :copyable:
 
 .. sharedinclude:: dbx/transactions-parallelism.rst
-
-    The {+driver-short+} does not support running parallel operations within a
-    single transaction.
 
     .. TODO:
          Replace content to use this wording when the bulk write guide is added:
