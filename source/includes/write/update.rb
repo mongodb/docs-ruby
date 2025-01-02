@@ -4,7 +4,7 @@ gemfile do
   gem 'mongo'
 end
 
-uri = "<connection string URI>"
+uri = "<connection string>"
 
 Mongo::Client.new(uri) do |client|
   # start-db-coll
