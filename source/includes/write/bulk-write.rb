@@ -13,11 +13,11 @@ Mongo::Client.new(uri) do |client|
   # end-db-coll
 
   # start-bulk-insert-one
-  insert = { insert_one: { name: 'Steve Rogers Cafe', borough: 'Brooklyn' } }
+  insert_one = { insert_one: { name: 'Steve Rogers Cafe', borough: 'Brooklyn' } }
   # end-bulk-insert-one
 
   # start-bulk-update-one
-  update = { update_one: 
+  update_one = { update_one: 
     { 
       filter: { name: 'Mountain View' },
       update: { '$set': { borough: 'Queens' } }
@@ -35,7 +35,7 @@ Mongo::Client.new(uri) do |client|
   # end-bulk-update-many
 
   # start-bulk-replace-one
-  replace = { replace_one:
+  replace_one = { replace_one:
     { 
       filter: { name: 'Old World Diner' },
       replacement: { '$set': { name: 'New Age Luncheonette' } }
@@ -44,7 +44,7 @@ Mongo::Client.new(uri) do |client|
   # end-bulk-replace-one
 
   # start-bulk-delete-one
-  delete = { delete_one: { name: 'Old World Diner' } }
+  delete_one = { delete_one: { name: 'Old World Diner' } }
   # end-bulk-delete-one
 
   # start-bulk-delete-many
@@ -52,15 +52,15 @@ Mongo::Client.new(uri) do |client|
   # end-bulk-delete-many
 
   # start-bulk-write-mixed
-  insert = { insert_one: { name: 'Nuovo Ristorante', borough: 'Brooklyn', cuisine: 'Italian' } }
-  update = { update_one: 
+  insert_one = { insert_one: { name: 'Nuovo Ristorante', borough: 'Brooklyn', cuisine: 'Italian' } }
+  update_one = { update_one: 
     { 
       filter: { name: 'Moonlit Tavern' },
       update: { '$set': { borough: 'Queens' } }
     }
   }
-  delete = { delete_many: { name: 'Crepe' } }
-  writes = [insert, update, delete]
+  delete_many = { delete_many: { name: 'Crepe' } }
+  writes = [insert_one, update_one, delete_many]
   collection.bulk_write(writes)
   # end-bulk-write-mixed
 

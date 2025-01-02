@@ -63,8 +63,8 @@ of the following operations:
 Then, pass a list of these instances to the ``bulk_write`` method.
 
 The following sections show how to create and use instances of the
-preceding classes. The :ref:`ruby-bulkwrite-method` section
-demonstrates how to pass a list of models to the ``bulk_write`` method
+preceding operations. The :ref:`ruby-bulkwrite-method` section
+demonstrates how to pass a list of hashes to the ``bulk_write`` method
 to perform the bulk operation.
 
 Insert Operations
@@ -191,7 +191,7 @@ Perform the Bulk Operation
 After you define a hash for each operation you want to perform,
 pass a list of these objects to the ``bulk_write`` method.
 By default, the method runs the operations in the order
-specified by the list of models.
+specified by the list of hashes.
 
 The following example performs multiple write operations by using the
 ``bulk_write`` method:
