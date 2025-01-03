@@ -20,14 +20,14 @@ Bulk Write Operations
 Overview
 --------
 
-This guide shows you how to use the {+driver-short+} to perform a bulk
+In this guide, you can learn how to use the {+driver-short+} to perform a bulk
 write operation that makes multiple changes to your data in a single
 database call.
 
 Consider a situation that requires you to insert documents, update
 documents, and delete documents for the same task. If you use
-the individual write methods to perform each type of operation, each write
-accesses the database separately. You can use a bulk write operation to
+the individual write methods, each write operation
+accesses the database separately. Instead, you can use a bulk write operation to
 optimize the number of calls your application makes to the server.
 
 Sample Data
@@ -157,8 +157,7 @@ Delete Operations
 
 To delete a document, create a ``delete_one`` hash and pass a
 query filter specifying the document you want to delete. The
-``delete_one`` operation provides instructions to delete
-only *the first* document that matches your query filter.
+``delete_one`` operation deletes only *the first* document that matches your query filter.
 
 The following example creates a ``delete_one`` hash:
 
@@ -171,8 +170,7 @@ The following example creates a ``delete_one`` hash:
 
 To delete multiple documents, create a ``delete_many`` hash and pass a
 query filter specifying the document you want to delete. The
-``delete_many`` operation provides instructions to remove *all* documents that
-match your query filter.
+``delete_many`` operation deletes *all* documents that match your query filter.
 
 The following example creates a ``delete_many`` hash:
 
@@ -202,6 +200,7 @@ The following example performs multiple write operations by using the
    :language: ruby
    :copyable:
    :dedent:
+   :emphasize-lines: 9-10
 
 If any of the write operations fail, the {+driver-short+} raises a
 ``BulkWriteError`` and does not perform any further operations.

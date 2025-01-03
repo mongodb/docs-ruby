@@ -26,7 +26,7 @@ Mongo::Client.new(uri) do |client|
   # end-bulk-update-one
 
   # start-bulk-update-many
-  update_many = { update_one: 
+  update_many = { update_many: 
     { 
       filter: { name: 'Starbucks' },
       update: { '$set': { cuisine: 'Cafe' } }
