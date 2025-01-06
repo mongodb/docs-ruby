@@ -285,7 +285,7 @@ guide, see the following API documentation:
 
 - `collections <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#collections-instance_method>`__
 - `collection_names <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#collection_names-instance_method>`__
-- `command <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Monitoring/Event/CommandStarted.html#command-instance_method>`__
-- `drop database <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#drop-instance_method>`__
-- `drop collection <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection.html#drop-instance_method>`__
-- `with <{+api+}/Collection.html#with-instance_method>`__
+- `command <{+api+}/api/Mongo/Monitoring/Event/CommandStarted.html#command-instance_method>`__
+- `drop database <{+api+}/current/api/Mongo/Database.html#drop-instance_method>`__
+- `drop collection <{+api+}/ruby-driver/current/api/Mongo/Collection.html#drop-instance_method>`__
+- `with <{+api+}/Mongo/Collection.html#with-instance_method>`__
