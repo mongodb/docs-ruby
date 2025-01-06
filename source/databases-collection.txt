@@ -246,21 +246,12 @@ higher latencies, pass the ``local_threshold`` option to the ``Mongo::Client`` c
 
 The following example specifies a local threshold of 35 milliseconds:
 
-.. code-block:: ruby
+.. literalinclude:: /read/databases-collection.rb
+   :language: ruby
+   :dedent:
+   :start-after: start-db-coll
+   :end-before: end-db-coll
    :emphasize-lines: 5
-
-   client = Mongo::Client.new(
-     ['IP_ADDRESS_001:27017'],
-     database: 'test_database',
-     read: { mode: :secondary_preferred },
-     local_threshold: 35
-   )
-
-   database = client.database
-
-   collection = database[:example_collection]
-   result = collection.find({}).first
-   puts result
 
 In the preceding example, {+driver-short+} distributes reads between matching members
 within 35 milliseconds of the closest member's ping time.
