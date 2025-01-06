@@ -93,7 +93,8 @@ This example defines a ``run_transaction`` method that modifies data in the
 collections of the ``sample_mflix`` database. The code performs the following
 actions:
 
-- Creates ``Mongo::Collection`` instances to access the movies and users collections.
+- Creates ``Mongo::Collection`` instances to access the ``movies`` and ``users``
+  collections.
 - Specifies the read and write concerns for the transaction. 
 - Starts the transaction. 
 - Inserts a document into the ``movies`` collection and prints the results. 
