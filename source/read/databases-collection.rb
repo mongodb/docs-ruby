@@ -8,8 +8,87 @@ end
 uri = '<connection string>'
 
 Mongo::Client.new(uri) do |client|
-    # Access the database and collection
-    # start-db-coll
+    # start-access-db
+    client = Mongo::Client.new(['127.0.0.1:27017'], database: 'test_database')
+    database = client.database
+    # end-access-db
+
+    # start-access-cl
+    client = Mongo::Client.new(['127.0.0.1:27017'], database: 'test_database')
+    database = client.database
+    collection = database['test_collection']
+    # end-access-cl
+
+    # start-create-collection
+    client = Mongo::Client.new(['127.0.0.1:27017'], database: 'test_database')
+    database = client.database
+ 
+    database.command(create: 'example_collection', capped: true, size: 1024)
+    # end-create-collection
+
+    # start-get-list
+    client = Mongo::Client.new(['IP_ADDRESS_001:27017'], database: 'test_database')
+    database = client.database
+ 
+    collection_list = database.collections
+ 
+    collection_list.each do |collection|
+      puts collection.name
+    end
+    # end-get-list
+
+    # start-get-list-names
+    client = Mongo::Client.new(['IP_ADDRESS_001:27017'], database: 'test_database')
+    database = client.database
+ 
+    collection_names = database.collection_names
+ 
+    collection_names.each do |name|
+      puts name
+    end
+    # end-get-list-names
+
+    # start-delete
+    client = Mongo::Client.new(['127.0.0.1:27017'], database: 'test_database')
+    database = client.database
+ 
+    collection = database[:test_collection]
+    collection.drop
+    # end-delete
+
+    # start-with-database
+    client = Mongo::Client.new(['IP_ADDRESS_001:27017'], database: 'test_database')
+
+    database_with_settings = client.use('test_database').with(
+      read: { mode: :secondary },
+      read_concern: { level: :local },
+      write: { w: :majority }
+    )
+    # end-with-database
+
+    # start-with-collection
+    client = Mongo::Client.new(['IP_ADDRESS_001:27017'], database: 'test_database')
+
+    collection_with_settings = client[:test_collection].with(
+      read: { mode: :secondary },
+      read_concern: { level: :local },
+      write: { w: :majority }
+    )
+    # end-with-collection
+
+    # start-tag-sets
+    client = Mongo::Client.new(['IP_ADDRESS_001:27017'], database: 'test', read: {
+        mode: :secondary,
+        tag_sets: [{'dc' => 'ny'}, {'dc' => 'sf'}]
+      })
+   
+      database = client.database
+   
+      collection = database[:example_collection]
+    # end-tag-sets
+
+
+    # start-local-threshold-example
     client = Mongo::Client.new(
         ['IP_ADDRESS_001:27017'],
         database: 'test_database',
@@ -17,10 +96,10 @@ Mongo::Client.new(uri) do |client|
         local_threshold: 35
       )
 
-    database = client.database
+      database = client.database
 
-    collection = database[:example_collection]
-    result = collection.find({}).first
-    puts result
-    # end-db-coll
+      collection = database[:example_collection]
+      result = collection.find({}).first
+      puts result
+    # end-local-threshold-example
 
