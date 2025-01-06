@@ -27,7 +27,7 @@ Mongo::Client.new(uri) do |client|
 
   # start-retrieve-file-info
   bucket.find().each do |file|
-    puts "Filename: #{file[:filename]}"
+    puts "Filename: #{file.filename}"
   end
   # end-retrieve-file-info
 
