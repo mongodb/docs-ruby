@@ -283,8 +283,8 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
-- `collections https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#collections-instance_method`_
-- `collection_names https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#collection_names-instance_method`_
-- `drop database https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#drop-instance_method`_
-- `drop collection https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection.html#drop-instance_method`_
-- `with {+api+}/docs/ruby-driver/current/api/Mongo/Collection.html#with-instance_method`_
+- `collections https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#collections-instance_method`__
+- `collection_names https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#collection_names-instance_method`__
+- `drop database https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#drop-instance_method`__
+- `drop collection https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection.html#drop-instance_method`__
+- `with {+api+}/docs/ruby-driver/current/api/Mongo/Collection.html#with-instance_method`__
