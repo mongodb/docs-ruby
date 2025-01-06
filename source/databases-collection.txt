@@ -71,8 +71,8 @@ The following example accesses a collection named ``test_collection``:
 Create a Collection
 -------------------
 
-While the Ruby driver for MongoDB does not have a direct create_collection 
-method, you can use the database.command method with the create command to explicitly
+While the Ruby driver for MongoDB does not have a direct ``create_collection`` 
+method, you can use the ``database.command`` method with the create command to 
 create a collection with specific options.
 
 The following example creates a collection called example_collection with 
@@ -166,9 +166,9 @@ and collections inherit them from the database. However, you can change these
 settings on your database or collection by using one of the following methods:
 
  - ``database.with``: Gets the database and applies the new read preference, read
-  concern, and write concern.
+   concern, and write concern.
  - ``collection.with``: Gets the collection and applies the new read preference,
-  read concern, and write concern.
+   read concern, and write concern.
 
 To change read or write settings with the preceding methods, call the method and 
 pass in the new read preference, read concern, or write concern. 
@@ -247,7 +247,7 @@ higher latencies, pass the ``local_threshold`` option to the ``Mongo::Client`` c
 The following example specifies a local threshold of 35 milliseconds:
 
 .. code-block:: ruby
-   :emphasize-lines: 3
+   :emphasize-lines: 5
 
    client = Mongo::Client.new(
      ['IP_ADDRESS_001:27017'],
@@ -285,6 +285,7 @@ guide, see the following API documentation:
 
 - `collections <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#collections-instance_method>`__
 - `collection_names <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#collection_names-instance_method>`__
+- `command <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Monitoring/Event/CommandStarted.html#command-instance_method>`__
 - `drop database <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#drop-instance_method>`__
 - `drop collection <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection.html#drop-instance_method>`__
-- `with <{+api+}/docs/ruby-driver/current/api/Mongo/Collection.html#with-instance_method>`__
+- `with <{+api+}/Collection.html#with-instance_method>`__
