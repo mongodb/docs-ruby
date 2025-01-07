@@ -9,6 +9,7 @@ uri = '<connection string>'
 
 Mongo::Client.new(uri) do |client|
     # Access the database and collection
+
     # start-write-concern
     client = Mongo::Client.new(['IP_ADDRESS_001:27017'], database: 'myDB')
     myDB = client.database
@@ -20,7 +21,7 @@ Mongo::Client.new(uri) do |client|
         w: 2,
         wtimeout: 5000
       }
-)
+    )
     # end-write-concern
 
     # start-write-concern-2
@@ -33,7 +34,7 @@ Mongo::Client.new(uri) do |client|
     pipeline = [
     { "$match" => { category: "KITCHENWARE" } },
     { "$unset" => ["_id", "category"] }
-  ]
+    ]
     result = myCollection.aggregate(pipeline, read: { read_concern: { level: :available } })
     # end-read-concern
 
@@ -43,7 +44,6 @@ Mongo::Client.new(uri) do |client|
     # end-change-read-concern
 
     # start-read-preference
-
     transaction_options = {
       read: { mode: :primary },
       read_concern: { level: :local },
@@ -60,4 +60,18 @@ Mongo::Client.new(uri) do |client|
         session.end_session
       end
     # end-read-preference
+
+    # start-read-preference-cluster
+    uri = 'mongodb+srv://<user>:<password>@<cluster-url>'
+    options = {
+      read: {
+        mode: :secondary,
+        max_staleness: 120
+      }
+    }
+    client = Mongo::Client.new(uri, options)
+    myDB = client.database
+    # end-read-preference-cluster
+
+
 
