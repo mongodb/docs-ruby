@@ -43,16 +43,16 @@ in your replica sets.
 Write Concern
 -------------
 
-The write concern specifies the level of acknowledgement requested from MongoDB for write
-operations, such as an insert or update, before the operation successfully returns.
+The write concern specifies the level of acknowledgement requested from MongoDB for 
+write operations, such as an insert or update, before the operation successfully returns.
 Operations that do not specify an explicit write concern inherit the global default write
 concern settings.
 
 For more information, see :manual:`Write Concern </reference/write-concern/>` in the
-Server manual. For detailed API documentation, see the `WriteConcern API documentation
-<{+api+}/classes/WriteConcern.html>`__.
+Server manual. For detailed API documentation, see the `Write Concern API documentation
+<https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Client.html#write_concern-instance_method>`__.
 
-The following table describes the ``WriteConcern`` parameters:
+The following table describes the ``write_concern`` parameters:
 
 .. list-table::
    :header-rows: 1
@@ -80,7 +80,7 @@ The following table describes the ``WriteConcern`` parameters:
 Example: Set the Write Concern for a Single Write Operation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This code uses custom ``WriteConcern`` settings while creating new a document:
+This code uses custom ``write_concern`` settings while creating new a document:
 
 .. literalinclude:: /includes/usage-examples/read-write-pref.rb
    :language: ruby
@@ -91,7 +91,7 @@ This code uses custom ``WriteConcern`` settings while creating new a document:
 Example: Retrieve and Apply an Existing Write Concern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This code uses the ``with_write_concern`` method to construct a ``WriteConcern`` from
+This code uses the ``with_write_concern`` method to construct a ``write_concern`` from
 the options of an existing database reference, ``myDB``. ``myDB`` can be 
 replaced with a reference to any entity that accepts a write concern option. 
 Then the new write concern is applied to a document, ``myDoc``:
@@ -121,8 +121,9 @@ may reduce latency.
 
 For more information about read concerns or read concern levels, see 
 :manual:`Read Concern </reference/read-concern/>` in the Server manual. For more
-detail on the ``ReadConcern`` type and definitions of the read concern levels, see
-the `ReadConcern <{+api+}/classes/ReadConcern.html>`__ in the API documentation.
+detail on the ``read_concern`` type and definitions of the read concern levels, see
+the `Read Concern <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Client.html#read_concern-instance_method>`__ 
+in the API documentation.
 
 Example: Set the Read Concern Level of an Aggregation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -135,7 +136,8 @@ This code sets the read concern level of an aggregation to `"available"`:
    :start-after: start-read-concern
    :end-before: end-read-concern
 
-For more information about aggregates, see the :ref:`ruby-aggregation` page.
+For more information about aggregates, see the `ruby-aggregation <https://www.mongodb.com/docs/ruby-driver/upcoming/reference/aggregation/>`_ 
+page.
 
 Example: Change the Read Concern of a Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -154,8 +156,8 @@ Read Preference
 The read preference determines which member of a replica set MongoDB reads when running a
 query. You can also customize how the server evaluates members. 
 
-For more detailed API documentation, see the `ReadPreference API
-documentation <{+api+}/classes/ReadPreference.html>`__.
+For more detailed API documentation, see the `Read Preference API
+documentation <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection/View/Readable.html#read_preference-instance_method>`__.
 
 .. list-table::
    :widths: 25 25 50
@@ -194,7 +196,7 @@ a transaction:
    :start-after: start-read-preference
    :end-before: end-read-preference
 
-For more information about transactions, see :ref:`ruby-transactions`.
+For more information about transactions, see `ruby-transactions <https://www.mongodb.com/docs/ruby-driver/upcoming/reference/transactions/>`_.
 
 Example: Set the Read Preference of a Cluster in the Connection String
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -218,7 +220,7 @@ API Documentation
 To learn more about the methods and types mentioned in this guide, see the following API
 documentation:
 
-- `API WriteConcern <{+api+}/classes/WriteConcern.html>`__
-- `API ReadConcern <{+api+}/classes/ReadConcern.html>`__
-- `API ReadPreference <{+api+}/classes/ReadPreference.html>`__
+- `API write_concern <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Client.html#write_concern-instance_method>`__
+- `API read_concern <{+api+}/Mongo/Client.html#read_concern-instance_method>`__
+- `API read_preference <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection/View/Readable.html#read_preference-instance_method>`__
 
