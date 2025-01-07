@@ -66,16 +66,16 @@ The following table describes the ``write_concern`` parameters:
      - integer or string
      - Requests acknowledgment that the write operation has propagated to a specified
        number of ``mongod`` instances or to ``mongod`` instances that are labelled
-       specified tags
+       specified tags.
 
    * - ``wtimeoutMS`` *(optional)*
      - integer
-     - Specifies a time limit to prevent write operations from blocking indefinitely
+     - Specifies a time limit to prevent write operations from blocking indefinitely.
 
    * - ``journal`` *(optional)*
      - boolean
      - Requests acknowledgment that the write operation has been written to the 
-     on-disk journal
+     on-disk journal.
 
 Example: Set the Write Concern for a Single Write Operation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -116,8 +116,10 @@ The read concern specifies the following behaviors:
 You can specify the read concern setting by using the ``level`` parameter. The default
 read concern level is ``local``. This means that the client returns the data from the
 replica set member that the client is connected to, with no guarantee that the data has
-been written to all replica set members. Note that lower read concern level requirements
-may reduce latency. 
+been written to all replica set members.
+
+.. note::
+    Lower read concern level requirements may reduce latency. 
 
 For more information about read concerns or read concern levels, see 
 :manual:`Read Concern </reference/read-concern/>` in the Server manual. For more
