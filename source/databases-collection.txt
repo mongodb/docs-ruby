@@ -90,7 +90,7 @@ specific options:
 You can specify collection options such as maximum size, document validation 
 rules, and others by passing them as arguments to the command method with the 
 create command. For a full list of optional parameters, refer to the MongoDB 
-documentation on the :manual:`create command/reference/command/create/`.
+documentation on the :manual:`create command /reference/command/create/`.
 
 Get a List of Collections
 -------------------------
@@ -118,8 +118,8 @@ To query for only the names of the collections in the database, call the
 
 .. note::
 
-   Note that ``database.collections`` provides more detailed information (i.e. each
-   collection object can be further queried for metadata), while 
+   The ``database.collections`` objects list provides more detailed information 
+   (i.e. each collection object can be further queried for metadata), while 
    ``database.collection_names`` simply lists the collection names.
 
 
@@ -212,6 +212,9 @@ instructs the {+driver-short+} to prefer reads from the New York data center
    :dedent:
    :start-after: start-tag-sets
    :end-before: end-tag-sets
+
+To learn more about replica sets, see the the MongoDB Server manual 
+:manual:`Replica Set Members </core/replica-set-members/>` page.
 
 Local Threshold
 ~~~~~~~~~~~~~~~
