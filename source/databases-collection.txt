@@ -61,8 +61,8 @@ The following example accesses a collection named ``test_collection``:
    :language: ruby
    :dedent:
    :emphasize-lines: 2
-   :start-after: start-access-db
-   :end-before: end-access-db
+   :start-after: start-access-cl
+   :end-before: end-access-cl
 
 .. tip::
 
@@ -90,7 +90,7 @@ specific options:
 You can specify collection options such as maximum size, document validation 
 rules, and others by passing them as arguments to the command method with the 
 create command. For a full list of optional parameters, refer to the MongoDB 
-documentation on creating collections.
+documentation on the :manual:`create command/reference/command/create/`.
 
 Get a List of Collections
 -------------------------
@@ -116,9 +116,13 @@ To query for only the names of the collections in the database, call the
    :start-after: start-get-list-names
    :end-before: end-get-list-names
 
-Note that ``database.collections`` provides more detailed information (e.g., each
-collection object can be further queried for metadata), while 
-``database.collection_names`` simply lists the collection names.
+.. note::
+
+   Note that ``database.collections`` provides more detailed information (i.e. each
+   collection object can be further queried for metadata), while 
+   ``database.collection_names`` simply lists the collection names.
+
+
 
 Delete a Collection
 -------------------
@@ -192,7 +196,7 @@ Tag Sets
 ~~~~~~~~
 
 In {+mdb-server+}, you can apply key-value :manual:`tags
-</core/read-preference-tags/>` to replica-set
+</core/read-preference-tags/>` to replica set
 members according to any criteria you choose. You can then use
 those tags to target one or more members for a read operation.
 
@@ -212,8 +216,8 @@ instructs the {+driver-short+} to prefer reads from the New York data center
 Local Threshold
 ~~~~~~~~~~~~~~~
 
-If multiple replica-set members match the read preference and tag sets you specify,
-{+driver-short+} reads from the nearest replica-set members, chosen according to
+If multiple replica set members match the read preference and tag sets you specify,
+{+driver-short+} reads from the nearest replica set members, chosen according to
 their ping time.
 
 By default, the driver uses only those members whose ping times are within 15 milliseconds
