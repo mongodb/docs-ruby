@@ -17,6 +17,12 @@ Databases and Collections
 .. meta::
    :keywords: table, row, organize, storage
 
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   Run a Command </databases-collections/run-command>
+
 Overview
 --------
 
@@ -121,8 +127,6 @@ To query for only the names of the collections in the database, call the
    The ``database.collections`` objects list provides more detailed information 
    (i.e. each collection object can be further queried for metadata), while 
    ``database.collection_names`` simply lists the collection names.
-
-
 
 Delete a Collection
 -------------------
