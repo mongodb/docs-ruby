@@ -220,7 +220,7 @@ API Documentation
 To learn more about the methods and types mentioned in this guide, see the following API
 documentation:
 
-- `API write_concern <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Client.html#write_concern-instance_method>`__
-- `API read_concern <{+api+}/Mongo/Client.html#read_concern-instance_method>`__
-- `API read_preference <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection/View/Readable.html#read_preference-instance_method>`__
+- `API Write Concern <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Client.html#write_concern-instance_method>`__
+- `API Read Concern <{+api+}/Mongo/Client.html#read_concern-instance_method>`__
+- `API Read Preference <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection/View/Readable.html#read_preference-instance_method>`__
 
