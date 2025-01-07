@@ -90,7 +90,7 @@ specific options:
 You can specify collection options such as maximum size, document validation 
 rules, and others by passing them as arguments to the command method with the 
 create command. For a full list of optional parameters, refer to the MongoDB 
-documentation on the `create command <https://www.mongodb.com/docs/manual/reference/command/create/>`.
+documentation on the :manual:`create command </reference/command/create/>`.
 
 Get a List of Collections
 -------------------------
