@@ -19,8 +19,9 @@ Mongo::Client.new(uri) do |client|
   # end-create-custom-bucket
 
   # start-upload-files
+  metadata = { uploaded_by: 'username' }
   File.open('/path/to/file', 'rb') do |file|
-    file_id = bucket.upload_from_stream('test.txt', file)
+    file_id = bucket.upload_from_stream('test.txt', file, metadata: metadata)
     puts "Uploaded file with ID: #{file_id}"
   end
   # end-upload-files

@@ -22,7 +22,7 @@ Overview
 
 In this guide, you can learn how to store and retrieve large files in
 MongoDB by using **GridFS**. GridFS is a specification that describes how to split files
-into chunks when storing them and reassemble them when retrieving them. The {+driver-short+}'s
+into chunks when storing them and reassemble those files when retrieving them. The {+driver-short+}'s
 implementation of GridFS is an abstraction that manages the operations and organization of
 the file storage. 
 
@@ -58,8 +58,8 @@ When storing files with GridFS, the driver splits the files into smaller
 chunks, each represented by a separate document in the ``chunks`` collection.
 It also creates a document in the ``files`` collection that contains
 a file ID, file name, and other file metadata. You can upload the file from
-memory or from a stream. See the following diagram to see how GridFS splits
-the files when uploaded to a bucket.
+memory or from a stream. The following diagram shows how GridFS splits
+the files when they're uploaded to a bucket.
 
 .. figure:: /includes/figures/GridFS-upload.png
    :alt: A diagram that shows how GridFS uploads a file to a bucket
@@ -75,7 +75,7 @@ Create a GridFS Bucket
 To store or retrieve files from GridFS, create a GridFS bucket by calling the
 ``FSBucket.new`` method and passing in a ``Mongo::Database`` instance.
 You can use the ``FSBucket`` instance to
-call read and write operations on the files in your bucket.
+perform read and write operations on the files in your bucket.
 
 .. literalinclude:: /includes/write/gridfs.rb
    :language: ruby
@@ -83,8 +83,8 @@ call read and write operations on the files in your bucket.
    :start-after: start-create-bucket
    :end-before: end-create-bucket
 
-To create or reference a bucket with a custom name other than the default name
-``fs``, pass the bucket name as the an optional parameter to the ``FSBucket.new``
+To create or reference a bucket with a name other than the default name
+``fs``, pass the bucket name as an optional parameter to the ``FSBucket.new``
 constructor, as shown in the following example:
 
 .. literalinclude:: /includes/write/gridfs.rb
@@ -102,7 +102,8 @@ upload stream and saves it to the ``GridFSBucket`` instance.
 You can pass a ``Hash`` as an optional parameter to configure the chunk size or include
 additional metadata.
 
-The following example uploads a file into ``FSBucket``:
+The following example uploads a file into ``FSBucket`` and specifies metadata for the
+uploaded file:
 
 .. literalinclude:: /includes/write/gridfs.rb
    :language: ruby
@@ -119,7 +120,7 @@ about the file it refers to, including:
 
 - The ``_id`` of the file
 - The name of the file
-- The length/size of the file
+- The size of the file
 - The upload date and time
 - A ``metadata`` document in which you can store any other information
 
@@ -145,7 +146,7 @@ Download Files
 The ``download_to_stream`` method downloads the contents of a file.
 
 To download a file by its file ``_id``, pass the ``_id`` to the method. The ``download_to_stream``
-method will write the contents of the file to the provided object.
+method writes the contents of the file to the provided object.
 The following example downloads a file by its file ``_id``:
 
 .. literalinclude:: /includes/write/gridfs.rb
@@ -154,9 +155,8 @@ The following example downloads a file by its file ``_id``:
    :start-after: start-download-files-id
    :end-before: end-download-files-id
 
-If you don't know the ``_id`` of the file but know the filename, then you
-can use the ``download_to_stream_by_name`` method. The following example
-downloads a file named ``mongodb-tutorial``:
+If you a file's name but not its ``_id``, you can use the ``download_to_stream_by_name``
+method. The following example downloads a file named ``mongodb-tutorial``:
 
 .. literalinclude:: /includes/write/gridfs.rb
    :language: ruby
@@ -167,7 +167,7 @@ downloads a file named ``mongodb-tutorial``:
 .. note::
 
    If there are multiple documents with the same ``filename`` value,
-   GridFS will fetch the most recent file with the given name (as
+   GridFS fetches the most recent file with the given name (as
    determined by the ``uploadDate`` field).
 
 Delete Files
@@ -198,4 +198,4 @@ API Documentation
 To learn more about using GridFS to store and retrieve large files,
 see the following API documentation:
 
-- `Mongo::Grid::FSBucket <{+api-root+}/Mongo/Grid/FSBucket.html>`_
+- `Mongo::Grid::FSBucket <{+api-root+}/Mongo/Grid/FSBucket.html>`__
