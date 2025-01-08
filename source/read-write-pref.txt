@@ -75,7 +75,7 @@ The following table describes the ``write_concern`` parameters:
    * - ``journal`` *(optional)*
      - boolean
      - Requests acknowledgment that the write operation has been written to the 
-     on-disk journal.
+       on-disk journal.
 
 Example: Set the Write Concern for a Single Write Operation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -91,7 +91,7 @@ This code uses custom ``write_concern`` settings while creating new a document:
 Example: Retrieve and Apply an Existing Write Concern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This code uses the ``with_write_concern`` method to construct a ``write_concern`` from
+This code uses the ``new_write_concern`` method to construct a ``write_concern`` from
 the options of an existing database reference, ``myDB``. ``myDB`` can be 
 replaced with a reference to any entity that accepts a write concern option. 
 Then the new write concern is applied to a document, ``myDoc``:
@@ -108,10 +108,10 @@ Read Concern
 The read concern specifies the following behaviors:
 
 - Level of :manual:`causal consistency </core/causal-consistency-read-write-concerns/>`
-  across replica sets
+  across replica sets.
 
 - `Isolation guarantees <https://www.mongodb.com/docs/current/core/read-isolation-consistency-recency/>`__ 
-  maintained during a query 
+  maintained during a query.
 
 You can specify the read concern setting by using the ``level`` parameter. The default
 read concern level is ``local``. This means that the client returns the data from the
