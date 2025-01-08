@@ -1,0 +1,94 @@
+.. _ruby-time-series-create:
+
+=======================
+Time Series Collections
+=======================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+Create a Time Series Collection
+-------------------------------
+
+.. important:: Server Version for Time Series Collections
+
+   To create and interact with time series collections, you must be
+   connected to a deployment running {+mdb-server+} 5.0 or later.
+
+To create a time series collection, pass the following arguments to the 
+``create_collection`` method:
+
+- Name of the new collection to create ``timeseries`` argument 
+
+The ``timeseries`` argument is of type ``dict``. It contains the following fields:
+
+- ``:time_field``: Specifies the field that stores a timestamp in each time series
+  document.
+- ``:meta_field``: Specifies the field that stores metadata in each time series 
+  document.
+- ``:granularity``: Specifies the approximate time between consecutive timestamps.
+  The possible values are ``'seconds'``, ``'minutes'``, and ``'hours'``.
+- ``:bucket_max_span_seconds``: Sets the maximum time between timestamps in the 
+  same bucket.
+- ``:bucket_rounding_seconds``: Sets the number of seconds to round down by when 
+  MongoDB sets the minimum timestamp for a new bucket. Must be equal to 
+  ``:bucket_max_span_seconds``.
+
+See :manual:`Command Fields </reference/command/create/#command-fields>`
+to learn more about these fields.
+
+Example
+~~~~~~~
+
+The following example creates a time series collection named ``october2024`` with the
+``:time_field``` option set to ``"timestamp"``:
+
+.. code-block:: ruby
+
+    client = Mongo::Client.new(['127.0.0.1:27017'], database: 'weather')
+    collection_name = 'october2024'
+
+    time_series_options = { timeField: 'timestamp' }
+    database = client.database
+    database.command(
+    create: collection_name,
+    timeseries: time_series_options
+    )
+
+To check if you successfully created the collection, you can get a list of all
+collections in your database and filter by collection name:
+
+.. io-code-block::
+    :copyable: true
+
+    .. input::
+        :language: ruby
+
+        collections = database.list_collections(filter: { name: 'october2024' }).to_a
+        puts collections
+    
+    .. output::
+        :language: json
+        :visible: false
+
+        [
+          {
+            "name": "october2024", 
+            "type": "timeseries", 
+            "options": {
+              "timeseries": { 
+                "time_field": "timestamp",
+                "granularity": "seconds", 
+                "bucket_max_span_seconds": 3600 
+           }
+         }, 
+          "info": {
+            "readOnly": false
+          }
+         }
+        ]
+
+
