@@ -6,7 +6,7 @@ uri = "<connection string>"
 # Sets the server_api field of the options object to Stable API version 1
 options = { server_api: { version: "1" }}
 
-# Creates a new client and connect to the server
+# Creates a new client and connects to the server
 client = Mongo::Client.new(uri, options)
 
 database = client.use('<database name>')
