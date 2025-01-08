@@ -85,7 +85,7 @@ The following code example shows how you can set the two options on a ``ServerAp
 .. code-block:: ruby
 
    client = Mongo::Client.new(uri, 
-                              server_api: { version: '1', strict: true, deprecation_errors: true })
+              server_api: { version: '1', strict: true, deprecation_errors: true })
 
 Troubleshooting
 ---------------
