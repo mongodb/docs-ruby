@@ -168,7 +168,7 @@ collection. After the cursor is exhausted, it remains open until retrieving thre
       {"_id"=>BSON::ObjectId('...'), "name"=>"zucchini"}
 
 If you insert another document into the ``vegetables`` collection, the preceding code prints
-the new document and closes the ``while`` loop.
+the new document and does not retrieve more results from the cursor.
 
 To learn more about tailable cursors, see :manual:`Tailable Cursors
 </core/tailable-cursors/>` in the {+mdb-server+} manual.

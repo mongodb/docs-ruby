@@ -55,11 +55,10 @@ Mongo::Client.new(uri) do |client|
   cursor = collection.find({}, cursor_type: :tailable)
   docs_found = 0
 
-  while docs_found < 3
-    cursor.each do |doc|
-      puts doc
-      docs_found += 1
-    end
+  cursor.each do |doc|
+    puts doc
+    docs_found += 1
+    break if docs_found >= 3
   end
   # end-tailable
 end
