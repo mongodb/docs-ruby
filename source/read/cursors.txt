@@ -121,7 +121,7 @@ Retrieve All Documents
 To retrieve all documents from a cursor, convert the cursor into an array by using
 the ``to_a`` method on its corresponding ``Mongo::Collection::View`` object.
 
-The following example calls the ``to_a`` to store the cursor results
+The following example calls the ``to_a`` method to store the cursor results
 in an array:
 
 .. literalinclude:: /includes/read/cursors.rb
@@ -140,8 +140,8 @@ can use a **tailable cursor** that remains open after the client exhausts the
 results in a cursor. To create a tailable cursor, pass the ``cursor_type`` option to
 the ``find`` method. Set this option to ``:tailable``.
 
-For example, you can create a capped collection called ``vegetables`` that stores
-documents representing vegetables, as shown in the following code:
+For example, you can create a capped collection called ``vegetables``, as
+shown in the following code:
 
 .. literalinclude:: /includes/read/cursors.rb
     :language: ruby
@@ -149,8 +149,10 @@ documents representing vegetables, as shown in the following code:
     :start-after: start-capped-coll
     :end-before: end-capped-coll
 
-The following code uses a tailable cursor to retrieve all documents in the ``vegetables``
-collection. After the cursor is exhausted, it remains open until retrieving three documents:
+Then, you can use the following code to retrieve all documents
+in the ``vegetables`` collection and store the results in a tailable
+cursor. After the cursor is exhausted, it remains open until
+retrieving three documents:
 
 .. io-code-block::
    :copyable:
