@@ -182,4 +182,4 @@ documentation:
 - `Mongo::Cursor <{+api-root+}/Mongo/Cursor.html>`__ 
 - `Mongo::Collection::View <{+api-root+}/Mongo/Collection/View.html>`__ 
 - `find <{+api-root+}/Mongo/Collection.html#find-instance_method>`__ 
-- `each <{+api-root+}Mongo/Cursor.html#each-instance_method>`__ 
+- `each <{+api-root+}/Mongo/Cursor.html#each-instance_method>`__ 
