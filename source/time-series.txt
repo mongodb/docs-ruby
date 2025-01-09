@@ -100,32 +100,34 @@ The following example creates a time series collection named ``october2024`` wit
 To check if you successfully created the collection, you can get a list of all
 collections in your database and filter by collection name:
 
-.. literalinclude:: /includes/usage-examples/time-series.rb
-   :language: ruby
-   :start-after: start-correct
-   :end-before: end-correct
-   :dedent:
+.. io-code-block::
 
-   .. output::
-    :language: json
-    :visible: false
+    .. input:: /includes/usage-examples/time-series.rb
+       :language: ruby
+       :start-after: start-correct
+       :end-before: end-correct
+       :dedent:
 
-    [
-      {
-        "name": "october2024", 
-        "type": "timeseries", 
-        "options": {
-          "timeseries": { 
-            "timeField": "timestamp",
-            "granularity": "seconds", 
-            "bucketMaxSpanSeconds": 3600 
-       }
-     }, 
-      "info": {
-        "readOnly": false
-      }
-     }
-    ]
+    .. output::
+       :language: json
+       :visible: false
+
+       [
+         {
+           "name": "october2024", 
+           "type": "timeseries", 
+           "options": {
+             "timeseries": { 
+               "timeField": "timestamp",
+               "granularity": "seconds", 
+               "bucketMaxSpanSeconds": 3600 
+          }
+        }, 
+         "info": {
+           "readOnly": false
+         }
+        }
+       ]
 
 
 .. _ruby-time-series-write:
