@@ -28,3 +28,4 @@ Read Data from MongoDB
    Specify Fields to Return </read/project>
    Distinct Field Values </read/distinct>
    Count Documents </read/count>
+   Cursors </read/cursors>
