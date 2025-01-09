@@ -35,11 +35,14 @@ Mongo::Client.new(uri) do |client|
     { "$match" => { category: "KITCHENWARE" } },
     { "$unset" => ["_id", "category"] }
     ]
-    result = myCollection.aggregate(pipeline, read: { read_concern: { level: :available } })
+    result = myCollection.aggregate(pipeline,
+    read: { read_concern: { level: :available } })
     # end-read-concern
 
     # start-change-read-concern
-    client = Mongo::Client.new(['IP_ADDRESS_001:27017'], database: 'mydb', read_concern: { level: :local })
+    client = Mongo::Client.new(['IP_ADDRESS_001:27017'], 
+    database: 'mydb', 
+    read_concern: { level: :local })
     myDB = client.database
     # end-change-read-concern
 
