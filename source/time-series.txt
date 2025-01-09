@@ -105,8 +105,8 @@ collections in your database and filter by collection name:
    :start-after: start-correct
    :end-before: end-correct
    :dedent:
-    
-.. output::
+
+   .. output::
     :language: json
     :visible: false
 
@@ -126,6 +126,7 @@ collections in your database and filter by collection name:
       }
      }
     ]
+
 
 .. _ruby-time-series-write:
 
