@@ -26,8 +26,9 @@ allows your application to subscribe to data changes on a collection, database,
 or deployment.
 
 When using the {+driver-short+}, you can call the ``watch`` method to return a
-``ChangeStream`` object. Then, you can iterate through the change stream
-to monitor data changes, such as updates, insertions, and deletions.
+``Mongo::Collection::View::ChangeStream`` object. Then, you can convert the change
+stream to an ``Enumerator`` object and iterate through its content to monitor data
+changes, such as updates, insertions, and deletions.
 
 Sample Data
 ~~~~~~~~~~~
@@ -54,12 +55,14 @@ To open a change stream, call the ``watch`` method. The object on which you
 call the ``watch`` method determines the scope of events that the change
 stream monitors. You can call the ``watch`` method on the following objects
 
-- ``Mongo::Client``: Monitor all changes in the MongoDB deployment
-- ``Mongo::Database``: Monitor changes in all collections in the database
-- ``Mongo::Collection``: Monitor changes in the collection
+- ``Mongo::Client``: Monitors changes to all collections across all databases
+  in a deployment, excluding :manual:`system collections </reference/system-collections/>`
+  or collections in the ``admin``, ``local``, and ``config`` databases
+- ``Mongo::Database``: Monitors changes to all collections in one database
+- ``Mongo::Collection``: Monitors changes to one collection
 
-The following example opens a change stream on the ``restaurants`` collection
-and outputs changes as they occur:
+The following example opens a change stream on the ``restaurants`` collection,
+converts the change stream to an ``Enumerator``, and outputs changes as they occur:
 
 .. literalinclude:: /includes/read/change-streams.rb
    :start-after: start-open-change-stream
@@ -115,10 +118,10 @@ when update operations occur:
    :language: ruby
    :dedent:
 
-Modify watch() Behavior
------------------------
+Modify watch Behavior
+---------------------
 
-To modify the behavior of the ``watch()`` method, you can pass an options hash
+To modify the behavior of the ``watch`` method, you can pass an options hash
 as a parameter to ``watch``. The following table describes some of the options that
 you can set:
 
@@ -214,7 +217,7 @@ output:
 
 .. code-block:: none
    :copyable: false
-   :emphasize-lines: 3-6
+   :emphasize-lines: 2-6
 
    {"_id"=>{"_data"=>"..."}, "operationType"=>"update", "clusterTime"=>
    #<...1>, "wallTime"=>..., "fullDocument"=>{"_id"=>BSON::ObjectId('...'),
@@ -244,6 +247,7 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
+- `Mongo::Collection::View::ChangeStream <{+api-root+}/Mongo/Collection/View/ChangeStream.html>`__
 - `Mongo::Client::watch <{+api-root+}/Mongo/Client.html#watch-instance_method>`__
 - `Mongo::Database::watch <{+api-root+}/Mongo/Database.html#watch-instance_method>`__
 - `Mongo::Collection::watch <{+api-root+}/Mongo/Collection.html#watch-instance_method>`__

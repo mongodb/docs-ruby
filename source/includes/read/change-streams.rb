@@ -23,7 +23,15 @@ Mongo::Client.new(uri) do |client|
     break if doc['operationType'] == 'invalidate'
   end
   # end-open-change-stream
-  
+
+  # Updates a document that has a 'name' value of 'Blarney Castle'
+  # start-update-for-change-stream
+  collection.update_one(
+    { 'name' => 'Blarney Castle' },
+    { '$set' => { 'cuisine' => 'Irish' } }
+  )
+  # end-update-for-change-stream
+
   # Passes a pipeline argument to watch to monitor only update operations
   # start-change-stream-pipeline
   pipeline = [{ '$match' => { 'operationType' => 'update' } }]
@@ -34,7 +42,7 @@ Mongo::Client.new(uri) do |client|
     break if doc['operationType'] == 'invalidate'
   end
   # end-change-stream-pipeline
-  
+
   # Passes an options argument to watch to include the post-image of updated documents
   # start-change-stream-post-image
   options = { full_document: 'updateLookup' }
