@@ -102,9 +102,9 @@ collections in your database and filter by collection name:
 
 .. literalinclude:: /includes/usage-examples/time-series.rb
    :language: ruby
-   :dedent:
    :start-after: start-correct
    :end-before: end-correct
+   :dedent:
     
 .. output::
     :language: json
