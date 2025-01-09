@@ -15,7 +15,7 @@ Mongo::Client.new(uri) do |client|
 
   # Iterates over and prints all documents that have a "name" value of "Dunkin' Donuts"
   # start-cursor-iterate
-  cursor = collection.find({ name: "Dunkin' Donuts" })
+  cursor = collection.find(name: "Dunkin' Donuts")
   cursor.each do |doc|
     puts doc
   end
@@ -23,14 +23,14 @@ Mongo::Client.new(uri) do |client|
 
   # Retrieves and prints the first document stored in the cursor
   # start-cursor-first
-  cursor = collection.find({ name: "Dunkin' Donuts" })
+  cursor = collection.find(name: "Dunkin' Donuts")
   first_doc = cursor.first
   puts first_doc
   # end-cursor-first
 
   # Converts the documents stored in a cursor to an array
   # start-cursor-array
-  cursor = collection.find({ name: "Dunkin' Donuts" })
+  cursor = collection.find(name: "Dunkin' Donuts")
   array_results = cursor.to_a
   # end-cursor-array
 
