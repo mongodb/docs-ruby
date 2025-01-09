@@ -31,7 +31,7 @@ The {+stable-api+} feature forces the server to run operations with behaviors co
 with the API version you specify. Using the {+stable-api+} ensures consistent responses 
 from the server and provides long-term API stability for your application.
 
-The following sections describe how you can enable and customize {+stable-api+} for
+The following sections describe how you can enable and customize the {+stable-api+} for
 your MongoDB client. For more information about the {+stable-api+}, including a list of 
 the commands it supports, see :manual:`Stable API </reference/stable-api/>` in the
 {+mdb-server+} manual.
@@ -89,6 +89,8 @@ The following code example shows how you can set the two options on a ``ServerAp
 
 Troubleshooting
 ---------------
+
+The following sections describe common issues you might encounter when using the {+stable-api+}.
 
 Unrecognized field 'apiVersion' on server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
