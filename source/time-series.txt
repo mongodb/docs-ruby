@@ -91,29 +91,20 @@ Example
 The following example creates a time series collection named ``october2024`` with the
 ``:timeField``` option set to ``"timestamp"``:
 
-.. code-block:: ruby
-
-    client = Mongo::Client.new(['127.0.0.1:27017'], database: 'weather')
-    collection_name = 'october2024'
-
-    time_series_options = { timeField: 'timestamp' }
-    database = client.database
-    database.command(
-    create: collection_name,
-    timeseries: time_series_options
-    )
+.. literalinclude:: /includes/usage-examples/time-series.rb
+   :language: ruby
+   :dedent:
+   :start-after: start-create
+   :end-before: end-create
 
 To check if you successfully created the collection, you can get a list of all
 collections in your database and filter by collection name:
 
-.. io-code-block::
-    :copyable: true
-
-    .. input::
-        :language: ruby
-
-        collections = database.list_collections(filter: { name: 'october2024' }).to_a
-        puts collections
+.. literalinclude:: /includes/usage-examples/time-series.rb
+   :language: ruby
+   :dedent:
+   :start-after: start-correct
+   :end-before: end-correct
     
     .. output::
         :language: json
@@ -158,18 +149,11 @@ document contains the following fields:
 - ``location``, which stores location metadata
 - ``timestamp``, which stores the measurement timestamp
 
-.. io-code-block::
-    :language: ruby
-
-    client = Mongo::Client.new([ '127.0.0.1:27017' ], :database => 'your_db')
-    collection = client[:october2024]
-
-    document_list = [
-      { temperature: 77, location: "New York City", timestamp: DateTime.new(2024, 10, 22, 6, 0, 0) },
-      { temperature: 74, location: "New York City", timestamp: DateTime.new(2024, 10, 23, 6, 0, 0) }
-    ]
-
-    collection.insert_many(document_list)
+.. literalinclude:: /includes/usage-examples/time-series.rb
+   :language: ruby
+   :dedent:
+   :start-after: start-insert
+   :end-before: end-insert
 
 .. tip:: Formatting Dates and Times
 
