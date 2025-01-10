@@ -28,7 +28,6 @@ index-definition = {
   }
 }
 collection.search_indexes.create_one(index_definition, name: '<index name>')
-
 # end-create-search-index
 
 # start-create-multiple-search-indexes
@@ -63,7 +62,7 @@ collection.search_indexes.create_many([index_spec_1, index_spec_2])
 updated_definition = {
   mappings: {
     dynamic: false,  
-    fields: { <updated field name>: { type: '<field type>' } }
+    fields: { <updated field name>: { type: '<updated field type>' } }
     }
 }
 

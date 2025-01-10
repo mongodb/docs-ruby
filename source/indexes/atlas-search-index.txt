@@ -24,11 +24,12 @@ Overview
 collections hosted on MongoDB Atlas. With Atlas Search indexes, you can specify the 
 behavior of the search and which fields to index.
 
-You can call the following database commands to manage you Atlas Search indexes:
-.. revise 
-- ``createSearchIndexes``
-- ``dropSearchIndex``
-- ``updateSearchIndex``
+You can call the following methods to manage you Atlas Search indexes:
+
+- ``search_indexes#create_one``
+- ``search_indexes#create_many``
+- ``search_indexes#update_one``
+- ``search_indexes#drop_one``
 
 The following sections provide code examples that demonstrate how to use
 each of the preceding commands.
@@ -42,7 +43,7 @@ To create one or more Atlas Search indexes, use the ``search_indexes#create_one`
 or the ``search_indexes#create_many`` methods. The methods will return immediately,
 while the indexes are asynchronously created in the background.
 
-The following code example shows how to create an Atlas Search index by passing
+The following code example shows how to create an Atlas Search index by providing
 an index definition and an optional name for the index:
 
 .. literalinclude:: /includes/indexes/atlas-search-index.rb
@@ -51,8 +52,8 @@ an index definition and an optional name for the index:
    :end-before: end-create-search-index
 
 You can use ``search_indexes#create_many`` to create multiple Atlas Search indexes by 
-passing an array of index specifications. Each index specification should include an index key,
-which defines the index, and a name key to specify the index name. The following 
+providing an array of index specifications. Each index specification should include a definition 
+key, which defines the index, and a name key to specify the index name. The following 
 code example shows how to create multiple search indexes:
 
 .. literalinclude:: /includes/indexes/atlas-search-index.rb
@@ -64,14 +65,6 @@ For longer index definitions, it is helpful to define the index definitions outs
 of the method call. To learn more about the syntax of index definitions, see the 
 :atlas:`Review Atlas Search Index Syntax </atlas-search/index-definitions>` 
 guide in the Atlas manual.
-
-.. note:: Atlas Vector Search Indexes
-
-    You can also use the ``createSearchIndexes`` database command to create 
-    Atlas Vector Search Indexes. Atlas Vector Search enables you to perform 
-    semantic searches on vector embeddings stored in MongoDB Atlas. To learn 
-    more about this feature, see the :atlas:`Atlas Vector Search Overview
-    </atlas-vector-search/vector-search-overview/>`.
 
 Update a Search Index
 ---------------------
@@ -99,10 +92,6 @@ code shows how to delete a search index from a collection:
    :language: ruby
    :start-after: start-drop-search-index
    :end-before: end-drop-search-index
-
-To learn more about the syntax for the ``dropSearchIndex`` database command,
-see the :manual:`dropSearchIndex </reference/command/dropSearchIndex/>`
-reference in the {+mdb-server+} manual.
 
 List Search Indexes
 -------------------
@@ -132,4 +121,6 @@ To learn more about MongoDB Atlas Search, see the
 API Documentation
 ~~~~~~~~~~~~~~~~~
 
-To learn more about the {+driver-short+} methods used in this guide, see the following API documentation:
+To learn more about the {+driver-short+} methods used in this guide, see the 
+following API documentation:
+
