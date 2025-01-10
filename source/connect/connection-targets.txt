@@ -68,8 +68,8 @@ is specified, the client will use the ``admin`` database:
    :end-before: end-local-connection
    :dedent:
 
-You can also specify the host, port, and database to connect using the URI 
-syntax:
+You can also specify the host, port, and database to connect to using a  
+connection string:
 
 .. literalinclude:: /includes/connect/connection-targets.rb
    :language: ruby
@@ -77,8 +77,8 @@ syntax:
    :end-before: end-local-connection-uri
    :dedent:
 
-You can use ``localhost`` to specify your host name, as well. The following
-code example connects to ``localhost`` on port ``27017``:
+You can also specify your host as ``localhost``. The following code example 
+connects to ``localhost`` on port ``27017``:
 
 .. literalinclude:: /includes/connect/connection-targets.rb
    :language: ruby
@@ -105,7 +105,8 @@ The following example shows how to specify three members of the replica set:
    :end-before: end-replica-set
    :dedent:
 
-The following example shows how to connect to the replica set using the URI syntax:
+The following example shows how to connect to the replica set using a connection
+string:
 
 .. literalinclude:: /includes/connect/connection-targets.rb
    :language: ruby
@@ -114,7 +115,7 @@ The following example shows how to connect to the replica set using the URI synt
    :dedent:
 
 The following example shows how to verify the replica set name upon connection
-by using the ``replica_set`` option or the ``replicaSet`` URI option:
+by using the ``replica_set`` option or the ``replicaSet`` connection string option:
 
 .. literalinclude:: /includes/connect/connection-targets.rb
    :language: ruby

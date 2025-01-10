@@ -24,5 +24,4 @@ Connect to MongoDB
 
    Create a Client </connect/mongoclient>
    Stable API </connect/stable-api>
-   Choose a Connection Target </conenct/connection-targets>
-   
+   Choose a Connection Target </connect/connection-targets>
