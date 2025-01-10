@@ -197,6 +197,6 @@ API documentation:
 
 - `create <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection.html#create-instance_method>`__
 - `list_collections <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#list_collections-instance_method>`__
-- `insert_one <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection.html#insert_one-instance_method>`__
+- `insert_one <{api-root}/Mongo/Collection.html#insert_one-instance_method>`__
 - `insert_many <api-root/Mongo/Collection.html#insert_many-instance_method>`__
 
