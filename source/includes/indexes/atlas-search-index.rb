@@ -13,23 +13,51 @@ database = client.use('sample_mflix')
 collection = database[:movies]
 
 # start-create-search-index
-index_definition = { 
-  name: '<index name>',
+# Creates indexes on all dynamically indexable fields with a default index name
+collection.search_indexes.create_one(
+  { mappings: { dynamic: true } } 
+)
+
+# Creates an index on the specified field with the specified index name
+index-definition = {
+  mappings: {
+    dynamic: false,  
+    fields: { 
+      <field name>: {type: '<field type>'}
+    }
+  }
+}
+collection.search_indexes.create_one(index_definition, name: '<index name>')
+
+# end-create-search-index
+
+# start-create-multiple-search-indexes
+index_spec_1 = {
+  name: '<index 1 name>',
   definition: {
     mappings: {
       dynamic: false,  
       fields: { 
-        <field name 1>: {type: '<field type>'},
-        <field name 2>: {type: '<field type>'}
+        <field name>: {type: '<field type>'}
       }
     }
   }
 }
-collection.database.command(
-  createSearchIndexes: '<collection name>',
-  indexes: [index_definition]
-)
-# end-create-search-index
+
+index_spec_2 = {
+  name: '<index 2 name>',
+  definition: {
+    mappings: {
+      dynamic: false,  
+      fields: { 
+        <field name>: {type: '<field type>'}
+      }
+    }
+  }
+}
+
+collection.search_indexes.create_many([index_spec_1, index_spec_2])
+# end-create-multiple-search-indexes
 
 # start-update-search-indexes
 updated_definition = {
@@ -38,16 +66,32 @@ updated_definition = {
     fields: { <updated field name>: { type: '<field type>' } }
     }
 }
-collection.database.command(
-    updateSearchIndex: '<collection name>',
-    name: '<index name>',
-    definition: updated_definition
-)
+
+# Specifies the index to update by using the index name
+collection.search_indexes.update_one(updated_definition, name: '<index name>')
+
+# Specifies the index to update by using the index id
+collection.search_indexes.update_one(updated_definition, id: <index id>)
 # end-update-search-indexes
 
 # start-drop-search-index
-collection.database.command(
-    dropSearchIndex: '<collection name>',
-    name: '<index name>'
-)
+# Specifies the index to delete by using the index name
+collection.search_indexes.drop_one(name: '<index name>')
+
+# Specifies the index to delete by using the index id
+collection.search_indexes.drop_one(id: <index id>)
 # end-drop-search-index
+
+# start-list-entire-spec
+puts collection.search_indexes.collect(&:to_json)
+# end-list-entire-spec
+
+# start-list-certain-elements
+collection.search_indexes.each do |index_spec|
+  p index_spec['id']
+  p index_spec['name']
+  p index_spec['status']
+  p index_spec['queryable']
+  p index_spec['latestDefinition']
+end
+# end-list-certain-elements
