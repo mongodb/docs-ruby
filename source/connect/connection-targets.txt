@@ -78,7 +78,7 @@ connection string:
    :dedent:
 
 You can also specify your host as ``localhost``. The following code example 
-connects to ``localhost`` on port ``27017``:
+connects to ``localhost`` on the default port, ``27017``:
 
 .. literalinclude:: /includes/connect/connection-targets.rb
    :language: ruby
@@ -127,4 +127,4 @@ API Documentation
 -----------------
 
 To learn more about creating a ``Mongo::Client`` object with the {+driver-short+},
-see the API documentation for `Mongo::Client. <{+api-root+}/Mongo/Client.html>`__.
+see the API documentation for `Mongo::Client <{+api-root+}/Mongo/Client.html>`__.

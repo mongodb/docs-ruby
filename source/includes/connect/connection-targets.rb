@@ -2,7 +2,7 @@
 require 'mongo'
 
 # Replace the placeholders with your credentials
-uri = "mongodb+srv://lindsey:me123@atlascluster.spm1ztf.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster"
+uri = "<connection string>"
 
 # Set the server_api field of the options object to Stable API version 1
 options = { server_api: { version: "1" } }
@@ -37,13 +37,13 @@ Mongo::Client.new([ 'host1:27017', 'host2:27018', `host3:21019` ], database: 'my
 # end-replica-set
 
 # start-replica-set-uri
-Mongo::Client.new("mongodb://127.0.0.1:27017,127.0.0.1:27018/mydb")
+Mongo::Client.new("mongodb://host1:27017,host2:27018,host3:27019/mydb")
 # end-replica-set-uri
 
 # start-replica-set-option
-Mongo::Client.new([ '127.0.0.1:27017', '127.0.0.1:27018' ],
+Mongo::Client.new([ 'host1:27017', 'host2:27018', 'host3:27019' ],
   database: 'mydb', replica_set: 'myapp')
 
 # Or using the URI syntax:
-Mongo::Client.new("mongodb://host1:27017,host2:27018, host3:27019/mydb?replicaSet=myapp")
+Mongo::Client.new("mongodb://host1:27017,host2:27018,host3:27019/mydb?replicaSet=myapp")
 # end-replica-set-option
