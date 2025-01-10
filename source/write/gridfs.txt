@@ -46,7 +46,7 @@ defined in the GridFS specification:
 - The ``files`` collection stores the file metadata.
 
 When you create a new GridFS bucket, the driver creates the ``fs.chunks`` and ``fs.files``
-collections, unless you specify a different name in the ``Mongo::Database.fs`` method options. The
+collections, unless you specify a different name in the ``Mongo::Database#fs`` method options. The
 driver also creates an index on each collection to ensure efficient retrieval of the files and related
 metadata. The driver creates the GridFS bucket, if it doesn't exist, only when the first write
 operation is performed. The driver creates indexes only if they don't exist and when the
