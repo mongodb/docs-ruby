@@ -63,12 +63,9 @@ Create a Time Series Collection
    To create and interact with time series collections, you must be
    connected to a deployment running {+mdb-server+} 5.0 or later.
 
-To create a time series collection, pass the following arguments to the 
-``create`` method:
-
-- Name of the new collection to create ``time_series`` argument 
-
-The ``time_series`` argument is of type ``dict``. It contains the following fields:
+To create a time series collection, you must pass an options hash that contains
+the specifications for the collection. You can specify the following specifications
+for your time series collection:
 
 - ``:timeField``: Specifies the field that stores a timestamp in each time series
   document.
@@ -83,13 +80,14 @@ The ``time_series`` argument is of type ``dict``. It contains the following fiel
   ``:bucketMaxSpanSeconds``.
 
 See :manual:`Command Fields </reference/command/create/#command-fields>`
-to learn more.
+in the {+mdb-server+} manual entry on the ``create`` command to learn more about
+these parameters. 
 
 Example
 ~~~~~~~
 
-The following example creates a time series collection named ``october2024`` with the
-``:timeField``` option set to ``"timestamp"``:
+The following example uses the ``Collection#create`` metho to create a time series
+collection named ``october2024`` with the ``:timeField``` option set to ``"timestamp"``:
 
 .. literalinclude:: /includes/usage-examples/time-series.rb
    :language: ruby
@@ -97,8 +95,9 @@ The following example creates a time series collection named ``october2024`` wit
    :start-after: start-create
    :end-before: end-create
 
-To check if you successfully created the collection, you can get a list of all
-collections in your database and filter by collection name:
+To verify that you have successfully created the collection, print a list of all
+collections in your database and filter by collection name, as shown in the following
+code:
 
 .. io-code-block::
 
@@ -145,8 +144,8 @@ Example
 ~~~~~~~
 
 This example inserts New York City temperature data into the ``october2024``
-time series collection created in :ref:`ruby-time-series-create`. Each
-document contains the following fields:
+time series collection created in the preceding :ref:`ruby-time-series-create`.
+section. Each document contains the following fields:
 
 - ``temperature``, which stores temperature measurements in degrees Fahrenheit
 - ``location``, which stores location metadata
@@ -158,10 +157,12 @@ document contains the following fields:
    :start-after: start-insert
    :end-before: end-insert
 
-.. tip:: Formatting Dates and Times
+.. TODO: add link 
 
-    To learn more about using ``datetime`` objects in {+driver-short+}, see 
-    :ref:`ruby-dates-times`.
+.. .. tip:: Formatting Dates and Times
+
+    .. To learn more about using ``datetime`` objects in {+driver-short+}, see 
+    .. :ref:`ruby-dates-times`.
 
 .. _ruby-time-series-read:
 
@@ -170,8 +171,11 @@ Query Time Series Data
 
 You can use the same syntax and conventions to query data stored in a time 
 series collection as you use when performing read or aggregation operations on 
-other collections. To learn more about these operations, see :ref:`ruby-read`
-and :ref:`ruby-aggregation`.
+other collections. 
+
+.. TODO: add links
+.. To learn more about these operations, see :ref:`ruby-read`
+.. and :ref:`ruby-aggregation`.
 
 .. _ruby-time-series-addtl-info:
 
@@ -194,5 +198,5 @@ API documentation:
 - `create <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection.html#create-instance_method>`__
 - `list_collections <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#list_collections-instance_method>`__
 - `insert_one <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection.html#insert_one-instance_method>`__
-- `insert_many <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection.html#insert_many-instance_method>`__
+- `insert_many <api-root/Mongo/Collection.html#insert_many-instance_method>`__
 
