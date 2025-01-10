@@ -1,0 +1,34 @@
+.. _ruby-data-formats:
+
+============
+Data Formats
+============
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :description: Learn how to use indexes by using the MongoDB Scala Driver.
+   :keywords: query, optimization, efficiency, usage example, code example
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   Time Series Data </data-formats/time-series>
+
+Overview
+--------
+
+You can use several types of specialized data formats in your {+driver-short+}
+application. To learn how to work with these data formats, see the following
+sections:
+
+- :ref:`ruby-time-series`: Learn how to create a time series collection and interact with time series data.

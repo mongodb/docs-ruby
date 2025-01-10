@@ -17,11 +17,11 @@
    Write Data </write>
    Read Data </read>
    Indexes </indexes>
+   Data Formats </data-formats>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
    What's New </whats-new>
    Compatibility </compatibility>
-   Time series </time-series>
 
 .. TODO:
  Databases & Collections </databases-collections>
@@ -90,6 +90,12 @@ working with data in the :ref:`ruby-get-started` tutorial.
 
 .. Learn how to authenticate your application and encrypt your data in the
 .. :ref:`ruby-security` section.
+
+Specialized Data Formats
+------------------------
+
+Learn how to work with specialized data formats and custom types in the
+:ref:`ruby-data-formats` section.
 
 What's New
 ----------
