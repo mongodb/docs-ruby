@@ -11,11 +11,11 @@ Mongo::Client.new(uri) do |client|
   collection = database[:restaurants]
 
   # start-create-bucket
-  bucket = Mongo::Grid::FSBucket.new(database)
+  bucket = database.fs
   # end-create-bucket
 
   # start-create-custom-bucket
-  custom_bucket = Mongo::Grid::FSBucket.new(database, bucket_name: 'files')
+  custom_bucket = database.fs(database, bucket_name: 'files')
   # end-create-custom-bucket
 
   # start-upload-files
@@ -27,7 +27,7 @@ Mongo::Client.new(uri) do |client|
   # end-upload-files
 
   # start-retrieve-file-info
-  bucket.find().each do |file|
+  bucket.find.each do |file|
     puts "Filename: #{file.filename}"
   end
   # end-retrieve-file-info
