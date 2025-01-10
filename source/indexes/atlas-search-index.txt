@@ -40,7 +40,7 @@ Create a Search Index
 ---------------------
 
 To create one or more Atlas Search indexes, use the ``search_indexes#create_one`` 
-or the ``search_indexes#create_many`` methods. The methods will return immediately,
+or the ``search_indexes#create_many`` method. Both methods return immediately,
 while the indexes are asynchronously created in the background.
 
 The following code example shows how to create an Atlas Search index by providing
@@ -50,6 +50,7 @@ an index definition and an optional name for the index:
    :language: ruby
    :start-after: start-create-search-index
    :end-before: end-create-search-index
+   :emphasize-lines: 15
 
 You can use ``search_indexes#create_many`` to create multiple Atlas Search indexes by 
 providing an array of index specifications. Each index specification should include a definition 
@@ -60,6 +61,7 @@ code example shows how to create multiple search indexes:
    :language: ruby
    :start-after: start-create-multiple-search-indexes
    :end-before: end-create-multiple-search-indexes
+   :emphasize-lines: 25
 
 For longer index definitions, it is helpful to define the index definitions outside 
 of the method call. To learn more about the syntax of index definitions, see the 
@@ -123,4 +125,3 @@ API Documentation
 
 To learn more about the {+driver-short+} methods used in this guide, see the 
 following API documentation:
-
