@@ -73,7 +73,7 @@ Create a GridFS Bucket
 ----------------------
 
 To store or retrieve files from GridFS, create a GridFS bucket by calling the
-``fs`` method and passing in a ``Mongo::Database`` instance.
+``fs`` method on a ``Mongo::Database`` instance.
 You can use the ``FSBucket`` instance to
 perform read and write operations on the files in your bucket.
 
