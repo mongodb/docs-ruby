@@ -74,7 +74,7 @@ Update a Search Index
 To update an Atlas Search index, use the ``search_indexes#update_one`` method.
 
 To update an index, you must provide a new index definition. You must specify
-the index you want to update by using either the``name`` or ``id`` of the index. 
+the index you want to update by using either the ``name`` or ``id`` of the index. 
 The following code shows how to update a search index:
 
 .. literalinclude:: /includes/indexes/atlas-search-index.rb
