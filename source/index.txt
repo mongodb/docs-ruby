@@ -21,9 +21,9 @@
    API Documentation <{+api-root+}>
    What's New </whats-new>
    Compatibility </compatibility>
+   Databases & Collections </databases-collections>
 
 .. TODO:
- Databases & Collections </databases-collections>
  Write Data </write>
  Operations on Replica Sets </read-write-pref>
  Monitor Your Application </monitoring>
