@@ -94,9 +94,7 @@ collection.indexes.drop_all
 
 # List an Index
 # start-list-indexes
-all_indexes.each do |index|
-    puts index
-end
+puts collection.indexes.collect(&:to_json)
 # end-list-indexes
 
 client.close

@@ -131,9 +131,6 @@ The following example creates an Atlas Search index on the specified field:
    :end-before: end-create-search-index
    :dedent:
 
-To learn more about creating search indexes, see the :ref:`ruby-atlas-search-index-create`
-guide.
-
 List Search Indexes
 ~~~~~~~~~~~~~~~~~~~
 
@@ -145,9 +142,6 @@ collection:
    :start-after: start-list-search-indexes
    :end-before: end-list-search-indexes
    :dedent:
-
-To learn more about listing search indexes, see the :ref:`ruby-atlas-search-index-list`
-guide.
 
 Update Search Indexes
 ~~~~~~~~~~~~~~~~~~~~~
@@ -161,9 +155,6 @@ new index definition:
    :end-before: end-update-search-indexes
    :dedent:
 
-To learn more about updating search indexes, see the :ref:`ruby-atlas-search-index-update`
-guide.
-
 Delete Search Indexes
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -174,9 +165,6 @@ The following example deletes an Atlas Search index with the specified name:
    :start-after: start-drop-search-index
    :end-before: end-drop-search-index
    :dedent:
-
-To learn more about deleting search indexes, see the :ref:`ruby-atlas-search-index-drop`
-guide.
 
 Text Index
 ----------
