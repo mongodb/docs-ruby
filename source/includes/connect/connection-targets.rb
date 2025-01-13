@@ -4,11 +4,11 @@ require 'mongo'
 # Replace the placeholders with your credentials
 uri = "<connection string>"
 
-# Set the server_api field of the options object to Stable API version 1
+# Sets the server_api field of the options object to Stable API version 1
 options = { server_api: { version: "1" } }
-# Create a new client and connect to the server
+# Creates a new client and connect to the server
 client = Mongo::Client.new(uri, options)
-# Send a ping to confirm a successful connection
+# Sends a ping to confirm a successful connection
 begin
   admin_client = client.use('admin')
   result = admin_client.database.command(ping: 1).documents.first
@@ -25,7 +25,7 @@ Mongo::Client.new([ 'host1:27017' ], database: 'mydb')
 # end-local-connection
 
 # start-local-connection-uri
-Mongo::Client.new("mongodb://host1/mydb")
+Mongo::Client.new("mongodb://host1:27017/mydb")
 # end-local-connection-uri
 
 # start-localhost
@@ -44,6 +44,6 @@ Mongo::Client.new("mongodb://host1:27017,host2:27018,host3:27019/mydb")
 Mongo::Client.new([ 'host1:27017', 'host2:27018', 'host3:27019' ],
   database: 'mydb', replica_set: 'myapp')
 
-# Or using the URI syntax:
+# Or by using a connection string:
 Mongo::Client.new("mongodb://host1:27017,host2:27018,host3:27019/mydb?replicaSet=myapp")
 # end-replica-set-option
