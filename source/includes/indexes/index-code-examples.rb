@@ -36,24 +36,20 @@ collection.indexes.create_one({ <GeoJSON field name>: '2dsphere' })
 
 # Create Search Index
 # start-create-search-index
-index_definition = { 
-  name: '<index name>',
-  definition: {
-    mappings: {
-      dynamic: false,  
-      fields: { <field name>: {type: '<field type>'} }
+index_definition = {
+  mappings: {
+    dynamic: false,  
+    fields: { 
+      <field name>: {type: '<field type>'}
     }
   }
 }
-collection.database.command(
-  createSearchIndexes: '<collection name>',
-  indexes: [index_definition]
-)
+collection.search_indexes.create_one(index_definition, name: '<index name>')
 # end-create-search-index
 
 # List Search Indexes
 # start-list-search-indexes
-collection.database.command(listSearchIndexes: '<collection name>')
+puts collection.search_indexes.collect(&:to_json)
 # end-list-search-indexes
 
 # Update Search Indexes
@@ -61,22 +57,16 @@ collection.database.command(listSearchIndexes: '<collection name>')
 updated_definition = {
   mappings: {
     dynamic: false,  
-    fields: { <updated field name>: { type: '<field type>' } }
+    fields: { <updated field name>: { type: '<updated field type>' } }
     }
 }
-collection.database.command(
-    updateSearchIndex: '<collection name>',
-    name: '<index name>',
-    definition: updated_definition
-)
+
+collection.search_indexes.update_one(updated_definition, name: '<index name>')
 #end-update-search-indexes
 
 # Delete Search Index
 # start-drop-search-index
-collection.database.command(
-    dropSearchIndex: '<collection name>',
-    name: '<index name>'
-)
+collection.search_indexes.drop_one(name: '<index name>')
 # end-drop-search-index
 
 # Text Index
