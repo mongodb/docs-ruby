@@ -42,7 +42,7 @@ database name.
 
 The following example accesses a database named ``test_database``:
 
-.. literalinclude:: /read/databases-collection.rb
+.. literalinclude:: /includes/usage-examples/databases-collection.rb
    :language: ruby
    :dedent:
    :start-after: start-access-db
@@ -57,7 +57,7 @@ of your database.
 
 The following example accesses a collection named ``test_collection``:
 
-.. literalinclude:: /read/databases-collection.rb
+.. literalinclude:: /includes/usage-examples/databases-collection.rb
    :language: ruby
    :dedent:
    :emphasize-lines: 2
@@ -80,7 +80,7 @@ create a collection with specific options.
 The following example creates a collection called example_collection with 
 specific options:
 
-.. literalinclude:: /read/databases-collection.rb
+.. literalinclude:: /includes/usage-examples/databases-collection.rb
    :language: ruby
    :dedent:
    :emphasize-lines: 2
@@ -101,7 +101,7 @@ method. This method returns an array of collection objects in the database.
 The following example calls the ``collections`` method and iterates over the array
 to print the results:
 
-.. literalinclude:: /read/databases-collection.rb
+.. literalinclude:: /includes/usage-examples/databases-collection.rb
    :language: ruby
    :dedent:
    :start-after: start-get-list
@@ -110,7 +110,7 @@ to print the results:
 To query for only the names of the collections in the database, call the 
 ``collection_names`` method as follows:
 
-.. literalinclude:: /read/databases-collection.rb
+.. literalinclude:: ncludes/usage-examples/databases-collection.rb
    :language: ruby
    :dedent:
    :start-after: start-get-list-names
@@ -131,7 +131,7 @@ You can delete a collection from the database by using the ``drop`` method.
 
 The following example deletes the ``test_collection`` collection:
 
-.. literalinclude:: /read/databases-collection.rb
+.. literalinclude:: /includes/usage-examples/databases-collection.rb
    :language: ruby
    :dedent:
    :start-after: start-delete
@@ -170,7 +170,7 @@ The following example shows how to change the read preference, read concern, and
 write preference of a database called ``test-database`` with the ``database.with``
 method:
 
-.. literalinclude:: /read/databases-collection.rb
+.. literalinclude:: /includes/usage-examples/databases-collection.rb
    :language: ruby
    :dedent:
    :start-after: start-with-database
@@ -179,7 +179,7 @@ method:
 The following example shows how to change the read preference, read concern, and 
 write concern of a collection: 
 
-.. literalinclude:: /read/databases-collection.rb
+.. literalinclude:: ncludes/usage-examples/databases-collection.rb
    :language: ruby
    :dedent:
    :start-after: start-with-collection
@@ -207,7 +207,7 @@ In the following code example, the tag set passed to the ``:read`` parameter
 instructs the {+driver-short+} to prefer reads from the New York data center 
 (``'dc':'ny'``) and to fall back to the San Francisco data center (``'dc':'sf'``):
 
-.. literalinclude:: /read/databases-collection.rb
+.. literalinclude:: includes/usage-examples/databases-collection.rb
    :language: ruby
    :dedent:
    :start-after: start-tag-sets
@@ -229,7 +229,7 @@ higher latencies, pass the ``local_threshold`` option to the ``Mongo::Client`` c
 
 The following example specifies a local threshold of 35 milliseconds:
 
-.. literalinclude:: /read/databases-collection.rb
+.. literalinclude:: /includes/usage-examples/databases-collection.rb
    :language: ruby
    :dedent:
    :start-after: start-local-threshold-example
@@ -249,7 +249,7 @@ within 35 milliseconds of the closest member's ping time.
 Troubleshooting
 ---------------
 
-.. include:: /includes/troubleshooting/read-write-options.rst
+.. include:: /includes/usage-examples/databases-collection.rb
 
 API Documentation
 -----------------
@@ -257,9 +257,9 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
-- `collections <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#collections-instance_method>`__
-- `collection_names <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Database.html#collection_names-instance_method>`__
-- `command <{+api+}/api/Mongo/Monitoring/Event/CommandStarted.html#command-instance_method>`__
-- `drop database <{+api+}/current/api/Mongo/Database.html#drop-instance_method>`__
-- `drop collection <{+api+}/ruby-driver/current/api/Mongo/Collection.html#drop-instance_method>`__
-- `with <{+api+}/Mongo/Collection.html#with-instance_method>`__
+- `collections <{+api-root+}/Mongo/Database.html#collections-instance_method>`__
+- `collection_names <{+api-root+}/Mongo/Database.html#collection_names-instance_method>`__
+- `command <{+api-root+}/Mongo/Monitoring/Event/CommandStarted.html#command-instance_method>`__
+- `drop database <{+api-root+}/Mongo/Database.html#drop-instance_method>`__
+- `drop collection <{+api-root+}/Mongo/Collection.html#drop-instance_method>`__
+- `with <{+api-root+}/Mongo/Collection.html#with-instance_method>`__
