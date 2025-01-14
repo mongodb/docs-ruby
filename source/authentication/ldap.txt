@@ -41,7 +41,7 @@ The code examples on this page use the following placeholders:
   the driver uses the default port number (``27017``). You don't need to specify a port
   when connecting to a MongoDB Atlas cluster.
 - ``<authenticationDb>``: The MongoDB database that contains the user's LDAP credentials.
-   If you omit this parameter, the driver uses the default database (``admin``).
+  If you omit this parameter, the driver uses the default database (``admin``).
 
 To use the code examples on this page, replace these placeholders with your own values.
 
@@ -51,7 +51,7 @@ Using PLAIN Authentication in Your Application
 You can specify the ``PLAIN`` authentication mechanism and supply your LDAP credentials
 either by
 using specifying the ``:plain`` option when creating a client or as part of the connection string.
-Select the :guilabel:`Connection String` or :guilabel:`Mongo::Client.new` tab to
+Select the :guilabel:`Connection String` or :guilabel:`Client Options` tab to
 see the corresponding syntax:
 
 .. tabs::
@@ -63,7 +63,7 @@ see the corresponding syntax:
          
          client = Mongo::Client.new('mongodb://<username>:<password>@<hostname>[:<port>]/?authSource=<authenticationDb>&authMechanism=PLAIN')
 
-   .. tab:: MongoCredential
+   .. tab:: Client Options
       :tabid: mongo-credential
 
       .. code-block:: ruby
