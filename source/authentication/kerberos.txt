@@ -1,0 +1,93 @@
+.. _ruby-authentication-kerberos:
+
+=================
+Kerberos (GSSAPI)
+=================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: .NET, code example
+
+Overview
+--------
+
+The Generic Security Services API (GSSAPI) authentication mechanism allows you to
+use your principal name to authenticate to a Kerberos service.
+You can use this mechanism only when authenticating to MongoDB Enterprise Advanced.
+
+Using GSSAPI Authentication in Your Application
+-----------------------------------------------
+
+To configure the MongoDB server to use Kerberos, please refer to the
+:manual:`server Kerberos documentation
+</tutorial/control-access-to-mongodb-with-kerberos-authentication/>`.
+
+To use the Kerberos authentication mechanism with the Ruby MongoDB driver,
+an additional library implementing the Kerberos authenticator -
+`mongo_kerberos <https://rubygems.org/gems/mongo_kerberos>`_ - must be
+installed and loaded. To do so, add the following lines to your ``Gemfile``:
+
+.. code-block:: ruby
+
+  gem 'mongo', '~> 2'
+  gem 'mongo_kerberos', '~> 2'
+
+Then, add the following lines to your application code:
+
+.. code-block:: ruby
+
+  require 'mongo'
+  require 'mongo_kerberos'
+
+If using Kerberos authentication with **MRI**, the password is not specified
+in driver configuration and it is not sent to the MongoDB server by the driver.
+Instead a Kerberos session must be established externally to the driver
+and this session is used by the driver to prove the user's identity to
+the server. Establishing this session requires that the host system is
+configured for Kerberos authentication; see the `Kerberos documentation
+<https://web.mit.edu/kerberos/krb5-latest/doc/admin/install_clients.html>`_
+or your operating system documentation for details. Use the `kinit utility
+<https://web.mit.edu/kerberos/krb5-latest/doc/user/user_commands/kinit.html>`_
+to establish a Kerberos session.
+
+If using Kerberos authentication with **JRuby**, the Kerberos session may
+be estabished externally to the driver using the process described above
+for MRI; alternatively, the password may be provided directly to the driver
+by using client configuration, or the path to a keytab file may be provided by using
+configuration stored in the ``java.security.auth.login.config`` system property.
+Additionally, the Java runtime environment must be configured for Kerberos. See the 
+`MongoDB Java Driver Kerberos documentation
+<https://mongodb.github.io/mongo-java-driver/4.0/driver/tutorials/authentication/#gssapi>`_
+for more information.
+
+.. note::
+
+  Per the server Kerberos documentation, the FQDN of the host
+  running MongoDB must be specified when using Kerberos authentication.
+
+.. note::
+
+  If using MongoDB URIs, be sure to percent-escape special characters like
+  ``/`` and ``@`` when they appear in the username.
+
+.. code-block:: ruby
+
+  # Authenticate as appuser@MYREALM:
+  client = Mongo::Client.new("mongodb://appuser%40MYREALM@myserver.mycompany.com:27017/mydb?authMechanism=GSSAPI")
+
+  # Authenticate as myapp/appuser@MYREALM:
+  client = Mongo::Client.new("mongodb://myapp%2Fappuser%40MYREALM@myserver.mycompany.com:27017/mydb?authMechanism=GSSAPI")
+
+  # Authenticate using Ruby options:
+  client = Mongo::Client.new(['myserver.mycompany.com:27017'],
+                             auth_mech: :gssapi,
+                             user: 'myapp/appuser@MYREALM')

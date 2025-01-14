@@ -17,7 +17,7 @@
    Write Data </write>
    Read Data </read>
    Indexes </indexes>
-   Security </security>
+   Authentication </authentication>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
    What's New </whats-new>
