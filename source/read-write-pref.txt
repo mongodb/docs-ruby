@@ -123,12 +123,13 @@ replica set member that the client is connected to, with no guarantee that the d
 been written to all replica set members.
 
 .. note::
-    Lower read concern level requirements may reduce latency. 
+
+  Lower read concern level requirements may reduce latency. 
 
 For more information about read concerns or read concern levels, see 
 :manual:`Read Concern </reference/read-concern/>` in the {+mdb-server+}  manual. For more
 detail on the ``read_concern`` type and definitions of the read concern levels, see
-`Read Concern <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Client.html#read_concern-instance_method>`__ 
+`Read Concern <{+api-root+}/Mongo/Client.html#read_concern-instance_method>`__ 
 in the API documentation.
 
 Example: Set the Read Concern Level of an Aggregation
@@ -142,9 +143,8 @@ The following code sets the read concern level of an aggregation to ``"available
    :start-after: start-read-concern
    :end-before: end-read-concern
 
-For more information about aggregation, see the Aggregation page.
-
 .. TODO: insert :ref:`Aggregation <ruby-aggregation>` link here
+.. For more information about aggregation, see the Aggregation page.
 
 Example: Change the Read Concern of a Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -164,7 +164,7 @@ The read preference determines which member of a replica set MongoDB reads when 
 query.
 
 For more detailed API documentation, see the `Read Preference API
-documentation <https://www.mongodb.com/docs/ruby-driver/current/api/Mongo/Collection/View/Readable.html#read_preference-instance_method>`__.
+documentation <{+api-root+}/Mongo/Collection/View/Readable.html#read_preference-instance_method>`__.
 
 The following table shows options you can use to customize how the server evaluates 
 members:
@@ -206,9 +206,8 @@ the operations in a transaction:
    :start-after: start-read-preference
    :end-before: end-read-preference
 
-For more information about transactions, see the Transactions guide.
-
 .. TODO: insert :ref:`Transactions <ruby-transactions>` link
+.. For more information about transactions, see the Transactions guide.
 
 Example: Set the Read Preference of a Cluster in the Connection String
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

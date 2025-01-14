@@ -16,12 +16,12 @@
    Connect </connect>
    Write Data </write>
    Read Data </read>
+   Operations on Replica Sets </read-write-pref> 
    Indexes </indexes>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
    What's New </whats-new>
    Compatibility </compatibility>
-   Operations on Replica Sets </read-write-pref>
 
 .. TODO:
  Databases & Collections </databases-collections>
