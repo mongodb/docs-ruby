@@ -5,7 +5,7 @@ toc_landing_pages = [
     "/connect",
     "/write",
     "/indexes",
-    "/security",
+    "/authentication",
 ]
 
 intersphinx = ["https://www.mongodb.com/docs/manual/objects.inv"]
