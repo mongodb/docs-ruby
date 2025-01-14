@@ -21,7 +21,7 @@ Mongo::Client.new(uri) do |client|
   # start-create-collection
   database = client.database
 
-  ddatabase[:example_collection].create(capped: true, size: 1024)
+  database[:example_collection].create(capped: true, size: 1024)
   # end-create-collection
 
   # start-get-list
