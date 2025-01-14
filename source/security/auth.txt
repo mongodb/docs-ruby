@@ -1,0 +1,330 @@
+.. _ruby-auth:
+
+=========================
+Authentication Mechanisms
+=========================
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: code example, verify, AWS, Kerberos
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+The {+driver-short+} supports all MongoDB authentication mechanisms,
+including those available only in the MongoDB Enterprise Edition.
+
+Default Authentication Mechanism
+--------------------------------
+
+In MongoDB 3.0, MongoDB changed the default authentication mechanism
+from ``MONGODB-CR`` to ``SCRAM-SHA-1``. In MongoDB 4.0, support for
+the deprecated ``MONGODB-CR`` mechanism was removed and ``SCRAM-SHA-256`` support was
+added.
+
+To create a credential that authenticates by using the default
+authentication mechanism, pass your ``user`` and ``password`` to the
+``Mongo::Client.new`` method:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-default
+   :end-before: end-default
+   :language: ruby
+   :copyable:
+   :dedent:
+
+Or, you can use a connection string without explicitly specifying the
+authentication mechanism:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-default-connection-string
+   :end-before: end-default-connection-string
+   :language: ruby
+   :copyable:
+   :dedent:
+
+For challenge and response mechanisms, we recommend using the default
+authentication mechanism. This approach simplifies upgrading from MongoDB 2.6 to MongoDB
+3.0, even after upgrading the authentication schema. For MongoDB 4.0 users, we also recommend
+the default authentication mechanism because it checks the mechanisms and uses the correct
+hashing algorithm.
+
+SCRAM-Based Mechanisms
+----------------------
+
+Salted Challenge-Response Authentication Mechanism (``SCRAM``) has been
+the default authentication mechanism for MongoDB since 3.0. ``SCRAM`` is
+based on the `IETF RFC 5802
+<https://datatracker.ietf.org/doc/html/rfc5802>`__ standard that defines
+best practices for implementation of challenge-response mechanisms for authenticating
+users with passwords.
+
+MongoDB 3.0 introduced support for ``SCRAM-SHA-1``, which uses the
+``SHA-1`` hashing function. MongoDB 4.0 introduced support for ``SCRAM-SHA-256`` which
+uses the ``SHA-256`` hashing function.
+
+SCRAM-SHA-256
+~~~~~~~~~~~~~
+
+Using this mechanism requires MongoDB 4.0 and
+``featureCompatibilityVersion`` to be set to 4.0.
+
+To explicitly create a credential of type ``SCRAM-SHA-256``, specify the
+``auth_mech`` option with the ``:scram256`` value when creating a client:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-scram-sha-256
+   :end-before: end-scram-sha-256
+   :language: ruby
+   :copyable:
+   :dedent:
+
+Or, you can use a connection string that explicitly specifies
+``authMechanism=SCRAM-SHA-256``:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-scram-sha-256-connection-string
+   :end-before: end-scram-sha-256-connection-string
+   :language: ruby
+   :copyable:
+   :dedent:
+
+SCRAM-SHA-1
+~~~~~~~~~~~
+
+To explicitly create a credential of type ``SCRAM-SHA-1``, specify the
+``auth_mech`` option with the ``:scram`` value when creating a client:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-scram-sha-1
+   :end-before: end-scram-sha-1
+   :language: ruby
+   :copyable:
+   :dedent:
+
+Or, you can use a connection string that explicitly specifies
+``authMechanism=SCRAM-SHA-1``:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-scram-sha-1-connection-string
+   :end-before: end-scram-sha-1-connection-string
+   :language: ruby
+   :copyable:
+   :dedent:
+
+x.509
+-----
+
+With the x.509 mechanism, MongoDB uses the x.509 certificate presented
+during SSL negotiation to authenticate a user whose name is derived
+from the distinguished name of the x.509 certificate.
+
+x.509 authentication requires the use of SSL connections with
+certificate validation. To authenticate the client, you will need a valid TLS certificate
+and private encryption key. These can be stored in separate files, or together in one PEM file.
+Even if the certificate and private key are stored in the same file, you must specify the
+path to that file by passing both the ``ssl_cert`` and ``ssl_key`` options to the client.
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-mongodb-x509
+   :end-before: end-mongodb-x509
+   :language: ruby
+   :copyable:
+   :dedent:
+
+Or, you can use a connection string that explicitly specifies
+``authMechanism=MONGODB-X509``:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-mongodb-x509-connection-string
+   :end-before: end-mongodb-x509-connection-string
+   :language: ruby
+   :copyable:
+   :dedent:
+
+See the :manual:`Use x.509 Certificates to Authenticate Clients </tutorial/configure-x509-client-authentication/>`
+tutorial in the Server manual to learn more about using x.509 certificates in your
+application.
+
+AWS
+---
+
+.. note::
+   
+   AWS authentication is available only in the MongoDB Enterprise Edition for MongoDB 4.4
+   and later.
+
+The AWS authentication mechanism uses AWS `Identity and Access Management (IAM)
+<https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html>`_
+and AWS `Security Token Service (STS)
+<https://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html>`_
+to prove the client's identity to a MongoDB server. Briefly, AWS authentication
+works as follows:
+
+1. The client uses AWS IAM credentials to create a signature that is sent to
+   the MongoDB server.
+2. The server sends a request to AWS STS using the client's signature.
+3. A successful STS request returns the username (technically, the ARN of
+   the IAM user or role) corresponding to the credentials that the client used.
+   The IAM user ARN is used by the server to look up a defined user, and the
+   client is considered to have authenticated as this user.
+
+.. note::
+
+  Unlike other authentication mechanisms, the username that the application
+  provides when creating a client and the username of the server user are
+  different: the username on the client is the AWS access key ID, but the
+  username on the server is the ARN of the IAM user or role corresponding
+  to the access key ID.
+
+AWS credentials are comprised of:
+
+- The access key ID.
+- The secret access key.
+- The optional session token.
+
+Authentication with `AWS IAM credentials
+<https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html>`_,
+uses the access key ID and the secret access key. Authentication with
+`temporary AWS IAM credentials
+<https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html>`_
+uses all three components.
+
+.. note::
+
+  The driver never sends the secret access key or the session token over
+  the network.
+
+Temporary credentials are used with:
+
+- STS `Assume Role <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-api.html>`_
+  requests.
+- `EC2 instance roles <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html>`_.
+- `ECS task roles <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html>`_.
+- `AWS Lambda environment <https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html>`_.
+- `IAM roles for service accounts <https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html>`_.
+
+The Ruby driver allows providing both regular and temporary credentials
+explicitly as Ruby options or URI options. If credentials are not explicitly
+provided, the driver will attempt to retrieve them from environment variables
+described below and from EC2 instance and ECS task metadata endpoints.
+
+Providing Credentials Explicitly
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Regular (non-temporary) IAM credentials can be provided as Ruby options,
+as follows:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-aws
+   :end-before: end-aws
+   :language: ruby
+   :copyable:
+   :dedent:
+
+They can also be provided by using a URI:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-aws-connection-string
+   :end-before: end-aws-connection-string
+   :language: ruby
+   :copyable:
+   :dedent:
+
+.. note::
+
+  When credentials are provided by using a URI, they must be percent-escaped.
+
+To provide temporary credentials, specify the session token in the
+authentication mechanism properties as follows:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-aws-temp
+   :end-before: end-aws-temp
+   :language: ruby
+   :copyable:
+   :dedent:
+
+You can also provide temporary credentials by using a URI:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-aws-temp-connection-string
+   :end-before: end-aws-temp-connection-string
+   :language: ruby
+   :copyable:
+   :dedent:
+
+Automatically Retrieving Credentials
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The client can retrieve credentials from the environment or from EC2 or ECS
+metadata endpoints. To retrieve credentials automatically, specify the
+AWS authentication mechanism but do not specify a username nor a password:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-aws-automatic-retrieval
+   :end-before: end-aws-automatic-retrieval
+   :language: ruby
+   :copyable:
+   :dedent:
+
+You can also use a connection string to retrieve credentials automatically:
+
+.. literalinclude:: /includes/security/auth.rb
+   :start-after: start-aws-automatic-retrieval-connection-string
+   :end-before: end-aws-automatic-retrieval-connection-string
+   :language: ruby
+   :copyable:
+   :dedent:
+
+The driver will try to obtain credentials from the following sources, in
+the specified order:
+
+- ``AWS_ACCESS_KEY_ID``, ``AWS_SECRET_ACCESS_KEY`` and ``AWS_SESSION_TOKEN``
+  environment variables. These environment variables are recognized by
+  a variety of AWS-related libraries and tools such as the official
+  AWS Ruby SDK and the AWS CLI. They are also defined when running in an
+  AWS Lambda environment.
+- The AWS STS `AssumeRoleWithWebIdentity action
+  <https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html>`_.
+  This returns credentials associated with the service account token. This mechanism
+  requires the following environment variables to be set:
+
+  - ``AWS_WEB_IDENTITY_TOKEN_FILE`` - path to a file containing the service
+    account token.
+  - ``AWS_ROLE_ARN`` - the Amazon Resource Name (ARN) of the role that the
+    caller is assuming.
+  - ``AWS_ROLE_SESSION_NAME`` (optional) - An identifier for the assumed role
+    session. If omitted, a random name will be generated by the driver.
+
+- The AWS `ECS task metadata endpoint
+  <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html>`_.
+  This returns credentials associated with the ECS task role assigned to
+  the container.
+- The AWS `EC2 instance metadata endpoint
+  <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html>`_.
+  This returns credentials associated with the EC2 instance role assigned to
+  the instance.
+
+.. note::
+
+  A credentials source that provides any credentials must provide a complete
+  set of credentials. For example, the driver will raise an error if only
+  one of ``AWS_ACCESS_KEY_ID`` or ``AWS_SECRET_ACCESS_KEY`` environment
+  variables is populated but not the other.
+
+.. note::
+
+  If an application is running in an ECS container on an EC2 instance and
+  `the container is allowed access to the instance metadata
+  <https://aws.amazon.com/premiumsupport/knowledge-center/ecs-container-ec2-metadata/>`_,
+  the driver will attempt to retrieve credentials for the AWS authentication
+  mechanism from the EC2 instance metadata endpoint, thus potentially
+  authenticating as the IAM role assigned to the EC2 instance, if it was not
+  able to retrieve ECS task role credentials from the ECS task endpoint.
