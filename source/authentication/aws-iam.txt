@@ -109,8 +109,8 @@ see the corresponding syntax:
       :tabid: default-connection-string
 
       .. literalinclude:: /includes/authentication/aws-iam.rb
-         :start-after: start-aws
-         :end-before: end-aws
+         :start-after: start-aws-connection-string
+         :end-before: end-aws-connection-string
          :language: ruby
          :copyable:
          :dedent:
@@ -119,8 +119,8 @@ see the corresponding syntax:
       :tabid: default-mongo-credential
 
       .. literalinclude:: /includes/authentication/aws-iam.rb
-         :start-after: start-aws-connection-string
-         :end-before: end-aws-connection-string
+         :start-after: start-aws
+         :end-before: end-aws
          :language: ruby
          :copyable:
          :dedent:
@@ -142,8 +142,8 @@ or :guilabel:`Client Options` tab to see the corresponding syntax:
       :tabid: default-connection-string
 
       .. literalinclude:: /includes/authentication/aws-iam.rb
-         :start-after: start-aws-temp
-         :end-before: end-aws-temp
+         :start-after: start-aws-temp-connection-string
+         :end-before: end-aws-temp-connection-string
          :language: ruby
          :copyable:
          :dedent:
@@ -152,8 +152,8 @@ or :guilabel:`Client Options` tab to see the corresponding syntax:
       :tabid: default-mongo-credential
 
       .. literalinclude:: /includes/authentication/aws-iam.rb
-         :start-after: start-aws-temp-connection-string
-         :end-before: end-aws-temp-connection-string
+         :start-after: start-aws-temp
+         :end-before: end-aws-temp
          :language: ruby
          :copyable:
          :dedent:
@@ -173,8 +173,8 @@ or :guilabel:`Client Options` tab to see the corresponding syntax:
       :tabid: default-connection-string
 
       .. literalinclude:: /includes/authentication/aws-iam.rb
-         :start-after: start-aws-automatic-retrieval
-         :end-before: end-aws-automatic-retrieval
+         :start-after: start-aws-automatic-retrieval-connection-string
+         :end-before: end-aws-automatic-retrieval-connection-string
          :language: ruby
          :copyable:
          :dedent:
@@ -183,8 +183,8 @@ or :guilabel:`Client Options` tab to see the corresponding syntax:
       :tabid: default-mongo-credential
 
       .. literalinclude:: /includes/authentication/aws-iam.rb
-         :start-after: start-aws-automatic-retrieval-connection-string
-         :end-before: end-aws-automatic-retrieval-connection-string
+         :start-after: start-aws-automatic-retrieval
+         :end-before: end-aws-automatic-retrieval
          :language: ruby
          :copyable:
          :dedent:
