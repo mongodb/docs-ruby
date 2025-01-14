@@ -21,11 +21,11 @@
    API Documentation <{+api-root+}>
    What's New </whats-new>
    Compatibility </compatibility>
+   Operations on Replica Sets </read-write-pref>
 
 .. TODO:
  Databases & Collections </databases-collections>
  Write Data </write>
- Operations on Replica Sets </read-write-pref>
  Monitor Your Application </monitoring>
  Data Aggregation </aggregation>
  Security </security>
@@ -66,11 +66,11 @@ working with data in the :ref:`ruby-get-started` tutorial.
 
 .. Learn how you can write data to MongoDB in the :ref:`ruby-write` section.
 
-.. Configure Operations on Replica Sets
-.. ------------------------------------
+Configure Operations on Replica Sets
+------------------------------------
 
-.. Learn how to configure read and write operations on a replica set in the
-.. :ref:`ruby-read-write-pref` section.
+Learn how to configure read and write operations on a replica set in the
+:ref:`ruby-read-write-pref` section.
 
 .. Optimize Queries by Using Indexes
 .. ---------------------------------
