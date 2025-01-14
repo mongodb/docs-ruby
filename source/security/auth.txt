@@ -29,7 +29,7 @@ the deprecated ``MONGODB-CR`` mechanism was removed and ``SCRAM-SHA-256`` suppor
 added.
 
 To create a credential that authenticates by using the default
-authentication mechanism, pass your ``user`` and ``password`` to the
+authentication mechanism, pass your ``username`` and ``password`` to the
 ``Mongo::Client.new`` method:
 
 .. literalinclude:: /includes/security/auth.rb
@@ -164,7 +164,7 @@ The AWS authentication mechanism uses AWS `Identity and Access Management (IAM)
 <https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html>`_
 and AWS `Security Token Service (STS)
 <https://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html>`_
-to prove the client's identity to a MongoDB server. Briefly, AWS authentication
+to prove the client's identity to a MongoDB server. AWS authentication
 works as follows:
 
 1. The client uses AWS IAM credentials to create a signature that is sent to
@@ -185,9 +185,9 @@ works as follows:
 
 AWS credentials are comprised of:
 
-- The access key ID.
-- The secret access key.
-- The optional session token.
+- The access key ID
+- The secret access key
+- The optional session token
 
 Authentication with `AWS IAM credentials
 <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html>`_,
@@ -210,16 +210,16 @@ Temporary credentials are used with:
 - `AWS Lambda environment <https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html>`_.
 - `IAM roles for service accounts <https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html>`_.
 
-The Ruby driver allows providing both regular and temporary credentials
-explicitly as Ruby options or URI options. If credentials are not explicitly
-provided, the driver will attempt to retrieve them from environment variables
+The {+driver-short+} allows providing both regular and temporary credentials
+explicitly as {+language+} options or URI options. If you do not explicitly provide
+credentials, the driver will attempt to retrieve them from environment variables
 described below and from EC2 instance and ECS task metadata endpoints.
 
 Providing Credentials Explicitly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Regular (non-temporary) IAM credentials can be provided as Ruby options,
-as follows:
+You can provide regular (non-temporary) IAM credentials as Ruby options,
+as shown in the following example:
 
 .. literalinclude:: /includes/security/auth.rb
    :start-after: start-aws
@@ -242,7 +242,7 @@ They can also be provided by using a URI:
   When credentials are provided by using a URI, they must be percent-escaped.
 
 To provide temporary credentials, specify the session token in the
-authentication mechanism properties as follows:
+authentication mechanism properties a shown in the following example:
 
 .. literalinclude:: /includes/security/auth.rb
    :start-after: start-aws-temp

@@ -31,4 +31,4 @@ To learn more about how to secure your application, see the
 following sections:
 
 - Learn how to use different authentication mechanisms to secure your data in
-  the :ref:`Authentication Mechanisms <scala-auth>` guide.
+  the :ref:`Authentication Mechanisms <ruby-auth>` guide.
