@@ -114,7 +114,7 @@ The read concern specifies the following behaviors:
 - Level of :manual:`causal consistency </core/causal-consistency-read-write-concerns/>`
   across replica sets
 
-- :manual:`Isolation guarantees </core/read-isolation-consistency-recency/>`__ 
+- :manual:`Isolation guarantees </core/read-isolation-consistency-recency/>`
   maintained during a query
 
 You can specify the read concern setting by using the ``level`` parameter. The default
@@ -134,7 +134,7 @@ in the API documentation.
 Example: Set the Read Concern Level of an Aggregation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following code sets the read concern level of an aggregation to `"available"`:
+The following code sets the read concern level of an aggregation to ``"available"``:
 
 .. literalinclude:: /includes/usage-examples/read-write-pref.rb
    :language: ruby
@@ -142,8 +142,9 @@ The following code sets the read concern level of an aggregation to `"available"
    :start-after: start-read-concern
    :end-before: end-read-concern
 
-For more information about aggregation, see the :ref:`Aggregation <ruby-aggregation>`
-page.
+For more information about aggregation, see the Aggregation page.
+
+.. TODO: insert :ref:`Aggregation <ruby-aggregation>` link here
 
 Example: Change the Read Concern of a Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -205,8 +206,9 @@ the operations in a transaction:
    :start-after: start-read-preference
    :end-before: end-read-preference
 
-For more information about transactions, see the :ref:`Transactions <ruby-transactions>`
-guide.
+For more information about transactions, see the Transactions guide.
+
+.. TODO: insert :ref:`Transactions <ruby-transactions>` link
 
 Example: Set the Read Preference of a Cluster in the Connection String
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
