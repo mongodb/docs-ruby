@@ -7,32 +7,32 @@ end
 # start-aws
 client = Mongo::Client.new(['<host>'],
                            auth_mech: :aws,
-                           user: '<AWS-ACCESS-KEY-ID>',
-                           password: '<AWS-SECRET-ACCESS-KEY>')
+                           user: '<aws_access_key_id>',
+                           password: '<aws_secret_access_key>')
 # end-aws
 
 # start-aws-connection-string
 client = Mongo::Client.new(
-  'mongodb://<AWS-ACCESS-KEY-ID>:<AWS-SECRET-ACCESS-KEY>@host/?authMechanism=MONGODB-AWS')
+  'mongodb://<aws_access_key_id>:<aws_secret_access_key>@host/?authMechanism=MONGODB-AWS')
 # end-aws-connection-string
 
 # start-aws-temp
 client = Mongo::Client.new(['<host>'],
                            auth_mech: :aws,
-                           user: '<AWS-ACCESS-KEY-ID>',
-                           password: '<AWS-SECRET-ACCESS-KEY>',
+                           user: '<aws_access_key_id>',
+                           password: '<aws_secret_access_key>',
                            auth_mech_properties: {
-                             aws_session_token: '<AWS-SESSION-TOKEN>',
+                             aws_session_token: '<<aws_session_token>>',
                            })
 # end-aws-temp
 
 # start-aws-temp-connection-string
 client = Mongo::Client.new(
-  'mongodb://<AWS-ACCESS-KEY-ID>:<AWS-SECRET-ACCESS-KEY>@host/?authMechanism=MONGODB-AWS&authMechanismProperties=AWS_SESSION_TOKEN:<AWS-SESSION-TOKEN>')
+  'mongodb://<aws_access_key_id>:<aws_secret_access_key>@host/?authMechanism=MONGODB-AWS&authMechanismProperties=AWS_SESSION_TOKEN:<<aws_session_token>>')
 # end-aws-temp-connection-string
 
 # start-aws-automatic-retrieval
-client = Mongo::Client.new(['<host>'],
+client = Mongo::Client.new(['<hostname>'],
                            auth_mech: :aws)
 )
 # end-aws-automatic-retrieval

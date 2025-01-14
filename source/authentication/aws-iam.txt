@@ -80,73 +80,114 @@ explicitly as {+language+} options or URI options. If you do not explicitly prov
 credentials, the driver will attempt to retrieve them from environment variables
 described below and from EC2 instance and ECS task metadata endpoints.
 
+Code Placeholders
+~~~~~~~~~~~~~~~~~
+
+The code examples on this page use the following placeholders:
+
+- ``<hostname>``: The network address of your MongoDB deployment.
+- ``<aws-access-key_id>``: The AWS access key ID.
+- ``<aws_secret_access_key>``: The AWS secret access key.
+- ``<aws_session_token>``: The AWS session token.
+
+Using AWS IAM Authentication in Your Application
+------------------------------------------------
+
+The following sections describe how to use the AWS IAM authentication mechanism in your
+application.
+
 Providing Credentials Explicitly
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can provide regular (non-temporary) IAM credentials as Ruby options,
-as shown in the following example:
+You can provide regular (non-temporary) IAM credentials as client options or by using a URI.
+Select the :guilabel:`Connection String` or :guilabel:`Client Options` tab to
+see the corresponding syntax:
 
-.. literalinclude:: /includes/authentication/aws-iam.rb
-   :start-after: start-aws
-   :end-before: end-aws
-   :language: ruby
-   :copyable:
-   :dedent:
+.. tabs::
 
-They can also be provided by using a URI:
+   .. tab:: Connection String
+      :tabid: default-connection-string
 
-.. literalinclude:: /includes/authentication/aws-iam.rb
-   :start-after: start-aws-connection-string
-   :end-before: end-aws-connection-string
-   :language: ruby
-   :copyable:
-   :dedent:
+      .. literalinclude:: /includes/authentication/aws-iam.rb
+         :start-after: start-aws
+         :end-before: end-aws
+         :language: ruby
+         :copyable:
+         :dedent:
+
+   .. tab:: Client Options
+      :tabid: default-mongo-credential
+
+      .. literalinclude:: /includes/authentication/aws-iam.rb
+         :start-after: start-aws-connection-string
+         :end-before: end-aws-connection-string
+         :language: ruby
+         :copyable:
+         :dedent:
 
 .. note::
 
   When credentials are provided by using a URI, they must be percent-escaped.
 
+Providing Temporary Credentials
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 To provide temporary credentials, specify the session token in the
-authentication mechanism properties a shown in the following example:
+client options or by using a URI. Select the :guilabel:`Connection String`
+or :guilabel:`Client Options` tab to see the corresponding syntax:
 
-.. literalinclude:: /includes/authentication/aws-iam.rb
-   :start-after: start-aws-temp
-   :end-before: end-aws-temp
-   :language: ruby
-   :copyable:
-   :dedent:
+.. tabs::
 
-You can also provide temporary credentials by using a URI:
+   .. tab:: Connection String
+      :tabid: default-connection-string
 
-.. literalinclude:: /includes/authentication/aws-iam.rb
-   :start-after: start-aws-temp-connection-string
-   :end-before: end-aws-temp-connection-string
-   :language: ruby
-   :copyable:
-   :dedent:
+      .. literalinclude:: /includes/authentication/aws-iam.rb
+         :start-after: start-aws-temp
+         :end-before: end-aws-temp
+         :language: ruby
+         :copyable:
+         :dedent:
+
+   .. tab:: Client Options
+      :tabid: default-mongo-credential
+
+      .. literalinclude:: /includes/authentication/aws-iam.rb
+         :start-after: start-aws-temp-connection-string
+         :end-before: end-aws-temp-connection-string
+         :language: ruby
+         :copyable:
+         :dedent:
 
 Automatically Retrieving Credentials
-------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The client can retrieve credentials from the environment or from EC2 or ECS
 metadata endpoints. To retrieve credentials automatically, specify the
-AWS authentication mechanism but do not specify a username nor a password:
+AWS authentication mechanism but do not specify a username nor a password, either by using
+client options or by using a URI. Select the :guilabel:`Connection String`
+or :guilabel:`Client Options` tab to see the corresponding syntax:
 
-.. literalinclude:: /includes/authentication/aws-iam.rb
-   :start-after: start-aws-automatic-retrieval
-   :end-before: end-aws-automatic-retrieval
-   :language: ruby
-   :copyable:
-   :dedent:
+.. tabs::
 
-You can also use a connection string to retrieve credentials automatically:
+   .. tab:: Connection String
+      :tabid: default-connection-string
 
-.. literalinclude:: /includes/authentication/aws-iam.rb
-   :start-after: start-aws-automatic-retrieval-connection-string
-   :end-before: end-aws-automatic-retrieval-connection-string
-   :language: ruby
-   :copyable:
-   :dedent:
+      .. literalinclude:: /includes/authentication/aws-iam.rb
+         :start-after: start-aws-automatic-retrieval
+         :end-before: end-aws-automatic-retrieval
+         :language: ruby
+         :copyable:
+         :dedent:
+
+   .. tab:: Client Options
+      :tabid: default-mongo-credential
+
+      .. literalinclude:: /includes/authentication/aws-iam.rb
+         :start-after: start-aws-automatic-retrieval-connection-string
+         :end-before: end-aws-automatic-retrieval-connection-string
+         :language: ruby
+         :copyable:
+         :dedent:
 
 The driver will try to obtain credentials from the following sources, in
 the specified order:

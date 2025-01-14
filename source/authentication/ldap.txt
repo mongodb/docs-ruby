@@ -40,7 +40,7 @@ The code examples on this page use the following placeholders:
 - ``<port>``: The port number of your MongoDB deployment. If you omit this parameter,
   the driver uses the default port number (``27017``). You don't need to specify a port
   when connecting to a MongoDB Atlas cluster.
-- ``<authenticationDb>``: The MongoDB database that contains the user's LDAP credentials.
+- ``<authentication_db>``: The MongoDB database that contains the user's LDAP credentials.
   If you omit this parameter, the driver uses the default database (``admin``).
 
 To use the code examples on this page, replace these placeholders with your own values.
@@ -61,7 +61,7 @@ see the corresponding syntax:
 
       .. code-block:: ruby
          
-         client = Mongo::Client.new('mongodb://<username>:<password>@<hostname>[:<port>]/?authSource=<authenticationDb>&authMechanism=PLAIN')
+         client = Mongo::Client.new('mongodb://<username>:<password>@<hostname>[:<port>]/?authSource=<authentication_b>&authMechanism=PLAIN')
 
    .. tab:: Client Options
       :tabid: mongo-credential
@@ -75,7 +75,6 @@ see the corresponding syntax:
                                     ssl_verify: true,
                                     ssl_cert: '/path/to/client.pem',
                                     ssl_ca_cert: '/path/to/ca.pem' )
-
 
 API Documentation
 -----------------

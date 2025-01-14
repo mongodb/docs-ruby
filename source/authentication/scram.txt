@@ -55,7 +55,7 @@ The code examples on this page use the following placeholders:
 - ``<port>``: The port number of your MongoDB deployment. If you omit this parameter,
   the driver uses the default port number (``27017``). You don't need a port number
   when connecting to a MongoDB Atlas cluster.
-- ``<authenticationDb>``: The MongoDB database that contains the user's authentication
+- ``<authentication_db>``: The MongoDB database that contains the user's authentication
   data. If you omit this parameter, the driver uses the default value, ``admin``.
 
 To use the code examples on this page, replace these placeholders with your own values.
@@ -68,7 +68,7 @@ MongoDB credentials, but don't specify an authentication mechanism.
 You can specify your MongoDB
 credentials either in your connection string or by passing your username and password to the
 ``user`` and ``password`` options when creating a client. 
-Select the :guilabel:`Connection String` or :guilabel:`MongoCredential` tab to
+Select the :guilabel:`Connection String` or :guilabel:`Client Options` tab to
 see the corresponding syntax:
 
 .. tabs::
@@ -78,7 +78,7 @@ see the corresponding syntax:
 
       .. code-block:: ruby
 
-         client = Mongo::Client.new('mongodb[+srv]://<username>:<password>@<hostname>[:<port>]/?authSource=<authenticationDb>')
+         client = Mongo::Client.new('mongodb[+srv]://<username>:<password>@<hostname>[:<port>]/?authSource=<authentication_db>')
 
    .. tab:: Client Options
       :tabid: default-mongo-credential

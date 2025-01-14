@@ -24,6 +24,22 @@ The Generic Security Services API (GSSAPI) authentication mechanism allows you t
 use your principal name to authenticate to a Kerberos service.
 You can use this mechanism only when authenticating to MongoDB Enterprise Advanced.
 
+Code Placeholders
+~~~~~~~~~~~~~~~~~
+
+The code examples on this page use the following placeholders:
+
+- ``<username>``: Your LDAP username.
+- ``<hostname>``: The network address of your MongoDB deployment.
+- ``<port>``: The port number of your MongoDB deployment. If you omit this parameter,
+  the driver uses the default port number (``27017``). You don't need to specify a port
+  when connecting to a MongoDB Atlas cluster.
+- ``<authentication_db>``: The MongoDB database that contains the user's LDAP credentials.
+  If you omit this parameter, the driver uses the default database (``admin``).
+
+To use the code examples on this page, replace these placeholders with your own values.
+
+
 Using GSSAPI Authentication in Your Application
 -----------------------------------------------
 
@@ -79,15 +95,33 @@ for more information.
   If using MongoDB URIs, be sure to percent-escape special characters like
   ``/`` and ``@`` when they appear in the username.
 
-.. code-block:: ruby
+Select the :guilabel:`Connection String` or :guilabel:`Client Options` tab to
+see the corresponding syntax for connecting to MongoDB with Kerberos authentication:
 
-  # Authenticate as appuser@MYREALM:
-  client = Mongo::Client.new("mongodb://appuser%40MYREALM@myserver.mycompany.com:27017/mydb?authMechanism=GSSAPI")
+.. tabs::
 
-  # Authenticate as myapp/appuser@MYREALM:
-  client = Mongo::Client.new("mongodb://myapp%2Fappuser%40MYREALM@myserver.mycompany.com:27017/mydb?authMechanism=GSSAPI")
+   .. tab:: Connection String
+      :tabid: connection-string
 
-  # Authenticate using Ruby options:
-  client = Mongo::Client.new(['myserver.mycompany.com:27017'],
-                             auth_mech: :gssapi,
-                             user: 'myapp/appuser@MYREALM')
+      .. code-block:: ruby
+
+         client = Mongo::Client.new("mongodb://<username>@<hostname>[:<port>]/<authentication_db>?authMechanism=GSSAPI")
+
+
+   .. tab:: Client Options
+      :tabid: mongo-credential
+
+      .. code-block:: ruby
+         :emphasize-lines: 1
+
+         client = Mongo::Client.new(['<hostname>[:<port>]'],
+                                    auth_mech: :gssapi,
+                                    user: 'myapp/appuser@MYREALM')
+
+API Documentation
+-----------------
+
+To learn more about any of the methods or types discussed on this
+page, see the following API documentation:
+
+- `Mongo::Client <{+api-root+}/Mongo/Client.html>`__
