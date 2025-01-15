@@ -48,9 +48,6 @@ the relevant values for your MongoDB deployment.
 
 .. _ruby-read-sample:
 
-Sample Application
-~~~~~~~~~~~~~~~~~~
-
 .. include:: /includes/usage-examples/sample-app-intro.rst
 
 .. literalinclude:: /includes/usage-examples/sample-read-app.rb
@@ -110,7 +107,7 @@ Count Documents Returned from a Query
 -------------------------------------
 
 The following example returns the number of documents in the specified
-collection that match query criteria:
+collection that match the query criteria:
 
 .. literalinclude:: /includes/usage-examples/read-code-examples.rb
    :start-after: start-count-accurate
