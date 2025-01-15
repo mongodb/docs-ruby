@@ -15,7 +15,7 @@ X.509
    :values: reference
 
 .. meta::
-   :keywords: .NET, certificate, code example
+   :keywords: certificate, code example
 
 Overview
 --------

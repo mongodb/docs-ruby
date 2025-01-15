@@ -15,7 +15,7 @@ LDAP
    :values: reference
 
 .. meta::
-   :keywords: .NET, code example
+   :keywords: code example
 
 Overview
 --------
@@ -49,8 +49,7 @@ Using PLAIN Authentication in Your Application
 ----------------------------------------------
 
 You can specify the ``PLAIN`` authentication mechanism and supply your LDAP credentials
-either by
-using specifying the ``:plain`` option when creating a client or as part of the connection string.
+either as a client option or as part of the connection string.
 Select the :guilabel:`Connection String` or :guilabel:`Client Options` tab to
 see the corresponding syntax:
 

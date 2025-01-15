@@ -15,16 +15,16 @@ Authentication Mechanisms
    :values: reference
 
 .. meta::
-   :keywords: .NET, community, security
+   :keywords: community, security
 
 .. toctree::
    :caption: Authentication
 
-   SCRAM </authentication/scram>
-   X.509 </authentication/x509>
-   AWS IAM </authentication/aws-iam>
-   LDAP (PLAIN) </authentication/ldap>
-   Kerberos (GSSAPI) </authentication/kerberos>
+   SCRAM </authentication/auth-mechanisms/scram>
+   X.509 </authentication/auth-mechanisms/x509>
+   AWS IAM </authentication/auth-mechanisms/aws-iam>
+   LDAP (PLAIN) </authentication/auth-mechanisms/ldap>
+   Kerberos (GSSAPI) </authentication/auth-mechanisms/kerberos>
 
 Overview
 --------

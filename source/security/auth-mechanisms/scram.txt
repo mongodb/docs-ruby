@@ -15,7 +15,7 @@ SCRAM
    :values: reference
 
 .. meta::
-   :keywords: .NET, salt, default, code example
+   :keywords: salt, default, code example
 
 Overview
 --------
