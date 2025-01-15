@@ -64,7 +64,7 @@ You can enable TLS for the connection to your MongoDB deployment in the followin
     .. tab:: Mongo::Client
         :tabid: mongoclient
 
-        You must specify the following options for certificate paths:
+        To configure certificates, you must specify the following options:
 
         - ``ssl_cert``: The certificate file used to identify the connection against MongoDB.
         - ``ssl_key``: The private keyfile used to identify the connection against MongoDB.
@@ -75,7 +75,7 @@ You can enable TLS for the connection to your MongoDB deployment in the followin
 
         These certificate options can be specified as different types. For example, the 
         ``ssl_cert`` option has the alternative ``ssl_cert_object`` and ``ssl_cert_string`` 
-        options to specify the certificate file as either a certificate object or a string.
+        options, to specify the certificate file as either a certificate object or a string.
         For more information on certificate options, see the Options Hash section of 
         the API Documentation for `Mongo::Client <{+api-root+}/Mongo/Client.html>`__ .  
 
@@ -102,7 +102,7 @@ You can enable TLS for the connection to your MongoDB deployment in the followin
     .. tab:: Connection String
         :tabid: uri
 
-        You must specify the following URI options:
+        To configure certificates, you must specify the following URI options:
         
         - ``tlsCertificateKeyFile``: The certificate and key file used to identify
           identify the connection against MongoDB. Both the certificate and key
