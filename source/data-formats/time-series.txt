@@ -9,7 +9,7 @@ Time Series Data
    :values: reference
 
 .. meta:: 
-   :keywords: ruby, time series, collections
+   :keywords: ruby, time series, collections, code example
 
 .. contents:: On this page
    :local:

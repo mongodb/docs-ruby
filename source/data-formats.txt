@@ -16,7 +16,7 @@ Data Formats
 
 .. meta::
    :description: Learn how to use indexes by using the MongoDB Ruby Driver.
-   :keywords: ruby, query, collections, time series, code example
+   :keywords: ruby, query, collections, time series
 
 .. toctree::
    :titlesonly:
