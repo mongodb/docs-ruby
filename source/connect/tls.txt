@@ -1,0 +1,173 @@
+.. _ruby-tls:
+
+========================================
+Configure Transport Layer Security (TLS) 
+========================================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: security, authentication, transport layer security, encrypt
+
+Overview
+--------
+
+In this guide, you can learn how to use the Transport Layer Security (TLS)
+protocol to secure your connection to a MongoDB deployment.
+
+To connect to a MongoDB deployment using TLS, you must:
+
+- Enable TLS connections in ``Mongo::Client``.
+- Specify the client TLS certificate.
+- Specify the CA certificate to verify the server's TLS certificate.
+
+To learn how to configure your MongoDB deployment for TLS, see the
+:manual:`TLS configuration guide </tutorial/configure-ssl/>` in the
+{+mdb-server+} manual.
+
+.. note::
+
+   This page assumes prior knowledge of TLS/SSL and access to valid certificates.
+   A full description of TLS/SSL, PKI (Public Key Infrastructure) certificates, and
+   Certificate Authorities (CAs) is beyond the scope of this documentation. To
+   learn more about TLS, see the Wikipedia entry for :wikipedia:`Transport Layer Security <Transport_Layer_Security>`.
+
+.. _ruby-enable-tls:
+
+Enable TLS
+----------
+
+You can enable TLS for the connection to your MongoDB deployment in the following ways:
+
+- Set the ``ssl`` option to ``true`` in a new ``Mongo:Client`` object
+- Set the ``tls`` option to ``true`` in your connection string
+
+.. note:: The {+driver-long+} does not support SSL
+
+    All {+mdb-server+} versions supported by the Ruby driver (2.6 and higher) 
+    only implement TLS. 2.6 and do not use SSL.
+    
+    For historical reasons, the Ruby option names pertaining to TLS configuration 
+    use the ``ssl`` rather than the ``tls`` prefix. The next major version of the Ruby 
+    driver (3.0) will use the ``tls`` prefix for Ruby option names.
+
+.. tabs::
+
+    .. tab:: Mongo::Client
+        :tabid: mongoclient
+
+        You must specify the following options for certificate paths:
+
+        - ``ssl_cert``: The certificate file used to identify the connection against MongoDB.
+        - ``ssl_key``: The private keyfile used to identify the connection against MongoDB.
+        - ``ssl_ca_cert``: The file containing the concatenated certificate authority (CA)
+          certificates used to validate certs passed from the other end of the connection.
+          By default, the driver will use the default system root certificate 
+          store as the trust anchor, if the option is not designated. 
+
+        These certificate options can be specified as different types. For example, the 
+        ``ssl_cert`` option has the alternative ``ssl_cert_object`` and ``ssl_cert_string`` 
+        options to specify the certificate file as either a certificate object or a string.
+        For more information on certificate options, see Options Hash section of 
+        the API Documentation for `Mongo::Client <{+api-root+}/Mongo/Client.html>`__.  
+
+        In the following example, the TLS certificate and corresponding private key 
+        are provided in separate files:
+
+        .. literalinclude:: /includes/connect/tls.rb
+            :language: ruby
+            :dedent:
+            :start-after: start-enable-tls-settings
+            :end-before: end-enable-tls-settings
+        
+        The TLS certificate and private key can also be contained in the same file, but 
+        both the certificate and private key options must still be specified. In the 
+        following example, the TLS certificate and the private key are both defined 
+        in the same ``client.pem`` file:
+
+        .. literalinclude:: /includes/connect/tls.rb
+            :language: ruby
+            :dedent:
+            :start-after: start-enable-tls-settings-same-file
+            :end-before: end-enable-tls-settings-same-file
+
+    .. tab:: Connection String
+        :tabid: uri
+
+        You must specify the following URI options:
+        
+        - ``tlsCertificateKeyFile``: The certificate and key file used to identify
+          identify the connection against MongoDB. Both the certificate and key
+          must be stored in the same file provided to this option.
+        - ``tlsCAFile``: The file containing the concatenated certificate authority (CA)
+          certificates used to validate certificates passed from the other end of the 
+          connection. The driver will use the default system root certificate 
+          store as the trust anchor, if the option is not designated. 
+
+        .. literalinclude:: /includes/connect/tls.rb
+            :language: ruby
+            :dedent:
+            :start-after: start-enable-tls-uri
+            :end-before: end-enable-tls-uri
+        
+        The file containing the certificate and key usually has a``.crt`` or ``.pem`` 
+        extension.
+
+        URI option values must be properly URI escaped. This applies, for example, 
+        to slashes (/) in the paths, which are encoded as ``%2f``.
+
+Modify the SSL Context
+----------------------
+
+If your TLS configuration requires customization, you can set TLS context hooks
+by adding a native Ruby class ``Proc`` object to the ``Mongo.tls_context_hooks`` 
+array. The ``Proc`` should be added to the array before creating any ``Mongo::Client`` 
+instances. 
+
+For example, the following code could be placed in an initializer to enable the 
+AES256-SHA cipher as the only cipher to be used for TLS:
+
+.. literalinclude:: /includes/connect/tls.rb
+    :language: ruby
+    :dedent:
+    :start-after: start-modify-context
+    :end-before: end-modify-context
+
+To learn more about the SSL context options available, see the Ruby
+documentation for 
+`SSLContext <https://ruby-doc.org/stdlib-2.7.0/libdoc/openssl/rdoc/OpenSSL/SSL/SSLContext.html>`__.
+
+OCSP Verification
+-----------------
+
+If the certificate provided by the server contains an OCSP endpoint URI,
+the driver will issue an OCSP request to the specified endpoint to verify the
+validity of the certificate by default.
+
+The OCSP endpoint check may be disabled by setting the
+``:ssl_verify_ocsp_endpoint`` Ruby option to ``false`` or by setting the
+``tlsDisableOCSPEndpointCheck`` URI option to ``true`` when creating a client.
+
+.. note::
+
+  OCSP endpoint checking is not currently performed when running on JRuby,
+  since JRuby does not correctly expose the OCSP endpoint URI.
+
+.. _ruby-tls-api:
+
+API Documentation
+-----------------
+
+For more information about any of the types and methods discussed in this guide,
+see the following API documentation:
+
+- `Mongo::Client <{+api-root+}/Mongo/Client.html>`__
+- `tls_context_hooks <{+api-root+/Mongo.html#tls_context_hooks-class_method}>`__
