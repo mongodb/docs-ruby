@@ -15,8 +15,8 @@ Data Formats
    :values: reference
 
 .. meta::
-   :description: Learn how to use indexes by using the MongoDB Scala Driver.
-   :keywords: query, optimization, efficiency, usage example, code example
+   :description: Learn how to use indexes by using the MongoDB Ruby Driver.
+   :keywords: ruby, query, collections, time series
 
 .. toctree::
    :titlesonly:

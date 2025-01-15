@@ -86,7 +86,7 @@ these parameters.
 Example
 ~~~~~~~
 
-The following example uses the ``Collection#create`` metho to create a time series
+The following example uses the ``Collection#create`` method to create a time series
 collection named ``october2024`` with the ``:timeField``` option set to ``"timestamp"``:
 
 .. literalinclude:: /includes/usage-examples/time-series.rb
@@ -135,10 +135,10 @@ Store Time Series Data
 ----------------------
 
 You can insert data into a time series collection by using the ``insert_one``
-or ``insert_many`` methods and specifying the measurement, timestamp, and 
+or ``insert_many`` method and specifying the measurement, timestamp, and 
 metadata in each inserted document.
 
-To learn more about inserting documents, see :ref:`ruby-write-insert`.
+To learn more about inserting documents, see the :ref:`ruby-write-insert` guide.
 
 Example
 ~~~~~~~
