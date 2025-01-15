@@ -86,11 +86,6 @@ for more information.
   Per the server Kerberos documentation, you must specify the FQDN of the host
   running MongoDB when using Kerberos authentication.
 
-.. note::
-
-  If using MongoDB URIs, be sure to percent-encode any special characters that appear in
-  the username.
-
 Select the :guilabel:`Connection String` or :guilabel:`Client Options` tab to
 see the corresponding syntax for connecting to MongoDB with Kerberos authentication:
 
@@ -113,6 +108,11 @@ see the corresponding syntax for connecting to MongoDB with Kerberos authenticat
          client = Mongo::Client.new(['<hostname>[:<port>]'],
                                     auth_mech: :gssapi,
                                     user: 'myapp/appuser@MYREALM')
+
+.. note::
+
+  If you use a connection string to connect to MongoDB, ensure that you to percent-encode any
+  special characters that appear in the username.
 
 API Documentation
 -----------------
