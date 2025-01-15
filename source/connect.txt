@@ -22,7 +22,6 @@ Connect to MongoDB
    :titlesonly:
    :maxdepth: 1
 
-   /connect/mongoclient
-   /connect/stable-api
-   /connect/tls
-   
+   Create a Client </connect/mongoclient>
+   Stable API </connect/stable-api>
+   Configure TLS </connect/tls>

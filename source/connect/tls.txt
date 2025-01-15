@@ -25,7 +25,7 @@ protocol to secure your connection to a MongoDB deployment.
 
 To connect to a MongoDB deployment using TLS, you must:
 
-- Enable TLS connections in ``Mongo::Client``.
+- Enable a TLS connection in ``Mongo::Client``.
 - Specify the client TLS certificate.
 - Specify the CA certificate to verify the server's TLS certificate.
 
@@ -50,7 +50,7 @@ You can enable TLS for the connection to your MongoDB deployment in the followin
 - Set the ``ssl`` option to ``true`` in a new ``Mongo:Client`` object
 - Set the ``tls`` option to ``true`` in your connection string
 
-.. note:: The {+driver-long+} does not support SSL
+.. note:: SSL Naming Convention
 
     All {+mdb-server+} versions supported by the Ruby driver (2.6 and higher) 
     only implement TLS. 2.6 and do not use SSL.
@@ -68,16 +68,16 @@ You can enable TLS for the connection to your MongoDB deployment in the followin
 
         - ``ssl_cert``: The certificate file used to identify the connection against MongoDB.
         - ``ssl_key``: The private keyfile used to identify the connection against MongoDB.
-        - ``ssl_ca_cert``: The file containing the concatenated certificate authority (CA)
-          certificates used to validate certs passed from the other end of the connection.
+        - ``ssl_ca_cert``: The file containing the concatenated CA certificates 
+          used to validate certs passed from the other end of the connection.
           By default, the driver will use the default system root certificate 
           store as the trust anchor, if the option is not designated. 
 
         These certificate options can be specified as different types. For example, the 
         ``ssl_cert`` option has the alternative ``ssl_cert_object`` and ``ssl_cert_string`` 
         options to specify the certificate file as either a certificate object or a string.
-        For more information on certificate options, see Options Hash section of 
-        the API Documentation for `Mongo::Client <{+api-root+}/Mongo/Client.html>`__.  
+        For more information on certificate options, see the Options Hash section of 
+        the API Documentation for `Mongo::Client <{+api-root+}/Mongo/Client.html>`__ .  
 
         In the following example, the TLS certificate and corresponding private key 
         are provided in separate files:
@@ -88,7 +88,7 @@ You can enable TLS for the connection to your MongoDB deployment in the followin
             :start-after: start-enable-tls-settings
             :end-before: end-enable-tls-settings
         
-        The TLS certificate and private key can also be contained in the same file, but 
+        The TLS certificate and private key can be contained in the same file, but 
         both the certificate and private key options must still be specified. In the 
         following example, the TLS certificate and the private key are both defined 
         in the same ``client.pem`` file:
@@ -160,6 +160,80 @@ The OCSP endpoint check may be disabled by setting the
 
   OCSP endpoint checking is not currently performed when running on JRuby,
   since JRuby does not correctly expose the OCSP endpoint URI.
+
+Allow Insecure TLS
+------------------
+
+When TLS is enabled, the {+driver-short+} automatically verifies the certificate that
+the server presents. When testing your code, you can disable this verification.
+This is known as *insecure TLS*.
+
+When insecure TLS is enabled, the driver requires only that the server present an
+X.509 certificate. The driver accepts a certificate even if any of the following are
+true: 
+
+- The hostname of the server and the subject name (or subject alternative name) 
+  on the certificate don't match.
+- The certificate is expired or not yet valid. 
+- The certificate doesn't have a trusted root certificate in the chain. 
+- The certificate purpose isn't valid for server identification.
+
+.. note::
+
+   Even when insecure TLS is enabled, communication between the client and server
+   is encrypted with TLS.
+
+To enable insecure TLS, set the ``sslVerify`` client option or the ``tlsInsecure``
+URI option to ``true``:
+
+.. tabs::
+
+    .. tab:: Mongo::Client
+        :tabid: mongoclient
+
+        .. literalinclude:: /includes/connect/tls.rb
+            :language: ruby
+            :dedent:
+            :start-after: start-ssl-verify
+            :end-before: end-ssl-verify
+
+    .. tab:: Connection String
+        :tabid: uri
+
+        .. literalinclude:: /includes/connect/tls.rb
+            :language: ruby
+            :dedent:
+            :start-after: start-tls-insecure
+            :end-before: end-tls-insecure
+
+You can similarly set the following options to disable verification for the 
+certificate or hostname:
+
+.. tabs::
+
+    .. tab:: Mongo::Client
+        :tabid: mongoclient
+
+        - ssl_verify_certificate: Disable certificate validation by setting the 
+          option to ``false``.
+        - ssl_verify_hostname: Disable hostname verification by setting the option 
+          to ``false``.
+
+    .. tab:: Connection String
+        :tabid: uri
+
+        - tlsAllowInvalidCertificates: Disable certificate validation by setting
+          the option to ``true``.
+        - tlsAllowInvalidHostnames: Disable hostname validation by setting
+          the option to ``true``.
+
+.. warning:: Don't Use Insecure TLS in Production
+
+   Always disable insecure TLS in production.
+   
+   Enabling insecure TLS in a production environment makes your application 
+   insecure and potentially vulnerable to expired certificates and foreign 
+   processes posing as valid client instances.
 
 .. _ruby-tls-api:
 
