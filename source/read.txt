@@ -163,7 +163,6 @@ subsequent change events in that collection:
    :copyable:
    :dedent:
 
-.. TODO
-.. To learn more about the ``watch()`` method, see the :ref:`Monitor Data Changes <ruby-change-streams>` guide.
+To learn more about the ``watch()`` method, see the :ref:`Monitor Data Changes <ruby-change-streams>` guide.
 
 
