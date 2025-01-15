@@ -29,28 +29,26 @@ Code Placeholders
 
 The code examples on this page use the following placeholders:
 
-- ``<username>``: Your LDAP username.
-- ``<hostname>``: The network address of your MongoDB deployment.
-- ``<port>``: The port number of your MongoDB deployment. If you omit this parameter,
-  the driver uses the default port number (``27017``). You don't need to specify a port
+- ``<username>``: LDAP username.
+- ``<hostname>``: Network address of your MongoDB deployment.
+- ``<port>``: Port number of your MongoDB deployment. If you omit this parameter,
+  the driver uses the default port number (``27017``). Specifying a port number is optional
   when connecting to a MongoDB Atlas cluster.
-- ``<authentication_db>``: The MongoDB database that contains the user's LDAP credentials.
+- ``<authentication_db>``: MongoDB database that contains the user's LDAP credentials.
   If you omit this parameter, the driver uses the default database (``admin``).
 
 To use the code examples on this page, replace these placeholders with your own values.
 
-
 Using GSSAPI Authentication in Your Application
 -----------------------------------------------
 
-To configure the MongoDB server to use Kerberos, please refer to the
+To configure the MongoDB server to use Kerberos, see the
 :manual:`server Kerberos documentation
 </tutorial/control-access-to-mongodb-with-kerberos-authentication/>`.
 
 To use the Kerberos authentication mechanism with the Ruby MongoDB driver,
-an additional library implementing the Kerberos authenticator -
-`mongo_kerberos <https://rubygems.org/gems/mongo_kerberos>`_ - must be
-installed and loaded. To do so, add the following lines to your ``Gemfile``:
+you must install and load the `mongo_kerberos <https://rubygems.org/gems/mongo_kerberos>`__
+library. To do so, add the following lines to your ``Gemfile``:
 
 .. code-block:: ruby
 
@@ -64,36 +62,34 @@ Then, add the following lines to your application code:
   require 'mongo'
   require 'mongo_kerberos'
 
-If using Kerberos authentication with **MRI**, the password is not specified
-in driver configuration and it is not sent to the MongoDB server by the driver.
-Instead a Kerberos session must be established externally to the driver
-and this session is used by the driver to prove the user's identity to
-the server. Establishing this session requires that the host system is
-configured for Kerberos authentication; see the `Kerberos documentation
-<https://web.mit.edu/kerberos/krb5-latest/doc/admin/install_clients.html>`_
+If using Kerberos authentication with **MRI**, you must establish a Kerberos
+session to the driver. This session is used by the driver to prove the user's identity to
+the server. You must ensure that the host system is
+configured for Kerberos authentication. To learn more about configuring the host system
+to use Kerberos, see the `Kerberos documentation
+<https://web.mit.edu/kerberos/krb5-latest/doc/admin/install_clients.html>`__
 or your operating system documentation for details. Use the `kinit utility
-<https://web.mit.edu/kerberos/krb5-latest/doc/user/user_commands/kinit.html>`_
+<https://web.mit.edu/kerberos/krb5-latest/doc/user/user_commands/kinit.html>`__
 to establish a Kerberos session.
 
-If using Kerberos authentication with **JRuby**, the Kerberos session may
-be estabished externally to the driver using the process described above
-for MRI; alternatively, the password may be provided directly to the driver
-by using client configuration, or the path to a keytab file may be provided by using
-configuration stored in the ``java.security.auth.login.config`` system property.
-Additionally, the Java runtime environment must be configured for Kerberos. See the 
+If using Kerberos authentication with **JRuby**, you can externally establish the Kerberos
+session to the driver using the process described above for MRI. Alternatively, you can directly
+provide the password to the driver by using client configuration. You can also provide the
+path to a keytab file by storing the configuration in the ``java.security.auth.login.config`` system property.
+If using JRuby, you must configure the Java Runtime Environment to use Kerberos. To learn more, see the 
 `MongoDB Java Driver Kerberos documentation
 <https://mongodb.github.io/mongo-java-driver/4.0/driver/tutorials/authentication/#gssapi>`_
 for more information.
 
 .. note::
 
-  Per the server Kerberos documentation, the FQDN of the host
-  running MongoDB must be specified when using Kerberos authentication.
+  Per the server Kerberos documentation, you must specify the FQDN of the host
+  running MongoDB when using Kerberos authentication.
 
 .. note::
 
-  If using MongoDB URIs, be sure to percent-escape special characters like
-  ``/`` and ``@`` when they appear in the username.
+  If using MongoDB URIs, be sure to percent-encode any special characters that appear in
+  the username.
 
 Select the :guilabel:`Connection String` or :guilabel:`Client Options` tab to
 see the corresponding syntax for connecting to MongoDB with Kerberos authentication:
