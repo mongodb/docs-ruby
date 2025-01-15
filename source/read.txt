@@ -42,7 +42,7 @@ can use to read data from MongoDB.
   provided in each section.
 
 To use an example from this page, copy the code example into the
-:ref:`sample application <>` or your own application.
+:ref:`<sample-application>` or your own application.
 Be sure to replace all placeholders in the code examples, such as ``<connection string URI>``, with
 the relevant values for your MongoDB deployment.
 
@@ -119,7 +119,7 @@ collection that match query criteria:
    :copyable:
    :dedent:
 
-To learn more about the ``countDocuments()`` method, see the :ref:`Count Documents <scala-count>` 
+To learn more about the ``countDocuments()`` method, see the :ref:`Count Documents <ruby-count>` 
 guide.
 
 Estimated Document Count
@@ -135,7 +135,7 @@ collection based on collection metadata:
    :copyable:
    :dedent:
 
-To learn more about the ``estimated_document_count()`` method, see the :ref:`Count Documents <scala-count>` 
+To learn more about the ``estimated_document_count()`` method, see the :ref:`Count Documents <ruby-count>` 
 guide.
 
 Retrieve Distinct Values
@@ -166,6 +166,6 @@ subsequent change events in that collection:
    :copyable:
    :dedent:
 
-To learn more about the ``watch()`` method, see the :ref:`Monitor Data Changes <scala-change-streams>` guide.
+To learn more about the ``watch()`` method, see the :ref:`Monitor Data Changes <ruby-change-streams>` guide.
 
 
