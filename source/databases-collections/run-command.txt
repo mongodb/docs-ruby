@@ -123,7 +123,7 @@ methods:
 
    * - ``ok?``
      - Returns ``true`` if the command succeeded, and ``false`` otherwise. If the ``ok?``
-       method returns ``false``The driver raises a ``Mongo::Error::OperationFailure`` .
+       method returns ``false``, the driver raises a ``Mongo::Error::OperationFailure`` .
 
    * - ``cluster_time``
      - Returns the cluster time reported in the server response. Cluster time is a
