@@ -166,7 +166,7 @@ Allow Insecure TLS
 
 When TLS is enabled, the {+driver-short+} automatically verifies the certificate that
 the server presents. When testing your code, you can disable this verification.
-This is known as *insecure TLS*.
+This is known as **insecure TLS**.
 
 When insecure TLS is enabled, the driver requires only that the server present an
 X.509 certificate. The driver accepts a certificate even if any of the following are
@@ -214,17 +214,17 @@ certificate or hostname:
     .. tab:: Mongo::Client
         :tabid: mongoclient
 
-        - ssl_verify_certificate: Disable certificate validation by setting the 
+        - ``ssl_verify_certificate``: Disable certificate validation by setting the 
           option to ``false``.
-        - ssl_verify_hostname: Disable hostname verification by setting the option 
+        - ``ssl_verify_hostname``: Disable hostname verification by setting the option 
           to ``false``.
 
     .. tab:: Connection String
         :tabid: uri
 
-        - tlsAllowInvalidCertificates: Disable certificate validation by setting
+        - ``tlsAllowInvalidCertificates``: Disable certificate validation by setting
           the option to ``true``.
-        - tlsAllowInvalidHostnames: Disable hostname validation by setting
+        - ``tlsAllowInvalidHostnames``: Disable hostname validation by setting
           the option to ``true``.
 
 .. warning:: Don't Use Insecure TLS in Production
@@ -234,8 +234,6 @@ certificate or hostname:
    Enabling insecure TLS in a production environment makes your application 
    insecure and potentially vulnerable to expired certificates and foreign 
    processes posing as valid client instances.
-
-.. _ruby-tls-api:
 
 API Documentation
 -----------------
