@@ -164,7 +164,6 @@ the database, as shown in the following code:
    "dataSize"=>11188720, "storageSize"=>7528448, "totalFreeStorageSize"=>0, "numExtents"=>0, "indexes"=>6,
    "indexSize"=>1519616, "indexFreeStorageSize"=>0, "fileSize"=>0, "nsSizeMB"=>0, "ok"=>1}
 
-
 Additional Information
 ----------------------
 
