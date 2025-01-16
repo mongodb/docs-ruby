@@ -25,7 +25,7 @@ Optimize Queries by Using Indexes
    Single Field </indexes/single-field-index>
    Compound </indexes/compound-index>
    Multikey </indexes/multikey-index>
-..   Atlas Search </indexes/atlas-search-index>
+   Atlas Search </indexes/atlas-search-index>
 
 Overview
 --------
