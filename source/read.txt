@@ -142,8 +142,8 @@ The following example returns all distinct values of the specified field name in
 collection:
 
 .. literalinclude:: /includes/usage-examples/read-code-examples.rb
-   :start-after: start-retrieve-distinct
-   :end-before: end-retrieve-distinct
+   :start-after: start-distinct
+   :end-before: end-distinct
    :language: ruby
    :copyable:
    :dedent:
