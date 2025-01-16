@@ -46,7 +46,7 @@ To use an example from this page, copy the code example into the
 Be sure to replace all placeholders in the code examples, such as ``<connection string URI>``, with
 the relevant values for your MongoDB deployment.
 
-.. _ruby-read-sample:
+.. _read-sample:
 
 .. include:: /includes/usage-examples/sample-app-intro.rst
 
