@@ -8,7 +8,7 @@ uri = "<connection string URI>"
 
 Mongo::Client.new(uri) do |client|
   #start-aggregation
-  database = client.use('test')
+  database = client.use('sample_restaurants')
   restaurants_collection = database[:restaurants]
     
   pipeline = [

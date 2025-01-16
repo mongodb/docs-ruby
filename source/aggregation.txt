@@ -138,12 +138,12 @@ pipeline with the following stages:
     .. output::
        :visible: false
 
-       {"_id": "Brooklyn", "count": 173}
-       {"_id": "Queens", "count": 204}
-       {"_id": "Bronx", "count": 71}
-       {"_id": "Staten Island", "count": 20}
-       {"_id": "Missing", "count": 2}
-       {"_id": "Manhattan", "count": 221}
+       {"_id"=>"Missing", "count"=>51}
+       {"_id"=>"Queens", "count"=>5656}
+       {"_id"=>"Staten Island", "count"=>969}
+       {"_id"=>"Brooklyn", "count"=>6086}
+       {"_id"=>"Manhattan", "count"=>10259}
+       {"_id"=>"Bronx", "count"=>2338}
 
 Explain an Aggregation
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -159,7 +159,7 @@ To explain an aggregation operation, chain the ``explain`` method to the
 ``aggregate`` method.
 
 The following example instructs MongoDB to explain the aggregation operation
-from the preceding :ref:`ruby-aggregation-example` example:
+from the preceding :ref:`ruby-aggregation-example`:
 
 .. io-code-block::
     :copyable:
@@ -173,13 +173,14 @@ from the preceding :ref:`ruby-aggregation-example` example:
     .. output::
        :visible: false
 
-       {"explainVersion": "2", "queryPlanner": {"namespace": "sample_restaurants.restaurants",
-       "indexFilterSet": false, "parsedQuery": {"cuisine": {"$eq": "Bakery"}}, "queryHash": "865F14C3",
-       "planCacheKey": "0FC225DA", "optimizedPipeline": true, "maxIndexedOrSolutionsReached": false, 
-       "maxIndexedAndSolutionsReached": false, "maxScansToExplodeReached": false, "winningPlan":
-       {"queryPlan": {"stage": "GROUP", "planNodeId": 3, "inputStage": {"stage": "COLLSCAN",
-       "planNodeId": 1, "filter": {"cuisine": {"$eq": "Bakery"}}, "direction": "forward"}},
-       ...}
+       {"explainVersion"=>"2", "queryPlanner"=>{"namespace"=>"sample_restaurants.restaurants",
+       "parsedQuery"=>"cuisine"=> {"$eq"=> "Bakery"}}, "indexFilterSet"=>false,
+       "planCacheKey"=>"6104204B", "optimizedPipeline"=>true, "maxIndexedOrSolutionsReached"=>false,
+       "maxIndexedAndSolutionsReached"=>false, "maxScansToExplodeReached"=>false,
+       "prunedSimilarIndexes"=>false, "winningPlan"=>{"isCached"=>false,
+       "queryPlan"=>{"stage"=>"GROUP", "planNodeId"=>3,
+       "inputStage"=>{"stage"=>"COLLSCAN", "planNodeId"=>1, "filter"=>{},
+       "direction"=>"forward"}},...}
 
 Run an Atlas Full-Text Search
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -210,19 +211,20 @@ This example creates pipeline stages to perform the following actions:
     .. output::
        :visible: false
 
-       {"_id": {"$oid": "..."}, "name": "Fresh Salt"}
-       {"_id": {"$oid": "..."}, "name": "Salt & Pepper"}
-       {"_id": {"$oid": "..."}, "name": "Salt + Charcoal"}
-       {"_id": {"$oid": "..."}, "name": "A Salt & Battery"}
-       {"_id": {"$oid": "..."}, "name": "Salt And Fat"}
-       {"_id": {"$oid": "..."}, "name": "Salt And Pepper Diner"}
+       {"_id"=> {"$oid"=>  "..."}, "name"=>  "Fresh Salt"}
+       {"_id"=>  {"$oid"=>  "..."}, "name"=>  "Salt & Pepper"}
+       {"_id"=>  {"$oid"=>  "..."}, "name"=>  "Salt + Charcoal"}
+       {"_id"=>  {"$oid"=>  "..."}, "name"=>  "A Salt & Battery"}
+       {"_id"=>  {"$oid"=> "..."}, "name"=>  "Salt And Fat"}
+       {"_id"=>  {"$oid"=>  "..."}, "name"=>  "Salt And Pepper Diner"}
 
 .. important::
 
     To run the preceding example, you must create an Atlas Search index on the ``restaurants``
     collection that covers the ``name`` field. Then, replace the ``"<search index name>"``
     placeholder with the name of the index. 
-    .. TODO: Add a link to the Atlas Search index creation guide.
+
+.. TODO: Add a link in the callout to the Atlas Search index creation guide.
 
 Additional Information
 ----------------------
