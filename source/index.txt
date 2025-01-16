@@ -17,6 +17,7 @@
    Write Data </write>
    Read Data </read>
    Indexes </indexes>
+   Data Aggregation </aggregation>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
    What's New </whats-new>
@@ -27,7 +28,6 @@
  Write Data </write>
  Operations on Replica Sets </read-write-pref>
  Monitor Your Application </monitoring>
- Data Aggregation </aggregation>
  Security </security>
  Issues & Help </issues-and-help>
  Upgrade </upgrade>
@@ -78,11 +78,11 @@ working with data in the :ref:`ruby-get-started` tutorial.
 .. Learn how to work with common types of indexes in the :ref:`ruby-indexes`
 .. section.
 
-.. Transform Your Data with Aggregation
-.. ------------------------------------
+Transform Your Data with Aggregation
+------------------------------------
 
-.. Learn how to use the {+driver-short+} to perform aggregation operations in the
-.. :ref:`ruby-aggregation` section.
+Learn how to use the {+driver-short+} to perform aggregation operations in the
+:ref:`ruby-aggregation` section.
 
 .. Secure Your Data
 .. ----------------
