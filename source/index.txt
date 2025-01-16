@@ -16,6 +16,7 @@
    Connect </connect>
    Write Data </write>
    Read Data </read>
+   Operations on Replica Sets </read-write-pref> 
    Indexes </indexes>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
@@ -25,7 +26,6 @@
 
 .. TODO:
  Write Data </write>
- Operations on Replica Sets </read-write-pref>
  Monitor Your Application </monitoring>
  Data Aggregation </aggregation>
  Security </security>
@@ -66,11 +66,11 @@ Learn how to use the {+driver-short+} to work with MongoDB databases and collect
 
 .. Learn how you can write data to MongoDB in the :ref:`ruby-write` section.
 
-.. Configure Operations on Replica Sets
-.. ------------------------------------
+Configure Operations on Replica Sets
+------------------------------------
 
-.. Learn how to configure read and write operations on a replica set in the
-.. :ref:`ruby-read-write-pref` section.
+Learn how to configure read and write operations on a replica set in the
+:ref:`ruby-crud-write-read-pref` section.
 
 .. Optimize Queries by Using Indexes
 .. ---------------------------------
