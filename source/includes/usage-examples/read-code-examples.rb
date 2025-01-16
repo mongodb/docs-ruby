@@ -40,6 +40,6 @@ Mongo::Client.new(uri) do |client|
   # start-monitor-changes
   stream = collection.watch
   collection.insert_one(a: 1)
-  doc = stream.to_enum.next
+  doc = stream.first
   process(doc)
   # end-monitor-changes
