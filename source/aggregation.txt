@@ -108,18 +108,14 @@ Run Aggregation Operations
 To perform an aggregation, define each pipeline stage as a Ruby ``hash``, and
 then pass the pipeline of operations to the ``aggregate`` method.
 
-To learn more about pipeline stages and their corresponding ``Aggregates``
-helper methods, see the :manual:`Aggregation Stages
-</reference/operator/aggregation-pipeline/>` guide in the {+mdb-server+} manual.
-
 .. _ruby-aggregation-example:
 
 Aggregation Example
 ~~~~~~~~~~~~~~~~~~~
 
-The following code example finds a list of the total number of 5-star
-restuarants, grouped by restaruant category. To do so, it uses an aggregation
-pipeline with the following stages:
+The following code example produces a count of the number of bakeries in each
+borough of New York. To do so, it uses an aggregation pipeline with the
+following stages:
 
 - A :manual:`$match </reference/operator/aggregation/match/>` stage to filter for documents whose ``cuisine`` field contains
   the value ``"Bakery"``.
@@ -211,7 +207,7 @@ This example creates pipeline stages to perform the following actions:
     .. output::
        :visible: false
 
-       {"_id"=> {"$oid"=>  "..."}, "name"=>  "Fresh Salt"}
+       {"_id"=>  {"$oid"=>  "..."}, "name"=>  "Fresh Salt"}
        {"_id"=>  {"$oid"=>  "..."}, "name"=>  "Salt & Pepper"}
        {"_id"=>  {"$oid"=>  "..."}, "name"=>  "Salt + Charcoal"}
        {"_id"=>  {"$oid"=>  "..."}, "name"=>  "A Salt & Battery"}
