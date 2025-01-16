@@ -19,7 +19,7 @@ collection.search_indexes.create_one(
 )
 
 # Creates an index on the specified field with the specified index name
-index-definition = {
+index_definition = {
   mappings: {
     dynamic: false,  
     fields: { 
