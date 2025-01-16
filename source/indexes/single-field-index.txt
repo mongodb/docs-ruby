@@ -20,7 +20,7 @@ Single Field Indexes
 Overview
 --------
 
-Single field indexes are indexes with a reference to a single field of a
+**Single field indexes** are indexes with a reference to a single field of a
 document in a collection. These indexes improve single field query and
 sort performance. They also support :manual:`TTL Indexes </core/index-ttl>`
 that automatically remove documents from a collection after a certain
@@ -131,5 +131,5 @@ To learn more about any of the methods discussed in this guide, see the
 following API documentation:
 
 - `indexes <{+api-root+}/Mongo/Collection.html#indexes-instance_method>`__
-- `create_one <{+api-root+}/Mongo/Index/View.html>`__
+- `create_one <{+api-root+}/Mongo/Index/View.html#create_one-instance_method>`__
 - `find <{+api-root+}/Mongo/Collection.html#find-instance_method>`__ 

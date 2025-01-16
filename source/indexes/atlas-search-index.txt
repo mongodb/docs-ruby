@@ -119,9 +119,3 @@ Additional Information
 
 To learn more about MongoDB Atlas Search, see the 
 :atlas:`Atlas Search </atlas-search/atlas-search-overview/>` documentation.
-
-API Documentation
-~~~~~~~~~~~~~~~~~
-
-To learn more about the {+driver-short+} methods used in this guide, see the 
-following API documentation:

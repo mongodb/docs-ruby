@@ -21,9 +21,9 @@
    API Documentation <{+api-root+}>
    What's New </whats-new>
    Compatibility </compatibility>
+   Databases & Collections </databases-collection>
 
 .. TODO:
- Databases & Collections </databases-collections>
  Write Data </write>
  Operations on Replica Sets </read-write-pref>
  Monitor Your Application </monitoring>
@@ -50,11 +50,11 @@ working with data in the :ref:`ruby-get-started` tutorial.
 .. Learn how to create and configure a connection to a MongoDB deployment
 .. in the :ref:`ruby-connect` section.
 
-.. Databases and Collections
-.. -------------------------
+Databases and Collections
+-------------------------
 
-.. Learn how to use the {+driver-short+} to work with MongoDB databases and collections in the
-.. :ref:`ruby-databases-collections` section.
+Learn how to use the {+driver-short+} to work with MongoDB databases and collections in the
+:ref:`ruby-databases-collections` section.
 
 .. Read Data from MongoDB
 .. ----------------------
