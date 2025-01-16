@@ -220,7 +220,7 @@ to be used for TLS:
     :start-after: start-modify-context
     :end-before: end-modify-context
 
-The {+driver-short+} TLS options are based on native Ruby handling of SSL. To 
+The {+driver-short+} TLS context options are based on native Ruby handling of SSL. To 
 learn more about the TLS context options available, see the Ruby
 documentation for 
 `SSLContext <https://ruby-doc.org/stdlib-2.7.0/libdoc/openssl/rdoc/OpenSSL/SSL/SSLContext.html>`__.
