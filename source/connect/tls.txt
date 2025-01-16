@@ -38,7 +38,7 @@ To learn how to configure your MongoDB deployment for TLS, see the
    This page assumes prior knowledge of TLS/SSL and access to valid certificates.
    A full description of TLS/SSL, PKI (Public Key Infrastructure) certificates, and
    CAs is beyond the scope of this documentation. To learn more about TLS, see the 
-   Wikipedia entry for :wikipedia:`Transport Layer Security<Transport_Layer_Security>` .
+   Wikipedia entry for :wikipedia:`Transport Layer Security <Transport_Layer_Security>` .
 
 .. _ruby-enable-tls:
 
@@ -200,7 +200,7 @@ You may provide one of the following options to specify the TLS CA certificate:
        to validate certificates passed from the MongoDB deployment to the client.
    * - ``:ssl_ca_cert_string``
      - ``String``
-     - A string containing the PEM-encoded CA certificate used to validate certificates 
+     - A string containing one PEM-encoded CA certificate used to validate certificates 
        passed from the MongoDB deployment to the client.
 
 Modify the TLS Context
@@ -220,10 +220,10 @@ to be used for TLS:
     :start-after: start-modify-context
     :end-before: end-modify-context
 
-To learn more about the TLS context options available, see the Ruby
+The {+driver-short+} TLS options are based on native Ruby handling of SSL. To 
+learn more about the TLS context options available, see the Ruby
 documentation for 
-`SSLContext <https://ruby-doc.org/stdlib-2.7.0/libdoc/openssl/rdoc/OpenSSL/SSL/SSLContext.html>`__ ,
-which the {+driver-short+} TLS options are based on.
+`SSLContext <https://ruby-doc.org/stdlib-2.7.0/libdoc/openssl/rdoc/OpenSSL/SSL/SSLContext.html>`__.
 
 OCSP Verification
 -----------------
