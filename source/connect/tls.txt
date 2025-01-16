@@ -38,7 +38,7 @@ To learn how to configure your MongoDB deployment for TLS, see the
    This page assumes prior knowledge of TLS/SSL and access to valid certificates.
    A full description of TLS/SSL, PKI (Public Key Infrastructure) certificates, and
    CAs is beyond the scope of this documentation. To learn more about TLS, see the 
-   entry for :wikipedia:`Transport Layer Security <Transport_Layer_Security>` .
+   Wikipedia entry for :wikipedia:`Transport Layer Security<Transport_Layer_Security>`.
 
 .. _ruby-enable-tls:
 
