@@ -4,7 +4,7 @@ require 'mongo'
 uri = "<connection string>"
 
 # Sets the server_api field of the options object to Stable API version 1
-options = { server_api: { version: "1" }}
+options = { server_api: { version: '1' }}
 
 # Creates a new client and connects to the server
 client = Mongo::Client.new(uri, options)
@@ -40,7 +40,7 @@ index_definition = {
   mappings: {
     dynamic: false,  
     fields: { 
-      <field name>: {type: '<field type>'}
+      <field name>: { type: '<field type>' }
     }
   }
 }
@@ -71,7 +71,7 @@ collection.search_indexes.drop_one(name: '<index name>')
 
 # Text Index
 # start-text
-collection.indexes.create_one( { :<field name> => 'text' } )
+collection.indexes.create_one({ <field name>: 'text' })
 # end-text
 
 # Create Many
