@@ -23,4 +23,9 @@ Read Data from MongoDB
    :maxdepth: 1
 
    Retrieve Data </read/retrieve>
+   Specify a Query </read/specify-a-query>
+   Specify Documents to Return </read/specify-documents-to-return>
    Specify Fields to Return </read/project>
+   Distinct Field Values </read/distinct>
+   Count Documents </read/count>
+   Cursors </read/cursors>
