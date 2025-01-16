@@ -38,7 +38,7 @@ To learn how to configure your MongoDB deployment for TLS, see the
    This page assumes prior knowledge of TLS/SSL and access to valid certificates.
    A full description of TLS/SSL, PKI (Public Key Infrastructure) certificates, and
    CAs is beyond the scope of this documentation. To learn more about TLS, see the 
-   Wikipedia entry for :wikipedia:`Transport Layer Security<Transport_Layer_Security>`.
+   Wikipedia entry for :wikipedia:`Transport Layer Security<Transport_Layer_Security>` .
 
 .. _ruby-enable-tls:
 
@@ -196,11 +196,11 @@ You may provide one of the following options to specify the TLS CA certificate:
        passed from the MongoDB deployment to the client.
    * - ``:ssl_ca_cert_object``
      - ``Array<OpenSSL::X509::Certificate>``
-     - An array of objects representing the certificate authority certificates used 
-       to validate certs passed from the MongoDB deployment to the client.
+     - An array of objects representing the CA certificates used 
+       to validate certificates passed from the MongoDB deployment to the client.
    * - ``:ssl_ca_cert_string``
      - ``String``
-     - A string containing the PEM-encoded, concatenated CA certificates used to validate certificates 
+     - A string containing the PEM-encoded CA certificate used to validate certificates 
        passed from the MongoDB deployment to the client.
 
 Modify the TLS Context
