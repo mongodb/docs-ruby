@@ -123,51 +123,85 @@ Specify Client TLS Certificates
 -------------------------------
 
 The {+driver-short+} provides multiple options for you to specify
-the TLS certficate, key, and CA certificate with different data types:
+the TLS certificate, key, and CA certificate with different data or object types.
+
+TLS Certificate
+~~~~~~~~~~~~~~~
+
+You may provide one of the following options to specify the TLS certificate:
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 20 50
+   :widths: 20 30 50
 
    * - Option Name
      - Data/Object Type Accepted
      - Description
    * - ``:ssl_cert``
      - ``String``
-     - The certificate file path used to identify the connection against MongoDB.
+     - The certificate file path used to verify the connection to a MongoDB 
+       deployment.
    * - ``:ssl_cert_object``
      - ``OpenSSL::X509::Certificate``
-     - An array of objects representing the certificate authority certificates 
-       used to validate certificates passed from the other end of the connection.
+     - The certificate object used to to verify the connection to a MongoDB 
+       deployment. 
    * - ``:ssl_cert_string``
-     - String
-     - A string containing the PEM-encoded certificate used to identify the 
-       connection against MongoDB.
+     - ``String``
+     - A string containing the PEM-encoded certificate used to verify the connection to 
+       a MongoDB deployment.
+
+TLS Private Key
+~~~~~~~~~~~~~~~
+
+You may provide one of the following options to specify the TLS private key:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 30 50
+
+   * - Option Name
+     - Data/Object Type Accepted
+     - Description
    * - ``:ssl_key``
-     - String
-     - The private keyfile path used to identify the connection against MongoDB. 
+     - ``String``
+     - The private keyfile path used to verify the connection to a MongoDB 
+       deployment.
    * - ``:ssl_key_object``
-     - OpenSSL::PKey
-     - The private key object used to identify the connection against MongoDB
+     - ``OpenSSL::PKey``
+     - The private key object used to verify the connection to a MongoDB 
+       deployment.
    * - ``:ssl_key_pass_phrase``
-     - String
+     - ``String``
      - A passphrase for the private key.
    * - ``:ssl_key_string``
-     - String
-     - A string containing the PEM-encoded private key used to identify the 
-       connection against MongoDB.
+     - ``String``
+     - A string containing the PEM-encoded private key used to verify the 
+       connection to a MongoDB deployment.
+
+TLS CA Certificate
+~~~~~~~~~~~~~~~~~~
+
+You may provide one of the following options to specify the TLS CA certificate:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 30 50
+
+   * - Option Name
+     - Data/Object Type Accepted
+     - Description
    * - ``:ssl_ca_cert``
-     - String
+     - ``String``
      - The file path containing concatenated CA certificates used to validate certificates 
-       passed from the other end of the connection.
+       passed from the MongoDB deployment to the client.
    * - ``:ssl_ca_cert_object``
-     - Array<OpenSSL::X509::Certificate>
+     - ``Array<OpenSSL::X509::Certificate>``
      - An array of objects representing the certificate authority certificates used 
-       to validate certs passed from the other end of the connection.
+       to validate certs passed from the MongoDB deployment to the client.
    * - ``:ssl_ca_cert_string``
-     - String
+     - ``String``
      - A string containing the PEM-encoded, concatenated CA certificates used to validate certificates 
-       passed from the other end of the connection.
+       passed from the MongoDB deployment to the client.
 
 Modify the TLS Context
 ----------------------
