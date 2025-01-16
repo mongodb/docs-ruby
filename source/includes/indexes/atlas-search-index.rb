@@ -23,7 +23,7 @@ index_definition = {
   mappings: {
     dynamic: false,  
     fields: { 
-      <field name>: {type: '<field type>'}
+      <field name>: { type: '<field type>' }
     }
   }
 }
@@ -37,7 +37,7 @@ index_spec_1 = {
     mappings: {
       dynamic: false,  
       fields: { 
-        <field name>: {type: '<field type>'}
+        <field name>: { type: '<field type>' }
       }
     }
   }
@@ -49,7 +49,7 @@ index_spec_2 = {
     mappings: {
       dynamic: false,  
       fields: { 
-        <field name>: {type: '<field type>'}
+        <field name>: { type: '<field type>' }
       }
     }
   }
