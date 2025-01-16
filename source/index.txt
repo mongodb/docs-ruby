@@ -70,7 +70,7 @@ Configure Operations on Replica Sets
 ------------------------------------
 
 Learn how to configure read and write operations on a replica set in the
-:ref:`ruby-read-write-pref` section.
+:ref:`ruby-crud-write-read-pref` section.
 
 .. Optimize Queries by Using Indexes
 .. ---------------------------------
