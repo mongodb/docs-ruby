@@ -10,12 +10,12 @@ uri = '<connection string>'
 Mongo::Client.new(uri) do |client|
 
   # start-find-one
-  document = collection.find(name: "<value>").first
+  document = collection.find(name: '<value>').first
   puts document
   # end-find-one
 
   # start-find-many
-  results = collection.find(founded_year: "<value>")
+  results = collection.find(founded_year: '<value>')
   # end-find-many
 
   # start-count-collection
@@ -24,7 +24,7 @@ Mongo::Client.new(uri) do |client|
   # end-count-collection
 
   # start-count-accurate
-  result = collection.count_documents("key": "<value>")
+  result = collection.count_documents('key': '<value>')
   puts "value: #{result}"
   # end-count-accurate
 
@@ -34,7 +34,7 @@ Mongo::Client.new(uri) do |client|
   # end-count-estimate
 
   # start-distinct
-  results = collection.distinct("field")
+  results = collection.distinct('field')
   # end-distinct
 
   # start-monitor-changes
