@@ -57,11 +57,14 @@ To use the code examples on this page, replace these placeholders with your own 
 Using X.509 Authentication in Your Application
 ----------------------------------------------
 
-x.509 authentication requires the use of SSL connections with
+X.509 authentication requires the use of TLS encryption with
 certificate validation. To authenticate the client, you will need a valid TLS certificate
 and private encryption key. These can be stored in separate files, or together in one ``.pem`` file.
-Even if the certificate and private key are stored in the same file, you must specify the
-path to that file by passing both the ``ssl_cert`` and ``ssl_key`` options to the client.
+
+.. note::
+
+   Even if the certificate and private key are stored in the same file, you must specify the
+   path to that file in both the ``ssl_cert`` and ``ssl_key`` options.
 
 Select the :guilabel:`Connection String` or :guilabel:`Client Options` tab to
 see the corresponding syntax:
