@@ -4,17 +4,16 @@ gemfile do
   gem 'mongo'
 end
 
-Mongo::Client.new(uri) do |client|
 
   # start-create
-  client = Mongo::Client.new(['<connection string>'], database: 'weather')
+  client = Mongo::Client.new('<connection string>', database: 'weather')
   collection_name = 'october2024'
 
   time_series_options = { timeField: 'timestamp' }
   database = client.database
   database.command(
-  create: collection_name,
-  timeseries: time_series_options
+    create: collection_name,
+    timeseries: time_series_options
   )
   # end-create
 
@@ -24,7 +23,7 @@ Mongo::Client.new(uri) do |client|
   # end-correct
 
   # start-insert
-  client = Mongo::Client.new(['<connection string>'], :database => 'your_db')
+  client = Mongo::Client.new('<connection string>', database => 'your_db')
   collection = client[:october2024]
 
   document_list = [
