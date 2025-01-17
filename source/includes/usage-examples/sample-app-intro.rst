@@ -1,3 +1,5 @@
+.. _ruby-read-sample:
+
 Sample Application
 ~~~~~~~~~~~~~~~~~~
 
