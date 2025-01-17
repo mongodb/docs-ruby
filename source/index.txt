@@ -17,6 +17,7 @@
    Write Data </write>
    Read Data </read>
    Indexes </indexes>
+   Monitor Your Application </monitoring>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
    What's New </whats-new>
