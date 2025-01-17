@@ -29,6 +29,7 @@ Read Data from MongoDB
    Distinct Field Values </read/distinct>
    Count Documents </read/count>
    Cursors </read/cursors>
+   Monitor Changes </read/change-streams>
 
 Overview
 --------
