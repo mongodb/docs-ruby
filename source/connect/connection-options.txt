@@ -114,8 +114,8 @@ Timeouts
          is passed (such as a negative value or a non-numeric value).
        |
        | **Data Type**: ``Float``
-       | **Default**: 10
-       | **Client Example**: ``connect_timeout: 10``
+       | **Default**: ``10.0``
+       | **Client Example**: ``connect_timeout: 10.0``
        | **Connection URI Example**: ``connectTimeoutMS=10000``
 
    * - **:socket_timeout**
@@ -128,7 +128,7 @@ Timeouts
        |
        | **Data Type**: ``Float``
        | **Default**: none
-       | **Client Example**: ``socket_timeout: 5``
+       | **Client Example**: ``socket_timeout: 5.0``
        | **Connection URI Example**: ``socketTimeoutMS=5000``
 
    * - **:wait_queue_timeout**
@@ -136,8 +136,8 @@ Timeouts
          connection pool to become available.
        |
        | **Data Type**: ``Float``
-       | **Default**: 10
-       | **Client Example**: ``wait_queue_timeout: 7``
+       | **Default**: ``10.0``
+       | **Client Example**: ``wait_queue_timeout: 7.0``
        | **Connection URI Example**: ``waitQueueTimeoutMS=7000``
 
 Server Selection
