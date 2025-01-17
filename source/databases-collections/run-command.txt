@@ -84,8 +84,8 @@ The ``command`` method does not inherit the read preference you might
 have set on your ``Database`` instance. By default, ``command``
 uses the ``primary`` read preference.
 
-You can set a read preference for the command execution by passing a
-``ReadPreference`` instance as a parameter to ``command``, as
+You can set a read preference for the command execution by passing the
+``:read`` opotion to the ``command`` method, as
 shown in the following code:
    
 .. literalinclude:: /includes/databases-collections/run-command.rb
