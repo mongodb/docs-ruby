@@ -46,7 +46,7 @@ defined in the GridFS specification:
 - The ``files`` collection stores the file metadata.
 
 When you create a new GridFS bucket, the driver creates the ``fs.chunks`` and ``fs.files``
-collections, unless you specify a different name in the ``Grid::FSBucket.new`` method options. The
+collections, unless you specify a different name in the ``Mongo::Database#fs`` method options. The
 driver also creates an index on each collection to ensure efficient retrieval of the files and related
 metadata. The driver creates the GridFS bucket, if it doesn't exist, only when the first write
 operation is performed. The driver creates indexes only if they don't exist and when the
@@ -73,7 +73,7 @@ Create a GridFS Bucket
 ----------------------
 
 To store or retrieve files from GridFS, create a GridFS bucket by calling the
-``FSBucket.new`` method and passing in a ``Mongo::Database`` instance.
+``fs`` method on a ``Mongo::Database`` instance.
 You can use the ``FSBucket`` instance to
 perform read and write operations on the files in your bucket.
 
@@ -84,8 +84,8 @@ perform read and write operations on the files in your bucket.
    :end-before: end-create-bucket
 
 To create or reference a bucket with a name other than the default name
-``fs``, pass the bucket name as an optional parameter to the ``FSBucket.new``
-constructor, as shown in the following example:
+``fs``, pass the bucket name as an optional parameter to the ``fs``
+method, as shown in the following example:
 
 .. literalinclude:: /includes/write/gridfs.rb
    :language: ruby
