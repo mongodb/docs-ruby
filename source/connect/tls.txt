@@ -223,7 +223,7 @@ to be used for TLS:
 The {+driver-short+} TLS context options are based on native Ruby handling of SSL. To 
 learn more about the TLS context options available, see the Ruby
 documentation for 
-`SSLContext <https://ruby-doc.org/stdlib-2.7.0/libdoc/openssl/rdoc/OpenSSL/SSL/SSLContext.html>`__.
+`SSLContext <https://ruby-doc.org/3.2.6/exts/openssl/OpenSSL/SSL/SSLContext.html>`__.
 
 OCSP Verification
 -----------------

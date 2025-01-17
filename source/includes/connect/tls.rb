@@ -37,5 +37,5 @@ client = Mongo::Client.new(["<hostname>:<port>"],
 # end-ssl-verify
 
 # start-tls-insecure
-client = Mongo::Client.new('mongodb://<hostname>:<port>/?tls=true&tlsInsecure=true');
+client = Mongo::Client.new('mongodb://<hostname>:<port>/?tls=true&tlsInsecure=true')
 # end-tls-insecure
