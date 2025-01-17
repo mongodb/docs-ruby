@@ -55,7 +55,7 @@ connection options:
 Connection Options
 ------------------
 
-The following sections describe the connection options available in {+driver-short+}.
+The following sections describe the connection options available in the {+driver-short+}.
 
 Network Compression
 ~~~~~~~~~~~~~~~~~~~
@@ -69,8 +69,8 @@ Network Compression
 
    * - **:compressors**
      - | A list of potential compressors to use, in order of preference.
-       | The driver chooses the first compressor that is also supported 
-       | by the server. Currently the driver only supports ``zstd``, ``snappy``, and ``zlib``.
+         The driver chooses the first compressor that is also supported 
+         by the server. Currently the driver only supports ``zstd``, ``snappy``, and ``zlib``.
        |
        | **Data Type**: ``Array<String>``
        | **Default**: none
@@ -79,7 +79,7 @@ Network Compression
 
    * - **:zlib_compression_level**
      - | The Zlib compression level to use, if using compression. 
-       | This option accepts an integer value between ``-1`` and ``9``:
+         This option accepts an integer value between ``-1`` and ``9``:
        | 
        | - **-1:** zlib uses its default compression level (usually ``6``).
        | - **0:** No compression.
@@ -87,7 +87,7 @@ Network Compression
        | - **9:** Best compression but slowest speed.
        |
        | For more information, see Ruby's `ZLib module <https://ruby-doc.org/stdlib-2.7.0/libdoc/zlib/rdoc/Zlib.html>`__ 
-       | documentation.
+         documentation.
        | 
        | **Data Type**: ``Integer``
        | **Default**: ``None``
@@ -106,12 +106,12 @@ Timeouts
 
    * - **:connect_timeout**
      - | The number of seconds to wait to establish a socket 
-       | connection before raising an exception. This 
-       | timeout is also used for SRV DNS record resolution. 
+         connection before raising an exception. This 
+         timeout is also used for SRV DNS record resolution. 
        | 
        | ``nil`` and ``0`` mean no timeout. Client creation will 
-       | fail with an error if an invalid timeout value
-       | is passed (such as a negative value or a non-numeric value).
+         fail with an error if an invalid timeout value
+         is passed (such as a negative value or a non-numeric value).
        |
        | **Data Type**: ``Float``
        | **Default**: 10
@@ -120,11 +120,11 @@ Timeouts
 
    * - **:socket_timeout**
      - | The number of seconds to wait for an operation to execute on 
-       | a socket before raising an exception. 
+         a socket before raising an exception. 
        |
        | ``nil`` and ``0`` mean no timeout. Client creation will fail 
-       | with an error if an invalid timeout value is passed 
-       | (such as a negative value or a non-numeric value).
+         with an error if an invalid timeout value is passed 
+         (such as a negative value or a non-numeric value).
        |
        | **Data Type**: ``Float``
        | **Default**: none
@@ -133,7 +133,7 @@ Timeouts
 
    * - **:wait_queue_timeout**
      - | The number of seconds to wait for a connection in the 
-       | connection pool to become available.
+         connection pool to become available.
        |
        | **Data Type**: ``Float``
        | **Default**: 10
@@ -152,8 +152,8 @@ Server Selection
 
    * - **:server_selector**
      - | Get the server selector. It either uses the read preference 
-       | defined in the client options or defaults to a Primary 
-       | server selector.
+         defined in the client options or defaults to a Primary 
+         server selector.
        |
        | **Data Type**: ``ServerSelector``
        | **Default**: none
@@ -162,7 +162,7 @@ Server Selection
 
    * - **:server_selection_timeout**
      - | The maximum amount of time, in seconds, the driver waits 
-       | for server selection to succeed before throwing an exception.
+         for server selection to succeed before throwing an exception.
        |
        | **Data Type**: ``Integer``
        | **Default**: ``30``
@@ -190,7 +190,7 @@ Authentication
 
    * - **:auth_mech_properties**
      - | Options specific to the authentication mechanism. This option 
-       | isn't needed for all authentication mechanisms.
+         isn't needed for all authentication mechanisms.
        |
        | **Data Type**: ``Hash``
        | **Default**: When you use the GSSAPI authentication mechanism, 
@@ -209,7 +209,7 @@ Authentication
 
    * - **:user**
      - | The username for authentication. When this option is included 
-       | in a connection URI, you must percent-encode it.
+         in a connection URI, you must percent-encode it.
        |
        | **Data Type**: ``String``
        | **Default**: none
@@ -218,7 +218,7 @@ Authentication
     
    * - **:password**
      - | The password for authentication. When this option is included 
-       | in a connection URI, you must percent-encode it.
+         in a connection URI, you must percent-encode it.
        |
        | **Data Type**: ``String``
        | **Default**: none
@@ -253,7 +253,7 @@ Read and Write Operations
 
    * - **:read**
      - | The read preference options. For more information,
-       | see :manual:`Read Preference </core/read-preference/>` in the Server manual.
+         see :manual:`Read Preference </core/read-preference/>` in the Server manual.
        |
        | **Data Type**: ``Hash``
        | **Default**: ``{ :mode: :primary }``
@@ -262,7 +262,7 @@ Read and Write Operations
 
    * - **:read_concern**
      - | Specifies the read concern options. For more information, see
-       | :manual:`Read Concern </reference/read-concern/>` in the Server manual.
+         :manual:`Read Concern </reference/read-concern/>` in the Server manual.
        |
        | **Data Type**: ``Hash``
        | **Default**: none
@@ -271,7 +271,7 @@ Read and Write Operations
 
    * - **:write_concern**
      - | Specifies the client's write concern. For more 
-       | information, see :manual:`Write Concern </reference/write-concern/>` in the Server manual.
+         information, see :manual:`Write Concern </reference/write-concern/>` in the Server manual.
        |
        | **Data Type**: ``Hash``
        | **Default**: ``write_concern: { w: 1 }``
@@ -280,9 +280,9 @@ Read and Write Operations
 
    * - **:local_threshold**
      - | The latency window, in seconds, for a replica-set member's 
-       | eligibility. If a member's round trip ping takes longer 
-       | than the fastest server's round-trip ping time 
-       | plus this value, the server isn't eligible for selection.
+         eligibility. If a member's round trip ping takes longer 
+         than the fastest server's round-trip ping time 
+         plus this value, the server isn't eligible for selection.
        |
        | **Data Type**: ``Float``
        | **Default**: ``0.015``
