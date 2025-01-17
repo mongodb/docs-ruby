@@ -42,8 +42,8 @@ Using a ``Mongo::Client``
 
 You can pass connection options as arguments to the ``Mongo::Client`` constructor
 instead of including them in your connection URI.
-Configuring the connection this way makes it easier to
-change settings at runtime and helps you catch errors during compilation.
+When you configure your connection this way, it easier for you to
+change settings at runtime and catch errors during compilation.
 The following example shows how to use the ``Mongo::Client`` constructor to set
 connection options:
 
@@ -161,8 +161,8 @@ Server Selection
        | **Connection URI Example**: N/A
 
    * - **:server_selection_timeout**
-     - | The number of seconds to wait for an appropriate server to
-       | be selected for an operation to be executed before raising an exception.
+     - | The maximum amount of time, in seconds, the driver waits 
+       | for server selection to succeed before throwing an exception.
        |
        | **Data Type**: ``Integer``
        | **Default**: ``30``
