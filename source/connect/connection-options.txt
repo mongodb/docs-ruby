@@ -56,9 +56,6 @@ Connection Options
 ------------------
 
 The following sections describe the connection options available in {+driver-short+}.
-If a ``Mongo::Client`` parameter maps to more than one
-option in the connection string, the **Connection URI Example** shows all
-relevant options.
 
 Network Compression
 ~~~~~~~~~~~~~~~~~~~
@@ -160,14 +157,14 @@ Server Selection
        |
        | **Data Type**: ``ServerSelector``
        | **Default**: none
-       | **Client Example**: ``server_selector: { mode: :secondary_preferred }`` NOT SURE ABOUT THIS ONE
+       | **Client Example**: ``server_selector: { mode: :secondary_preferred }``
        | **Connection URI Example**: N/A
 
    * - **:server_selection_timeout**
      - | The number of seconds to wait for an appropriate server to
        | be selected for an operation to be executed before raising an exception.
        |
-       | **Data Type**: 
+       | **Data Type**: ``Integer``
        | **Default**: ``30``
        | **Client Example**: ``server_selection_timeout: 30``
        | **Connection URI Example**: ``serverSelectionTimeoutMS=30000``
@@ -186,14 +183,9 @@ Authentication
      - | The mechanism that the {+driver-short+} uses to authenticate the application.
        |
        | **Data Type**: ``Symbol``
-       | **Default**: If user credentials are not supplied, ``nil``. If user credentials
-       | are supplied, the default depends on server version.
-       | MongoDB 4.0 and later: ``:scram256`` if user credentials correspond
-       | to a user which supports SCRAM-SHA-256 authentication, otherwise
-       | ``:scram``.
-       | MongoDB 3.0-3.6: ``:scram``.
-       | MongoDB 2.6: ``:mongodb_cr``
-       | **Client Example**: ``auth_mech: :scram256`` UNSUREEEEEE
+       | **Default**: ``nil`` if user credentials are not supplied. 
+       | ``:scram256`` when connecting to MongoDB v4.0 or later.
+       | **Client Example**: ``auth_mech: :scram256``
        | **Connection URI Example**: ``authMechanism=SCRAM-SHA-256``
 
    * - **:auth_mech_properties**
@@ -201,8 +193,9 @@ Authentication
        | isn't needed for all authentication mechanisms.
        |
        | **Data Type**: ``Hash``
-       | **Default**: When you use the GSSAPI authentication mechanism, the default properties
-       | are ``{service_name: "mongodb"}``. Otherwise the default is ``nil``.
+       | **Default**: When you use the GSSAPI authentication mechanism, 
+       | the default properties are ``{service_name: "mongodb"}``. 
+       | Otherwise, the default is ``nil``.
        | **Client Example**: ``auth_mech_properties: {aws_session_token: '12345'}``
        | **Connection URI Example**: ``authMechanismProperties=AWS_SESSION_TOKEN:12345``
 
@@ -215,8 +208,8 @@ Authentication
        | **Connection URI Example**: ``authSource=admin``
 
    * - **:user**
-     - | The username for authentication. When this option is included in a 
-       | connection URI, you must percent-encode it.
+     - | The username for authentication. When this option is included 
+       | in a connection URI, you must percent-encode it.
        |
        | **Data Type**: ``String``
        | **Default**: none
@@ -260,8 +253,7 @@ Read and Write Operations
 
    * - **:read**
      - | The read preference options. For more information,
-       | see :manual:`Read Preference </core/read-preference/>` in the
-       | Server manual.
+       | see :manual:`Read Preference </core/read-preference/>` in the Server manual.
        |
        | **Data Type**: ``Hash``
        | **Default**: ``{ :mode: :primary }``
@@ -270,8 +262,7 @@ Read and Write Operations
 
    * - **:read_concern**
      - | Specifies the read concern options. For more information, see
-       | :manual:`Read Concern </reference/read-concern/>` in the Server
-       | manual.
+       | :manual:`Read Concern </reference/read-concern/>` in the Server manual.
        |
        | **Data Type**: ``Hash``
        | **Default**: none
