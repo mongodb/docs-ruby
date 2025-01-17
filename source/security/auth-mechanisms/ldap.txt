@@ -66,7 +66,6 @@ see the corresponding syntax:
       :tabid: mongo-credential
 
       .. code-block:: ruby
-         :emphasize-lines: 1
 
          client = Mongo::Client.new([ '<hostname>' ],
                                     auth_mech: :plain,
