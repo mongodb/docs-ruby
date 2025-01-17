@@ -45,7 +45,7 @@ AWS authentication process:
    The client and server use different usernames. The client uses the AWS access key ID,
    but the server uses the ARN of the IAM user or role corresponding to the access key ID.
 
-AWS credentials are include the following components:
+AWS credentials include the following components:
 
 - Access key ID
 - Secret access key
@@ -65,12 +65,12 @@ uses all three components.
 
 Temporary credentials are used with:
 
-- STS `Assume Role <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-api.html>`_
+- STS `Assume Role <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-api.html>`__
   requests.
-- `EC2 instance roles <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html>`_.
-- `ECS task roles <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html>`_.
-- `AWS Lambda environment <https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html>`_.
-- `IAM roles for service accounts <https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html>`_.
+- `EC2 instance roles <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html>`__.
+- `ECS task roles <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html>`__.
+- `AWS Lambda environment <https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html>`__.
+- `IAM roles for service accounts <https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html>`__.
 
 Code Placeholders
 ~~~~~~~~~~~~~~~~~
@@ -119,7 +119,7 @@ see the corresponding syntax:
 
 .. note::
 
-  If you provide credentiasl in a URI, you must percent-encode them.
+  If you provide credentials in a URI, you must percent-encode them.
 
 Providing Temporary Credentials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -211,21 +211,21 @@ the specified order:
 
 .. important::
 
-  A credentials source must provide a complete
-  set of credentials. For example, if your application uses the ``AWS_ACCESS_KEY_ID``
-  and ``AWS_SECRET_ACCESS_KEY`` environment variables, the driver raises an error if only
-  one of these variables has a value.
+   A credentials source must provide a complete
+   set of credentials. For example, if your application uses the ``AWS_ACCESS_KEY_ID``
+   and ``AWS_SECRET_ACCESS_KEY`` environment variables, the driver raises an error if only
+   one of these variables has a value.
 
 .. note::
 
-  If an application runs in an ECS container on an EC2 instance and
-  the container is allowed access to the instance metadata,
-  the driver attempts to retrieve AWS credentials from the EC2 instance metadata endpoint.
-  If the driver retrieves credentials in this way, your application can authenticate as the IAM
-  role assigned to the EC2 instance.
+   If an application runs in an ECS container on an EC2 instance and
+   the container is allowed access to the instance metadata,
+   the driver attempts to retrieve AWS credentials from the EC2 instance metadata endpoint.
+   If the driver retrieves credentials in this way, your application can authenticate as the IAM
+   role assigned to the EC2 instance.
 
-  To learn how to prevent containers from accessing EC2 instance metadata,
-  see the `AWS documentation <https://aws.amazon.com/premiumsupport/knowledge-center/ecs-container-ec2-metadata>`__.
+   To learn how to prevent containers from accessing EC2 instance metadata,
+   see the `AWS documentation <https://aws.amazon.com/premiumsupport/knowledge-center/ecs-container-ec2-metadata>`__.
 
 API Documentation
 -----------------
