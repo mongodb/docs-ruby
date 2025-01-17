@@ -5,6 +5,7 @@ toc_landing_pages = [
     "/connect",
     "/write",
     "/indexes",
+    "/databases-collection",
     "/security/authentication"
 ]
 
