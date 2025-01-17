@@ -120,7 +120,7 @@ see the corresponding syntax for connecting to MongoDB with Kerberos authenticat
 
          client = Mongo::Client.new(['<hostname>[:<port>]'],
                                     auth_mech: :gssapi,
-                                    user: 'myapp/appuser@MYREALM')
+                                    user: '<username>')
 
 .. note::
 
