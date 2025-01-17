@@ -121,12 +121,12 @@ code:
                "granularity": "seconds", 
                "bucketMaxSpanSeconds": 3600 
           }
-        }, 
-         "info": {
-           "readOnly": false
-         }
-        }
-       ]
+          }, 
+           "info": {
+             "readOnly": false
+           }
+          }
+        ]
 
 
 .. _ruby-time-series-write:
@@ -144,7 +144,7 @@ Example
 ~~~~~~~
 
 This example inserts New York City temperature data into the ``october2024``
-time series collection created in the preceding :ref:`ruby-time-series-create`.
+time series collection created in the preceding :ref:`ruby-time-series-create`
 section. Each document contains the following fields:
 
 - ``temperature``, which stores temperature measurements in degrees Fahrenheit
