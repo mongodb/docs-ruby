@@ -26,9 +26,8 @@ allows your application to subscribe to data changes on a collection, database,
 or deployment.
 
 When using the {+driver-short+}, you can call the ``watch`` method to return a
-``Mongo::Collection::View::ChangeStream`` object. Then, you can convert the change
-stream to an ``Enumerator`` object and iterate through its content to monitor data
-changes, such as updates, insertions, and deletions.
+``Mongo::Collection::View::ChangeStream`` object. Then, you can iterate through
+its content to monitor data changes, such as updates, insertions, and deletions.
 
 Sample Data
 ~~~~~~~~~~~
@@ -61,8 +60,8 @@ stream monitors. You can call the ``watch`` method on the following objects
 - ``Mongo::Database``: Monitors changes to all collections in one database
 - ``Mongo::Collection``: Monitors changes to one collection
 
-The following example opens a change stream on the ``restaurants`` collection,
-converts the change stream to an ``Enumerator``, and outputs changes as they occur:
+The following example opens a change stream on the ``restaurants`` collection
+and outputs changes as they occur:
 
 .. literalinclude:: /includes/read/change-streams.rb
    :start-after: start-open-change-stream

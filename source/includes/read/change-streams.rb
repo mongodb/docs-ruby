@@ -17,8 +17,7 @@ Mongo::Client.new(uri) do |client|
   # Monitors and prints changes to the "restaurants" collection
   # start-open-change-stream
   stream = collection.watch
-  enum = stream.to_enum
-  while (doc = enum.next)
+  stream.each do |doc|
     puts doc
     break if doc['operationType'] == 'invalidate'
   end
@@ -36,8 +35,7 @@ Mongo::Client.new(uri) do |client|
   # start-change-stream-pipeline
   pipeline = [{ '$match' => { 'operationType' => 'update' } }]
   stream = collection.watch(pipeline)
-  enum = stream.to_enum
-  while (doc = enum.next)
+  stream.each do |doc|
     puts doc
     break if doc['operationType'] == 'invalidate'
   end
@@ -47,8 +45,7 @@ Mongo::Client.new(uri) do |client|
   # start-change-stream-post-image
   options = { full_document: 'updateLookup' }
   stream = collection.watch([], options)
-  enum = stream.to_enum
-  while (doc = enum.next)
+  stream.each do |doc|
     puts doc
     break if doc['operationType'] == 'invalidate'
   end
