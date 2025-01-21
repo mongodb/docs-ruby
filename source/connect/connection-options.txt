@@ -220,7 +220,8 @@ Authentication
     
    * - **:password**
      - | The password for authentication. When this option is included 
-         in a connection URI, you must percent-encode it.
+         in a connection URI, you must 
+         `percent-encode <https://datatracker.ietf.org/doc/html/rfc3986#section-2.1>`__ it.
        |
        | **Data Type**: ``String``
        | **Default**: none
