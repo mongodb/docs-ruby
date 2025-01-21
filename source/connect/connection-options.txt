@@ -7,7 +7,7 @@ Specify Connection Options
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
+   :depth: 2
    :class: singlecol
 
 .. facet::
@@ -21,8 +21,9 @@ Overview
 --------
 
 This section describes the MongoDB connection and authentication options
-available in {+driver-short+}. You can configure your connection using either
-the connection URI or arguments to the ``Mongo::Client`` constructor.
+available in {+driver-short+}. You can configure your connection by using either
+the connection URI (also called a :manual:`connection string </connection-string/>`) 
+or by passing arguments to the ``Mongo::Client`` constructor.
 
 Using the Connection URI
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -209,7 +210,8 @@ Authentication
 
    * - **:user**
      - | The username for authentication. When this option is included 
-         in a connection URI, you must percent-encode it.
+         in a connection URI, you must 
+         `percent-encode <https://datatracker.ietf.org/doc/html/rfc3986#section-2.1>`__ it.
        |
        | **Data Type**: ``String``
        | **Default**: none
