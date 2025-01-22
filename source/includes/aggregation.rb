@@ -4,7 +4,7 @@ gemfile do
   gem 'mongo'
 end
 
-uri = "<connection string URI>"
+uri = '<connection string URI>'
 
 Mongo::Client.new(uri) do |client|
   #start-aggregation
@@ -12,6 +12,7 @@ Mongo::Client.new(uri) do |client|
   restaurants_collection = database[:restaurants]
     
   pipeline = [
+    { '$match' => { 'cuisine' => 'Bakery' } },
     { '$group' => {
       '_id' => '$borough',
       'count' => { '$sum' => 1 }
@@ -36,7 +37,7 @@ Mongo::Client.new(uri) do |client|
   search_pipeline = [
     {
       '$search' => {
-        'index' => 'your_search_index_name',
+        'index' => '<your_search_index_name>',
         'text' => {
           'query' => 'Salt',
           'path' => 'name'
