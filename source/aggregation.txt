@@ -219,7 +219,7 @@ This example creates pipeline stages to perform the following actions:
        {"_id"=>  {"$oid"=>  "..."}, "name"=>  "Salt & Pepper"}
        {"_id"=>  {"$oid"=>  "..."}, "name"=>  "Salt + Charcoal"}
        {"_id"=>  {"$oid"=>  "..."}, "name"=>  "A Salt & Battery"}
-       {"_id"=>  {"$oid"=> "..."}, "name"=>  "Salt And Fat"}
+       {"_id"=>  {"$oid"=> "..."},  "name"=>  "Salt And Fat"}
        {"_id"=>  {"$oid"=>  "..."}, "name"=>  "Salt And Pepper Diner"}
 
 Additional Information

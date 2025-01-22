@@ -14,8 +14,8 @@ Mongo::Client.new(uri) do |client|
   pipeline = [
     { '$match' => { 'cuisine' => 'Bakery' } },
     { '$group' => {
-      '_id' => '$borough',
-      'count' => { '$sum' => 1 }
+        '_id' => '$borough',
+        'count' => { '$sum' => 1 }
       }
     }
   ]
