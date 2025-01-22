@@ -63,13 +63,13 @@ your data.
    * - Find Operations
      - Aggregation Operations
 
-   * - | Select *certain* documents to return
-       | Select *which* fields to return
+   * - | Select certain documents to return
+       | Select which fields to return
        | Sort the results
        | Limit the results
        | Count the results
-     - | Select *certain* documents to return
-       | Select *which* fields to return
+     - | Select certain documents to return
+       | Select which fields to return
        | Sort the results
        | Limit the results
        | Count the results
@@ -170,7 +170,7 @@ from the preceding :ref:`ruby-aggregation-example`:
        :visible: false
 
        {"explainVersion"=>"2", "queryPlanner"=>{"namespace"=>"sample_restaurants.restaurants",
-       "parsedQuery"=>"cuisine"=> {"$eq"=> "Bakery"}}, "indexFilterSet"=>false,
+       "parsedQuery"=>{"cuisine"=> {"$eq"=> "Bakery"}}, "indexFilterSet"=>false,
        "planCacheKey"=>"6104204B", "optimizedPipeline"=>true, "maxIndexedOrSolutionsReached"=>false,
        "maxIndexedAndSolutionsReached"=>false, "maxScansToExplodeReached"=>false,
        "prunedSimilarIndexes"=>false, "winningPlan"=>{"isCached"=>false,
@@ -190,6 +190,11 @@ Run an Atlas Full-Text Search
 To specify a full-text search of one or more fields, you can create a
 ``$search`` pipeline stage.
 
+This example creates pipeline stages to perform the following actions:
+
+- Search the ``name`` field for the term ``"Salt"``
+- Project only the ``_id`` and the ``name`` values of matching documents
+
 .. important::
 
     To run the following example, you must create an Atlas Search index on the ``restaurants``
@@ -197,11 +202,6 @@ To specify a full-text search of one or more fields, you can create a
     placeholder with the name of the index. 
 
 .. TODO: Add a link in the callout to the Atlas Search index creation guide.
-
-This example creates pipeline stages to perform the following actions:
-
-- Search the ``name`` field for the term ``"Salt"``
-- Project only the ``_id`` and the ``name`` values of matching documents
 
 .. io-code-block::
     :copyable:
