@@ -1,5 +1,12 @@
 # Command monitoring
 
+# start-available-subscriber
+Mongo::Monitoring::Global.subscribe(Mongo::Monitoring::COMMAND, subscriber)
+client = Mongo::Client.new(['127.0.0.1:27017'])
+
+client.subscribe( Mongo::Monitoring::COMMAND, subscriber )
+# end-available-subscriber
+
 # start-command-logging
 class CommandLogSubscriber
     include Mongo::Loggable
