@@ -50,7 +50,7 @@ The following table provides available subscribers and their monitoring ``topic`
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 20 60
+   :widths: 35 20 45
 
    * - Method Name
      - Monitoring Topic
@@ -90,7 +90,7 @@ section on this page.
 Custom SDAM Monitoring
 ----------------------
 
-You can create a custom command subscriber to access details about server
+You can create a custom SDAM subscriber to access details about server
 and topology events. Create a separate class for each event type, as available
 data for each event varies. 
 
@@ -105,7 +105,9 @@ like the following:
    :copyable:
    :dedent:
 
-The following code shows how to subscribe to SDAM events globally:
+To subscribe to events, you need to create the appropriate subscriber and 
+subscribe to the correct monitoring ``topic``. The following code shows how 
+to subscribe to SDAM events globally:
 
 .. literalinclude:: /includes/monitoring/monitoring.rb
    :start-after: start-sdam-subscriber-global
@@ -151,11 +153,11 @@ outputs messages such as the following:
 
 .. note::
 
-  ``:sdam_proc`` client option applies only to the client during whose
-  construction it is given. When certain client options are changed via the
+  The ``:sdam_proc`` client option applies only to the given client. 
+  When certain client options are changed via the
   ``Client#with`` call, a new cluster may be created by the driver with
   a default set of event subscribers. If this happens, the provided
-  ``:sdam_proc`` is not called and the application may miss events.
+  ``:sdam_proc`` is not called, and the application may miss events.
 
 Server Heartbeats
 ~~~~~~~~~~~~~~~~~
@@ -169,7 +171,7 @@ as they must implement the following three methods:
 - ``succeeded``: Response for a successful heartbeat outcome
 - ``failed``: Response for a failed heartbeat outcome
 
-The following code is an example logging heartbeat event subscriber:
+The following code is an example heartbeat event subscriber:
 
 .. literalinclude:: /includes/monitoring/monitoring.rb
    :start-after: start-heartbeat

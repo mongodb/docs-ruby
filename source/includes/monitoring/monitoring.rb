@@ -1,11 +1,11 @@
 # start-available-subscriber
 subscriber = Mongo::Monitoring::ServerOpeningLogSubscriber.new
 
-# Globally subscribes to Server Opening events
+# Globally subscribes to ServerOpening events by using the SERVER_OPENING monitoring topic
 Mongo::Monitoring::Global.subscribe(Mongo::Monitoring::SERVER_OPENING, subscriber)
 client = Mongo::Client.new(['127.0.0.1:27017'])
 
-# Subscribes to Server Opening events at the client level
+# Subscribes to ServerOpening events at the client level by using the SERVER_OPENING monitoring topic
 client.subscribe( Mongo::Monitoring::SERVER_OPENING, subscriber )
 # end-available-subscriber
 
