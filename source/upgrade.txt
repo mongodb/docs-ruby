@@ -25,7 +25,7 @@ to upgrade your driver to a new version.
 
 Before you upgrade, perform the following actions:
 
-- Ensure the new driver version is compatible with the MongoDB Server versions
+- Ensure the new driver version is compatible with the {+mdb-server+} versions
   your application connects to and the Ruby versions your application runs on.
   To view compatibility information, see the :ref:`Compatibility <ruby-compatibility>` page.
 
@@ -77,5 +77,5 @@ Version 2.0 Breaking Changes
 
 This driver version introduces the following breaking change:
 
-- Drops support for Ruby 2.5 and 2.6. To upgrade to this version, ensure your
-  application runs on Ruby 2.7 or later.
+- Discontinues support for Ruby 2.5 and 2.6. Deprecates support for Ruby 2.7 and
+  JRuby 9.2.
