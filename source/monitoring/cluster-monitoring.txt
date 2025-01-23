@@ -29,14 +29,15 @@ that you are connected to.
 You can use information about SDAM events in your application to understand 
 cluster changes, assess cluster health, or perform capacity planning.
 
-Available SDAM Subscribers
---------------------------
+SDAM Subscribers
+----------------
 
 You can use the {+driver-short+}'s ``subscribe`` method to subscribe to events. 
 The ``subscribe`` method requires you to specify a monitoring ``topic`` 
-(the event type) and a subscriber object.
+(the monitored event type) and a subscriber object.
 
-The following code uses the ``CommandLogSubscriber`` to monitor command events:
+The following code uses the ``ServerOpeningLogSubscriber`` to monitor a connection
+to a server instance. You can subscribe to events at a global or client level:
 
 .. literalinclude:: /includes/monitoring/monitoring.rb
    :start-after: start-available-subscriber
@@ -45,7 +46,7 @@ The following code uses the ``CommandLogSubscriber`` to monitor command events:
    :copyable:
    :dedent:
 
-The following table provides available subscribers and their event types: 
+The following table provides available subscribers and their monitoring ``topic``: 
 
 .. list-table::
    :header-rows: 1
@@ -61,82 +62,41 @@ The following table provides available subscribers and their event types:
 
    * - `ServerClosedLogSubscriber <{+api-root+}/Mongo/Monitoring/ServerClosedLogSubscriber.html>`__
      - ``SERVER_CLOSED``
-     - Subscribes to Server Closed events and logs them.
+     - Subscribes to ``ServerClosed`` events and logs them.
 
    * - `ServerDescriptionChangedLogSubscriber <{+api-root+}/Mongo/Monitoring/ServerDescriptionChangedLogSubscriber.html>`__
      - ``SERVER_DESCRIPTION_CHANGED``
-     - Subscribes to Server Description Changed events and logs them.
+     - Subscribes to ``ServerDescriptionChanged`` events and logs them.
 
    * - `ServerOpeningLogSubscriber <{+api-root+}/Mongo/Monitoring/ServerOpeningLogSubscriber.html>`__ 
      - ``SERVER_OPENING``
-     - Subscribes to Server Opening events and logs them.
+     - Subscribes to ``ServerOpening`` events and logs them.
 
    * - `TopologyChangedLogSubscriber <{+api-root+}/Mongo/Monitoring/TopologyChangedLogSubscriber.html>`__
      - ``TOPOLOGY_CHANGED``
-     - Subscribes to Topology Changed events and logs them.
+     - Subscribes to ``TopologyChanged`` events and logs them.
 
    * - `TopologyClosedLogSubscriber <{+api-root+}/Mongo/Monitoring/TopologyClosedLogSubscriber.html>`__
      - ``TOPOLOGY_CLOSED``
-     - Subscribes to Topology Closed events and logs them.
+     - Subscribes to ``TopologyClosed`` events and logs them.
 
    * - `TopologyOpeningLogSubscriber <{+api-root+}/Mongo/Monitoring/TopologyOpeningLogSubscriber.html>`__
      - ``TOPOLOGY_OPENING``
-     - Subscribes to Topology Opening events and logs them.
+     - Subscribes to ``TopologyOpening`` events and logs them.
 
-Custom Command Monitoring
--------------------------
-
-You can create a custom command subscriber to access details about server
-and topology events.
-
-A subscriber must implement the following three methods: 
-
-- ``started``: Response when you initiate the command
-- ``succeeded``: Response when the command succeeds
-- ``failed``: Response when the command fails
-
-The following is an example command logging subscriber:
-
-.. literalinclude:: /includes/monitoring/monitoring.rb
-   :start-after: start-command-logging
-   :end-before: end-command-logging
-   :language: ruby
-   :copyable:
-   :dedent:
-
-To register a custom subscriber, you can do so globally for all clients or 
-on a per-client basis:
-
-.. literalinclude:: /includes/monitoring/monitoring.rb
-   :start-after: start-command-subscriber
-   :end-before: end-command-subscriber
-   :language: ruby
-   :copyable:
-   :dedent:
-
-When you run the application, your subscriber records the commands' event information  
-and outputs logs such as the following:
-
-.. code-block:: none
-
-  D, [2018-09-23T13:47:31.258020 #4692] DEBUG -- : COMMAND | 127.0.0.1:27027 | test.hello | STARTED | {"hello"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x47111693353080 type=uuid data=0x730341e880dc40a2...>}}
-  D, [2018-09-23T13:47:31.259145 #4692] DEBUG -- : COMMAND | 127.0.0.1:27027 | test.hello | SUCCEEDED | 0.000791175s
+You can find a table of SDAM event descriptions in the :ref:`Event Descriptions <SDAM-event-descriptions>` 
+section on this page. 
 
 Custom SDAM Monitoring
 ----------------------
 
 You can create a custom command subscriber to access details about server
-and topology events.
+and topology events. Create a separate class for each event type, as available
+data for each event varies. 
 
-A subscriber must implement the following three methods: 
-
-- ``started``: Response when you initiate the command
-- ``succeeded``: Response when the command succeeds
-- ``failed``: Response when the command fails
-
-Available data for events varies, therefore to log the events a separate
-class is needed for each event type. A simple SDAM logging subscriber
-can look like the following:
+For all events, the ``succeeded`` method is called on each event subscriber with 
+the event as the sole argument. A simple SDAM logging subscriber can look 
+like the following:
 
 .. literalinclude:: /includes/monitoring/monitoring.rb
    :start-after: start-sdam
@@ -145,7 +105,7 @@ can look like the following:
    :copyable:
    :dedent:
 
-To subscribe to SDAM events globally:
+The following code shows how to subscribe to SDAM events globally:
 
 .. literalinclude:: /includes/monitoring/monitoring.rb
    :start-after: start-sdam-subscriber-global
@@ -154,7 +114,8 @@ To subscribe to SDAM events globally:
    :copyable:
    :dedent:
 
-To subscribe to SDAM events for a single client by using the ``sdam-proc`` client option:
+The following code shows how to subscribe to SDAM events for a single client 
+by using the ``sdam-proc`` client option:
 
 .. literalinclude:: /includes/monitoring/monitoring.rb
    :start-after: start-sdam-subscriber-client
@@ -163,7 +124,8 @@ To subscribe to SDAM events for a single client by using the ``sdam-proc`` clien
    :copyable:
    :dedent:
 
-Sample output:
+When you run the application, your subscriber records the SDAM event and 
+outputs messages such as the following:
 
 .. code-block:: none
 
@@ -195,24 +157,50 @@ Sample output:
   a default set of event subscribers. If this happens, the provided
   ``:sdam_proc`` is not called and the application may miss events.
 
+Server Heartbeats
+~~~~~~~~~~~~~~~~~
+
+You can also create a custom subscriber to monitor server heartbeats.
+
+Custom server heartbeat subscribers differ from other SDAM subscribers,
+as they must implement the following three methods: 
+
+- ``started``: Invoked when the listener receives the heartbeat
+- ``succeeded``: Response for a successful heartbeat outcome
+- ``failed``: Response for a failed heartbeat outcome
+
+The following code is an example logging heartbeat event subscriber:
+
+.. literalinclude:: /includes/monitoring/monitoring.rb
+   :start-after: start-heartbeat
+   :end-before: end-heartbeat
+   :language: ruby
+   :copyable:
+   :dedent:
+
+You can subscribe to heartbeat events globally or for a specific client:
+
+.. literalinclude:: /includes/monitoring/monitoring.rb
+   :start-after: start-heartbeat-subscribe
+   :end-before: end-heartbeat-subscribe
+   :language: ruby
+   :copyable:
+   :dedent:
+
+When you run the application, your subscriber records the heartbeat event and 
+outputs messages such as the following:
+
+.. code-block:: none
+
+   D, [2018-09-23T13:44:10.707018 #1739] DEBUG -- : HEARTBEAT | 127.0.0.1:27027 | STARTED
+   D, [2018-09-23T13:44:10.707778 #1739] DEBUG -- : HEARTBEAT | 127.0.0.1:27027 | SUCCEEDED | 0.000772381s
+
+.. _SDAM-event-descriptions:
+
 Event Descriptions
 ------------------
 
-.. figure out what to do with this
-
-The Ruby driver implements `Server Discovery And Monitoring (SDAM) specification
-<https://github.com/mongodb/specifications/tree/master/source/server-discovery-and-monitoring>`_.
-and makes the following events available to the application:
-
-- Topology opening
-- Server opening
-- Server description changed
-- Topology changed
-- Server closed
-- Topology closed
-- Heartbeat events (covered below in a separate section)
-
-You can monitor the following SDAM events:
+The following table provides the name and description of each SDAM event:
 
 .. list-table::
    :header-rows: 1
@@ -222,7 +210,7 @@ You can monitor the following SDAM events:
      - Description 
 
    * - `ServerClosed <{+api-root+}/Mongo/Monitoring/Event/ServerClosed.html>`__
-     - Event fired when the server is closed.
+     - Event fired when the server instance is closed.
 
    * - `ServerDescriptionChanged <{+api-root+}/Mongo/Monitoring/Event/ServerDescriptionChanged.html>`__
      - Event fired when a server's description changes.
@@ -231,10 +219,10 @@ You can monitor the following SDAM events:
      - Event fired when a server heartbeat fails.
 
    * - `ServerHeartbeatStarted <{+api-root+}/Mongo/Monitoring/Event/ServerHeartbeatStarted.html>`__ 
-     - Event fired when a server heartbeat is dispatched.
+     - Event fired when a server heartbeat is received by the listener.
 
    * - `ServerHeartbeatSucceeded <{+api-root+}/Mongo/Monitoring/Event/ServerHeartbeatSucceeded.html>`__ 
-     - Event fired when a server heartbeat successfully returns.
+     - Event fired when a server heartbeat succeeds.
 
    * - `ServerOpening <{+api-root+}/Mongo/Monitoring/Event/ServerOpening.html>`__ 
      - Event fired when the driver connects to the server.
@@ -251,8 +239,9 @@ You can monitor the following SDAM events:
 API Documentation
 -----------------
 
-To learn more about any of the methods discussed in this guide, see the following API documentation:
+To learn more about any of the classes or methods discussed in this guide, see the 
+following API documentation:
 
+- `Mongo::Monitoring <{+api-root+}/Mongo/Monitoring.html>`__
 - `Mongo::Monitoring::Event <{+api-root+}/Mongo/Monitoring/Event.html>`__
-
-.. event descriptions table, reread for active voice, api doc section, remove unnecessary code
+- `subscribe <{+api-root+}/Mongo/Monitoring/Subscribable.html#subscribe-instance_method>`__

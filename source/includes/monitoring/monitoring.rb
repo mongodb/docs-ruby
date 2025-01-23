@@ -1,63 +1,13 @@
-# Command monitoring
-
 # start-available-subscriber
-Mongo::Monitoring::Global.subscribe(Mongo::Monitoring::COMMAND, subscriber)
+subscriber = Mongo::Monitoring::ServerOpeningLogSubscriber.new
+
+# Globally subscribes to Server Opening events
+Mongo::Monitoring::Global.subscribe(Mongo::Monitoring::SERVER_OPENING, subscriber)
 client = Mongo::Client.new(['127.0.0.1:27017'])
 
-client.subscribe( Mongo::Monitoring::COMMAND, subscriber )
+# Subscribes to Server Opening events at the client level
+client.subscribe( Mongo::Monitoring::SERVER_OPENING, subscriber )
 # end-available-subscriber
-
-# start-command-logging
-class CommandLogSubscriber
-    include Mongo::Loggable
-  
-    def started(event)
-      # The default inspection of a command which is a BSON document gets
-      # truncated in the middle. To get the full rendering of the command, the
-      # ``to_json`` method can be called on the document.
-      log_debug("#{prefix(event)} | STARTED | #{format_command(event.command.to_json)}")
-    end
-  
-    def succeeded(event)
-      log_debug("#{prefix(event)} | SUCCEEDED | #{event.duration}s")
-    end
-  
-    def failed(event)
-      log_debug("#{prefix(event)} | FAILED | #{event.message} | #{event.duration}s")
-    end
-  
-    private
-  
-    def logger
-      Mongo::Logger.logger
-    end
-  
-    def format_command(args)
-      begin
-        args.inspect
-      rescue Exception
-        '<Unable to inspect arguments>'
-      end
-    end
-  
-    def format_message(message)
-      format("COMMAND | %s".freeze, message)
-    end
-  
-    def prefix(event)
-      "#{event.address.to_s} | #{event.database_name}.#{event.command_name}"
-    end
-  end
-# end-command-logging
-
-# start-command-subscriber
-subscriber = CommandLogSubscriber.new
-
-Mongo::Monitoring::Global.subscribe(Mongo::Monitoring::COMMAND, subscriber)
-
-client = Mongo::Client.new([ '127.0.0.1:27017' ], :database => 'test' )
-client.subscribe( Mongo::Monitoring::COMMAND, subscriber )
-# end-command-subscriber
 
 # start-sdam
 class SDAMLogSubscriber
@@ -214,19 +164,10 @@ class HeartbeatLogSubscriber
 # start-heartbeat-subscribe
 subscriber = HeartbeatLogSubscriber.new
 
+# Globally subscribes to Server Opening events
 Mongo::Monitoring::Global.subscribe(Mongo::Monitoring::SERVER_HEARTBEAT, subscriber)
 
+# Subscribes to Server Opening events at the client level
 client = Mongo::Client.new([ '127.0.0.1:27017' ], :database => 'test' )
 client.subscribe( Mongo::Monitoring::SERVER_HEARTBEAT, subscriber )
 # end-heartbeat-subscribe
-
-# Connection Pool
-# start-pool-subscriber
-Mongo::Monitoring::Global.subscribe(
-  Mongo::Monitoring::CONNECTION_POOL,
-  Mongo::Monitoring::CmapLogSubscriber.new)
-
-client = Mongo::Client.new([ '127.0.0.1:27017' ], :database => 'test' )
-subscriber = Mongo::Monitoring::CmapLogSubscriber.new
-client.subscribe( Mongo::Monitoring::CONNECTION_POOL, subscriber )
-# end-pool-subscriber
