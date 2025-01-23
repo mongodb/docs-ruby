@@ -55,31 +55,31 @@ The following table provides available subscribers and their event types:
      - Monitoring Topic
      - Description 
 
-   * - SDAMLogSubscriber
+   * - `SDAMLogSubscriber <{+api-root+}/Mongo/Monitoring/SDAMLogSubscriber.html>`__
      - 
      - Subscribes to SDAM events and logs them.
 
-   * - ServerClosedLogSubscriber
+   * - `ServerClosedLogSubscriber <{+api-root+}/Mongo/Monitoring/ServerClosedLogSubscriber.html>`__
      - ``SERVER_CLOSED``
      - Subscribes to Server Closed events and logs them.
 
-   * - ServerDescriptionChangedLogSubscriber
+   * - `ServerDescriptionChangedLogSubscriber <{+api-root+}/Mongo/Monitoring/ServerDescriptionChangedLogSubscriber.html>`__
      - ``SERVER_DESCRIPTION_CHANGED``
      - Subscribes to Server Description Changed events and logs them.
 
-   * - ServerOpeningLogSubscriber
+   * - `ServerOpeningLogSubscriber <{+api-root+}/Mongo/Monitoring/ServerOpeningLogSubscriber.html>`__ 
      - ``SERVER_OPENING``
      - Subscribes to Server Opening events and logs them.
 
-   * - TopologyChangedLogSubscriber
+   * - `TopologyChangedLogSubscriber <{+api-root+}/Mongo/Monitoring/TopologyChangedLogSubscriber.html>`__
      - ``TOPOLOGY_CHANGED``
      - Subscribes to Topology Changed events and logs them.
 
-   * - TopologyClosedLogSubscriber
+   * - `TopologyClosedLogSubscriber <{+api-root+}/Mongo/Monitoring/TopologyClosedLogSubscriber.html>`__
      - ``TOPOLOGY_CLOSED``
      - Subscribes to Topology Closed events and logs them.
 
-   * - TopologyOpeningLogSubscriber
+   * - `TopologyOpeningLogSubscriber <{+api-root+}/Mongo/Monitoring/TopologyOpeningLogSubscriber.html>`__
      - ``TOPOLOGY_OPENING``
      - Subscribes to Topology Opening events and logs them.
 
@@ -221,11 +221,32 @@ You can monitor the following SDAM events:
    * - Event Type
      - Description 
 
-   * - 
-     - 
+   * - `ServerClosed <{+api-root+}/Mongo/Monitoring/Event/ServerClosed.html>`__
+     - Event fired when the server is closed.
 
+   * - `ServerDescriptionChanged <{+api-root+}/Mongo/Monitoring/Event/ServerDescriptionChanged.html>`__
+     - Event fired when a server's description changes.
 
+   * - `ServerHeartbeatFailed <{+api-root+}/Mongo/Monitoring/Event/ServerHeartbeatFailed.html>`__
+     - Event fired when a server heartbeat fails.
 
+   * - `ServerHeartbeatStarted <{+api-root+}/Mongo/Monitoring/Event/ServerHeartbeatStarted.html>`__ 
+     - Event fired when a server heartbeat is dispatched.
+
+   * - `ServerHeartbeatSucceeded <{+api-root+}/Mongo/Monitoring/Event/ServerHeartbeatSucceeded.html>`__ 
+     - Event fired when a server heartbeat successfully returns.
+
+   * - `ServerOpening <{+api-root+}/Mongo/Monitoring/Event/ServerOpening.html>`__ 
+     - Event fired when the driver connects to the server.
+
+   * - `TopologyChanged <{+api-root+}/Mongo/Monitoring/Event/TopologyChanged.html>`__ 
+     - Event fired when the topology changes.
+
+   * - `TopologyClosed <{+api-root+}/Mongo/Monitoring/Event/TopologyClosed.html>`__ 
+     - Event fired when all instance connections in the topology close.
+
+   * - `TopologyOpening <{+api-root+}/Mongo/Monitoring/Event/TopologyOpening.html>`__ 
+     - Event fired before the driver attempts to connect to an instance.
 
 API Documentation
 -----------------
