@@ -16,7 +16,11 @@
    Connect </connect>
    Write Data </write>
    Read Data </read>
+   Operations on Replica Sets </read-write-pref> 
    Indexes </indexes>
+   Data Aggregation </aggregation>
+   Security </security>
+   Data Formats </data-formats>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
    What's New </whats-new>
@@ -25,9 +29,7 @@
 
 .. TODO:
  Write Data </write>
- Operations on Replica Sets </read-write-pref>
  Monitor Your Application </monitoring>
- Data Aggregation </aggregation>
  Security </security>
  Issues & Help </issues-and-help>
  Upgrade </upgrade>
@@ -66,11 +68,11 @@ Learn how to use the {+driver-short+} to work with MongoDB databases and collect
 
 .. Learn how you can write data to MongoDB in the :ref:`ruby-write` section.
 
-.. Configure Operations on Replica Sets
-.. ------------------------------------
+Configure Operations on Replica Sets
+------------------------------------
 
-.. Learn how to configure read and write operations on a replica set in the
-.. :ref:`ruby-read-write-pref` section.
+Learn how to configure read and write operations on a replica set in the
+:ref:`ruby-crud-write-read-pref` section.
 
 .. Optimize Queries by Using Indexes
 .. ---------------------------------
@@ -78,17 +80,23 @@ Learn how to use the {+driver-short+} to work with MongoDB databases and collect
 .. Learn how to work with common types of indexes in the :ref:`ruby-indexes`
 .. section.
 
-.. Transform Your Data with Aggregation
-.. ------------------------------------
+Transform Your Data with Aggregation
+------------------------------------
 
-.. Learn how to use the {+driver-short+} to perform aggregation operations in the
-.. :ref:`ruby-aggregation` section.
+Learn how to use the {+driver-short+} to perform aggregation operations in the
+:ref:`ruby-aggregation` section.
 
 .. Secure Your Data
 .. ----------------
 
 .. Learn how to authenticate your application and encrypt your data in the
 .. :ref:`ruby-security` section.
+
+Specialized Data Formats
+------------------------
+
+Learn how to work with specialized data formats and custom types in the
+:ref:`ruby-data-formats` section.
 
 What's New
 ----------

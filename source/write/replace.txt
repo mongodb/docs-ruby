@@ -35,7 +35,7 @@ Sample Data
 
 The examples in this guide use the ``restaurants`` collection in the ``sample_restaurants``
 database from the :atlas:`Atlas sample datasets </sample-data>`. To access this collection
-from your {+language+} application, create a ``MongoClient`` object that connects to an Atlas cluster
+from your {+language+} application, create a ``Mongo::Client`` object that connects to an Atlas cluster
 and assign the following values to your ``database`` and ``collection`` variables:
 
 .. literalinclude:: /includes/write/replace.rb
