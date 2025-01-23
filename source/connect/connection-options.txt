@@ -119,20 +119,6 @@ Timeouts
        | **Client Example**: ``connect_timeout: 10.0``
        | **Connection URI Example**: ``connectTimeoutMS=10000``
 
-   * - **:socket_timeout**
-     - | *Deprecated as of v2.21: Use ``timeout_ms`` instead*
-       | The number of seconds to wait for an operation to execute on 
-         a socket before raising an exception. 
-       |
-       | ``nil`` and ``0`` mean no timeout. Client creation will fail 
-         with an error if an invalid timeout value is passed 
-         (such as a negative value or a non-numeric value).
-       |
-       | **Data Type**: ``Float``
-       | **Default**: none
-       | **Client Example**: ``socket_timeout: 5.0``
-       | **Connection URI Example**: ``socketTimeoutMS=5000``
-
    * - **:timeout_ms**
      - | The number of milliseconds to wait for an operation to execute 
          before raising an exception. 
@@ -145,16 +131,6 @@ Timeouts
        | **Default**: none
        | **Client Example**: ``timeout_ms: 5000``
        | **Connection URI Example**: ``timeoutMS=5000``
-
-   * - **:wait_queue_timeout**
-     - | *Deprecated as of v2.21: Use ``timeout_ms`` instead*
-         The number of seconds to wait for a connection in the 
-         connection pool to become available.
-       |
-       | **Data Type**: ``Float``
-       | **Default**: ``10.0``
-       | **Client Example**: ``wait_queue_timeout: 7.0``
-       | **Connection URI Example**: ``waitQueueTimeoutMS=7000``
 
 Server Selection
 ~~~~~~~~~~~~~~~~
