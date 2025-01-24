@@ -71,7 +71,8 @@ The server-selection function must meet the following criteria:
 API Documentation
 -----------------
 
-For more information about ``Mongo::Client`` options for the {+driver-short+},
-see the API documentation for `Mongo::Client <{+api-root+}/Mongo/Client.html>`__ .
+For more information about any of the types and methods discussed in this guide,
+see the following API documentation:
 
+- `Mongo::Client <{+api-root+}/Mongo/Client.html>`__ 
 - `Mongo::ServerSelector <{+api-root+}/Mongo/ServerSelector.html>`__
