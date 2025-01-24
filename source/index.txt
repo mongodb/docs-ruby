@@ -24,6 +24,7 @@
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
    API Documentation <{+api-root+}>
    What's New </whats-new>
+   Upgrade </upgrade>
    Compatibility </compatibility>
    Databases & Collections </databases-collection>
 
@@ -32,7 +33,6 @@
  Monitor Your Application </monitoring>
  Security </security>
  Issues & Help </issues-and-help>
- Upgrade </upgrade>
 
 Introduction
 ------------
@@ -104,11 +104,11 @@ What's New
 For a list of new features and changes in each version, see the :ref:`What's New <ruby-whats-new>`
 section.
 
-.. Upgrade Driver Versions
-.. -----------------------
+Upgrade Driver Versions
+-----------------------
  
-.. Learn what changes you must make to your application to upgrade driver
-.. versions in the :ref:`ruby-upgrade` section.
+Learn what changes you must make to your application to upgrade driver
+versions in the :ref:`ruby-upgrade` section.
 
 Compatibility
 -------------
