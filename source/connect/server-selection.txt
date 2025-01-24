@@ -1,0 +1,77 @@
+. _ruby-server-selection:
+
+==========================
+Customize Server Selection
+==========================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: code example, read preference, write
+
+Overview
+--------
+
+All MongoDB drivers follow a defined algorithm when selecting a server to read or write
+from. By using the ``server_selector`` property of ``Mongo::Client``, you can customize this
+algorithm to choose the server that works best for your application.
+
+.. important::
+
+   Customizing the server-selection algorithm can have unintended consequences,
+   such as degraded read or write performance.
+
+Customized Selection Algorithm
+------------------------------
+
+When {+driver-short+} executes a read operation, it performs the following steps,
+in order, to select a MongoDB deployment:
+
+1. From the list of known servers, the {+driver-short+} selects all servers
+   that match the active read preference.
+
+#. If at least one readable server exists, the {+driver-short+} calls the user-defined
+   server-selector function and passes in the list from the previous step.
+
+#. The {+driver-short+} applies the ``local_threshold`` client setting to the list of
+   servers returned from the function.
+
+#. The {+driver-short+} selects a server at random from the servers still on the list and
+   executes the operation against this server.
+
+When the {+driver-short+} executes a write operation, it begins by selecting all writeable
+servers, not just those that match the active read preference. The remaining steps are
+identical.
+
+To learn more about the default server-selection algorithm, which the driver follows
+when you don't use the ``server_selector`` argument, see
+:manual:`Server Selection Algorithm </core/read-preference-mechanics/>` in the
+MongoDB Server manual.
+
+Example: Select Servers on ``localhost``
+----------------------------------------
+
+When using a sharded cluster with multiple ``mongos`` servers, you might want to prefer
+deployments running on ``localhost``. Operations against these deployments
+usually have lower latency and higher throughput.
+This example shows how to customize the server-selection algorithm to favor
+servers running on ``localhost``. 
+
+First, write a Ruby function to select your preferred servers.
+The server-selection function must meet the following criteria:
+
+API Documentation
+-----------------
+
+For more information about ``Mongo::Client`` options for the {+driver-short+},
+see the API documentation for `Mongo::Client <{+api-root+}/Mongo/Client.html>`__ .
+
+- `Mongo::ServerSelector <{+api-root+}/Mongo/ServerSelector.html>`__
