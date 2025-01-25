@@ -27,3 +27,4 @@ Connect to MongoDB
    Choose a Connection Target </connect/connection-targets>
    Connection Option </connect/connection-options>
    Configure TLS </connect/tls>
+   Limit Server Execution Time </connect/csot>
