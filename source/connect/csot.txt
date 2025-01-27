@@ -27,8 +27,8 @@ steps needed to complete the operation, including server selection, connection
 checkout, and server-side execution. When the timeout expires, the
 {+driver-short+} raises a timeout exception.
 
-timeoutMS Option
-----------------
+timeout_ms Option
+-----------------
 
 To specify a timeout when connecting to a MongoDB deployment, set the
 ``timeout_ms`` connection option to the timeout length in milliseconds. You can
@@ -157,8 +157,6 @@ call to ``start_session``.
 You can only set a timeout value for the 
 `start_transaction <{+api-root+}/Mongo/Session.html#start_transaction-instance_method>`__
 method by using the ``timeout_ms`` option.
-
-.. is above sentence true? 
  
 You cannot override ``default_timeout_ms`` by setting the ``timeout_ms`` option on an
 operation in a transaction session provided by the ``with_transaction`` callback.
