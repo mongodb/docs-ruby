@@ -199,8 +199,7 @@ to the cursor methods must complete within the limit specified by the
 Otherwise, the cursor's lifetime expires and a timeout error occurs.
 
 When you close a cursor by calling the  ``to_a`` or ``close`` method, the
-timeout resets for the ``killCursors`` command to ensure server-side resources are
-cleaned up.
+timeout resets to ensure server-side resources are cleaned up.
 
 The following example shows how to set the ``timeout_ms`` option to ensure that
 the cursor is initialized and all documents are retrieved within 10 seconds:
