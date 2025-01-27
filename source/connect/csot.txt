@@ -54,7 +54,7 @@ connection string option to specify a timeout of 30 seconds:
    .. tab:: Connection String
       :tabid: connection-string
 
-      .. code-block:: javascript
+      .. code-block:: ruby
          :emphasize-lines: 1
 
          uri = "mongodb://<hostname>:<port>?timeoutMS=30000"
@@ -132,7 +132,7 @@ The following example demonstrates how an operation-level ``timeout_ms``
 configuration can override a client-level ``timeout_ms`` configuration:
 
 .. literalinclude:: /includes/connect/csot.rb
-   :language: javascript
+   :language: ruby
    :start-after: start-csot-overrides
    :end-before: end-csot-overrides
 
@@ -220,7 +220,7 @@ by using an iterable cursor, and then fetches and logs the ``imdb`` information 
 each movie document:
 
 .. literalinclude:: /includes/connect/csot.rb
-   :language: javascript
+   :language: ruby
    :start-after: start-csot-iterable
    :end-before: end-csot-iterable
 
