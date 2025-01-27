@@ -1,9 +1,8 @@
 # start-csot-overrides
 require 'mongo'
 
-# Replace the placeholders with your credentials
-uri = "mongodb+srv://lindsey:me123@atlascluster.spm1ztf.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster"
-
+# Replace the placeholder with your connection string
+uri = "<connection string>"
 options = { timeoutMS: 30000 }
 
 client = Mongo::Client.new(uri, options)

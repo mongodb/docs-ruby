@@ -57,8 +57,11 @@ connection string option to specify a timeout of 30 seconds:
       .. code-block:: javascript
          :emphasize-lines: 1
 
-         const uri = "mongodb://<hostname>:<port>?timeoutMS=30000"
+         uri = "mongodb://<hostname>:<port>?timeoutMS=30000"
          client = Mongo::Client.new(uri)
+
+If you specify the ``timeout_ms`` option, the driver automatically applies the
+specified timeout per each server operation.
 
 .. note:: 
 
@@ -73,9 +76,6 @@ connection string option to specify a timeout of 30 seconds:
 
    The ``timeout_ms`` connection option takes precedence over these 
    deprecated timeout options. 
-
-If you specify the ``timeout_ms`` option, the driver automatically applies the
-specified timeout per each server operation.
 
 Timeout Inheritance
 ~~~~~~~~~~~~~~~~~~~
@@ -152,12 +152,13 @@ If you do not specify ``default_timeout_ms``, the driver uses the ``timeout_ms``
 value set on the parent ``Mongo::Client``.
 
 You cannot override the ``timeout_ms`` value of the ``Mongo::Client`` for a 
-call to ``start_session``
+call to ``start_session``. 
 
-.. is below true? 
-
-You can only set a timeout value for the `start_transaction <{+api-root+}/Mongo/Session.html#start_transaction-instance_method>`__
+You can only set a timeout value for the 
+`start_transaction <{+api-root+}/Mongo/Session.html#start_transaction-instance_method>`__
 method by using the ``timeout_ms`` option.
+
+.. is above sentence true? 
  
 You cannot override ``default_timeout_ms`` by setting the ``timeout_ms`` option on an
 operation in a transaction session provided by the ``with_transaction`` callback.
@@ -191,20 +192,20 @@ to ``cursorLifetime``, which is the default, or ``iteration``.
 Cursor Lifetime Mode
 ~~~~~~~~~~~~~~~~~~~~
 
-The cursor lifetime mode uses ``timeoutMS`` to limit the entire lifetime of a
+The cursor lifetime mode uses ``timeout_ms`` to limit the entire lifetime of a
 cursor. In this mode, the initialization of the cursor and all subsequent calls
 to the cursor methods must complete within the limit specified by the
-``timeoutMS`` option. All documents must be returned within this limit.
+``timeout_ms`` option. All documents must be returned within this limit.
 Otherwise, the cursor's lifetime expires and a timeout error occurs.
 
-When you close a cursor by calling the  ``toArray()`` or ``close()`` method, the
+When you close a cursor by calling the  ``to_a`` or ``close`` method, the
 timeout resets for the ``killCursors`` command to ensure server-side resources are
 cleaned up.
 
-The following example shows how to set the ``timeoutMS`` option to ensure that
+The following example shows how to set the ``timeout_ms`` option to ensure that
 the cursor is initialized and all documents are retrieved within 10 seconds:
 
-.. code-block:: javascript
+.. code-block:: ruby
 
    docs = collection.find({}, timeout_ms:10000).to_a
 
@@ -212,9 +213,9 @@ Cursor Iteration Mode
 ~~~~~~~~~~~~~~~~~~~~~
 
 The cursor iteration mode uses the ``timeout_ms`` option to limit each call to
-the ``next()``, ``hasNext()``, or ``tryNext()`` method. The timeout refreshes
-after each call completes. This is the default mode for all tailable cursors,
-such as the tailable cursors returned by the ``find()`` method on capped
+the ``try_next`` method. The timeout refreshes after each call completes. 
+This is the default mode for all tailable cursors,
+such as the tailable cursors returned by the ``find`` method on capped
 collections or change streams.
 
 The following code example iterates over documents in the ``mflix`` collection
