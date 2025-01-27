@@ -171,11 +171,11 @@ Query Time Series Data
 
 You can use the same syntax and conventions to query data stored in a time 
 series collection as you use when performing read or aggregation operations on 
-other collections. 
+other collections. To learn more about these operations, see the following
+guides:
 
-.. TODO: add links
-.. To learn more about these operations, see :ref:`ruby-read`
-.. and :ref:`ruby-aggregation`.
+- :ref:`ruby-read`
+- :ref:`ruby-aggregation`
 
 .. _ruby-time-series-addtl-info:
 

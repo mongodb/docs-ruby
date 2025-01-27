@@ -250,12 +250,6 @@ within 35 milliseconds of the closest member's ping time.
    :manual:`localThreshold </reference/program/mongos/#std-option-mongos.--localThreshold>`
    command-line option.
 
-.. TODO: 
-.. Troubleshooting
-.. ---------------
-
-.. .. include:: /includes/usage-examples/databases-collection.rb
-
 API Documentation
 -----------------
 

@@ -89,7 +89,10 @@ You can provide a **query filter** to the ``distinct`` method to find the distin
 field values across a subset of documents in a collection. A query filter is an expression
 that specifies search criteria used to match documents in an operation. 
 
-.. TODO: To learn more about creating a query filter, see the :ref:`ruby-specify-query` guide.
+.. tip::
+
+   To learn more about creating a query filter, see the :ref:`ruby-specify-query`
+   guide.
 
 The following example retrieves the distinct values of the ``borough`` field for
 all documents that have a ``cuisine`` field value of ``'Italian'``:

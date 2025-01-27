@@ -56,8 +56,8 @@ A standard connection string includes the following components:
 
      - Optional. Authentication credentials. If you include these, the client
        authenticates the user against the database specified in ``authSource``.
-       For more information about the ``authSource`` connection option, see
-       :ref:`ruby-auth`. 
+       For more information about the ``authSource`` connection option, see the
+       :ref:`ruby-authentication-mechanisms` guide. 
 
    * - ``hostname[:port]``
 

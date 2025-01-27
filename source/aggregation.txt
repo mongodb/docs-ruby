@@ -199,9 +199,8 @@ This example creates pipeline stages to perform the following actions:
 
     To run the following example, you must create an Atlas Search index on the ``restaurants``
     collection that covers the ``name`` field. Then, replace the ``"<your_search_index_name>"``
-    placeholder with the name of the index. 
-
-.. TODO: Add a link in the callout to the Atlas Search index creation guide.
+    placeholder with the name of the index. To learn how to create an Atlas Search index,
+    see the :ref:`ruby-atlas-search-index` guide.
 
 .. io-code-block::
     :copyable:

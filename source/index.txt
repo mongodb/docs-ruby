@@ -14,8 +14,8 @@
 
    Get Started </get-started>
    Connect </connect>
-   Write Data </write>
    Read Data </read>
+   Write Data </write>
    Operations on Replica Sets </read-write-pref> 
    Indexes </indexes>
    Data Aggregation </aggregation>
@@ -29,9 +29,7 @@
    Databases & Collections </databases-collection>
 
 .. TODO:
- Write Data </write>
  Monitor Your Application </monitoring>
- Security </security>
  Issues & Help </issues-and-help>
 
 Introduction
@@ -58,15 +56,15 @@ Databases and Collections
 Learn how to use the {+driver-short+} to work with MongoDB databases and collections in the
 :ref:`ruby-databases-collections` section.
 
-.. Read Data from MongoDB
-.. ----------------------
+Read Data from MongoDB
+----------------------
 
-.. Learn how you can retrieve data from MongoDB in the :ref:`ruby-read` section.
+Learn how you can retrieve data from MongoDB in the :ref:`ruby-read` section.
 
-.. Write Data to MongoDB
-.. ---------------------
+Write Data to MongoDB
+---------------------
 
-.. Learn how you can write data to MongoDB in the :ref:`ruby-write` section.
+Learn how you can write data to MongoDB in the :ref:`ruby-write` section.
 
 Configure Operations on Replica Sets
 ------------------------------------
@@ -74,11 +72,11 @@ Configure Operations on Replica Sets
 Learn how to configure read and write operations on a replica set in the
 :ref:`ruby-crud-write-read-pref` section.
 
-.. Optimize Queries by Using Indexes
-.. ---------------------------------
+Optimize Queries by Using Indexes
+---------------------------------
 
-.. Learn how to work with common types of indexes in the :ref:`ruby-indexes`
-.. section.
+Learn how to work with common types of indexes in the :ref:`ruby-indexes`
+section.
 
 Transform Your Data with Aggregation
 ------------------------------------
@@ -86,11 +84,11 @@ Transform Your Data with Aggregation
 Learn how to use the {+driver-short+} to perform aggregation operations in the
 :ref:`ruby-aggregation` section.
 
-.. Secure Your Data
-.. ----------------
+Secure Your Data
+----------------
 
-.. Learn how to authenticate your application and encrypt your data in the
-.. :ref:`ruby-security` section.
+Learn how to authenticate your application and encrypt your data in the
+:ref:`ruby-security` section.
 
 Specialized Data Formats
 ------------------------

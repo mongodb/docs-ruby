@@ -143,8 +143,10 @@ The following code sets the read concern level of an aggregation to ``"available
    :start-after: start-read-concern
    :end-before: end-read-concern
 
-.. TODO: insert :ref:`Aggregation <ruby-aggregation>` link here
-.. For more information about aggregation, see the Aggregation page.
+.. tip::
+
+   To learn more about aggregation operations, see the
+   :ref:`ruby-aggregation` guide.
 
 Example: Change the Read Concern of a Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -206,8 +208,10 @@ the operations in a transaction:
    :start-after: start-read-preference
    :end-before: end-read-preference
 
-.. TODO: insert :ref:`Transactions <ruby-transactions>` link
-.. For more information about transactions, see the Transactions guide.
+.. tip::
+
+   To learn more about transactions, see the
+   :ref:`ruby-transactions` guide.
 
 Example: Set the Read Preference of a Cluster in the Connection String
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

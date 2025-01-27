@@ -57,7 +57,9 @@ object from which you can access the results.
 
 You can chain option methods to the ``find`` method to refine the results of the operation.
 
-.. TODO: To learn more about query filters, see the :ref:`ruby-specify-query` guide.
+.. tip::
+
+   To learn more about query filters, see the :ref:`ruby-specify-query` guide.
 
 .. _ruby-retrieve-find-multiple:
 
@@ -225,9 +227,10 @@ method.
 Additional Information
 ----------------------
 
-.. TODO:
- To learn more about query filters, see the :ref:`ruby-specify-query` guide.
- To view code examples of retrieving documents with the {+driver-short+}, see :ref:`ruby-read`.
+To learn more about query filters, see the :ref:`ruby-specify-query` guide.
+
+To view code examples that retrieve documents by using the {+driver-short+},
+see :ref:`ruby-read`.
 
 API Documentation
 ~~~~~~~~~~~~~~~~~

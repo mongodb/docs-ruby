@@ -201,7 +201,7 @@ Additional Information
 
 For more information about retrieving documents, see the :ref:`ruby-retrieve` guide.
 
-.. TODO: For more information about specifying a query, see the :ref:`ruby-specify-query` guide.
+For more information about specifying a query, see the :ref:`ruby-specify-query` guide.
 
 API Documentation
 ~~~~~~~~~~~~~~~~~
