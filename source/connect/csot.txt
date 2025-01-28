@@ -20,8 +20,8 @@ Limit Server Execution Time
 Overview
 --------
 
-In this guide, you can learn how to use ``timeout_ms`` to set a timeout 
-for server operations. 
+In this guide, you can learn how to use the ``timeout_ms`` option to set a 
+timeout for server operations. 
 
 When you use the {+driver-short+} to perform a server operation, you can
 limit the duration allowed for the server to finish the operation. To do so,
@@ -30,8 +30,8 @@ steps needed to complete the operation, including server selection, connection
 checkout, and server-side execution. If the timeout expires before the operation 
 completes, the {+driver-short+} raises a timeout exception.
 
-timeout_ms Option
------------------
+``timeout_ms`` Option
+---------------------
 
 To specify a timeout when connecting to a MongoDB deployment, set the
 ``timeout_ms`` connection option to the timeout length in milliseconds. You can
