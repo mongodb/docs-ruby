@@ -290,7 +290,7 @@ API Documentation
 To learn more about the methods or objects used in this guide, see the following 
 API documentation:
 
-- `indexes <{+api-root+}/Mongo/Collection.html#indexes-instance_method>`__
-- `create_one <{+api-root+}/Mongo/Index/View.html#create_one-instance_method>`__
-- `drop_one <{+api-root+}/Mongo/Index/View.html#drop_one-instance_method>`__
-- `drop_all <{+api-root+}/Mongo/Index/View.html#drop_all-instance_method>`__
+- :ruby-api:`indexes <Collection.html#indexes-instance_method>`
+- :ruby-api:`create_one <Index/View.html#create_one-instance_method>`
+- :ruby-api:`drop_one <Index/View.html#drop_one-instance_method>`
+- :ruby-api:`drop_all <Index/View.html#drop_all-instance_method>`

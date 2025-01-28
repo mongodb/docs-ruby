@@ -322,5 +322,5 @@ API Documentation
 For more information about any of the types and methods discussed in this guide,
 see the following API documentation:
 
-- `Mongo::Client <{+api-root+}/Mongo/Client.html>`__
-- `tls_context_hooks <{+api-root+/Mongo.html#tls_context_hooks-class_method}>`__
+- :ruby-api:`Mongo::Client <Client.html>`
+- :ruby-api:`tls_context_hooks <.html#tls_context_hooks-class_method>`

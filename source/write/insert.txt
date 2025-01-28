@@ -163,5 +163,5 @@ Additional Information
 To learn more about any of the methods discussed in this
 guide, see the following API documentation:
 
-- `insert_one <{+api-root+}/Mongo/Collection.html#insert_one-instance_method>`_
-- `insert_many <{+api-root+}/Mongo/Collection.html#insert_many-instance_method>`_
+- :ruby-api:`insert_one <Collection.html#insert_one-instance_method>`
+- :ruby-api:`insert_many <Collection.html#insert_many-instance_method>`

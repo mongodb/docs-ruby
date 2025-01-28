@@ -182,4 +182,4 @@ API Documentation
 -----------------
 
 To learn more about the ``distinct`` method, see the
-`API documentation. <{+api-root+}/Mongo/Collection.html#distinct-instance_method>`__ 
+:ruby-api:`API documentation. <Collection.html#distinct-instance_method>` 

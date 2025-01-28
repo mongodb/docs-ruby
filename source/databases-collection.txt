@@ -256,9 +256,9 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
-- `collections <{+api-root+}/Mongo/Database.html#collections-instance_method>`__
-- `collection_names <{+api-root+}/Mongo/Database.html#collection_names-instance_method>`__
-- `command <{+api-root+}/Mongo/Monitoring/Event/CommandStarted.html#command-instance_method>`__
-- `drop database <{+api-root+}/Mongo/Database.html#drop-instance_method>`__
-- `drop collection <{+api-root+}/Mongo/Collection.html#drop-instance_method>`__
-- `with <{+api-root+}/Mongo/Collection.html#with-instance_method>`__
+- :ruby-api:`collections <Database.html#collections-instance_method>`
+- :ruby-api:`collection_names <Database.html#collection_names-instance_method>`
+- :ruby-api:`command <Monitoring/Event/CommandStarted.html#command-instance_method>`
+- :ruby-api:`drop database <Database.html#drop-instance_method>`
+- :ruby-api:`drop collection <Collection.html#drop-instance_method>`
+- :ruby-api:`with <Collection.html#with-instance_method>`

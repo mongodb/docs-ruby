@@ -242,6 +242,6 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
-- `update_one <{+api-root+}/Mongo/Collection.html#update_one-instance_method>`_
-- `update_many <{+api-root+}/Mongo/Collection.html#update_many-instance_method>`_
-- `Result <{+api-root+}/Mongo/Operation/Update/Result.html>`_
+- :ruby-api:`update_one <Collection.html#update_one-instance_method>`
+- :ruby-api:`update_many <Collection.html#update_many-instance_method>`
+- :ruby-api:`Result <Operation/Update/Result.html>`

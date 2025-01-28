@@ -134,7 +134,7 @@ methods:
      - Returns the logical time of the operation execution.
 
 For a full list of methods available on the ``Result`` object, see
-the `API documentation <{+api-root+}/Mongo/Operation/Result.html>`__.
+the :ruby-api:`API documentation <Operation/Result.html>`.
 
 .. tip::
 
@@ -181,4 +181,4 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
-- `command <{+api-root+}/Mongo/Database.html#command-instance_method>`_
+- :ruby-api:`command <Database.html#command-instance_method>`

@@ -174,7 +174,7 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
-- `delete_one <{+api-root+}/Mongo/Collection.html#delete_one-instance_method>`_
-- `delete_many <{+api-root+}/Mongo/Collection.html#delete_many-instance_method>`_
-- `Mongo::Operation::Delete::Result <{+api-root+}/Mongo/Operation/Delete/Result.html>`_
+- :ruby-api:`delete_one <Collection.html#delete_one-instance_method>`
+- :ruby-api:`delete_many <Collection.html#delete_many-instance_method>`
+- :ruby-api:`Mongo::Operation::Delete::Result <Operation/Delete/Result.html>`
 

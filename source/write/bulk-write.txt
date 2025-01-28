@@ -329,5 +329,5 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
-- `bulk_write <{+api-root+}/Mongo/Collection.html#bulk_write-instance_method>`_
-- `BulkWrite::Result <{+api-root+}/Mongo/BulkWrite/Result.html>`_
+- :ruby-api:`bulk_write <Collection.html#bulk_write-instance_method>`
+- :ruby-api:`BulkWrite::Result <BulkWrite/Result.html>`

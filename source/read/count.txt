@@ -254,5 +254,5 @@ API Documentation
 To learn more about any of the methods discussed in this
 guide, see the following API documentation:
 
-- `count_documents <{+api-root+}/Mongo/Collection.html#count_documents-instance_method>`__ 
-- `estimated_document_count <{+api-root+}/Mongo/Collection.html#estimated_document_count-instance_method>`__ 
+- :ruby-api:`count_documents <Collection.html#count_documents-instance_method>` 
+- :ruby-api:`estimated_document_count <Collection.html#estimated_document_count-instance_method>` 

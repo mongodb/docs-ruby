@@ -139,8 +139,8 @@ API Documentation
 To learn more about the methods and types mentioned in this
 guide, see the following API documentation:
 
-- `Mongo::Session <{+api-root+}/Mongo/Session.html>`_
-- `start_transaction <{+api-root+}/Mongo/Session.html#start_transaction-instance_method>`_
-- `commit_transaction <{+api-root+}/Mongo/Session.html#commit_transaction-instance_method>`_
-- `abort_transaction <{+api-root+}/Mongo/Session.html#abort_transaction-instance_method>`_
-- `with_transaction <{+api-root+}/Mongo/Session.html#with_transaction-instance_method>`_
+- :ruby-api:`Mongo::Session <Session.html>`
+- :ruby-api:`start_transaction <Session.html#start_transaction-instance_method>`
+- :ruby-api:`commit_transaction <Session.html#commit_transaction-instance_method>`
+- :ruby-api:`abort_transaction <Session.html#abort_transaction-instance_method>`
+- :ruby-api:`with_transaction <Session.html#with_transaction-instance_method>`

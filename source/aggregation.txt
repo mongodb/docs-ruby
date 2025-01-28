@@ -254,4 +254,4 @@ API Documentation
 ~~~~~~~~~~~~~~~~~
 
 To learn more about the Ruby driver's aggregation methods, see the
-API documentation for `Aggregation <{+api-root+}/Mongo/Collection/View/Aggregation.html>`__.
+API documentation for :ruby-api:`Aggregation <Collection/View/Aggregation.html>`.

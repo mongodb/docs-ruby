@@ -209,5 +209,5 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
-- `replace_one <{+api-root+}/Mongo/Collection.html#replace_one-instance_method>`_
-- `Mongo::Operation::Update::Result <{+api-root+}/Mongo/Operation/Update/Result.html>`_
+- :ruby-api:`replace_one <Collection.html#replace_one-instance_method>`
+- :ruby-api:`Mongo::Operation::Update::Result <Operation/Update/Result.html>`
