@@ -223,6 +223,10 @@ raw: ${prefix}/stable -> ${base}/current/
 (v2.21-master]: ${prefix}/${version}/reference/database-tasks/ -> ${base}/${version}/databases-collection/
 (v2.21-master]: ${prefix}/${version}/reference/collection-tasks/ -> ${base}/${version}/databases-collection/
 (v2.21-master]: ${prefix}/${version}/reference/indexing/ -> ${base}/${version}/indexes/
+(v2.21-master]: ${prefix}/${version}/reference/text-search/ -> ${base}/${version}/indexes/text-search/
+(v2.21-master]: ${prefix}/${version}/reference/geospatial-search/ -> ${base}/${version}/indexes/geospatial-search/
+(v2.21-master]: ${prefix}/${version}/reference/map-reduce/ -> ${base}/${version}/
 (v2.21-master]: ${prefix}/${version}/reference/search-indexes/ -> ${base}/${version}/indexes/atlas-search-index/
+(v2.21-master]: ${prefix}/${version}/reference/collations/ -> ${base}/${version}/read/collations/
 (v2.21-master]: ${prefix}/${version}/release-notes/ -> ${base}/${version}/whats-new/
 (v2.21-master]: ${prefix}/${version}/contribute/ -> ${base}/${version}/issues-and-help/

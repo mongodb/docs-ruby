@@ -26,6 +26,8 @@ Optimize Queries by Using Indexes
    Compound </indexes/compound-index>
    Multikey </indexes/multikey-index>
    Atlas Search </indexes/atlas-search-index>
+   Text </indexes/text-search>
+   Geospatial </indexes/geospatial-search>
 
 Overview
 --------

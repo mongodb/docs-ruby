@@ -1,6 +1,8 @@
-*****************
-Geospatial Search
-*****************
+.. _ruby-geospatial-index:
+
+==================
+Geospatial Indexes
+==================
 
 .. default-domain:: mongodb
 

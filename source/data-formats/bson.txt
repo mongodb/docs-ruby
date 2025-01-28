@@ -1,10 +1,8 @@
-.. https://www.mongodb.com/docs/ecosystem/tutorial/ruby-bson-tutorial/
-
 .. _ruby-bson-tutorial:
 
-*************
+=============
 BSON Tutorial
-*************
+=============
 
 .. default-domain:: mongodb
 
@@ -14,10 +12,10 @@ BSON Tutorial
    :depth: 2
    :class: twocols
 
-This tutorial discusses using the Ruby BSON library.
+In this tutorial, you can learn how to use the Ruby BSON library.
 
 Installation
-============
+------------
 
 The BSON library can be installed from `Rubygems <http://rubygems.org>`_
 manually or with bundler.
@@ -37,7 +35,7 @@ To install the gem with bundler, include the following in your ``Gemfile``:
 The BSON library is compatible with MRI >= 2.5 and JRuby >= 9.2.
 
 Use With ActiveSupport
-======================
+----------------------
 
 Serialization for ActiveSupport-defined classes, such as TimeWithZone, is
 not loaded by default to avoid a hard dependency of BSON on ActiveSupport.
@@ -50,7 +48,7 @@ ActiveSupport-related code must be explicitly required:
     require 'bson/active_support'
 
 BSON Serialization
-==================
+------------------
 
 Getting a Ruby object's raw BSON representation is done by calling ``to_bson``
 on the Ruby object, which will return a ``BSON::ByteBuffer``. For example:
@@ -70,13 +68,13 @@ you wish to instantiate and passing it a ``BSON::ByteBuffer`` instance.
 
 
 Byte Buffers
-============
+------------
 
 BSON library 4.0 introduces the use of native byte buffers in MRI and JRuby
 instead of using ``StringIO``, for improved performance.
 
 Writing
--------
+~~~~~~~
 
 To create a ``ByteBuffer`` for writing (i.e. serializing to BSON),
 instantiate ``BSON::ByteBuffer`` with no arguments:
@@ -182,9 +180,8 @@ over a socket), call ``to_s`` on the buffer:
   There is no way to rewind the buffer for writing - ``rewind`` only affects
   the read position.
 
-
 Reading
--------
+~~~~~~~
 
 To create a ``ByteBuffer`` for reading (i.e. deserializing from BSON),
 instantiate ``BSON::ByteBuffer`` with a byte string as the argument:
@@ -216,9 +213,8 @@ To restart reading from the beginning of a buffer, use ``rewind``:
   ``ByteBuffer`` keeps track of read and write positions separately.
   ``rewind`` only affects the read position.
 
-
 Supported Classes
-=================
+-----------------
 
 Core Ruby classes that have representations in the BSON specification and
 will have a ``to_bson`` method defined for them are: ``Object``, ``Array``,
@@ -228,9 +224,8 @@ will have a ``to_bson`` method defined for them are: ``Object``, ``Array``,
 In addition to the core Ruby objects, BSON also provides some special types
 specific to the specification:
 
-
 ``BSON::Binary``
-----------------
+~~~~~~~~~~~~~~~~
 
 Use ``BSON::Binary`` objects to store arbitrary binary data. The ``Binary``
 objects can be constructed from binary strings as follows:
@@ -379,9 +374,8 @@ These methods can be used to convert from one representation to another:
   BSON::Binary.from_uuid('77665544-3322-1100-ffeeddccbbaa9988',:java_legacy).to_uuid(:csharp_legacy)
   # => "33221100-5544-7766-8899aabbccddeeff"
 
-
 ``BSON::Code``
---------------
+~~~~~~~~~~~~~~
 
 Represents a string of JavaScript code.
 
@@ -390,7 +384,7 @@ Represents a string of JavaScript code.
   BSON::Code.new("this.value = 5;")
 
 ``BSON::CodeWithScope``
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
 
@@ -405,9 +399,8 @@ Represents a string of JavaScript code with a hash of values.
 
   BSON::CodeWithScope.new("this.value = age;", age: 5)
 
-
 ``BSON::DBRef``
----------------
+~~~~~~~~~~~~~~~
 
 This is a subclass of ``BSON::Document`` that provides accessors for the
 collection, id, and database of the DBRef.
@@ -447,9 +440,8 @@ This API is deprecated and will be removed in a future version of ``bson-ruby``:
   BSON::DBRef.new("collection", BSON::ObjectId('61eeb760a15d5d0f9f1e401d'))
   BSON::DBRef.new("collection", BSON::ObjectId('61eeb760a15d5d0f9f1e401d'), "db")
 
-
 ``BSON::Document``
-------------------
+~~~~~~~~~~~~~~~~~~
 
 This is a subclass of ``Hash`` that stores all keys as strings, but allows
 access to them with symbol keys.
@@ -473,9 +465,8 @@ access to them with symbol keys.
     loaded.class
     => BSON::Document
 
-
 ``BSON::MaxKey``
-----------------
+~~~~~~~~~~~~~~~~
 
 Represents a value in BSON that will always compare higher to another value.
 
@@ -484,7 +475,7 @@ Represents a value in BSON that will always compare higher to another value.
   BSON::MaxKey.new
 
 ``BSON::MinKey``
-----------------
+~~~~~~~~~~~~~~~~
 
 Represents a value in BSON that will always compare lower to another value.
 
@@ -493,7 +484,7 @@ Represents a value in BSON that will always compare lower to another value.
   BSON::MinKey.new
 
 ``BSON::ObjectId``
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Represents a 12 byte unique identifier for an object on a given machine.
 
@@ -502,7 +493,7 @@ Represents a 12 byte unique identifier for an object on a given machine.
   BSON::ObjectId.new
 
 ``BSON::Timestamp``
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 Represents a special time with a start and increment value.
 
@@ -511,7 +502,7 @@ Represents a special time with a start and increment value.
   BSON::Timestamp.new(5, 30)
 
 ``BSON::Undefined``
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 Represents a placeholder for a value that was not provided.
 
@@ -520,7 +511,7 @@ Represents a placeholder for a value that was not provided.
   BSON::Undefined.new
 
 ``BSON::Decimal128``
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 Represents a 128-bit decimal-based floating-point value capable of emulating
 decimal rounding with exact precision.
@@ -566,7 +557,7 @@ follows:
   on ``from_bson``.
 
 ``Symbol``
-----------
+~~~~~~~~~~
 
 The BSON specification defines a symbol type which allows round-tripping
 Ruby ``Symbol`` values (i.e., a Ruby ``Symbol``is encoded into a BSON symbol
@@ -613,7 +604,7 @@ To force encoding of Ruby symbols to BSON symbols, wrap the Ruby symbols in
   # => "\x12\x00\x00\x00\x0Efoo\x00\x04\x00\x00\x00bar\x00\x00"
 
 JSON Serialization
-==================
+------------------
 
 Some BSON types have special representations in JSON. These are as follows
 and will be automatically serialized in the form when calling ``to_json`` on
@@ -655,7 +646,7 @@ them.
 
 
 Time Instances
-==============
+--------------
 
 Times in Ruby can have nanosecond precision. Times in BSON (and MongoDB)
 can only have millisecond precision. When Ruby ``Time`` instances are
@@ -686,9 +677,8 @@ Because of this flooring, applications are strongly recommended to perform
 all time calculations using integer math, as inexactness of floating point
 calculations may produce unexpected results.
 
-
 DateTime Instances
-==================
+------------------
 
 BSON only supports storing the time as the number of seconds since the
 Unix epoch. Ruby's ``DateTime`` instances can be serialized to BSON,
@@ -702,7 +692,7 @@ database.
 
 
 Date Instances
-==============
+--------------
 
 BSON only supports storing the time as the number of seconds since the
 Unix epoch. Ruby's ``Date`` instances can be serialized to BSON, but when
@@ -713,7 +703,7 @@ of the day that the ``Date`` refers to in UTC.
 
 
 Regular Expressions
-===================
+-------------------
 
 Both MongoDB and Ruby provide facilities for working with regular expressions,
 but they use regular expression engines. The following subsections detail the
@@ -721,7 +711,7 @@ differences between Ruby regular expressions and MongoDB regular expressions
 and describe how to work with both.
 
 Ruby vs MongoDB Regular Expressions
------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 MongoDB server uses `Perl-compatible regular expressions implemented using
 the PCRE library <http://pcre.org/>`_ and `Ruby regular expressions
@@ -799,7 +789,7 @@ When writing portable regular expressions:
   - ``(?:\z|(?=[\n\n]))`` (handles CR, LF and CR+LF line ends)
 
 ``BSON::Regexp::Raw`` Class
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Since there is no simple way to programmatically convert a PCRE
 regular expression into the equivalent Ruby regular expression,
@@ -830,7 +820,7 @@ the ``BSON::`` prefix may be omitted:
   # => #<BSON::Regexp::Raw:0x000055df6317f028 @pattern="^Hello.world$", @options="s">
 
 Regular Expression Conversion
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To convert a Ruby regular expression to a BSON regular expression,
 instantiate a ``BSON::Regexp::Raw`` object as follows:
@@ -880,7 +870,7 @@ expression always has the ``m`` modifier set reflecting the behavior of
 ``^`` and ``$`` anchors in Ruby regular expressions.
 
 Reading and Writing
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 Both Ruby and BSON regular expressions implement the ``to_bson`` method
 for serialization to BSON:
@@ -921,7 +911,7 @@ as described above.
 
 
 Key Order
-=========
+---------
 
 BSON documents preserve the order of keys, because the documents are stored
 as lists of key-value pairs. Hashes in Ruby also preserve key order; thus
@@ -931,7 +921,7 @@ the order of keys in the document will match the order of keys in the hash.
 
 
 Duplicate Keys
-==============
+--------------
 
 BSON specification allows BSON documents to have duplicate keys, because the
 documents are stored as lists of key-value pairs. Applications should refrain

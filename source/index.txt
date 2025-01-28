@@ -14,6 +14,7 @@
 
    Get Started </get-started>
    Connect </connect>
+   Databases & Collections </databases-collection>
    Read Data </read>
    Write Data </write>
    Operations on Replica Sets </read-write-pref> 
@@ -26,7 +27,7 @@
    What's New </whats-new>
    Upgrade </upgrade>
    Compatibility </compatibility>
-   Databases & Collections </databases-collection>
+   Common Errors </common-errors>
 
 .. TODO:
  Monitor Your Application </monitoring>
@@ -44,11 +45,11 @@ Get Started
 Learn how to install the driver, establish a connection to MongoDB, and begin
 working with data in the :ref:`ruby-get-started` tutorial.
 
-.. Connect to MongoDB
-.. ------------------
+Connect to MongoDB
+------------------
 
-.. Learn how to create and configure a connection to a MongoDB deployment
-.. in the :ref:`ruby-connect` section.
+Learn how to create and configure a connection to a MongoDB deployment
+in the :ref:`ruby-connect` section.
 
 Databases and Collections
 -------------------------
