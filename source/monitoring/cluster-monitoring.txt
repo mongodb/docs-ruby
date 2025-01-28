@@ -21,7 +21,7 @@ Overview
 --------
 
 This guide shows you how to use the {+driver-short+} to monitor server discovery 
-and monitoring (SDAM) events events in a MongoDB instance, replica set, or sharded 
+and monitoring (SDAM) events in a MongoDB instance, replica set, or sharded 
 cluster by using custom subscribers or available subscriber methods. These events 
 occur when there are any changes in the state of the MongoDB instance or cluster 
 that you are connected to.
@@ -36,9 +36,9 @@ You can use the {+driver-short+}'s ``subscribe`` method to subscribe to events.
 Pass a monitoring topic, which defines the monitoring event type, and a subscriber 
 object as arguments to the ``subscribe`` method.
 
-The following code uses the ``ServerOpeningLogSubscriber`` to monitor a connection
-to a server instance. You can subscribe to events at a global level, for all the clients 
-of a cluster, or at the client level:
+The following code uses the ``ServerOpeningLogSubscriber`` subscriber to monitor a connection
+to a server instance. You can subscribe to events at a global level, which monitors 
+all clients of a cluster, or at the client level:
 
 .. literalinclude:: /includes/monitoring/monitoring.rb
    :start-after: start-available-subscriber
@@ -47,13 +47,13 @@ of a cluster, or at the client level:
    :copyable:
    :dedent:
 
-The following table provides available subscribers and their monitoring ``topic``: 
+The following table provides available subscribers and their monitoring topic: 
 
 .. list-table::
    :header-rows: 1
    :widths: 35 20 45
 
-   * - Method Name
+   * - Subscriber Name
      - Monitoring Topic
      - Description 
 
@@ -97,7 +97,7 @@ data for each event varies.
 
 For all events, the subscriber calls the ``succeeded`` method and passes the event
 as an argument. A simple SDAM logging subscriber can look 
-like the following:
+like the following code:
 
 .. literalinclude:: /includes/monitoring/monitoring.rb
    :start-after: start-sdam
@@ -157,14 +157,15 @@ outputs messages such as the following:
 
   The ``:sdam_proc`` client option applies only to the given client. 
   When certain client options are changed by using the
-  ``Client#with`` call, a new cluster may be created by the driver with
+  ``Client#with`` call, the driver may create a new cluster with
   a default set of event subscribers. If this happens, the provided
   ``:sdam_proc`` is not called, and the application may miss events.
 
 Server Heartbeats
 ~~~~~~~~~~~~~~~~~
 
-You can also create a custom subscriber to monitor server heartbeats.
+You can also create a custom subscriber to monitor server heartbeats, which occur 
+when the server monitor sends a ``hello`` command to the server.
 
 Custom server heartbeat subscribers differ from other SDAM subscribers,
 as they must implement the following three methods: 
