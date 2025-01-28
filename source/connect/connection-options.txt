@@ -146,7 +146,7 @@ Server Selection
      - | Get the server selector. It either uses the read preference 
          defined in the client options or defaults to a Primary 
          server selector.
-
+       |
        | For more information on read preference modes, see the
          :manual:`Server Selection Algorithm </core/read-preference-mechanics/>` 
          documentation in the Server manual.   
