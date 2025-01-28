@@ -26,8 +26,8 @@ Optimize Queries by Using Indexes
    Compound </indexes/compound-index>
    Multikey </indexes/multikey-index>
    Atlas Search </indexes/atlas-search-index>
-   Text </indexes/text-search>
-   Geospatial </indexes/geospatial-search>
+   Text </indexes/text-index>
+   Geospatial </indexes/geospatial-index>
 
 Overview
 --------
@@ -179,8 +179,8 @@ The following example creates a text index on the specified string field:
    :language: ruby
    :dedent:
 
-.. TODO: To learn more about text indexes, see the :ref:`ruby-text-index`
-.. guide.
+To learn more about text indexes, see the :ref:`ruby-text-index`
+guide.
 
 Create Many Indexes
 -------------------
