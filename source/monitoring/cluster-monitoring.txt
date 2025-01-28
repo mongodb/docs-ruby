@@ -23,7 +23,7 @@ Overview
 This guide shows you how to use the {+driver-short+} to monitor server discovery 
 and monitoring (SDAM) events in a MongoDB instance, replica set, or sharded 
 cluster by using custom subscribers or available subscriber methods. These events 
-occur when there are any changes in the state of the MongoDB instance or cluster 
+occur when there are changes in the state of the MongoDB instance or cluster 
 that you are connected to.
 
 You can use information about SDAM events in your application to understand 
@@ -127,6 +127,14 @@ by using the ``sdam-proc`` client option:
    :copyable:
    :dedent:
 
+.. note::
+
+  The ``:sdam_proc`` client option applies only to the given client. 
+  When certain client options are changed by using the
+  ``Client#with`` call, the driver may create a new cluster with
+  a default set of event subscribers. If this happens, the provided
+  ``:sdam_proc`` is not called, and the application may miss events.
+
 When you run the application, your subscriber records the SDAM event and 
 outputs messages such as the following:
 
@@ -152,14 +160,6 @@ outputs messages such as the following:
   D, [2018-10-09T13:58:05.342299 #22079] DEBUG -- : SDAM | Server localhost:27101 connection closed.
   D, [2018-10-09T13:58:05.342565 #22079] DEBUG -- : SDAM | Server localhost:27102 connection closed.
   D, [2018-10-09T13:58:05.342693 #22079] DEBUG -- : SDAM | Topology type 'ReplicaSetWithPrimary' closed.
-
-.. note::
-
-  The ``:sdam_proc`` client option applies only to the given client. 
-  When certain client options are changed by using the
-  ``Client#with`` call, the driver may create a new cluster with
-  a default set of event subscribers. If this happens, the provided
-  ``:sdam_proc`` is not called, and the application may miss events.
 
 Server Heartbeats
 ~~~~~~~~~~~~~~~~~
