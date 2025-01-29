@@ -38,13 +38,13 @@ a Jira issue:
 1. Visit the `MongoDB Jira issue tracker <https://jira.mongodb.org/>`__ and click the 
    `signup link. <https://account.mongodb.com/account/register>`__
    Create an account, and then log in to Jira.
-#. Navigate to the `Ruby Jira project. <https://jira.mongodb.org/browse/RUBY>`__
+#. Navigate to the `RUBY Jira project. <https://jira.mongodb.org/browse/RUBY>`__
 #. Click :guilabel:`Create` to create a ticket. Please provide as much
    information as possible about the issue or request in the ticket.
 
 .. note::
 
-   Bug reports in the Ruby Jira project are publicly viewable.
+   Bug reports in the RUBY Jira project are publicly viewable.
 
 If you've identified a security vulnerability in any official MongoDB
 product, please report it according to the instructions found in the
@@ -71,4 +71,4 @@ running the following commands:
    If your changes correspond to a specific Jira ticket, title your pull
    request by using the following convention:
 
-   ``MONGOID-<ticket #>``
+   ``RUBY-<ticket #>``
