@@ -28,6 +28,7 @@
    Upgrade </upgrade>
    Compatibility </compatibility>
    Databases & Collections </databases-collection>
+   Issues & Help </issues-and-help>
 
 .. TODO:
  Write Data </write>
