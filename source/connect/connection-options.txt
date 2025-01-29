@@ -269,7 +269,8 @@ Read and Write Operations
 
    * - **:write_concern**
      - | Specifies the client's write concern. For more 
-         information, see :manual:`Write Concern </reference/write-concern/>` in the Server manual.
+         information, see :manual:`Write Concern </reference/write-concern/>` in 
+         the {+mdb-server+} manual.
        |
        | **Data Type**: ``Hash``
        | **Default**: ``write_concern: { w: 1 }``
