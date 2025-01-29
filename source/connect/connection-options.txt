@@ -147,6 +147,10 @@ Server Selection
          defined in the client options or defaults to a Primary 
          server selector.
        |
+       | For more information on read preference modes, see the
+         :manual:`Server Selection Algorithm </core/read-preference-mechanics/>` 
+         documentation in the {+mdb-server+} manual.   
+       |
        | **Data Type**: ``ServerSelector``
        | **Default**: none
        | **Client Example**: ``server_selector: { mode: :secondary_preferred }``
@@ -247,16 +251,16 @@ Read and Write Operations
 
    * - **:read**
      - | The read preference options. For more information,
-         see :manual:`Read Preference </core/read-preference/>` in the Server manual.
+         see :manual:`Read Preference </core/read-preference/>` in the {+mdb-server+} manual.
        |
        | **Data Type**: ``Hash``
-       | **Default**: ``{ :mode: :primary }``
+       | **Default**: ``{ mode: :primary }``
        | **Client Example**: ``read: { mode: :primary }``
        | **Connection URI Example**: ``readPreference=primary``
 
    * - **:read_concern**
      - | Specifies the read concern options. For more information, see
-         :manual:`Read Concern </reference/read-concern/>` in the Server manual.
+         :manual:`Read Concern </reference/read-concern/>` in the {+mdb-server+} manual.
        |
        | **Data Type**: ``Hash``
        | **Default**: none
@@ -265,7 +269,8 @@ Read and Write Operations
 
    * - **:write_concern**
      - | Specifies the client's write concern. For more 
-         information, see :manual:`Write Concern </reference/write-concern/>` in the Server manual.
+         information, see :manual:`Write Concern </reference/write-concern/>` in 
+         the {+mdb-server+} manual.
        |
        | **Data Type**: ``Hash``
        | **Default**: ``write_concern: { w: 1 }``
