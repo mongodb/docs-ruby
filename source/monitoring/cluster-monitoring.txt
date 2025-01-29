@@ -57,10 +57,6 @@ The following table provides available subscribers and their monitoring topic:
      - Monitoring Topic
      - Description 
 
-   * - `SDAMLogSubscriber <{+api-root+}/Mongo/Monitoring/SDAMLogSubscriber.html>`__
-     - 
-     - Subscribes to SDAM events and logs them.
-
    * - `ServerClosedLogSubscriber <{+api-root+}/Mongo/Monitoring/ServerClosedLogSubscriber.html>`__
      - ``SERVER_CLOSED``
      - Subscribes to ``ServerClosed`` events and logs them.
