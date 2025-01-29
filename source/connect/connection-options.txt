@@ -149,7 +149,7 @@ Server Selection
        |
        | For more information on read preference modes, see the
          :manual:`Server Selection Algorithm </core/read-preference-mechanics/>` 
-         documentation in the Server manual.   
+         documentation in the {+mdb-server+} manual.   
        |
        | **Data Type**: ``ServerSelector``
        | **Default**: none
@@ -251,7 +251,7 @@ Read and Write Operations
 
    * - **:read**
      - | The read preference options. For more information,
-         see :manual:`Read Preference </core/read-preference/>` in the Server manual.
+         see :manual:`Read Preference </core/read-preference/>` in the {+mdb-server+} manual.
        |
        | **Data Type**: ``Hash``
        | **Default**: ``{ :mode: :primary }``
@@ -260,7 +260,7 @@ Read and Write Operations
 
    * - **:read_concern**
      - | Specifies the read concern options. For more information, see
-         :manual:`Read Concern </reference/read-concern/>` in the Server manual.
+         :manual:`Read Concern </reference/read-concern/>` in the {+mdb-server+} manual.
        |
        | **Data Type**: ``Hash``
        | **Default**: none
