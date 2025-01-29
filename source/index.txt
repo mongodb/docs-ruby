@@ -18,6 +18,7 @@
    Read Data </read>
    Operations on Replica Sets </read-write-pref> 
    Indexes </indexes>
+   Monitor Your Application </monitoring>
    Data Aggregation </aggregation>
    Security </security>
    Data Formats </data-formats>
