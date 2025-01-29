@@ -15,7 +15,7 @@ Limit Server Execution Time
    :values: reference
  
 .. meta::
-   :keywords: error, blocking, thread, task, code examples
+   :keywords: error, blocking, thread, task, code example
 
 Overview
 --------
@@ -30,12 +30,12 @@ steps needed to complete the operation, including server selection, connection
 checkout, and server-side execution. If the timeout expires before the operation 
 completes, the {+driver-short+} raises a timeout exception.
 
-``timeout_ms`` Option
----------------------
+timeout_ms Option
+-----------------
 
 To specify a timeout when connecting to a MongoDB deployment, set the
 ``timeout_ms`` connection option to the timeout length in milliseconds. You can
-specify a timeout value in two ways: 
+specify a timeout value in the following ways: 
 
 - Pass the ``timeout_ms`` client option to the ``Mongo::Client`` constructor.
 - Pass the ``timeoutMS`` connection string option as a parameter to your connection string.
@@ -222,8 +222,8 @@ This is the default mode for all tailable cursors,
 such as the tailable cursors returned by the ``find`` method on capped
 collections or change streams.
 
-The following code example iterates over documents in a movie collection
-by using an iterable cursor, and then fetches and logs the ``imdb`` information for 
+The following code example iterates over documents in a sample collection
+by using an iterable cursor, and then fetches and logs the ``title`` information for 
 each movie document:
 
 .. literalinclude:: /includes/connect/csot.rb

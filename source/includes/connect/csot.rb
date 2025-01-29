@@ -26,6 +26,6 @@ end
 cursor = collection.find()
 
 cursor.each do |movie|
-  puts movie['imdb']
+  puts movie['title']
 end
 # end-csot-iterable
