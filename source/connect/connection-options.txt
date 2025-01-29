@@ -254,7 +254,7 @@ Read and Write Operations
          see :manual:`Read Preference </core/read-preference/>` in the {+mdb-server+} manual.
        |
        | **Data Type**: ``Hash``
-       | **Default**: ``{ :mode: :primary }``
+       | **Default**: ``{ mode: :primary }``
        | **Client Example**: ``read: { mode: :primary }``
        | **Connection URI Example**: ``readPreference=primary``
 
