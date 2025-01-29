@@ -38,13 +38,13 @@ a Jira issue:
 1. Visit the `MongoDB Jira issue tracker <https://jira.mongodb.org/>`__ and click the 
    `signup link. <https://account.mongodb.com/account/register>`__
    Create an account, and then log in to Jira.
-#. Navigate to the `JAVA Jira project. <https://jira.mongodb.org/browse/JAVA>`__
+#. Navigate to the `Ruby Jira project. <https://jira.mongodb.org/browse/RUBY>`__
 #. Click :guilabel:`Create` to create a ticket. Please provide as much
    information as possible about the issue or request in the ticket.
 
 .. note::
 
-   Bug reports in the JAVA Jira project are publicly viewable.
+   Bug reports in the Ruby Jira project are publicly viewable.
 
 If you've identified a security vulnerability in any official MongoDB
 product, please report it according to the instructions found in the
@@ -55,16 +55,15 @@ Pull Requests
 
 We are happy to accept contributions to help improve the driver. We will guide
 user contributions to ensure they meet the standards of the codebase. Please
-ensure that any pull requests include documentation, tests, and pass the
-**gradle** checks.
+ensure that any pull requests include documentation and tests.
 
 To get started, clone the source repository and work on a branch by
 running the following commands:
 
 .. code-block:: bash
 
-   git clone https://github.com/mongodb/mongo-java-driver.git
-   cd mongo-java-driver
+   git clone https://github.com/mongodb/mongo-ruby-driver.git
+   cd mongo-ruby-driver
    git checkout -b myNewFeature
 
 .. tip::
@@ -73,4 +72,3 @@ running the following commands:
    request by using the following convention:
 
    ``MONGOID-<ticket #>``
-   
