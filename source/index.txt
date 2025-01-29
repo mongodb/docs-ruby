@@ -23,7 +23,7 @@
    Security </security>
    Data Formats </data-formats>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
-   API Documentation :ruby-api:`<>`
+   API Documentation <{+api-root+}>
    What's New </whats-new>
    Upgrade </upgrade>
    Compatibility </compatibility>
