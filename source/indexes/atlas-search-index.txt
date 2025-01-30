@@ -119,3 +119,12 @@ Additional Information
 
 To learn more about MongoDB Atlas Search, see the 
 :atlas:`Atlas Search </atlas-search/atlas-search-overview/>` documentation.
+
+API Documentation
+~~~~~~~~~~~~~~~~~
+
+To learn more about any of the methods discussed in this guide, see the
+following API documentation:
+
+- `search_indexes <{+api-root+}/Mongo/Collection.html#search_indexes-instance_method>`__
+- `SearchIndex methods <{+api-root+}/Mongo/SearchIndex/View.html>`__

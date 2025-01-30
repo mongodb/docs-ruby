@@ -6,9 +6,8 @@ uri = "<connection string>"
 
 # Sets a client-level timeout configuration
 options = { timeoutMS: 30000 }
-client = Mongo::Client.new(uri, options)
 
-begin
+Mongo::Client.new(uri, options) do |client|
   db = client.use('test-db')
   collection = db[:test-collection]
 
@@ -17,8 +16,6 @@ begin
   docs = collection.find({}, timeout_ms: 10000).to_a
 
   docs.each { |doc| puts doc }
-ensure
-  client.close
 end
 # end-csot-overrides
 
