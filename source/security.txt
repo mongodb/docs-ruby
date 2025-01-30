@@ -21,3 +21,4 @@ Security
    :titlesonly:
 
    Authentication </security/authentication>
+   In-Use Encryption </security/in-use-encryption>
