@@ -237,5 +237,5 @@ API Documentation
 To learn more about using timeouts with the {+driver-short+}, see the following
 API documentation:
 
-- `Mongo::Client <{+api-root+}/Mongo/Client.html>`__
-- `Mongo::Session <{+api-root+}/Mongo/Session.html>`__
+- :ruby-api:`Mongo::Client <Client.html>`
+- :ruby-api:`Mongo::Session <Session.html>`
