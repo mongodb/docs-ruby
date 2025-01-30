@@ -11,7 +11,7 @@ Mongo::Client.new(uri, options) do |client|
   db = client.use('test-db')
   collection = db[:test-collection]
 
-  # Perform a query with an operation-level timeout configuration,
+  # Performs a query with an operation-level timeout configuration,
   # overriding the client-level configuration
   docs = collection.find({}, timeout_ms: 10000).to_a
 
