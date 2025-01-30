@@ -31,9 +31,6 @@
    Issues & Help </issues-and-help>
    Common Errors </common-errors>
 
-.. TODO:
- Monitor Your Application </monitoring>
-
 Introduction
 ------------
 
@@ -78,6 +75,12 @@ Optimize Queries by Using Indexes
 ---------------------------------
 
 Learn how to work with common types of indexes in the :ref:`ruby-indexes`
+section.
+
+Monitor Your Application
+------------------------
+
+Learn how to monitor change events in the :ref:`ruby-monitoring`
 section.
 
 Transform Your Data with Aggregation
