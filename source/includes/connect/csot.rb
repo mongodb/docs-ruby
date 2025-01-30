@@ -5,7 +5,7 @@ require 'mongo'
 uri = "<connection string>"
 
 # Sets a client-level timeout configuration
-options = { timeoutMS: 30000 }
+options = { timeout_ms: 30000 }
 
 Mongo::Client.new(uri, options) do |client|
   db = client.use('test-db')
