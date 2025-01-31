@@ -157,8 +157,8 @@ option is enabled, this insert operation bypasses document-level validation.
    :dedent:
    :copyable:
 
-Additional Information
-----------------------
+API Documentation
+-----------------
 
 To learn more about any of the methods discussed in this
 guide, see the following API documentation:
