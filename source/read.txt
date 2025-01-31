@@ -30,6 +30,7 @@ Read Data from MongoDB
    Count Documents </read/count>
    Cursors </read/cursors>
    Monitor Changes </read/change-streams>
+   Collations </read/collations>
 
 Overview
 --------

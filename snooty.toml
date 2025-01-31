@@ -2,7 +2,7 @@ name = "ruby-driver"
 title = "Ruby MongoDB Driver"
 toc_landing_pages = [
     "/get-started",
-    "/connect",
+    "/read",
     "/write",
     "/indexes",
     "/databases-collection",
@@ -24,4 +24,4 @@ version-number = "2.21"
 patch-version-number = "{+version-number+}.0"                     # always set this to the driver branch (i.e. 1.7.0, 1.8.0, etc.)
 version = "v{+version-number+}"
 stable-api = "Stable API"
-api-root = "https://www.mongodb.com/docs/ruby-driver/current/api"
+api-root = "https://www.mongodb.com/docs/ruby-driver/current/api/"

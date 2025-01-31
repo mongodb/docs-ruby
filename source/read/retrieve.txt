@@ -57,7 +57,9 @@ object from which you can access the results.
 
 You can chain option methods to the ``find`` method to refine the results of the operation.
 
-.. TODO: To learn more about query filters, see the :ref:`ruby-specify-query` guide.
+.. tip::
+
+   To learn more about query filters, see the :ref:`ruby-specify-query` guide.
 
 .. _ruby-retrieve-find-multiple:
 
@@ -217,7 +219,7 @@ the ``number_of_employees`` field has the value ``1000``. The example uses the
       "homepage_url"=>"http://www.yodle.com", ...}
 
 For a full list of options, see the API documentation for the
-`find <{+api-root+}/Mongo/Collection.html#find-instance_method>`__ 
+:ruby-api:`find <Collection.html#find-instance_method>` 
 method.
 
 .. _ruby-retrieve-additional-information:
@@ -225,9 +227,10 @@ method.
 Additional Information
 ----------------------
 
-.. TODO:
- To learn more about query filters, see the :ref:`ruby-specify-query` guide.
- To view code examples of retrieving documents with the {+driver-short+}, see :ref:`ruby-read`.
+To learn more about query filters, see the :ref:`ruby-specify-query` guide.
+
+To view code examples that retrieve documents by using the {+driver-short+},
+see :ref:`ruby-read`.
 
 API Documentation
 ~~~~~~~~~~~~~~~~~
@@ -235,6 +238,6 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
-- `find <{+api-root+}/Mongo/Collection.html#find-instance_method>`__ 
-- `Mongo::Collection::View <{+api-root+}/Mongo/Collection/View.html>`__ 
-- `Mongo::Cursor <{+api-root+}/Mongo/Cursor.html>`__ 
+- :ruby-api:`find <Collection.html#find-instance_method>` 
+- :ruby-api:`Mongo::Collection::View <Collection/View.html>` 
+- :ruby-api:`Mongo::Cursor <Cursor.html>` 

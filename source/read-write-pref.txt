@@ -49,8 +49,8 @@ Operations that do not specify an explicit write concern inherit the global defa
 concern settings.
 
 For more information, see :manual:`Write Concern </reference/write-concern/>` in the
-{+mdb-server+} manual. For detailed API documentation, see the `Write Concern API documentation
-<{+api-root+}/Mongo/Client.html#write_concern-instance_method>`__.
+{+mdb-server+} manual. For detailed API documentation, see the
+:ruby-api:`Write Concern API documentation <Client.html#write_concern-instance_method>`.
 
 The following table describes the ``write_concern`` parameters:
 
@@ -129,7 +129,7 @@ been written to all replica set members.
 For more information about read concerns or read concern levels, see 
 :manual:`Read Concern </reference/read-concern/>` in the {+mdb-server+}  manual. For more
 detail on the ``read_concern`` type and definitions of the read concern levels, see
-`Read Concern <{+api-root+}/Mongo/Client.html#read_concern-instance_method>`__ 
+:ruby-api:`Read Concern <Client.html#read_concern-instance_method>` 
 in the API documentation.
 
 Example: Set the Read Concern Level of an Aggregation
@@ -143,8 +143,10 @@ The following code sets the read concern level of an aggregation to ``"available
    :start-after: start-read-concern
    :end-before: end-read-concern
 
-.. TODO: insert :ref:`Aggregation <ruby-aggregation>` link here
-.. For more information about aggregation, see the Aggregation page.
+.. tip::
+
+   To learn more about aggregation operations, see the
+   :ref:`ruby-aggregation` guide.
 
 Example: Change the Read Concern of a Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -163,8 +165,8 @@ Read Preference
 The read preference determines which member of a replica set MongoDB reads when running a
 query.
 
-For more detailed API documentation, see the `Read Preference API
-documentation <{+api-root+}/Mongo/Collection/View/Readable.html#read_preference-instance_method>`__.
+For more detailed API documentation, see the :ruby-api:`Read Preference API
+documentation <Collection/View/Readable.html#read_preference-instance_method>`.
 
 The following table shows options you can use to customize how the server evaluates 
 members:
@@ -206,8 +208,10 @@ the operations in a transaction:
    :start-after: start-read-preference
    :end-before: end-read-preference
 
-.. TODO: insert :ref:`Transactions <ruby-transactions>` link
-.. For more information about transactions, see the Transactions guide.
+.. tip::
+
+   To learn more about transactions, see the
+   :ref:`ruby-transactions` guide.
 
 Example: Set the Read Preference of a Cluster in the Connection String
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -231,6 +235,6 @@ API Documentation
 To learn more about the methods and types mentioned in this guide, see the following API
 documentation:
 
-- `Write Concern <{+api-root+}/Mongo/Client.html#write_concern-instance_method>`__
-- `Read Concern <{+api-root+}/Mongo/Client.html#read_concern-instance_method>`__
-- `Read Preference <{+api-root+}/Mongo/Collection/View/Readable.html#read_preference-instance_method>`__
+- :ruby-api:`Write Concern <Client.html#write_concern-instance_method>`
+- :ruby-api:`Read Concern <Client.html#read_concern-instance_method>`
+- :ruby-api:`Read Preference <Collection/View/Readable.html#read_preference-instance_method>`

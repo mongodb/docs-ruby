@@ -118,6 +118,6 @@ API Documentation
 To learn more about any of the methods discussed in this guide, see the
 following API documentation:
 
-- `indexes <{+api-root+}/Mongo/Collection.html#indexes-instance_method>`__
-- `create_one <{+api-root+}/Mongo/Index/View.html>`__
-- `find <{+api-root+}/Mongo/Collection.html#find-instance_method>`__ 
+- :ruby-api:`indexes <Collection.html#indexes-instance_method>`
+- :ruby-api:`create_one <Index/View.html>`
+- :ruby-api:`find <Collection.html#find-instance_method>` 

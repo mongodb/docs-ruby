@@ -1,6 +1,8 @@
-*************
+.. _ruby-common-errors:
+
+=============
 Common Errors
-*************
+=============
 
 .. default-domain:: mongodb
 
@@ -12,7 +14,7 @@ Common Errors
 
 
 No Server is Available Matching Preference
-==========================================
+------------------------------------------
 
 If you receive the following error:
 
@@ -39,14 +41,13 @@ this, you can try the following:
   host list.
 - If you are connecting to Atlas, ensure that the firewall rules are configured
   correctly. See the documentation on `Cluster Security <https://www.mongodb.com/docs/atlas/setup-cluster-security/>`_.
-- If your application uses a forking web server, see the documentation on :ref:`Forking <forking>`.
 
 See more on this issue here:
 `RUBY-1281 <https://jira.mongodb.org/browse/RUBY-1281>`_.
 
 
 ``OperationFailure`` When Reading ``local`` Database With Auth On
-=================================================================
+-----------------------------------------------------------------
 
 If you are getting the following error when trying to read the ``local`` database:
 
@@ -66,7 +67,7 @@ You can find more information about this issue here:
 
 
 ``SocketTimeoutError`` and name resolution errors on EC2
-========================================================
+--------------------------------------------------------
 
 Some users reported getting the following error:
 
@@ -102,7 +103,7 @@ You can find more information about this issue here:
 
 
 ``Mongo::Auth::Unauthorized`` User is Not Authorized to Access
-==============================================================
+--------------------------------------------------------------
 
 Some users reported getting the following error:
 

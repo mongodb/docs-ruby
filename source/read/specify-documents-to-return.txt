@@ -201,10 +201,10 @@ Additional Information
 
 For more information about retrieving documents, see the :ref:`ruby-retrieve` guide.
 
-.. TODO: For more information about specifying a query, see the :ref:`ruby-specify-query` guide.
+For more information about specifying a query, see the :ref:`ruby-specify-query` guide.
 
 API Documentation
 ~~~~~~~~~~~~~~~~~
 
-To learn more about the ``find`` method and its options, see the `API documentation.
-<{+api-root+}/Mongo/Collection.html#find-instance_method>`__ 
+To learn more about the ``find`` method and its options, see the
+:ruby-api:`API documentation. <Collection.html#find-instance_method>`

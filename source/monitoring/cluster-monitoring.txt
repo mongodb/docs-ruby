@@ -245,6 +245,6 @@ API Documentation
 To learn more about any of the classes or methods discussed in this guide, see the 
 following API documentation:
 
-- `Mongo::Monitoring <{+api-root+}/Mongo/Monitoring.html>`__
-- `Mongo::Monitoring::Event <{+api-root+}/Mongo/Monitoring/Event.html>`__
-- `subscribe <{+api-root+}/Mongo/Monitoring/Subscribable.html#subscribe-instance_method>`__
+- :ruby-api:`Mongo::Monitoring <Monitoring.html>`
+- :ruby-api:`Mongo::Monitoring::Event <Monitoring/Event.html>`
+- :ruby-api:`subscribe <Monitoring/Subscribable.html#subscribe-instance_method>`

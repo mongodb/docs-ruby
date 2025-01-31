@@ -171,11 +171,11 @@ Query Time Series Data
 
 You can use the same syntax and conventions to query data stored in a time 
 series collection as you use when performing read or aggregation operations on 
-other collections. 
+other collections. To learn more about these operations, see the following
+guides:
 
-.. TODO: add links
-.. To learn more about these operations, see :ref:`ruby-read`
-.. and :ref:`ruby-aggregation`.
+- :ref:`ruby-read`
+- :ref:`ruby-aggregation`
 
 .. _ruby-time-series-addtl-info:
 
@@ -195,8 +195,8 @@ API Documentation
 To learn more about the methods mentioned in this guide, see the following
 API documentation:
 
-- `create <{+api-root+}/Mongo/Collection.html#create-instance_method>`__
-- `list_collections <{+api-root+}/Mongo/Database.html#list_collections-instance_method>`__
-- `insert_one <{+api-root+}/Mongo/Collection.html#insert_one-instance_method>`__
-- `insert_many <{+api-root+}/Mongo/Collection.html#insert_many-instance_method>`__
+- :ruby-api:`create <Collection.html#create-instance_method>`
+- :ruby-api:`list_collections <Database.html#list_collections-instance_method>`
+- :ruby-api:`insert_one <Collection.html#insert_one-instance_method>`
+- :ruby-api:`insert_many <Collection.html#insert_many-instance_method>`
 

@@ -26,6 +26,8 @@ Optimize Queries by Using Indexes
    Compound </indexes/compound-index>
    Multikey </indexes/multikey-index>
    Atlas Search </indexes/atlas-search-index>
+   Text </indexes/text-index>
+   Geospatial </indexes/geospatial-index>
 
 Overview
 --------
@@ -104,13 +106,7 @@ contains GeoJSON objects:
    :start-after: start-index-geospatial
    :end-before: end-index-geospatial
 
-For more information on 2dsphere indexes, see the 
-:manual:`2dsphere Indexes </core/indexes/index-types/geospatial/2dsphere/>`
-guide in the {+mdb-server+} manual.
-
-For more information about the GeoJSON type, see the 
-:manual:`GeoJSON Objects </reference/geojson/>` guide in
-the {+mdb-server+} manual.
+To learn more about geospatial indexes, see the :ref:`ruby-geospatial-index` guide.
 
 Atlas Search Index Management
 -----------------------------
@@ -177,8 +173,8 @@ The following example creates a text index on the specified string field:
    :language: ruby
    :dedent:
 
-.. TODO: To learn more about text indexes, see the :ref:`ruby-text-index`
-.. guide.
+To learn more about text indexes, see the :ref:`ruby-text-index`
+guide.
 
 Create Many Indexes
 -------------------
@@ -288,7 +284,7 @@ API Documentation
 To learn more about the methods or objects used in this guide, see the following 
 API documentation:
 
-- `indexes <{+api-root+}/Mongo/Collection.html#indexes-instance_method>`__
-- `create_one <{+api-root+}/Mongo/Index/View.html#create_one-instance_method>`__
-- `drop_one <{+api-root+}/Mongo/Index/View.html#drop_one-instance_method>`__
-- `drop_all <{+api-root+}/Mongo/Index/View.html#drop_all-instance_method>`__
+- :ruby-api:`indexes <Collection.html#indexes-instance_method>`
+- :ruby-api:`create_one <Index/View.html#create_one-instance_method>`
+- :ruby-api:`drop_one <Index/View.html#drop_one-instance_method>`
+- :ruby-api:`drop_all <Index/View.html#drop_all-instance_method>`

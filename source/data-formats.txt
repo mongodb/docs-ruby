@@ -23,6 +23,7 @@ Data Formats
    :maxdepth: 1
 
    Time Series Data </data-formats/time-series>
+   BSON </data-formats/bson>
 
 Overview
 --------
@@ -32,3 +33,4 @@ application. To learn how to work with these data formats, see the following
 sections:
 
 - :ref:`ruby-time-series`: Learn how to create a time series collection and interact with time series data.
+- :ref:`ruby-bson-tutorial`: Learn how to work with BSON data by using the {+driver-short+}'s BSON library.

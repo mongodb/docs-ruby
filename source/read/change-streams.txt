@@ -154,7 +154,7 @@ you can set:
    * - ``collation``
      - | Sets the collation to use for the change stream cursor.
 
-For a full list of ``watch`` options, see `watch <{+api-root+}/Mongo/Collection.html#watch-instance_method>`__
+For a full list of ``watch`` options, see :ruby-api:`watch <Collection.html#watch-instance_method>`
 in the API documentation.
 
 .. _ruby-change-stream-pre-post-image:
@@ -246,7 +246,7 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API documentation:
 
-- `Mongo::Collection::View::ChangeStream <{+api-root+}/Mongo/Collection/View/ChangeStream.html>`__
-- `Mongo::Client::watch <{+api-root+}/Mongo/Client.html#watch-instance_method>`__
-- `Mongo::Database::watch <{+api-root+}/Mongo/Database.html#watch-instance_method>`__
-- `Mongo::Collection::watch <{+api-root+}/Mongo/Collection.html#watch-instance_method>`__
+- :ruby-api:`Mongo::Collection::View::ChangeStream <Collection/View/ChangeStream.html>`
+- :ruby-api:`Mongo::Client::watch <Client.html#watch-instance_method>`
+- :ruby-api:`Mongo::Database::watch <Database.html#watch-instance_method>`
+- :ruby-api:`Mongo::Collection::watch <Collection.html#watch-instance_method>`

@@ -276,5 +276,5 @@ To learn more about retrieving documents by using the {+driver-short+}, see the
 API Documentation
 ~~~~~~~~~~~~~~~~~
 
-To learn more about the ``find`` method, see the `API documentation.
-<{+api-root+}/Mongo/Collection.html#find-instance_method>`__ 
+To learn more about the ``find`` method, see the
+:ruby-api:`API documentation. <Collection.html#find-instance_method>`

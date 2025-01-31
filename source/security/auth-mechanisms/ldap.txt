@@ -80,4 +80,4 @@ API Documentation
 To learn more about any of the methods or types discussed on this
 page, see the following API documentation:
 
-- `Mongo::Client <{+api-root+}/Mongo/Client.html>`__
+- :ruby-api:`Mongo::Client <Client.html>`

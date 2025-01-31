@@ -292,4 +292,4 @@ API Documentation
 -----------------
 
 For more information about ``Mongo::Client`` options for the {+driver-short+},
-see the API documentation for `Mongo::Client <{+api-root+}/Mongo/Client.html>`__ .
+see the API documentation for :ruby-api:`Mongo::Client <Client.html>`.

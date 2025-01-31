@@ -1,6 +1,8 @@
-***********
-Text Search
-***********
+.. _ruby-text-index:
+
+============
+Text Indexes
+============
 
 .. default-domain:: mongodb
 

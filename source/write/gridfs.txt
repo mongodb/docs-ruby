@@ -198,4 +198,4 @@ API Documentation
 To learn more about using GridFS to store and retrieve large files,
 see the following API documentation:
 
-- `Mongo::Grid::FSBucket <{+api-root+}/Mongo/Grid/FSBucket.html>`__
+- :ruby-api:`Mongo::Grid::FSBucket <Grid/FSBucket.html>`
