@@ -2,6 +2,7 @@ name = "ruby-driver"
 title = "Ruby MongoDB Driver"
 toc_landing_pages = [
     "/get-started",
+    "/read",
     "/write",
     "/indexes",
     "/databases-collection",
