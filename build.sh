@@ -4,5 +4,4 @@ if [ -f build-site.sh ]; then
 fi 
 
 
-curl https://raw.githubusercontent.com/mongodb/docs-worker-pool/netlify-poc/scripts/build-site.sh -o build-site.sh 
-sh build-site.sh
+cd snooty && npm run build:no-prefix
