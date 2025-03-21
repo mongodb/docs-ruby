@@ -32,6 +32,7 @@ definition as the first argument, and an optional name for the index as the
 second argument.
 
 .. code-block:: ruby
+  
   # Creates indexes on all dynamically indexable fields with a default index name
   client[:bands].search_indexes.create_one(
     { mappings: { dynamic: true } }
