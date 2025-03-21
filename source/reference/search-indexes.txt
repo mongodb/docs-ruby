@@ -32,7 +32,7 @@ definition as the first argument, and an optional name for the index as the
 second argument.
 
 .. code-block:: ruby
-  
+
   # Creates indexes on all dynamically indexable fields with a default index name
   client[:bands].search_indexes.create_one(
     { mappings: { dynamic: true } }
@@ -59,7 +59,7 @@ the index.
 
   index_spec_1 = { definition: { mappings: { dynamic: true } } }
   index_spec_2 = { 
-    name: 'band-name-index,
+    name: 'band-name-index',
     definition: {
       mappings: {
         dynamic: false,
