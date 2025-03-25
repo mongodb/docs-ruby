@@ -33,17 +33,21 @@ second argument.
 
 .. code-block:: ruby
 
-  client[:bands].search_indexes.create_one({ dynamic: true })
-
+  # Creates indexes on all dynamically indexable fields with a default index name
   client[:bands].search_indexes.create_one(
-    {
-      dynamic: false,
-      fields: {
-        name: { type: 'string', analyzer: 'lucene.simple' }
-      }
-    },
-    'band-name-index'
+    { mappings: { dynamic: true } }
   )
+
+  # Creates an index on the specified field with the specified index name
+  index_definition = {
+    mappings: {
+      dynamic: false,  
+      fields: { 
+        country: { type: 'string', analyzer: 'lucene.simple' }
+      }
+    }
+  }
+  client[:bands].search_indexes.create_one(index_definition, name: 'band-name-index')
 
 To create multiple indexes, use ``search_indexes#create_many`` which accepts
 an array of index specifications. Unlike ``create_one``, each index
@@ -53,22 +57,23 @@ the index.
 
 .. code-block:: ruby
 
-  client[:bands].search_indexes.create_many([
-    { definition: { dynamic: true } },
-    { name: 'band-name-index,
-      definition: {
+  index_spec_1 = { definition: { mappings: { dynamic: true } } }
+  index_spec_2 = { 
+    name: 'band-name-index',
+    definition: {
+      mappings: {
         dynamic: false,
         fields: {
-          name: { type: 'string', analyzer: 'lucene.simple' }
+          country: { type: 'string', analyzer: 'lucene.simple' }
         }
       }
-    },
-  ])
+    }
+  }
+  client[:bands].search_indexes.create_many([index_spec_1, index_spec_2])
 
 Note that whether you call ``create_one`` or ``create_many``, the
 method will return immediately, before the indexes are created. The
 indexes are then created in the background, asynchronously.
-
 
 Update Search Indexes
 =====================
