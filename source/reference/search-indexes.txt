@@ -43,7 +43,7 @@ second argument.
     mappings: {
       dynamic: false,  
       fields: { 
-        name: { type: 'string', analyzer: 'lucene.simple' }
+        country: { type: 'string', analyzer: 'lucene.simple' }
       }
     }
   }
@@ -64,7 +64,7 @@ the index.
       mappings: {
         dynamic: false,
         fields: {
-          name: { type: 'string', analyzer: 'lucene.simple' }
+          country: { type: 'string', analyzer: 'lucene.simple' }
         }
       }
     }
