@@ -1,41 +1,36 @@
-.. http://www.mongodb.org/display/DOCS/Ruby+Language+Center
-
 .. _ruby-language-center:
+.. _ruby-driver-landing:
 
-*******************
+===================
 Ruby MongoDB Driver
-*******************
+===================
 
-.. default-domain:: mongodb
+.. toctree::
+   :titlesonly:
 
-.. class:: hidden
-
-  .. toctree::
-    :titlesonly:
-
-    Get Started <getting-started>
-    Tutorials <tutorials>
-    Connection & Configuration <reference/connection-and-configuration>
-    Working with Data <reference/working-with-data>
-    Schema Operations <reference/schema-operations>
-    API <https://mongodb.com/docs/ruby-driver/current/api/>
-    Release Notes <release-notes>
-    Additional Resources <reference/additional-resources>
-    Contribute <contribute>
+   Get Started </getting-started>
+   Tutorials </tutorials>
+   Connection & Configuration </reference/connection-and-configuration>
+   Working with Data </reference/working-with-data>
+   Schema Operations </reference/schema-operations>
+   API <https://www.mongodb.com/docs/ruby-driver/current/api/>
+   Release Notes </release-notes>
+   Additional Resources </reference/additional-resources>
+   Contribute </contribute>
 
 Welcome to the documentation site for the official MongoDB Ruby driver.
 You can add the driver to your application to work with MongoDB in
 Ruby.
 
 Get Started
-===========
+-----------
 
 To get started with the Ruby driver, see :doc:`/installation` and
 :doc:`/tutorials/quick-start`. Continue to :doc:`/tutorials`
 for high level documentation for common operations.
 
 BSON
-====
+----
 
 The Ruby BSON implementation is packaged in a separate gem with C and
 Java extensions for speed depending on the runtime environment.
@@ -43,7 +38,7 @@ Java extensions for speed depending on the runtime environment.
 For reference on the Ruby BSON gem, see the :doc:`/tutorials/bson`.
 
 Object Mappers
-==============
+--------------
 
 Because MongoDB is so easy to use, the basic Ruby driver can be the
 best solution for many applications. But if you need validations,
@@ -56,12 +51,6 @@ Because MongoDB is a document-based database, these mappers are called
 Object Document Mappers (ODM) as opposed to Object Relational Mappers
 (ORM).
 
-The ODM officially supported by MongoDB is Mongoid, originally written
-by Durran Jordan.
+The official ODM for MongoDB in Ruby is **Mongoid**.
 
-For tutorials on Mongoid, see the `Mongoid Manual <https://mongodb.com/docs/mongoid/master>`_.
-
-.. COMMENT  For the actual build, see mongodb/docs-ruby repo which pulls the documentation source from:
-..    mongo-ruby-driver,
-..    bson-ruby, and
-..    mongoid repos.
+To learn about Mongoid, see the `Mongoid documentation <https://www.mongodb.com/docs/mongoid/current/>`__.
