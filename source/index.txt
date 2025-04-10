@@ -2,6 +2,9 @@
 {+driver-long+}
 ====================
 
+.. meta::
+   :description: Explore the official Ruby driver for MongoDB, including installation, BSON implementation, and using Mongoid for object document mapping.
+
 .. contents:: On this page
    :local:
    :backlinks: none
