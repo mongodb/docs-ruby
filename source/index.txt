@@ -1,3 +1,6 @@
+.. meta::
+   :robots: noindex, nosnippet 
+
 .. http://www.mongodb.org/display/DOCS/Ruby+Language+Center
 
 .. _ruby-language-center:

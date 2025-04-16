@@ -1,3 +1,6 @@
+.. meta::
+   :robots: noindex, nosnippet 
+
 This file is not part of Ruby driver documentation proper, it is an internal
 reference for the nesting levels that other files should be using.
 
