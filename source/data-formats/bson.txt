@@ -363,9 +363,9 @@ use the ``to_uuid`` method:
 .. code-block:: ruby
 
    binary = BSON::Binary.new("\x00\x11\x22\x33\x44\x55\x66\x77\x88\x99\xAA\xBB\xCC\xDD\xEE\xFF".force_encoding('BINARY'), :uuid)
-   => <BSON::Binary:0x46942046606480 type=uuid data=0x0011223344556677...>
+   # => <BSON::Binary:0x46942046606480 type=uuid data=0x0011223344556677...>
    binary.to_uuid
-   => "00112233-4455-6677-8899aabbccddeeff"
+   # => "00112233-4455-6677-8899aabbccddeeff"
 
 You can explicitly specify standard UUID representation in
 the ``from_uuid`` and ``to_uuid`` methods:
@@ -407,7 +407,7 @@ cannot be stringified without specifying a representation.
 .. code-block:: ruby
 
    binary = BSON::Binary.new("\x00\x11\x22\x33\x44\x55\x66\x77\x88\x99\xAA\xBB\xCC\xDD\xEE\xFF".force_encoding('BINARY'), :uuid_old)
-   => <BSON::Binary:0x46942046606480 type=uuid data=0x0011223344556677...>
+   # => <BSON::Binary:0x46942046606480 type=uuid data=0x0011223344556677...>
 
    binary.to_uuid
    # => ArgumentError (Representation must be specified for BSON::Binary objects of type :uuid_old)
@@ -507,9 +507,9 @@ strings, but allows access to them by using symbol keys.
 
       bson = {test: 1}.to_bson.to_s
       loaded = Hash.from_bson(BSON::ByteBuffer.new(bson))
-      => {"test"=>1}
+      # => {"test"=>1}
       loaded.class
-      => BSON::Document
+      # => BSON::Document
 
 BSON::MaxKey
 ~~~~~~~~~~~~
@@ -949,7 +949,7 @@ most recent specification:
 .. code-block:: ruby
 
    BSON::Document.new(test: 1, 'test' => 2)
-   => {"test"=>2}
+   # => {"test"=>2}
 
 When loading a BSON document with duplicate keys, the last value for a
 duplicated key overwrites previous values for the same key.
