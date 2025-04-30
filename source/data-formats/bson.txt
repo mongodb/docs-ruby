@@ -601,7 +601,7 @@ MongoDB. The following list describes the limitations on ``BigDecimal``:
 
 .. note::
 
-   In BSON lirbary v5.0, ``Decimal128`` is deserialized into ``BigDecimal`` by
+   In BSON library v5.0, ``Decimal128`` is deserialized into ``BigDecimal`` by
    default. In order to have ``Decimal128`` values in BSON documents
    deserialized into ``BSON::Decimal128``, you can set the ``mode: :bson`` option
    on ``from_bson``.
