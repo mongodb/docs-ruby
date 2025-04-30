@@ -1,7 +1,7 @@
 .. _ruby-atlas-vector-search:
 
 ================================
-Run an Atlas Vector Search Query
+Run an {+avs+} Query
 ================================
 
 .. facet::
@@ -22,20 +22,20 @@ Overview
 --------
 
 In this guide, you can learn how to perform searches on your documents
-by using the Atlas Vector Search feature. The {+driver-short+} allows you to
-perform Atlas Vector Search queries by using the aggregation framework.
+by using the {+avs+} feature. The {+driver-short+} allows you to
+perform {+avs+} queries by using the aggregation framework.
 To learn more about performing aggregations, see the
 :ref:`ruby-aggregation` guide.
 
 .. note:: Deployment Compatibility
 
-   You can use the Atlas Vector Search feature only when
+   You can use the {+avs+} feature only when
    you connect to MongoDB Atlas clusters. This feature is not
    available for self-managed deployments.
 
-To learn more about Atlas Vector Search, see the :atlas:`Atlas Vector
-Search Overview </atlas-vector-search/vector-search-overview/>` in the
-Atlas documentation.
+To learn more about {+avs+}, see the :atlas:`{+avs+} Overview
+</atlas-vector-search/vector-search-overview/>` in the Atlas
+documentation.
 
 .. note:: Atlas Search
 
@@ -43,11 +43,11 @@ Atlas documentation.
    Atlas Search feature. To learn about this feature, see the
    :atlas:`Atlas Search Overview </atlas-search/atlas-search-overview/>`.
 
-Atlas Vector Search Index
+{+avs+} Index
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Before you can perform Atlas Vector Search queries, you must create an
-Atlas Vector Search index on your collection. To learn more about
+Before you can perform {+avs+} queries, you must create an
+{+avs+} index on your collection. To learn more about
 creating this index, see the :ref:`ruby-atlas-search-index` guide.
 
 Vector Search Aggregation Stage
@@ -101,9 +101,9 @@ tutorial in the Atlas documentation.
 Basic Vector Search Query
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following code performs an Atlas Vector Search query on the
-``plot_embedding`` vector field by using a query vector that represents
-the term *time travel*:
+The following code performs an {+avs+} query on the
+``plot_embedding`` vector field by using a query vector that is a vector
+embedding of the phrase "time travel":
 
 .. io-code-block::
    :copyable: true
@@ -115,7 +115,7 @@ the term *time travel*:
       :end-before: end-basic-query
 
    .. output::
-      :language: json
+      :language: none
       :visible: false
 
       {"plot"=>"A reporter, learning of time travelers visiting 20th century disasters, tries to change the history they know by averting upcoming disasters.", "title"=>"Thrill Seekers"}
@@ -142,7 +142,7 @@ field, which describes how well the document matches the query vector:
       :emphasize-lines: 15
 
    .. output::
-      :language: json
+      :language: none
       :visible: false
 
       {"title"=>"Thrill Seekers", "score"=>0.9253387451171875}
