@@ -122,7 +122,7 @@ Raw Bytes
 To write raw bytes to the byte buffer with no transformations, use the
 ``put_byte`` and ``put_bytes`` methods. Each method takes a byte string
 as its argument and copies this string into the buffer. The ``put_byte``
-method enforces that the argument is a string of length 1. ``put_bytes``
+method enforces that the argument is a string of length ``1``. ``put_bytes``
 accepts any length of strings. The strings can contain null bytes.
 
 The following code demonstrates how to write raw bytes to a byte buffer:
@@ -135,15 +135,19 @@ The following code demonstrates how to write raw bytes to a byte buffer:
 
 .. note::
 
-   ``put_byte`` and ``put_bytes`` do not write a BSON type byte before
-   writing the argument to the byte buffer.
+   ``put_byte`` and ``put_bytes`` do not write a BSON type byte to the
+   buffer before writing the byte string. This means that the buffer
+   does not information about the type of data that the raw byte string encodes.
 
-Subsequent write methods write objects of particular types in the
-`BSON specification <http://bsonspec.org/spec.html>`__. The type indicated
-by the method name takes precedence over the type of the argument.
-For example, if a floating-point value is passed to ``put_int32``, it is
-coerced into an integer, and the driver writes the resulting integer to the byte
-buffer.
+Typed Byte Write Methods
+````````````````````````
+
+The write methods described in the following sections write objects of
+particular types in the `BSON specification
+<http://bsonspec.org/spec.html>`__. The type indicated by the method
+name takes precedence over the type of the argument. For example, if a
+floating-point value is passed to ``put_int32``, it is coerced into an
+integer, and the driver writes the resulting integer to the byte buffer.
 
 Strings
 ```````
@@ -331,8 +335,7 @@ ensure that you install v5.0.2 or later of the BSON library.
 .. note:: BINARY Encoding
 
    ``BSON::Binary`` objects always store the data in ``BINARY`` encoding,
-   regardless of the encoding that the string passed to the constructor
-   was in:
+   regardless of the encoding of the string passed to the constructor:
 
    .. code-block:: ruby
 
@@ -421,8 +424,8 @@ cannot be stringified without specifying a representation.
    binary.to_uuid(:python_legacy)
    # => "00112233-4455-6677-8899aabbccddeeff"
 
-To create a legacy UUID BSON::Binary from the string representation of the
-UUID, use the ``from_uuid`` method specifying the desired representation:
+To create a legacy UUID ``BSON::Binary`` from the string representation of the
+UUID, use the ``from_uuid`` method and specify the desired representation:
 
 .. code-block:: ruby
 
@@ -576,8 +579,8 @@ value that can emulate decimal rounding with exact precision:
 BSON::Decimal128 and BigDecimal
 ```````````````````````````````
 
-The ``from_bson`` and ``to_bson`` methods from ``BigDecimal`` use the same
-``BSON::Decimal128`` methods internally. This leads to some limitations
+The ``BigDecimal#from_bson`` and ``BigDecimal#to_bson`` methods use the
+equivalent ``BSON::Decimal128`` methods internally. This leads to some limitations
 on ``BigDecimal`` values that can be serialized to BSON
 and those that can be deserialized from existing ``decimal128`` BSON
 values.
@@ -604,7 +607,7 @@ MongoDB. The following list describes the limitations on ``BigDecimal``:
    In BSON library v5.0, ``Decimal128`` is deserialized into ``BigDecimal`` by
    default. In order to have ``Decimal128`` values in BSON documents
    deserialized into ``BSON::Decimal128``, you can set the ``mode: :bson`` option
-   on ``from_bson``.
+   when calling ``from_bson``.
 
 JSON Serialization
 ------------------
@@ -852,7 +855,7 @@ To convert a BSON regular expression to a {+language+} regular expression, call 
    bson_regexp.compile
    # => /^hello.world/m
  
-   bson_regexp = BSON::Regexp::Raw.new("^hello", "")
+   bson_regexp = BSON::Regexp::Raw.new("^hello.world", "")
    bson_regexp.compile
    # => /^hello.world/
  
