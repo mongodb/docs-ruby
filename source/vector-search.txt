@@ -132,7 +132,7 @@ embedding of the phrase "time travel":
    ``BSON::Binary`` type's vector subtype, introduced in ``bson`` gem v5.1,
    to serve as the query vector. You can also use an array of
    numbers as a query vector, but we recommend that you use the
-   ``Binary`` vector type to improve storage efficiency. To learn more about
+   ``BSON::Binary`` vector type to improve storage efficiency. To learn more about
    this type, see the :ref:`ruby-bson-vector` section of the BSON guide.
 
 Vector Search Score
