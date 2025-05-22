@@ -82,7 +82,7 @@ You must define the following fields in your ``$vectorSearch`` stage:
      - Field that contains vector embeddings
 
    * - ``queryVector``
-     - ``BSON::Vector`` instance or array of numbers
+     - ``BSON::Binary`` vector subtype, ``BSON::Vector``, or array of numbers
      - Vector representation of your query
 
    * - ``limit``
