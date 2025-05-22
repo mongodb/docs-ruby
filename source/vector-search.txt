@@ -128,11 +128,11 @@ embedding of the phrase "time travel":
 
 .. tip:: Query Vector Type
 
-   The preceding example creates an instance of
-   ``BSON::Vector``, introduced in ``bson`` gem v5.1,
+   The preceding example creates an instance of the
+   ``BSON::Binary`` type's vector subtype, introduced in ``bson`` gem v5.1,
    to serve as the query vector. You can also use an array of
    numbers as a query vector, but we recommend that you use the
-   ``Vector`` type to improve storage efficiency. To learn more about
+   ``Binary`` vector type to improve storage efficiency. To learn more about
    this type, see the :ref:`ruby-bson-vector` section of the BSON guide.
 
 Vector Search Score

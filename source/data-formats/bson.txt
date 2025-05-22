@@ -455,10 +455,6 @@ BSON::Vector
 Starting in ``bson`` v5.1, you can use the
 ``BSON::Vector`` type to represent vectors of numeric values.
 
-Because this type is serialized as a BSON binary vector (subtype 9), you
-can use the ``Vector`` type for improved storage efficiency. To learn
-more, see the `BSON specification <https://bsonspec.org/spec.html>`__.
-
 You can create a ``Vector`` object to store values of the following
 types:
 
@@ -468,6 +464,9 @@ types:
 
 You can use the optional ``dtype`` and ``padding`` atrributes to specify
 the data type of the vector and the bit padding, respectively.
+``Vector`` itself is a container to hold your array values, type
+information, and padding specification. ``Vector`` objects are
+serialized as normal arrays in MongoDB.
 
 The following example demonstrates how to create a ``Vector`` object:
 
@@ -475,15 +474,26 @@ The following example demonstrates how to create a ``Vector`` object:
 
    BSON::Vector.new([ -0.0016261312, -0.028070757, -0.011342932 ], :float32)
 
-The following list describes some methods that you can use
-to handle conversions between ``BSON::Binary`` and ``BSON::Vector``:
+Convert Vectors to Binary
+`````````````````````````
 
-- ``Binary.as_vector``: Decodes binary data as a ``Vector`` object
-- ``Binary.from_vector``: Constructs a binary object from a ``Vector`` object
+You can convert ``Vector`` and array objects to ``BSON::Binary`` objects
+so they are serialized as BSON binary vector (subtype 9) instances. Use
+the ``Binary.from_vector`` method, as shown in the following code:
+
+.. code-block:: ruby
+
+   BSON::Binary.from_vector([ -0.0016261312, -0.028070757, -0.011342932 ], :float32)
+
+Using the ``Binary`` type improves storage efficiency. To learn
+more, see the `BSON specification <https://bsonspec.org/spec.html>`__.
+
+You can convert a ``Binary`` to a ``Vector`` by using the
+``Binary.as_vector`` method.
 
 .. tip:: {+avs+}
 
-   To view an example that leverages the ``Vector`` type
+   To view an example that leverages the ``Binary`` type
    to perform efficient {+avs+} queries, see the :ref:`ruby-avs-examples`.
 
 BSON::Code
