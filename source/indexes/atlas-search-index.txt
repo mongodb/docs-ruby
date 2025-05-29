@@ -15,7 +15,7 @@ Atlas Search Indexes
    :values: reference
 
 .. meta::
-   :keywords: index, query, optimization, efficiency
+   :keywords: index, query, optimization, efficiency, code example
 
 Overview
 --------
