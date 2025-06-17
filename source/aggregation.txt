@@ -40,6 +40,12 @@ The **aggregation pipeline** is the assembly line, **aggregation stages** are th
 assembly stations, and **operator expressions** are the
 specialized tools.
 
+.. sharedinclude:: dbx/agg-tutorials-manual-tip.rst
+
+   .. replacement:: language
+
+      :guilabel:`{+language+}`
+
 Compare Aggregation and Find Operations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
