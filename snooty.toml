@@ -13,5 +13,5 @@ driver-short = "Ruby driver"
 targets = ["*"]
 variant = "info"
 value = """\
-    This version of the documentation is archived and no longer supported. View the `current documentation <link>`__ to learn how to `upgrade your version of [product name] <link>`__.\
+    This version of the documentation is archived and no longer supported. View the `current documentation <https://www.mongodb.com/docs/ruby-driver/current/>`__ to learn how to `upgrade your version of the Ruby driver <link>`__.\
     """
