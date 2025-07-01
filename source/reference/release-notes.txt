@@ -56,11 +56,12 @@ and improvements:
   To learn more, see the :ref:`ruby-bson-vector` section of the BSON
   guide.
 
-- The ``#deep_symbolize_keys!`` and ``#symbolize_keys!`` methods are not
-  supported on ``BSON::Document`` objects. In previous versions,
-  ``#symbolize_keys!`` method raises an ``ArgumentError`` when used on a
-  ``BSON::Document``, but ``#deep_symbolize_keys!`` does not, and only
-  returns a ``Hash``, rather than a ``BSON::Document``.
+- ``BSON::Document`` objects do not support use of the
+  ``#deep_symbolize_keys!`` and ``#symbolize_keys!`` methods. In
+  previous versions, the ``#symbolize_keys!`` method raises an
+  ``ArgumentError`` when used on a ``BSON::Document``, but
+  ``#deep_symbolize_keys!`` does not, and only returns a ``Hash``
+  rather than a ``BSON::Document``.
 
   This release adds a warning when you use ``#deep_symbolize_keys!`` on a
   ``BSON::Document`` instance. In ``bson`` v6.0, this action will raise
