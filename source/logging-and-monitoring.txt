@@ -1,0 +1,13 @@
+.. _ruby-logging-monitoring
+
+======================
+Logging and Monitoring
+======================
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   Logging </logging-and-monitoring/logging>
+   Monitoring </logging-and-monitoring/monitoring>
+   Change Streams </logging-and-monitoring/change-streams>

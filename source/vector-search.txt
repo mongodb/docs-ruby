@@ -1,8 +1,8 @@
 .. _ruby-atlas-vector-search:
 
-================================
-Run an {+avs+} Query
-================================
+===================
+Atlas Vector Search
+===================
 
 .. facet::
    :name: genre

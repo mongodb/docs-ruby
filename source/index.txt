@@ -17,20 +17,18 @@
 
    Get Started </get-started>
    Connect </connect>
-   Databases & Collections </databases-collection>
-   Read Data </read>
-   Write Data </write>
-   Operations on Replica Sets </read-write-pref> 
-   Indexes </indexes>
-   Monitor Your Application </monitoring>
-   Data Aggregation </aggregation>
-   {+avs+} </vector-search>
-   Security </security>
+   CRUD Operations </crud>
+   Aggregation </aggregation>
    Data Formats </data-formats>
-   API Documentation <{+api-root+}>
+   Indexes </indexes>
+   Run a Database Command </run-command>
+   Atlas Search </atlas-search>
+   Atlas Vector Search </vector-search>
+   Logging and Monitoring </logging-and-monitoring>
+   Security </security>
    Reference </reference>
+   API Documentation <{+api-root+}>
    Issues & Help </issues-and-help>
-   Common Errors </common-errors>
 
 Introduction
 ------------

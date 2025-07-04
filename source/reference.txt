@@ -12,8 +12,8 @@ Reference
    :maxdepth: 1
 
    Release Notes </reference/release-notes>
-   Upgrade Versions <reference/upgrade>
    Compatibility </reference/compatibility>
+   Upgrade Versions <reference/upgrade>
    View the Source <https://github.com/mongodb/mongo-ruby-driver>
 
 - :ref:`Release Notes <ruby-release-notes>`

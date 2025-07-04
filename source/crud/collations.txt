@@ -1,7 +1,7 @@
 .. _ruby-collations:
 
 ==========
-Collations
+Collation
 ==========
 
 .. default-domain:: mongodb
