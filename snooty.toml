@@ -1,13 +1,9 @@
 name = "ruby-driver"
 title = "Ruby Driver"
 toc_landing_pages = [
-    "/crud",
     "/crud/query",
-    "/logging-and-monitoring",
     "/indexes",
-    "/security",
-    "/security/authentication",
-    "/reference"
+    "/security/authentication"
 ]
 
 intersphinx = ["https://www.mongodb.com/docs/manual/objects.inv"]

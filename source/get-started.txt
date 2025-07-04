@@ -232,8 +232,8 @@ the sample data, and prints out the result.
 
 .. _ruby-databases-collections:
 
-Databases and Collections
--------------------------
+Manage your Databases and Collections
+-------------------------------------
 
 You can learn how to use MongoDB databases and
 collections with {+driver-short+}.
