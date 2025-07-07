@@ -124,3 +124,34 @@ raw: ${prefix}/stable -> ${base}/current/
 (v2.20-*]: ${prefix}/${version}/reference/search-indexes/ -> ${base}/${version}/indexes/atlas-search-index/
 (v2.20-*]: ${prefix}/${version}/reference/collations/ -> ${base}/${version}/read/collations/
 (v2.20-*]: ${prefix}/${version}/contribute/ -> ${base}/${version}/issues-and-help/
+
+# Comprehensive coverage TOC shift
+
+(*-master) ${prefix}/${version}/get-started/download-and-install/ -> ${base}/${version}/get-started/
+(*-master) ${prefix}/${version}/get-started/create-a-deployment/ -> ${base}/${version}/get-started/
+(*-master) ${prefix}/${version}/get-started/create-a-connection-string/ -> ${base}/${version}/get-started/
+(*-master) ${prefix}/${version}/get-started/connect-to-mongodb/ -> ${base}/${version}/get-started/
+(*-master) ${prefix}/${version}/get-started/next-steps/ -> ${base}/${version}/get-started/
+(*-master) ${prefix}/${version}/databases-collections/ -> ${base}/${version}/get-started/
+(*-master) ${prefix}/${version}/write/insert/ -> ${base}/${version}/crud/insert/
+(*-master) ${prefix}/${version}/read/retrieve/ -> ${base}/${version}/crud/query/
+(*-master) ${prefix}/${version}/write/update/ -> ${base}/${version}/crud/update/
+(*-master) ${prefix}/${version}/write/replace/ -> ${base}/${version}/crud/replace/
+(*-master) ${prefix}/${version}/write/delete/ -> ${base}/${version}/crud/delete/
+(*-master) ${prefix}/${version}/write/bulk-write/ -> ${base}/${version}/crud/bulk-write/
+(*-master) ${prefix}/${version}/write/transactions/ -> ${base}/${version}/crud/transactions/
+(*-master) ${prefix}/${version}/read-write-pref/ -> ${base}/${version}/crud/configure-crud/
+(*-master) ${prefix}/${version}/read/collations/ -> ${base}/${version}/crud/collations/
+(*-master) ${prefix}/${version}/write/gridfs/ -> ${base}/${version}/crud/gridfs/
+(*-master) ${prefix}/${version}/read/count/ -> ${base}/${version}/crud/query/count
+(*-master) ${prefix}/${version}/read/retrieve/ -> ${base}/${version}/crud/query/find
+(*-master) ${prefix}/${version}/read/project/ -> ${base}/${version}/crud/query/project
+(*-master) ${prefix}/${version}/read/specify-documents-to-return/ -> ${base}/${version}/crud/query/specify-documents-to-return
+(*-master) ${prefix}/${version}/read/distinct/ -> ${base}/${version}/crud/query/distinct
+(*-master) ${prefix}/${version}/read/cursors/ -> ${base}/${version}/crud/query/cursors
+(*-master) ${prefix}/${version}/read/specify-a-query/ -> ${base}/${version}/crud/query/specify-a-query
+(*-master) ${prefix}/${version}/databases-collections/run-command -> ${base}/${version}/run-command
+(*-master) ${prefix}/${version}/monitoring/cluster-monitoring -> ${base}/${version}/logging-and-monitoring/cluster-monitoring
+(*-master) ${prefix}/${version}/read/change-streams/ -> ${base}/${version}/logging-and-monitoring/change-streams
+(*-master) ${prefix}/${version}/connect/tls/ -> ${base}/${version}/security/tls
+(*-master) ${prefix}/${version}/common-errors/ -> ${base}/${version}/

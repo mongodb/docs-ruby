@@ -20,5 +20,6 @@ Security
 .. toctree::
    :titlesonly:
 
+   TLS </security/tls> 
    Authentication </security/authentication>
    In-Use Encryption </security/in-use-encryption>

@@ -1,8 +1,8 @@
 .. _ruby-crud-write-read-pref:
 
-===============================
-CRUD Operations on Replica Sets
-===============================
+=========================
+Configure CRUD Operations
+=========================
 
 .. facet::
    :name: genre
