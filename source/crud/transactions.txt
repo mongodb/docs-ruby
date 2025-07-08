@@ -52,19 +52,19 @@ Causal Consistency
 
    .. replacement:: insert-one-method
 
-      ``insert_one``
+      ``insert_one()``
 
    .. replacement:: update-one-method
 
-      ``update_one``
+      ``update_one()``
 
    .. replacement:: find-one-method
 
-      ``find``
+      ``find()``
 
    .. replacement:: delete-one-method
 
-      ``delete_one``
+      ``delete_one()``
 
    .. replacement:: ReadConcern.MAJORITY
 
