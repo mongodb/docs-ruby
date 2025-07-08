@@ -66,11 +66,11 @@ Causal Consistency
 
       ``delete_one()``
 
-   .. replacement:: ReadConcern.MAJORITY
+   .. replacement:: majority-rc
 
       ``:majority``
 
-   .. replacement:: WriteConcern.MAJORITY
+   .. replacement:: majority-wc
 
       ``:majority``
 
