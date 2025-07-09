@@ -58,4 +58,4 @@ specify the algorithms you want to use in one of the following ways:
       .. code-block:: ruby
 
          client = Mongo::Client.new(["<hostname>:<port>"],
-         compressors: ["zlib", "snappy"])
+            compressors: ["zlib", "snappy"])
