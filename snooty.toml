@@ -1,6 +1,7 @@
 name = "ruby-driver"
 title = "Ruby Driver"
 toc_landing_pages = [
+    "/connect/connection-options",
     "/crud/query",
     "/indexes",
     "/security/authentication"
