@@ -25,8 +25,8 @@ The driver supports the following compression algorithms:
 If you specify multiple compression algorithms, the driver selects the first
 one in the list supported by your MongoDB instance.
 
-Specify Connection Algorithms
------------------------------
+Specify Compression Algorithms
+------------------------------
 
 To enable compression for the connection to your MongoDB instance,
 specify the algorithms you want to use in one of the following ways: 
