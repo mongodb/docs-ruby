@@ -17,11 +17,9 @@ of data transmitted between the client and the server.
 
 The driver supports the following compression algorithms:
 
-1. `Snappy <https://google.github.io/snappy/>`__
-
-2. `Zlib <https://zlib.net/>`__
-
-3. `Zstandard <https://github.com/facebook/zstd/>`__
+- `Snappy <https://google.github.io/snappy/>`__
+- `Zlib <https://zlib.net/>`__
+- `Zstandard <https://github.com/facebook/zstd/>`__
 
 
 If you specify multiple compression algorithms, the driver selects the first
@@ -33,8 +31,8 @@ Specify Connection Algorithms
 To enable compression for the connection to your MongoDB instance,
 specify the algorithms you want to use in one of the following ways: 
 
-1. Add the algorithms to your connection string as a parameter 
-2. Specify the algorithms in the ``compressors`` option of your ``Mongo::Client`` object
+- Add the algorithms to your connection string as a parameter 
+- Specify the algorithms in the ``compressors`` option of your ``Mongo::Client`` object
 
 .. tabs::
 
@@ -44,18 +42,18 @@ specify the algorithms you want to use in one of the following ways:
       To enable network compression by using the connection string, add the ``compressors`` option. 
       You can specify one or more algorithms as a comma-separated list.
 
-      .. code-block:: ruby
-
-         uri = "mongodb://<hostname>:<port>/?compressors=zlib,snappy"
-         client = Mongo::Client.new(uri)
+      .. literalinclude:: /includes/connect/network-compression.rb
+         :start-after: start-connection-string
+         :end-before: end-connection-string
+         :language: ruby      
 
    .. tab:: Client Settings
       :tabid: client-settings
 
-      To enable compression in your Client object, pass the ``:compressors`` option
-      to the ``Mongo::Client`` constructor, as shown in the following example:
+      To enable compression in your Client object, pass the ``compressors`` option
+      to the ``Mongo::Client`` constructor.
 
-      .. code-block:: ruby
-
-         client = Mongo::Client.new(["<hostname>:<port>"],
-            compressors: ["zlib", "snappy"])
+      .. literalinclude:: /includes/connect/network-compression.rb
+         :start-after: start-client-settings
+         :end-before: end-client-settings
+         :language: ruby     
