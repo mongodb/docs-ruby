@@ -1,0 +1,31 @@
+.. _ruby-extended-json:
+
+=============
+Extended JSON
+=============
+
+.. facet::
+   :name: genre
+   :values: reference
+ 
+.. meta::
+   :keywords: code example, json, standard formatting
+   :description: Learn how to use extended JSON in the MongoDB Ruby Driver.
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: twocols
+
+.. sharedinclude:: dbx/extended-json.rst
+
+Read Extended JSON
+------------------
+
+You can read an Extended JSON string into a Python object by calling
+the ``bson.json_util.loads()`` method. This method parses an Extended
+JSON string and returns a Python list containing the data.
+
+The following example shows how you can read an Extended JSON string into a
+list of dictionaries by using the ``loads()`` method:
