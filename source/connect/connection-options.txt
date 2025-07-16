@@ -142,6 +142,17 @@ Server Selection
    * - Connection Option
      - Description
 
+   * - **:load_balanced**
+     - | Whether to expect to connect to a load balancer. 
+       | 
+       | The driver will behave as if the server is a load balancer even if it
+       isn’t connected to a load balancer. 
+       | 
+       | **Data Type**: ``Boolean``
+       | **Default**: ``false``
+       | **Client Example**: ``load_balanced: { true }``
+       | **Connection URI Example**: N/A
+
    * - **:server_selector**
      - | Get the server selector. It either uses the read preference 
          defined in the client options or defaults to a Primary 
