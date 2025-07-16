@@ -65,15 +65,14 @@ Upsert Option
 ~~~~~~~~~~~~~
 	
 The ``upsert`` parameter allows you to use the ``update_one()`` and
-``update_many()`` operations to use one method to perform a conditional
-operation:
+``update_many()`` operations to perform a conditional operation:
 
 - If the specified document exists, the command updates it
 - If the specified document does not exist, the command creates a new document
   with the specified parameter.
 
-For more information, see the :ref:`<ruby-upsert-example>`
-on this page, or the :ref:`<ruby-update-options-table>`.
+For more information, see the :ref:`<ruby-upsert-example>` or the :ref:`options
+table<ruby-update-options-table>` on this page.
 
 Update One Document Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
