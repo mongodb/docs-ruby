@@ -38,8 +38,8 @@ and the ``tls`` option with a value of ``true``:
    uri = "mongodb://<hostname>:<port>/?connectTimeoutMS=60000&tls=true"
    client = Mongo::Client.new(uri)
 
-Using a ``Mongo::Client``
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Using a Mongo::Client
+~~~~~~~~~~~~~~~~~~~~~
 
 You can pass connection options as arguments to the ``Mongo::Client`` constructor
 instead of including them in your connection URI.
