@@ -146,7 +146,7 @@ Server Selection
      - | Whether to expect to connect to a load balancer. 
        | 
        | The driver will behave as if the server is a load balancer even if it
-       isn’t connected to a load balancer. 
+         isn’t connected to a load balancer.  
        | 
        | **Data Type**: ``Boolean``
        | **Default**: ``false``
