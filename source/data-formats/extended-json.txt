@@ -79,7 +79,7 @@ legacy formats by passing a ``mode:`` argument.
    using MongoDB Extended JSON v1 format, which predates the current
    relaxed and canonical formats. 
 
-   For more information see the :server:`MongoDB Extended JSON v1 (legacy
+   For more information see the :manual:`MongoDB Extended JSON v1 (legacy
    format)<reference/mongodb-extended-json-v1/>` page in the Server manual.
 
 The following example outputs an Extended JSON string in the canonical, relaxed
@@ -127,7 +127,7 @@ API Documentation
 ~~~~~~~~~~~~~~~~~
 
 - `BSON::ExtJSON.parse() <https://www.rubydoc.info/gems/bson/{+bson-version+}/BSON/ExtJSON#parse-class_method>`__
-- `#as_extended_json()<https://www.rubydoc.info/gems/bson/{+bson-version+}/BSON/Hash#as_extended_json-instance_method>`__
+- `#as_extended_json() <https://www.rubydoc.info/gems/bson/{+bson-version+}/BSON/Hash#as_extended_json-instance_method>`__
 
 Server Manual Pages
 
