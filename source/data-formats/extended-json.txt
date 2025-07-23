@@ -23,9 +23,112 @@ Extended JSON
 Read Extended JSON
 ------------------
 
-You can read an Extended JSON string into a Python object by calling
-the ``bson.json_util.loads()`` method. This method parses an Extended
-JSON string and returns a Python list containing the data.
+You can read an Extended JSON string into an Ruby array by calling
+the ``BSON::ExtJSON.parse()`` method. This method parses an Extended
+JSON string and returns an array containing the data.
 
 The following example shows how you can read an Extended JSON string into a
-list of dictionaries by using the ``loads()`` method:
+array of hashes by using the ``parse()`` method:
+
+.. io-code-block::
+
+   .. input::
+      :language: ruby 
+
+      require 'bson'
+
+      ex_json = '''[
+         {"foo": [1, 2]},
+         {"bar": {"hello": "world"}},
+         {"code": {
+            "$scope": {},
+            "$code": "function x() { return 1; }"
+         }},
+         {"bin": {
+            "$type": "80",
+            "$binary": "AQIDBA=="
+         }}
+         ]'''
+
+        doc = BSON::ExtJSON.parse(ex_json)
+        
+        puts doc.class
+        puts doc
+
+   .. output::
+      :language: none
+      :visible: false
+
+      {"foo" => [1, 2]}
+      {"bar" => {"hello" => "world"}}
+      {"code" => #<BSON::CodeWithScope:0x0000000123f398e0 @javascript="function x() { return 1; }", @scope={}>}
+      {"bin" => <BSON::Binary:0x7144 type=user data=0x01020304...>}
+
+Write Extended JSON
+-------------------
+
+You can write an Extended JSON string from a hash by using the
+``as_extended_json()`` method. Using the Ruby ``map{}`` method, you can create
+an Extended JSON string from an array of hashes. By default, this method returns
+the Extended JSON string in canonical format, but you can specify relaxed or
+legacy formats by passing a ``mode:`` argument. 
+
+.. note:: Legacy Version
+
+   The legacy format option tells the {+driver-short+} to serialize BSON types
+   using MongoDB Extended JSON v1 format, which predates the current
+   relaxed and canonical formats. 
+
+   For more information see the :server:`MongoDB Extended JSON v1 (legacy
+   format)<reference/mongodb-extended-json-v1/>` page in the Server manual.
+
+The following example outputs an Extended JSON string in the canonical, relaxed
+and legacy formats:
+
+.. io-code-block::
+
+   .. input::
+      :language: ruby
+
+      require 'bson'
+
+      hash_array = [
+         { "foo" => [1, 2] },
+         { "bin" => BSON::Binary.new("\x01\x02\x03\x04", :user) },
+         { "number" => BSON::Int64.new(42) }
+      ]
+
+      json_array_canonical = hash_array.map(&:as_extended_json)
+      json_array_relaxed = hash_array.map{ |hash| hash.as_extended_json(mode: :relaxed) }
+      json_array_legacy = hash_array.map{ |hash| hash.as_extended_json(mode: :legacy) }
+
+      json_string_canonical = JSON.generate(json_array_canonical)
+      json_string_relaxed = JSON.generate(json_array_relaxed)
+      json_string_legacy = JSON.generate(json_array_legacy)
+
+      puts "canonical:\t #{json_string_canonical}"
+      puts "relaxed:\t #{json_string_relaxed}"
+      puts "legacy:\t\t #{json_string_legacy}"
+
+   .. output::
+      :language: none
+      :visible: false
+
+      canonical: [{"foo":[{"$numberInt":"1"},{"$numberInt":"2"}]},{"bin":{"$binary":{"base64":"AQIDBA==","subType":"80"}}},{"number":{"$numberLong":"42"}}]
+      relaxed:   [{"foo":[1,2]},{"bin":{"$binary":{"base64":"AQIDBA==","subType":"80"}}},{"number":42}]
+      legacy:    [{"foo":[1,2]},{"bin":{"$binary":"AQIDBA==","$type":"80"}},{"number":42}]
+      
+More Information
+----------------
+
+For more information, see the following resources:
+
+API Documentation
+~~~~~~~~~~~~~~~~~
+
+- `BSON::ExtJSON.parse() <https://www.rubydoc.info/gems/bson/{+bson-version+}/BSON/ExtJSON#parse-class_method>`__
+- `#as_extended_json()<https://www.rubydoc.info/gems/bson/{+bson-version+}/BSON/Hash#as_extended_json-instance_method>`__
+
+Server Manual Pages
+
+- :manual:`MongoDB Extended JSON (v2)</reference/mongodb-extended-json/>`
