@@ -80,7 +80,7 @@ legacy formats by passing a ``mode:`` argument.
    relaxed and canonical formats. 
 
    For more information see the :manual:`MongoDB Extended JSON v1 (legacy
-   format)<reference/mongodb-extended-json-v1/>` page in the Server manual.
+   format) </reference/mongodb-extended-json-v1/>` page in the Server manual.
 
 The following example outputs an Extended JSON string in the canonical, relaxed
 and legacy formats:
