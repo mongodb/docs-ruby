@@ -24,6 +24,7 @@ Data Formats
 
    Time Series Data </data-formats/time-series>
    BSON </data-formats/bson>
+   Extended JSON </data-formats/extended-json>
 
 Overview
 --------
