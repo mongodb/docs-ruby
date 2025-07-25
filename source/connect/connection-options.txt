@@ -46,8 +46,8 @@ and the ``tls`` option with a value of ``true``:
    uri = "mongodb://<hostname>:<port>/?connectTimeoutMS=60000&tls=true"
    client = Mongo::Client.new(uri)
 
-Using a ``Mongo::Client``
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Using a Mongo::Client
+~~~~~~~~~~~~~~~~~~~~~
 
 You can pass connection options as arguments to the ``Mongo::Client`` constructor
 instead of including them in your connection URI.
@@ -149,6 +149,14 @@ Server Selection
 
    * - Connection Option
      - Description
+
+   * - **:load_balanced**
+     - | Whether to expect to connect to a load balancer. 
+       | 
+       | **Data Type**: ``Boolean``
+       | **Default**: ``false``
+       | **Client Example**: ``load_balanced: { true }``
+       | **Connection URI Example**: N/A
 
    * - **:server_selector**
      - | Get the server selector. It either uses the read preference 
